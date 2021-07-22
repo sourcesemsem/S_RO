@@ -1,7 +1,7 @@
 """
-credits to @rruuurr
+credits to @zlzzl77
 """
-# Arabic userbot - SOURCE ICSS.
+# Arabic userbot - SOURCE ZED.
 
 from sqlalchemy import Column, String
 
