@@ -1,5 +1,5 @@
-# ICSS SOURCE
-# ARABIC USERBOT - BY: @rruuurr
+# ZED SOURCE
+# ARABIC USERBOT - BY: @zlzzl77
 
 import aiohttp
 
