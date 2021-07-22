@@ -1,6 +1,6 @@
-# Icss - Userbot
-# Whois for Icss - Userbot
-# edit ~ <@rruuurr>
+# Zed - Userbot
+# Whois for Zed - Userbot
+# edit ~ <@zlzzl77>
 # from ~ <ULTRA-X>
 
 from telethon.tl.functions.users import GetFullUserRequest
