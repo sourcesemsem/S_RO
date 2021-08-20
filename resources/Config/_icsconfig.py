@@ -43,6 +43,7 @@ class Config(object):
     PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL") or 0)
     CUSTOM_ALIVE_TEXT = os.environ.get("CUSTOM_ALIVE_TEXT", None)
     CUSTOM_ALIVE_EMOJI = os.environ.get("CUSTOM_ALIVE_EMOJI", None)
+    CUSTOM_ALIVE_EMZED = os.environ.get("CUSTOM_ALIVE_EMZED", None)
     CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
     TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Zed - UserBot")
     CLEAN_WELCOME = os.environ.get("CLEAN_WELCOME", True)
