@@ -5,7 +5,7 @@ from moviepy.editor import VideoFileClip
 from PIL import Image, ImageOps
 
 
-LOGS = getLogger(__name__)
+
 
 
 async def vid_to_gif(inputfile, outputfile, speed=None, starttime=None, endtime=None):
