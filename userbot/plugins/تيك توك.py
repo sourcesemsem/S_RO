@@ -1,11 +1,15 @@
-#ZedThon
+#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
+#الملـف حقـوق زلـزال الهيبـه ⤶ @zzzzl1l خاص بسـورس ⤶ 𝙕𝙚𝙙𝙏𝙝𝙤𝙣
+#الملف متعوب عليه So تخمط وماتذكـر المصـدر == اهينـك
+
+#هه
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 
-@icssbot.on(admin_cmd(pattern="تيكتوك$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="تيكتوك$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="تيكتوك$", outgoing=True))
+@bot.on(sudo_cmd(pattern="تيكتوك$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -16,23 +20,23 @@ async def _(event):
     if not reply_message.text:
         await edit_or_reply(event, "**```بالـرد على الرابـط حمبـي 🧸🎈```**")
         return
-    chat = "@TIKTOKDOWNLOADROBOT"
-    catevent = await edit_or_reply(event, "**╮•⎚ جـارِ التحميل ... 🧸🎈**")
+    chat = "@zzTiKbot"
+    catevent = await edit_or_reply(event, "**╮ ❐ جـارِ التحميـل من تيـك تـوك انتظـر قليلاً  ▬▭... 𓅫╰**")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=1598492699)
+                events.NewMessage(incoming=True, from_users=5093220483)
             )
             await event.client.forward_messages(chat, reply_message)
             response = await response
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
             await catevent.edit(
-                "`RIP Check Your Blacklist Boss and unblock @TIKTOKDOWNLOADROBOT`"
+                "**❈╎تحـقق من انـك لم تقـم بحظـر البوت @zzTiKbot .. ثم اعـد استخدام الامـر ...🤖♥️**"
             )
             return
         if response.text.startswith(""):
-            await catevent.edit("Am I Dumb Or Am I Dumb?")
+            await catevent.edit("**🤨💔...؟**")
         else:
             await catevent.delete()
             await event.client.send_message(event.chat_id, response.message)
