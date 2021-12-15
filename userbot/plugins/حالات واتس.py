@@ -34,7 +34,7 @@ async def _(event):
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=1956894280)
+                events.NewMessage(incoming=True, from_users=1569771593)
             )
             await event.client.send_message(chat, "{}".format(input_str))
             response = await response
