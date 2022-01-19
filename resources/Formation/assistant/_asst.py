@@ -40,7 +40,7 @@ startotherena = MSSG
 startowner = f"** ⌔∮ اهلا بك مجدداً {ALIVE_NAME}. اختر احد الخيارات الاتيه:**"
 
 # for alive
-Def = str(ALIVE_NAME) if ALIVE_NAME else "Icss - User"
+Def = str(ALIVE_NAME) if ALIVE_NAME else "Zed - User"
 asst_p = "https://telegra.ph/file/5adc05c0958432a117183.jpg"
 asst_c = "➥ **ASSISTANT IS:** `ONLINE`\n"
 asst_c += f"➥ **My Boss** : {Def} \n"
