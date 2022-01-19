@@ -55,6 +55,7 @@ class Config(object):
     }
     NO_LOAD = [x for x in os.environ.get("NO_LOAD", "").split()]
     ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
+    ZED_MEDIA = os.environ.get("ZED_MEDIA", None)
     BOT_PIC = os.environ.get("BOT_PIC", None)
     BOT_HANDLER = os.environ.get("BOT_HANDLER", "^;")
     PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
