@@ -32,7 +32,7 @@ async def _(event):
                 event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
             )
             await event.delete()
-        except noinline:
+        except:
             zelzal = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎تـم تفعيـل انـلاين بـوتك .. بنجـاح ☑️**\n\n**❈╎جـاري اعـادة تشغيل البـوت الرجـاء الانتظـار  ▬▭...𓅫**")
             async with bot.conversation(chat) as conv:
                 try:
