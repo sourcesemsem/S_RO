@@ -206,7 +206,7 @@ async def _(event):
 
 @icssbot.on(
     icss_cmd(outgoing=True,
-    pattern="انلاين (تفعيل|تعطيل)")
+    pattern="الانلاين (تفعيل|تعطيل)")
 )
 async def _(event):
     if event.fwd_from:
@@ -244,7 +244,7 @@ CMD_HELP.update(
 •  **╮•❐ الامـر ⦂ **`.المراكز`
 •  **الشـرح •• **__Shows your dc id and dc ids list__
 
-•  **╮•❐ الامـر ⦂ **`.انلاين (تفعيل|تعطيل)`
+•  **╮•❐ الامـر ⦂ **`.الانلاين (تفعيل|تعطيل)`
 •  **الشـرح •• **__Sets help menu either in inline or text format__"""
     }
 )
