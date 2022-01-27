@@ -3,8 +3,8 @@
 from telethon.utils import pack_bot_file_id
 
 
-@icssbot.on(admin_cmd(pattern="(الايدي|id)( (.*)|$)"))
-@icssbot.on(sudo_cmd(pattern="(الايدي|id)( (.*)|$)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="(الايدي|id)( (.*)|$)"))
+@bot.on(sudo_cmd(pattern="(الايدي|id)( (.*)|$)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
