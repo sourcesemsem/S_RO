@@ -3,8 +3,8 @@
 import asyncio
 
 
-@icssbot.on(admin_cmd(pattern="unoob$"))
-@icssbot.on(sudo_cmd(pattern="unoob$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="unoob$"))
+@bot.on(sudo_cmd(pattern="unoob$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -27,8 +27,8 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@icssbot.on(admin_cmd(pattern="menoob$"))
-@icssbot.on(sudo_cmd(pattern="menoob$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="menoob$"))
+@bot.on(sudo_cmd(pattern="menoob$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -51,8 +51,8 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@icssbot.on(admin_cmd(pattern="upro$"))
-@icssbot.on(sudo_cmd(pattern="upro$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="upro$"))
+@bot.on(sudo_cmd(pattern="upro$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -74,8 +74,8 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@icssbot.on(admin_cmd(pattern="mepro$"))
-@icssbot.on(sudo_cmd(pattern="mepro$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="mepro$"))
+@bot.on(sudo_cmd(pattern="mepro$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -97,8 +97,8 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@icssbot.on(admin_cmd(pattern=f"quickheal$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"quickheal$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"quickheal$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"quickheal$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -123,8 +123,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@icssbot.on(admin_cmd(pattern=f"sqh$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"sqh$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"sqh$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"sqh$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -149,8 +149,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@icssbot.on(admin_cmd(pattern=f"vquickheal$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"vquickheal$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"vquickheal$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"vquickheal$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -175,8 +175,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@icssbot.on(admin_cmd(pattern=f"macos$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"macos$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"macos$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"macos$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -201,8 +201,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@icssbot.on(admin_cmd(pattern=f"windows$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"windows$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"windows$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"windows$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -227,8 +227,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@icssbot.on(admin_cmd(pattern=f"linux$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"linux$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"linux$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"linux$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -253,8 +253,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@icssbot.on(admin_cmd(pattern=f"stock$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"stock$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"stock$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"stock$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -279,8 +279,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@icssbot.on(admin_cmd(pattern=f"os$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"os$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"os$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"os$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
