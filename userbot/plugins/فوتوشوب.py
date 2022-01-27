@@ -7,8 +7,8 @@ import requests
 from . import convert_toimage, convert_tosticker
 
 
-@icssbot.on(admin_cmd(pattern="(تحلييل|تغيير) ?(.*)"))
-@icssbot.on(sudo_cmd(pattern="(تحلييل|تغيير) ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="(تحلييل|تغيير) ?(.*)"))
+@bot.on(sudo_cmd(pattern="(تحلييل|تغيير) ?(.*)", allow_sudo=True))
 async def remove_background(event):
     if Config.REM_BG_API_KEY is None:
         return await edit_delete(
