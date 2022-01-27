@@ -74,8 +74,8 @@ def get_provider(url):
     return url
 
 
-@icssbot.on(admin_cmd(pattern="فيلم (.*)"))
-@icssbot.on(sudo_cmd(pattern="فيلم (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="فيلم (.*)"))
+@bot.on(sudo_cmd(pattern="فيلم (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
