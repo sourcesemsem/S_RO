@@ -1,2 +1,2 @@
-# Icss - Config 
+# Zed - Config 
 from resources.Config import Config
