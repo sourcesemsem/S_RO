@@ -4,8 +4,8 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 
-@icssbot.on(admin_cmd(pattern="التحليل(.*)"))
-@icssbot.on(sudo_cmd(pattern="التحليل(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="التحليل(.*)"))
+@bot.on(sudo_cmd(pattern="التحليل(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
