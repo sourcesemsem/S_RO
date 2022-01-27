@@ -4,7 +4,7 @@ from .. import reply_id as rd
 from . import *
 
 
-@bot.on(icss_cmd(outgoing=True, pattern="ك1$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ك1$"))
 @bot.on(sudo_cmd(pattern="ك1$", allow_sudo=True))
 async def kutgif(zed):
     if zed.fwd_from:
@@ -18,7 +18,7 @@ async def kutgif(zed):
             zed.chat_id, kut_gif, caption=zed_caption, reply_to=Ti
         )
 
-@bot.on(icss_cmd(outgoing=True, pattern="ك2$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ك2$"))
 @bot.on(sudo_cmd(pattern="ك2$", allow_sudo=True))
 async def kutgif(zed):
     if zed.fwd_from:
@@ -32,7 +32,7 @@ async def kutgif(zed):
             zed.chat_id, kut_gif2, caption=zed_caption, reply_to=th
         )
 
-@bot.on(icss_cmd(outgoing=True, pattern="ك3$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ك3$"))
 @bot.on(sudo_cmd(pattern="ك3$", allow_sudo=True))
 async def kutgif(zed):
     if zed.fwd_from:
@@ -46,7 +46,7 @@ async def kutgif(zed):
             zed.chat_id, kut_gif3, caption=zed_caption, reply_to=kh
         )
 
-@bot.on(icss_cmd(outgoing=True, pattern="ك4$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ك4$"))
 @bot.on(sudo_cmd(pattern="ك4$", allow_sudo=True))
 async def kutgif(zed):
     if zed.fwd_from:
@@ -60,7 +60,7 @@ async def kutgif(zed):
             zed.chat_id, kut_gif4, caption=kutc, reply_to=wh
         )
 
-@bot.on(icss_cmd(outgoing=True, pattern="ك5$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ك5$"))
 @bot.on(sudo_cmd(pattern="ك5$", allow_sudo=True))
 async def kutgif(zed):
     if zed.fwd_from:
@@ -75,7 +75,7 @@ async def kutgif(zed):
         )
 
 
-@bot.on(icss_cmd(outgoing=True, pattern="ك6$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ك6$"))
 @bot.on(sudo_cmd(pattern="ك6$", allow_sudo=True))
 async def kutgif(zed):
     if zed.fwd_from:
@@ -90,7 +90,7 @@ async def kutgif(zed):
         )
 
 
-@bot.on(icss_cmd(outgoing=True, pattern="ك7$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ك7$"))
 @bot.on(sudo_cmd(pattern="ك7$", allow_sudo=True))
 async def kutgif(zed):
     if zed.fwd_from:
