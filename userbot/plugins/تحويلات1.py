@@ -335,7 +335,7 @@ async def _(event):
             await event.delete()
             
 #ZedThon 
-@icss.on(icss_cmd(pattern="متحركه ?(.*)"))
+@bot.on(zelzal_cmd(pattern="متحركه ?(.*)"))
 @bot.on(sudo_cmd(pattern="متحركه ?(.*)", allow_sudo=True))
 async def gifs(ult):
     get = ult.pattern_match.group(1)
