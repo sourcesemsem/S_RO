@@ -3,8 +3,8 @@
 import asyncio
 
 
-@icssbot.on(admin_cmd(pattern="رسائلي الاخيره ?(.*)"))
-@icssbot.on(sudo_cmd(pattern="رسائلي الاخيره ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="رسائلي الاخيره ?(.*)"))
+@bot.on(sudo_cmd(pattern="رسائلي الاخيره ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
