@@ -5,12 +5,12 @@ import time
 from . import StartTime, mention
 from . import get_readable_time as grt
 
-@icssbot.on(
-    icss_cmd(
+@bot.on(
+    admin_cmd(
        pattern="مده", outgoing=True
     )
 )
-@icssbot.on(
+@bot.on(
     sudo_cmd(
        pattern="مده", allow_sudo=True
     )
