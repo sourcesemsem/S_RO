@@ -6,8 +6,8 @@ from collections import deque
 from . import mention
 
 
-@icssbot.on(admin_cmd(pattern=r"نجمه$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"نجمه$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"نجمه$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"نجمه$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -19,8 +19,8 @@ async def _(event):
         deq.rotate(1)
 
 
-@icssbot.on(admin_cmd(pattern=r"مكعبات$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"مكعبات$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"مكعبات$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"مكعبات$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -32,8 +32,8 @@ async def _(event):
         deq.rotate(1)
 
 
-@icssbot.on(admin_cmd(pattern=r"مطر$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"مطر$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"مطر$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"مطر$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -45,8 +45,8 @@ async def _(event):
         deq.rotate(1)
 
 
-@icssbot.on(admin_cmd(pattern=r"deploy$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"deploy$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"deploy$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"deploy$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -72,8 +72,8 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@icssbot.on(admin_cmd(pattern=r"تفريغ ?(.*)", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"تفريغ ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"تفريغ ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"تفريغ ?(.*)", allow_sudo=True))
 async def _(message):
     if message.fwd_from:
         return
@@ -115,8 +115,8 @@ async def _(message):
                 return
 
 
-@icssbot.on(admin_cmd(pattern=r"فليم$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"فليم$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"فليم$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"فليم$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -141,8 +141,8 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@icssbot.on(admin_cmd(pattern=r"احبك$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"احبك$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"احبك$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"احبك$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -191,8 +191,8 @@ async def _(event):
         await event.edit(animation_chars[i % 35])
 
 
-@icssbot.on(admin_cmd(pattern=r"طائره$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"طائره$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"طائره$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"طائره$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -214,8 +214,8 @@ async def _(event):
     await asyncio.sleep(3)
 
 
-@icssbot.on(admin_cmd(pattern=r"شرطه$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"شرطه$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"شرطه$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"شرطه$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -241,8 +241,8 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@icssbot.on(admin_cmd(pattern=r"jio$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"jio$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"jio$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"jio$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -275,8 +275,8 @@ async def _(event):
         await event.edit(animation_chars[i % 19])
 
 
-@icssbot.on(admin_cmd(pattern=r"النضام الشمسي$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"النضام الشمسي$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"النضام الشمسي$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"النضام الشمسي$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
