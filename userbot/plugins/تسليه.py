@@ -319,8 +319,8 @@ R = (
 )
 
 
-@icssbot.on(admin_cmd(pattern=r"وحش$"))
-@icssbot.on(sudo_cmd(pattern="وحش$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"وحش$"))
+@bot.on(sudo_cmd(pattern="وحش$", allow_sudo=True))
 async def bluedevilmonster(monster):
     await edit_or_reply(monster, A)
 
