@@ -1,4 +1,4 @@
-#    Copyright (C) 2020  Teamthon
+#    Copyright (C) 2020  Zedthon
 # button post makker for ZedThon thanks to uniborg for the base
 # by @sandy1709 (@mrconfused)
 # edit @ZedThon (zed)
@@ -13,8 +13,8 @@ from . import BOT_USERNAME
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
 
 
-@icssbot.on(admin_cmd(pattern=r"كول ?(.*)", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"كول ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"كول ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"كول ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -72,8 +72,8 @@ async def _(event):
 # Zed Helpers
 
 
-@icssbot.on(admin_cmd(pattern=r"كوول ?(.*)", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"كوول ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"كوول ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"كوول ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
