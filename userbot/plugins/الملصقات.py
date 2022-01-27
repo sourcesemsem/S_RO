@@ -212,8 +212,8 @@ async def add_to_pack(
     else:
         return pack, packname
 
-@icssbot.on(admin_cmd(outgoing=True, pattern="ملصق"))
-@icssbot.on(sudo_cmd(pattern="ملصق", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="ملصق"))
+@bot.on(sudo_cmd(pattern="ملصق", allow_sudo=True))
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
@@ -466,8 +466,8 @@ async def resize_photo(photo):
 
     return image
 
-@icssbot.on(admin_cmd(pattern="حزمه ?(.*)", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="حزمه ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="حزمه ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="حزمه ?(.*)", allow_sudo=True))
 async def pack_kang(event):
     if event.fwd_from:
         return
@@ -627,8 +627,8 @@ async def pack_kang(event):
     await icssevent.edit(result)
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern="معلومات الملصق"))
-@icssbot.on(sudo_cmd(pattern="معلومات الملصق", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="معلومات الملصق"))
+@bot.on(sudo_cmd(pattern="معلومات الملصق", allow_sudo=True))
 # @register(outgoing=True, pattern="^.stkrinfo$")
 async def get_pack_info(event):
     if not event.is_reply:
