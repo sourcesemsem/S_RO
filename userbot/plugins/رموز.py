@@ -15,13 +15,13 @@ Ulodya = [
    "⌭",
 ]
 
-@icssbot.on(
-    icss_cmd(
+@bot.on(
+    admin_cmd(
        pattern="رموز", outgoing=True
     )
 )
-async def icss(ics):
+async def zed(zel):
    Ulo = random.choics(Ulodya)
-   await icss.edit("**وجع انتظر...**")
+   await zel.edit("**وجع انتظر...**")
    await asyncio.sleep(3)
-   await eor(ics, Ulo)
+   await eor(zel, Ulo)
