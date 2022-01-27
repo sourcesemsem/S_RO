@@ -6,7 +6,7 @@
 """
 
 
-# telegraph utils for Source Icss
+# telegraph utils for Source ZEDThon
 
 import os
 from datetime import datetime
@@ -21,18 +21,18 @@ r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
 auth_url = r["auth_url"]
 
 
-@icssbot.on(
-    icss_cmd(
+@bot.on(
+    admin_cmd(
        pattern="تلكراف (ميديا|نص) ?(.*)"
     )
 )
-@icssbot.on(sudo_cmd(pattern="تلكراف(ميديا|نص) ?(.*)", allow_sudo=True))
-@icssbot.on(
-    icss_cmd(
+@bot.on(sudo_cmd(pattern="تلكراف(ميديا|نص) ?(.*)", allow_sudo=True))
+@bot.on(
+    admin_cmd(
        pattern="tg(m|t) ?(.*)"
     )
 )
-@icssbot.on(sudo_cmd(pattern="tg(m|t) ?(.*)", allow_sudo=True))
+@bot.on(sudo_cmd(pattern="tg(m|t) ?(.*)", allow_sudo=True))
 async def _(tosh):
     if tosh.fwd_from:
         return
