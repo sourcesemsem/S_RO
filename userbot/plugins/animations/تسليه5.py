@@ -2,8 +2,8 @@
 
 import asyncio
 
-@icssbot.on(admin_cmd(pattern=f"تتحميل$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"تتحميل$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"تتحميل$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"تتحميل$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -16,8 +16,8 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@icssbot.on(admin_cmd(pattern=f"مربع$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"مربع$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"مربع$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"مربع$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -30,8 +30,8 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@icssbot.on(admin_cmd(pattern=f"up$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"up$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"up$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"up$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -44,8 +44,8 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@icssbot.on(admin_cmd(pattern=f"دائره$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"دائره$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"دائره$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"دائره$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -58,8 +58,8 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@icssbot.on(admin_cmd(pattern=f"قلب$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"قلب$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"قلب$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"قلب$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -72,8 +72,8 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@icssbot.on(admin_cmd(pattern=f"انيم$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"انيم$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"انيم$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"انيم$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -97,8 +97,8 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@icssbot.on(admin_cmd(pattern=f"بشره$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"بشره$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"بشره$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"بشره$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -111,8 +111,8 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@icssbot.on(admin_cmd(pattern=f"قرد$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"قرد$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"قرد$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"قرد$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -125,8 +125,8 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@icssbot.on(admin_cmd(pattern=f"هاربر$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"هاربر$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"هاربر$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"هاربر$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -150,8 +150,8 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@icssbot.on(admin_cmd(pattern=f"يد$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"يد$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"يد$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"يد$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -178,8 +178,8 @@ async def _(event):
         await event.edit(animation_chars[i % 13])
 
 
-@icssbot.on(admin_cmd(pattern=f"العد التنازلي$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"العد التنازلي$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"العد التنازلي$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"العد التنازلي$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -205,8 +205,8 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@icssbot.on(admin_cmd(pattern=r"قلوب$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"قلوب$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"قلوب$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"قلوب$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
