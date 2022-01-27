@@ -9,8 +9,8 @@ from . import BOTLOG, BOTLOG_CHATID, deEmojify
 TRT_LANG = "en"
 
 
-@icssbot.on(admin_cmd(pattern="ترجمه (.*)"))
-@icssbot.on(sudo_cmd(pattern="ترجمه (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ترجمه (.*)"))
+@bot.on(sudo_cmd(pattern="ترجمه (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -41,8 +41,8 @@ async def _(event):
         await edit_delete(event, str(exc), time=5)
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern=r"trt(?: |$)([\s\S]*)"))
-@icssbot.on(sudo_cmd(allow_sudo=True, pattern=r"trt(?: |$)([\s\S]*)"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"trt(?: |$)([\s\S]*)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern=r"trt(?: |$)([\s\S]*)"))
 async def translateme(trans):
     Translator()
     textx = await trans.get_reply_message()
@@ -71,8 +71,8 @@ async def translateme(trans):
         )
 
 
-@icssbot.on(admin_cmd(pattern="lang trt (.*)", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="lang trt (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="lang trt (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="lang trt (.*)", allow_sudo=True))
 async def lang(value):
     scraper = "Translator"
     global TRT_LANG
