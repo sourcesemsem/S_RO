@@ -7,8 +7,8 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from . import parse_pre, sanga_seperator
 
 
-@icssbot.on(admin_cmd(pattern="(الاسماء|المعرفات)($| (.*))"))
-@icssbot.on(sudo_cmd(pattern="(الاسماء|المعرفات)($| (.*))", allow_sudo=True))
+@bot.on(admin_cmd(pattern="(الاسماء|المعرفات)($| (.*))"))
+@bot.on(sudo_cmd(pattern="(الاسماء|المعرفات)($| (.*))", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
