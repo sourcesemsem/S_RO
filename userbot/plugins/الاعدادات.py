@@ -10,8 +10,8 @@ if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
     os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern="pips (.*)"))
-@icssbot.on(sudo_cmd(pattern="pips (.*)", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="pips (.*)"))
+@bot.on(sudo_cmd(pattern="pips (.*)", allow_sudo=True))
 async def pipcheck(pip):
     pipmodule = pip.pattern_match.group(1)
     reply_to_id = pip.message.id
@@ -56,8 +56,8 @@ async def pipcheck(pip):
             )
 
 
-@icssbot.on(admin_cmd(pattern="فرمته$"))
-@icssbot.on(sudo_cmd(pattern="فرمته$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="فرمته$"))
+@bot.on(sudo_cmd(pattern="فرمته$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -71,8 +71,8 @@ async def _(event):
     event = await edit_or_reply(event, OUTPUT)
 
 
-@icssbot.on(admin_cmd(pattern="الاضافات$"))
-@icssbot.on(sudo_cmd(pattern="الاضافات$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="الاضافات$"))
+@bot.on(sudo_cmd(pattern="الاضافات$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -102,8 +102,8 @@ async def _(event):
         event = await edit_or_reply(event, OUTPUT)
 
 
-@icssbot.on(admin_cmd(pattern="تاريخ$"))
-@icssbot.on(sudo_cmd(pattern="تاريخ$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="تاريخ$"))
+@bot.on(sudo_cmd(pattern="تاريخ$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -136,7 +136,7 @@ async def _(event):
         event = await edit_or_reply(event, OUTPUT)
 
 
-@icssbot.on(admin_cmd(pattern="الفارات$"))
+@bot.on(admin_cmd(pattern="الفارات$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -169,8 +169,8 @@ async def _(event):
         event = await edit_or_reply(event, OUTPUT)
 
 
-@icssbot.on(admin_cmd(pattern="السرعه$"))
-@icssbot.on(sudo_cmd(pattern="السرعه$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="السرعه$"))
+@bot.on(sudo_cmd(pattern="السرعه$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
