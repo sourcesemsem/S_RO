@@ -8,8 +8,8 @@ import html
 import userbot.plugins.sql_helper.warns_sql as sql
 
 
-@icssbot.on(admin_cmd(pattern="تحذير (.*)"))
-@icssbot.on(sudo_cmd(pattern="تحذير (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="تحذير (.*)"))
+@bot.on(sudo_cmd(pattern="تحذير (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -42,8 +42,8 @@ async def _(event):
     await edit_or_reply(event, reply)
 
 
-@icssbot.on(admin_cmd(pattern="احذر$"))
-@icssbot.on(sudo_cmd(pattern="احذر$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="احذر$"))
+@bot.on(sudo_cmd(pattern="احذر$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -70,8 +70,8 @@ async def _(event):
         await edit_or_reply(event, "this user hasn't got any warnings!")
 
 
-@icssbot.on(admin_cmd(pattern="حذف التحذير$"))
-@icssbot.on(sudo_cmd(pattern="حذف التحذير$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="حذف التحذير$"))
+@bot.on(sudo_cmd(pattern="حذف التحذير$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
