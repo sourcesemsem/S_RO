@@ -20,8 +20,8 @@ GROUPS_OWNERSTR = "**🏮⪼ قائمـه بجميـع الكـروبات الت
 # =========================================================== #
 
 
-@icssbot.on(admin_cmd(pattern="احصائياتي$"))
-@icssbot.on(sudo_cmd(pattern="احصائياتي$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="احصائياتي$"))
+@bot.on(sudo_cmd(pattern="احصائياتي$", allow_sudo=True))
 async def stats(event):
     ics = await edit_or_reply(event, STAT_INDICATION)
     start_time = time.time()
@@ -86,8 +86,8 @@ async def stats(event):
     await ics.edit(response)
 
 
-@icssbot.on(admin_cmd(pattern="قنواتي (عام|مشرف|مالك)$"))
-@icssbot.on(sudo_cmd(pattern="قنواتي (عام|مشرف|مالك)$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="قنواتي (عام|مشرف|مالك)$"))
+@bot.on(sudo_cmd(pattern="قنواتي (عام|مشرف|مالك)$", allow_sudo=True))
 async def stats(event):
     if event.fwd_from:
         return
@@ -138,8 +138,8 @@ async def stats(event):
         )
 
 
-@icssbot.on(admin_cmd(pattern="كروباتي (عام|مشرف|مالك)$"))
-@icssbot.on(sudo_cmd(pattern="كروباتي (عام|مشرف|مالك)$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="كروباتي (عام|مشرف|مالك)$"))
+@bot.on(sudo_cmd(pattern="كروباتي (عام|مشرف|مالك)$", allow_sudo=True))
 async def stats(event):
     if event.fwd_from:
         return
@@ -198,8 +198,8 @@ async def stats(event):
         )
 
 
-@icssbot.on(admin_cmd(pattern="احصائياته ?(.*)"))
-@icssbot.on(sudo_cmd(pattern="احصائياته ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="احصائياته ?(.*)"))
+@bot.on(sudo_cmd(pattern="احصائياته ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
