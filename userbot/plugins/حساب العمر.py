@@ -2,12 +2,12 @@
 
 from datetime import datetime
 
-@icssbot.on(
-    icss_cmd(pattern="حساب العمر")
+@bot.on(
+    admin_cmd(pattern="حساب العمر")
 )
 async def _(e):
-    icst = e.txt
-    yar = icst[4:5]
+    zelt = e.txt
+    yar = zelt[4:5]
     if not yar:
        yar = "2"
     YearNow = datetime.now().year
