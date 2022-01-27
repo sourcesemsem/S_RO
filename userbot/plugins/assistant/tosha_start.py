@@ -1,4 +1,4 @@
-#    Icss - UserBot
+#    Zed - UserBot
 
 import re
 from userbot.plugins.assistant import *
@@ -65,13 +65,13 @@ async def start_all(event):
                                   caption=startotherena,
                                   buttons=[
                                       [Button.inline(
-                                          "⚜️ 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="Icss")]
+                                          "⚜️ 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="Zed")]
                                   ])
         else:
             await event.reply(startotherena,
                                      buttons=[
                                          [Button.inline(
-                                             "⚜️ 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="icss")]
+                                             "⚜️ 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="zed")]
                                      ])
 
 
@@ -149,8 +149,8 @@ async def settings(event):
 async def settings(event):
     await event.edit("** ⌔∮ هنا ستجد رابط زد ثـون ورابط التنصيب ايضا**:",
                      buttons=[
-                         [Button.url("🔗 رابط السورس🔗", url="https://github.com/Zedthon/zedpack")],
-                         [Button.url("🔗 رابط التنصيب 🔗", url="https://dashboard.heroku.com/new?template=https://github.com/Zedthon/zedpack/")],
+                         [Button.url("🔗 رابط السورس🔗", url="https://github.com/Zedthon/ZED_USERBOT")],
+                         [Button.url("🔗 رابط التنصيب 🔗", url="https://t.me/ZedThon/105")],
                          [Button.url("✨ الدعم ✨",
                                      url="https://t.me/ZedThon")]
                      ])
