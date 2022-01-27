@@ -12,8 +12,8 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "icss"
 # ============================================
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern=r"النظام$"))
-@icssbot.on(sudo_cmd(allow_sudo=True, pattern=r"النظام$"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"النظام$"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern=r"النظام$"))
 async def psu(event):
     uname = platform.uname()
     softw = "** 𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 𝑺𝒀𝑺𝑻𝑬𝑴 𝑰𝑵𝑭𝑶 𓆪 **\n"
@@ -69,8 +69,8 @@ def get_size(inputbytes, suffix="B"):
         inputbytes /= factor
 
 
-@icssbot.on(admin_cmd(pattern="cpu$"))
-@icssbot.on(sudo_cmd(pattern="cpu$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="cpu$"))
+@bot.on(sudo_cmd(pattern="cpu$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -81,8 +81,8 @@ async def _(event):
     )
 
 
-@icssbot.on(admin_cmd(pattern=f"sysd$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"sysd$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"sysd$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"sysd$", allow_sudo=True))
 async def sysdetails(sysd):
     cmd = "git clone https://github.com/dylanaraps/neofetch.git"
     await _catutils.runcmd(cmd)
