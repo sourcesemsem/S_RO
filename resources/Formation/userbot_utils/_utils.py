@@ -558,14 +558,14 @@ def load_admin(shortname):
         mod.reply_id = reply_id
         mod.rd = reply_id
         mod.admin_cmd = admin_cmd
-        mod.icss_cmd = admin_cmd
+        mod.zelzal_cmd = admin_cmd
         mod.ed = ed
         mod.edit_delete = ed
         mod.eor = eor
         mod.edit_or_reply = eor
         mod.logger = logging.getLogger(shortname)
         sys.modules["uniborg.util"] = userbot.utils
-        mod.icssbot = bot
+        mod.zedthonbot = bot
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.Admin." + shortname] = mod
         print('%s'% adn + shortname)
