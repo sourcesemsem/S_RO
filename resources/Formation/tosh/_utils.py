@@ -1,5 +1,5 @@
-#    ICSS - USERBOT
-#    KIMO - ANL0KE
+#    ZED - USERBOT
+#    ZelZal - @zzzzl1l
 
 import asyncio
 import os
