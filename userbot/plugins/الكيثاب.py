@@ -9,8 +9,8 @@ from . import reply_id
 GIT_TEMP_DIR = "./temp/"
 
 
-@icssbot.on(admin_cmd(pattern="كيثاب (.*)", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="كيثاب (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="كيثاب (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="كيثاب (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -50,8 +50,8 @@ async def _(event):
         await edit_or_reply(event, "`{}`: {}".format(input_str, r.text))
 
 
-@icssbot.on(admin_cmd(pattern="كومنت$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="كومنت$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="كومنت$", outgoing=True))
+@bot.on(sudo_cmd(pattern="كومنت$", allow_sudo=True))
 async def download(event):
     if event.fwd_from:
         return
