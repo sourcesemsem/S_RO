@@ -9,7 +9,7 @@
 H = "Hi im ZelZal"
 
 @bot.on(
-    icss_cmd(pattern="hello")
+    zelzal_cmd(pattern="hello")
 )
 async def hi(zed):
     await eor(zed, H)
