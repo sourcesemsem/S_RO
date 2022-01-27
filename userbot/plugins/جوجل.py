@@ -18,8 +18,8 @@ useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML
 opener.addheaders = [("User-agent", useragent)]
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern=r"جوجل (.*)"))
-@icssbot.on(sudo_cmd(allow_sudo=True, pattern=r"جوجل (.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"جوجل (.*)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern=r"جوجل (.*)"))
 async def gsearch(q_event):
     catevent = await edit_or_reply(q_event, "** ⌔∮جـارِ البـحث ♥️ ،**" )
     match = q_event.pattern_match.group(1)
@@ -52,8 +52,8 @@ async def gsearch(q_event):
         )
 
 
-@icssbot.on(admin_cmd(pattern="تحليل$"))
-@icssbot.on(sudo_cmd(pattern="تحليل$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="تحليل$"))
+@bot.on(sudo_cmd(pattern="تحليل$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -118,8 +118,8 @@ async def _(event):
     await catevent.edit(OUTPUT_STR, parse_mode="HTML", link_preview=False)
 
 
-@icssbot.on(admin_cmd(pattern=r"تخمين(?: |$)(\d*)", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=r"تخمين(?: |$)(\d*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"تخمين(?: |$)(\d*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"تخمين(?: |$)(\d*)", allow_sudo=True))
 @errors_handler
 async def _(img):
     if os.path.isfile("okgoogle.png"):
