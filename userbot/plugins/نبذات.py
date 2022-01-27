@@ -1,7 +1,7 @@
 import asyncio
 import random
 
-TOSHA = [
+MALATH = [
     """
 ༆
 
@@ -75,9 +75,9 @@ Which 𝒅𝒐𝒏'𝒕 𝑬𝒙𝒊𝒔𝒕.
 # edit @zedthon
 
 
-@icssbot.on(admin_cmd(pattern="انكلش"))
-async def ics(kimo):
-    await kimo.edit("**⌔∮ اهلا عزيزي يتم تجهيز نبذه لاجلك.**")
+@bot.on(admin_cmd(pattern="انكلش"))
+async def ics(zel):
+    await zel.edit("**⌔∮ اهلا عزيزي يتم تجهيز نبذه لاجلك.**")
     await asyncio.sleep(2)
-    tosh = random.choice(TOSHA)
-    return await kimo.edit(f"{tosh}")
+    tosh = random.choice(MALATH)
+    return await zel.edit(f"{tosh}")
