@@ -18,8 +18,8 @@ Name = bot.me.first_name
 Mention = "[{}](tg://user?id={})".format(Name, UserId)
 # ---------------------- #
 
-@icssbot.on(icss_cmd(pattern="q(?: |$)(.*)", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="q(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="q(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="q(?: |$)(.*)", allow_sudo=True))
 async def _(e):
     if e.fwd_from:
         return
@@ -49,8 +49,8 @@ async def _(e):
     os.remove(endfi)
 
 
-@icssbot.on(icss_cmd(pattern="rq(?: |$)(.*)", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="rq(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="rq(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="rq(?: |$)(.*)", allow_sudo=True))
 async def _(e):
     if e.fwd_from:
         return
@@ -80,8 +80,8 @@ async def _(e):
     os.remove(endfi)
 
 
-@icssbot.on(icss_cmd(pattern="ستكر(?: |$)(.*)", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="ستكر(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ستكر(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="ستكر(?: |$)(.*)", allow_sudo=True))
 async def _(e):
     if e.fwd_from:
         return
