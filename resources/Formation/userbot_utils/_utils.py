@@ -73,7 +73,7 @@ def load_module(shortname):
         mod.reply_id = reply_id
         mod.rd = reply_id
         mod.admin_cmd = admin_cmd
-        mod.icss_cmd = admin_cmd
+        mod.zelzal_cmd = admin_cmd
         mod._icssutils = _icssutils
         mod.icut = _icssutils
         mod._icsstools = _icsstools
@@ -90,8 +90,8 @@ def load_module(shortname):
         # support for uniborg
         sys.modules["uniborg.util"] = userbot.utils
         mod.borg = bot
-        mod.icssbot = bot
-        mod.icss = bot
+        mod.zedthonbot = bot
+        mod.zedthon = bot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
