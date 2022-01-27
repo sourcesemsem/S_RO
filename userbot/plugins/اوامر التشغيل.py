@@ -4,8 +4,8 @@ from os import execl
 from . import BOTLOG, BOTLOG_CHATID, HEROKU_APP, bot, mention
 
 
-@icssbot.on(admin_cmd(pattern="اعاده تشغيل$"))
-@icssbot.on(sudo_cmd(pattern="اعاده تشغيل$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="اعاده تشغيل$"))
+@bot.on(sudo_cmd(pattern="اعاده تشغيل$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -22,8 +22,8 @@ async def _(event):
     execl(sys.executable, sys.executable, *sys.argv)
 
 
-@icssbot.on(admin_cmd(pattern="ايقاف$"))
-@icssbot.on(sudo_cmd(pattern="ايقاف$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ايقاف$"))
+@bot.on(sudo_cmd(pattern="ايقاف$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
