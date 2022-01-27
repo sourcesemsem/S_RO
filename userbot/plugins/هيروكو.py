@@ -25,8 +25,8 @@ Heroku_cmd = (
     "\n𓆩 [𝙎𝙊𝙐𝙍𝘾𝞝 𝙕𝞝𝘿](t.me/ZEDthon) 𓆪"
 )
 
-@icss.on(icss_cmd(pattern=r"(ضع|جلب|حذف) فار (.*)", outgoing=True))
-@icss.on(sudo_cmd(pattern=r"(ضع|جلب|حذف) فار (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"(ضع|جلب|حذف) فار (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"(ضع|جلب|حذف) فار (.*)", allow_sudo=True))
 async def variable(var):
     if Config.HEROKU_API_KEY is None:
         return await ed(
@@ -107,8 +107,8 @@ async def variable(var):
         del heroku_var[variable]
 
 
-@icss.on(icss_cmd(pattern=r"(set|get|del) var (.*)", outgoing=True))
-@icss.on(sudo_cmd(pattern=r"(set|get|del) var (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"(set|get|del) var (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"(set|get|del) var (.*)", allow_sudo=True))
 async def variable(var):
     if Config.HEROKU_API_KEY is None:
         return await ed(
@@ -189,8 +189,8 @@ async def variable(var):
         del heroku_var[variable]
 
 
-@icss.on(icss_cmd(pattern="استخدامي$", outgoing=True))
-@icss.on(sudo_cmd(pattern="استخدامي$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="استخدامي$", outgoing=True))
+@bot.on(sudo_cmd(pattern="استخدامي$", allow_sudo=True))
 async def dyno_usage(dyno):
     """
     Get your account Dyno Usage
@@ -259,8 +259,8 @@ async def dyno_usage(dyno):
     )
 
 
-@icss.on(icss_cmd(pattern="الدخول$", outgoing=True))
-@icss.on(sudo_cmd(pattern="الدخول$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="الدخول$", outgoing=True))
+@bot.on(sudo_cmd(pattern="الدخول$", allow_sudo=True))
 async def _(dyno):
     "To get recent 100 lines logs from heroku"
     if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
