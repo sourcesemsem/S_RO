@@ -192,46 +192,6 @@ async def yt_search(event):
     await edit_or_reply(video_q, reply_text)
 
 
-@bot.on(admin_cmd(pattern="انستا (.*)"))
-@bot.on(sudo_cmd(pattern="انستا (.*)", allow_sudo=True))
-async def kakashi(event):
-    if event.fwd_from:
-        return
-    chat = "@instasavegrambot"
-    link = event.pattern_match.group(1)
-    if "www.instagram.com" not in link:
-        await edit_or_reply(
-            event, "**╮ احتاج لرابـط الانستا لـ تنزيل المقطـع ...(*_*)╰**"
-        )
-    else:
-        start = datetime.now()
-        icse = await edit_or_reply(event, "**╮ ❐ جـارِ التحميـل انتظـر قليلاً  ▬▭... 𓅫╰**")
-    async with event.client.conversation(chat) as conv:
-        try:
-            msg_start = await conv.send_message("/start")
-            response = await conv.get_response()
-            msg = await conv.send_message(link)
-            video = await conv.get_response()
-            details = await conv.get_response()
-            await event.client.send_read_acknowledge(conv.chat_id)
-        except YouBlockedUserError:
-            await icse.edit("**Error:** `unblock` @instasavegrambot `and retry!`")
-            return
-        await icse.delete()
-        ics = await event.client.send_file(
-            event.chat_id,
-            video,
-        )
-        end = datetime.now()
-        ms = (end - start).seconds
-        await cat.edit(
-            f"<b><i>➥ Video uploaded in {ms} seconds.</i></b>\n<b><i>➥ Uploaded by :- {hmention}</i></b>",
-            parse_mode="html",
-        )
-    await event.client.delete_messages(
-        conv.chat_id, [msg_start.id, response.id, msg.id, video.id, details.id]
-    )
-
 
 CMD_HELP.update(
     {
