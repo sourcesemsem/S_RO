@@ -18,10 +18,10 @@ from gtts import gTTS
 from . import deEmojify
 
 
-@icssbot.on(
-    icss_cmd(pattern="صوت كوكل (.*)")
+@bot.on(
+    admin_cmd(pattern="صوت كوكل (.*)")
 )
-@icssbot.on(sudo_cmd(pattern="صوت كوكل (.*)", allow_sudo=True))
+@bot.on(sudo_cmd(pattern="صوت كوكل (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
