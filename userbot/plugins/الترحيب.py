@@ -1,6 +1,6 @@
 """
 ©zed : @ZedThon
-  - Welcome Code For Icss
+  - Welcome Code For Zed
   - Add Welcome Commend   : .ترحيب
   - list Welcome Commend  : .الترحيب
   - Remove Welcome Commend: .حذف ترحيب
@@ -18,7 +18,7 @@ from userbot.plugins.sql_helper.welcome_sql import (
 from . import BOTLOG_CHATID, LOGS
 
 
-@icssbot.on(events.ChatAction)
+@bot.on(events.ChatAction)
 async def _(event):
     cws = get_current_welcome_settings(event.chat_id)
     if (
@@ -83,8 +83,8 @@ async def _(event):
         update_previous_welcome(event.chat_id, current_message.id)
 
 
-@icssbot.on(admin_cmd(pattern=r"ترحيب ?(.*)"))
-@icssbot.on(sudo_cmd(pattern=r"ترحيب ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"ترحيب ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"ترحيب ?(.*)", allow_sudo=True))
 async def save_welcome(event):
     if event.fwd_from:
         return
@@ -121,8 +121,8 @@ async def save_welcome(event):
     await edit_or_reply("خطأ أثناء تعيين الترحيب في هذه المجموعة")
 
 
-@icssbot.on(admin_cmd(pattern="حذف ترحيب$"))
-@icssbot.on(sudo_cmd(pattern="حذف ترحيب$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="حذف ترحيب$"))
+@bot.on(sudo_cmd(pattern="حذف ترحيب$", allow_sudo=True))
 async def del_welcome(event):
     if event.fwd_from:
         return
@@ -138,8 +138,8 @@ async def del_welcome(event):
         )
 
 
-@icssbot.on(admin_cmd(pattern="الترحيب$"))
-@icssbot.on(sudo_cmd(pattern="الترحيب$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="الترحيب$"))
+@bot.on(sudo_cmd(pattern="الترحيب$", allow_sudo=True))
 async def show_welcome(event):
     if event.fwd_from:
         return
