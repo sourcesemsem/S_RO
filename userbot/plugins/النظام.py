@@ -8,7 +8,7 @@ from telethon import __version__
 from . import ALIVE_NAME
 
 # ================= CONSTANT =================
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "icss"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "zed"
 # ============================================
 
 
@@ -77,7 +77,7 @@ async def _(event):
     cmd = "ics /proc/cpuinfo | grep 'model name'"
     o = (await _icssutils.runcmd(cmd))[0]
     await edit_or_reply(
-        event, f"**[- icss’s](tg://need_update_for_some_feature/) CPU Model:**\n{o}"
+        event, f"**[- zed’s](tg://need_update_for_some_feature/) CPU Model:**\n{o}"
     )
 
 
