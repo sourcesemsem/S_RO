@@ -7,37 +7,37 @@ import os
 from . import *
 
 
-@icssbot.on(admin_cmd(pattern="تسبام"))
-async def icss(ics):
-    tspam = str(ics.text[7:])
+@bot.on(admin_cmd(pattern="تسبام"))
+async def zed(zel):
+    tspam = str(zel.text[7:])
     message = tspam.replace(" ", "")
     for letter in message:
-        await ics.respond(letter)
-    await ics.delete()
+        await zel.respond(letter)
+    await zel.delete()
 
 
-@icssbot.on(admin_cmd(pattern="سبام"))
-async def icss(ics):
-    if not ics.text[0].isalpha() and ics.text[0] not in ("/", "#", "@", "!"):
-        message = ics.text
+@bot.on(admin_cmd(pattern="سبام"))
+async def zed(zel):
+    if not zel.text[0].isalpha() and zel.text[0] not in ("/", "#", "@", "!"):
+        message = zel.text
         counter = int(message[6:8])
-        spam_message = str(ics.text[8:])
-        await asyncio.wait([ics.respond(spam_message) for i in range(counter)])
-        await ics.delete()
+        spam_message = str(zel.text[8:])
+        await asyncio.wait([zel.respond(spam_message) for i in range(counter)])
+        await zel.delete()
 
 
-@icssbot.on(admin_cmd(pattern="بسبام"))
-async def icss(ics):
-    if not ics.text[0].isalpha() and ics.text[0] not in ("/", "#", "@", "!"):
-        message = ics.text
+@bot.on(admin_cmd(pattern="بسبام"))
+async def zed(zel):
+    if not zel.text[0].isalpha() and zel.text[0] not in ("/", "#", "@", "!"):
+        message = zel.text
         counter = int(message[9:13])
-        spam_message = str(ics.text[13:])
-        for i in range(ics, counter):
-            await ics.respond(spam_message)
-        await ics.delete()
+        spam_message = str(zel.text[13:])
+        for i in range(zel, counter):
+            await zel.respond(spam_message)
+        await zel.delete()
 
 
-@icssbot.on(admin_cmd(pattern="بكسبام"))
+@bot.on(admin_cmd(pattern="بكسبام"))
 async def tiny_pic_spam(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         reply = await e.get_reply_message()
@@ -51,7 +51,7 @@ async def tiny_pic_spam(e):
         await e.delete()
 
 
-@icssbot.on(admin_cmd(pattern="تكرار ?(.*)"))
+@bot.on(admin_cmd(pattern="تكرار ?(.*)"))
 async def delayspammer(e):
     args = e.pattern_match.group(1)
     print(args)
