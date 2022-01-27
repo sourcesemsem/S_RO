@@ -11,8 +11,8 @@ from ..utils import errors_handler
 from . import media_type, progress
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern="ترميز (.*)"))
-@icssbot.on(sudo_cmd(allow_sudo=True, pattern="ترميز (.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern="ترميز (.*)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="ترميز (.*)"))
 @errors_handler
 async def gethash(hash_q):
     if hash_q.fwd_from:
@@ -43,8 +43,8 @@ async def gethash(hash_q):
     await edit_or_reply(hash_q, ans)
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern="تشفير (en|de) ?(.*)"))
-@icssbot.on(sudo_cmd(allow_sudo=True, pattern="تشفير (en|de) ?(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern="تشفير (en|de) ?(.*)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="تشفير (en|de) ?(.*)"))
 @errors_handler
 async def endecrypt(event):
     if event.fwd_from:
