@@ -111,7 +111,7 @@ async def logs(event):
         event.chat_id,
         "logs.txt",
         reply_to=event.id,
-        caption="**Heroku** Icss Logs",
+        caption="**Heroku** Zed Logs",
         buttons=[
             [Button.url("💠 𝙑𝙄𝙀𝙒 𝙊𝙉𝙇𝙄𝙉𝙀 💠", f"{url}")],
             [Button.url("💠 𝘾𝙍𝘼𝙎𝙃𝙀𝘿 💠", "t.me/ZedThon")]
@@ -133,7 +133,7 @@ async def settings(event):
                              ])
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"icss"))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"zed"))
           )  # pylint: disable=oof
 async def settings(event):
     await event.delete()
@@ -173,9 +173,9 @@ async def settings(event):
         await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
 
 
-# icss zag - زغرفه اكسس
+# zed zag - زغرفه زدثون
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"icszag"))
-          )  # Icss - Userbot
+          )  # Zed - Userbot
 async def settings(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
@@ -239,7 +239,7 @@ async def settings(event):
 
 # Boys zag list1 - قائمه اسماء الشباب الاولى
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"boysna1"))
-          )  # Icss - Userbot
+          )  # Zed - Userbot
 async def settings(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
@@ -253,7 +253,7 @@ async def settings(event):
 
 # Boys zag list2 - قائمه اسماء الشباب الثانيه
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"boysna2"))
-          )  # Icss - Userbot
+          )  # Zed - Userbot
 async def settings(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
@@ -289,7 +289,7 @@ async def settings(event):
 
 # girls zag list1 - قائمه اسماء بنات الاولى
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"girlan1"))
-          )  # Icss - Userbot
+          )  # Zed - Userbot
 async def settings(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
@@ -304,7 +304,7 @@ async def settings(event):
 
 # girls zag list2 - قائمه اسماء بنات الثانيه
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"girlan2"))
-          )  # Icss - Userbot
+          )  # Zed - Userbot
 async def settings(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
