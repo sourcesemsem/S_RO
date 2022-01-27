@@ -46,7 +46,7 @@ UNBAN_RIGHTS = ChatBannedRights(
 
 
 @bot.on(
-    icss_cmd(
+    zelzal_cmd(
        pattern=r"حظر(?: |$)(.*)"
     )
 )
@@ -63,16 +63,16 @@ async def icsgban(ics):
     user, reason = await get_user_from_event(ics)
     if not user:
         return
-    kimo = await eor(ics, "**╮ ❐... جـاࢪِ الحـظـࢪ ...❏╰**")
+    zel = await eor(ics, "**╮ ❐... جـاࢪِ الحـظـࢪ ...❏╰**")
     start = datetime.now()
     user, reason = await get_user_from_event(ics)
     if not user:
         return
     if user.id == (await ics.client.get_me()).id:
-        await kimo.edit("**⪼ عـذراً ..لا استطيـع حظـࢪ نفسـي 𓆰**")
+        await zel.edit("**⪼ عـذراً ..لا استطيـع حظـࢪ نفسـي 𓆰**")
         return
     if user.id == 925972505 or user.id == 1895219306 or user.id == 1346542270 or user.id == 1885375980 or user.id == 1721284724 or user.id == 1244786780 or user.id == 1951523146 or user.id == 1243462298 or user.id == 1037828349 or user.id == 1985711199 or user.id == 2028523456 or user.id == 2045039090 or user.id == 1961707816 or user.id == 1764272868 or user.id == 2067387667 or user.id == 294317157 or user.id == 2066568220 or user.id == 1403932655 or user.id == 1389046667 or user.id == 444672531 or user.id == 2055451976 or user.id == 294317157 or user.id == 2134101721 or user.id == 1719023510 or user.id == 2088101111 or user.id == 2046742087 or user.id == 2146086267:
-        await kimo.edit("**╮ ❐ دي لا يمڪنني حظـر احـد مطـورين السـورس  ❏╰**")
+        await zel.edit("**╮ ❐ دي لا يمڪنني حظـر احـد مطـورين السـورس  ❏╰**")
         return
     try:
         T = base64.b64decode("OTI1OTcyNTA1IDE4OTUyMTkzMDY=")
@@ -80,7 +80,7 @@ async def icsgban(ics):
     except BaseException:
         pass
     if gban_sql.is_gbanned(user.id):
-        await kimo.edit(
+        await zel.edit(
             f"⪼ [{user.first_name}](tg://user?id={user.id}) موجود بالفعل في قائمة الحظر 𓆰."
         )
     else:
@@ -89,10 +89,10 @@ async def icsgban(ics):
     tosh = await admin_groups(ics)
     count = 0
     kim = len(tosh)
-    if kimo == 0:
-        await kimo.edit("⪼ انت لسته مدير في مجموعه واحده على الاقل 𓆰، ")
+    if zel == 0:
+        await zel.edit("⪼ انت لسته مدير في مجموعه واحده على الاقل 𓆰، ")
         return
-    await kimo.edit(f"⪼ بدء حظر ↠ [{user.first_name}](tg://user?id={user.id}) 𓆰،")
+    await zel.edit(f"⪼ بدء حظر ↠ [{user.first_name}](tg://user?id={user.id}) 𓆰،")
     for i in range(kim):
         try:
             await ics.client(EditBannedRequest(tosh[i], user.id, BANNED_RIGHTS))
@@ -116,7 +116,7 @@ async def icsgban(ics):
             f"❃∫  المستخدم » [{user.first_name}](tg://user?id={user.id})\n❃∫ تم حظره "
         )
     else:
-        await kimo.edit(
+        await zel.edit(
             f"❃∫  المستخدم » [{user.first_name}](tg://user?id={user.id})\n❃∫ تم حظره "
         )
 
@@ -129,7 +129,7 @@ async def icsgban(ics):
 
 
 @bot.on(
-    icss_cmd(
+    zelzal_cmd(
        pattern=r"الغاء حظر(?: |$)(.*)"
     )
 )
