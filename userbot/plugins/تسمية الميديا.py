@@ -10,8 +10,8 @@ from . import progress, reply_id
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "thumb_image.jpg"
 
 
-@icssbot.on(admin_cmd(pattern="rename (.*)"))
-@icssbot.on(sudo_cmd(pattern="rename (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="rename (.*)"))
+@bot.on(sudo_cmd(pattern="rename (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -50,8 +50,8 @@ async def _(event):
         )
 
 
-@icssbot.on(admin_cmd(pattern="إسم (.*)"))
-@icssbot.on(sudo_cmd(pattern="إسم (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="إسم (.*)"))
+@bot.on(sudo_cmd(pattern="إسم (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -118,8 +118,8 @@ async def _(event):
         )
 
 
-@icssbot.on(admin_cmd(pattern="اسم (.*)"))
-@icssbot.on(sudo_cmd(pattern="اسم (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="اسم (.*)"))
+@bot.on(sudo_cmd(pattern="اسم (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
