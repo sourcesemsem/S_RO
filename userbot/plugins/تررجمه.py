@@ -6,8 +6,8 @@ from datetime import datetime
 import requests
 
 
-@icssbot.on(admin_cmd(pattern="تررجمه (.*)"))
-@icssbot.on(sudo_cmd(pattern="تررجمه (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="تررجمه (.*)"))
+@bot.on(sudo_cmd(pattern="تررجمه (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
