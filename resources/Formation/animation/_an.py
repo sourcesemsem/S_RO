@@ -1,5 +1,5 @@
-#   ICSS - USERBOT
-#   TELE - @NIIIN2
+#   ZEDThon - USERBOT
+#   TELE - @ZedThon
 
 #  ======================================================= #
 
