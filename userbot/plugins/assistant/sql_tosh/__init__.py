@@ -1,4 +1,4 @@
-# ICSS - USERBOT
+# ZED - USERBOT
 
 import os
 
