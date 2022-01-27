@@ -368,7 +368,7 @@ CHANLAN = (
      ": ..................."
 )
 
-# Set Icss-Bot in @botfather
+# Set ZED-Bot in @botfather
 SetMsg = [
     "⌔∮ يتم تنصيب بوتك في @botfather",
     "⌔∮ يتم اكمال تنصيب بوتك في @BotFather",
@@ -377,4 +377,4 @@ SetMsg = [
 SetDec = "- 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 𝘼𝙎𝙎𝙄𝙎𝙏𝘼𝙉𝙏 𝘽𝙊𝙏 🔱\n- ZED 𝘽𝙊𝙏 𝙁𝙊𝙍 ~ {}\n- 𝙎𝙊𝙐𝙍𝘾𝙀 𝘿𝙀𝙑 ~ @ZedThon 𖤨"
 SetAbt = "- 𝙎𝙊𝙐𝙍𝘾𝙀 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 🔱\n- ZED 𝘽𝙊𝙏 𝙁𝙊𝙍 ~ {}"
 
-# This is For Icss - Userbot only!!
+# This is For ZED - Userbot only!!
