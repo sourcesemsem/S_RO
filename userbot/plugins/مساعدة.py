@@ -10,7 +10,7 @@ from .sql_helper.globals import addgvar, gvarstatus
 
 
 @bot.on(
-    icss_cmd(outgoing=True, 
+    admin_cmd(outgoing=True, 
     pattern="مساعده ?(.*)")
 )
 async def cmd_list(event):
@@ -181,7 +181,7 @@ async def info(event):
 
 
 @bot.on(
-    icss_cmd(pattern="المراكز$")
+    admin_cmd(pattern="المراكز$")
 )
 @bot.on(
     sudo_cmd(pattern="المراكز$", 
@@ -204,8 +204,8 @@ async def _(event):
     await edit_or_reply(event, result)
 
 
-@icssbot.on(
-    icss_cmd(outgoing=True,
+@bot.on(
+    admin_cmd(outgoing=True,
     pattern="الانلاين (تفعيل|تعطيل)")
 )
 async def _(event):
