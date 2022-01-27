@@ -9,6 +9,6 @@ A = "https://dashboard.heroku.com/new?template=https://github.com/Zedthon/zedpac
 
 B = "**⌔∮ اهلا عزيزي - {} \n⌔∮ رابط التنصيب - [اضغط هنا]({})**"
 
-@icssbot.on(icss_cmd(pattern="رابط التنصيب"))
+@bot.on(admin_cmd(pattern="رابط التنصيب"))
 async def _(e):
     await eor(e, B.format(M, A))
