@@ -5,8 +5,8 @@ from collections import deque
 from telethon.tl.types import ChannelParticipantsAdmins
 
 
-@icssbot.on(admin_cmd(pattern="جو$"))
-@icssbot.on(sudo_cmd(pattern="جو$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="جو$"))
+@bot.on(sudo_cmd(pattern="جو$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -25,8 +25,8 @@ async def _(event):
     await event.delete()
 
 
-@icssbot.on(admin_cmd(pattern="كليم$"))
-@icssbot.on(sudo_cmd(pattern="كليم$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="كليم$"))
+@bot.on(sudo_cmd(pattern="كليم$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -45,8 +45,8 @@ async def _(event):
     await event.delete()
 
 
-@icssbot.on(admin_cmd(pattern="نار$"))
-@icssbot.on(sudo_cmd(pattern="نار$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="نار$"))
+@bot.on(sudo_cmd(pattern="نار$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -65,8 +65,8 @@ async def _(event):
     await event.delete()
 
 
-@icssbot.on(admin_cmd(pattern="انتحر$"))
-@icssbot.on(sudo_cmd(pattern="انتحر$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="انتحر$"))
+@bot.on(sudo_cmd(pattern="انتحر$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -85,8 +85,8 @@ async def _(event):
     await event.delete()
 
 
-@icssbot.on(admin_cmd(pattern="مذاكره$"))
-@icssbot.on(sudo_cmd(pattern="مذاكره$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="مذاكره$"))
+@bot.on(sudo_cmd(pattern="مذاكره$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -106,8 +106,8 @@ async def _(event):
 
 
 # edit by: @zzzzl1l
-@icssbot.on(admin_cmd(pattern=r"القمر$"))
-@icssbot.on(sudo_cmd(pattern="القمر$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"القمر$"))
+@bot.on(sudo_cmd(pattern="القمر$", allow_sudo=True))
 async def test(event):
     if event.fwd_from:
         return
@@ -117,8 +117,8 @@ async def test(event):
     )
 
 
-@icssbot.on(admin_cmd(pattern=r"مدينه$"))
-@icssbot.on(sudo_cmd(pattern="مدينه$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"مدينه$"))
+@bot.on(sudo_cmd(pattern="مدينه$", allow_sudo=True))
 async def test(event):
     if event.fwd_from:
         return
