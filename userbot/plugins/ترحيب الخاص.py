@@ -11,7 +11,7 @@ from .sql_helper.welcomesql import (
 )
 
 
-@icssbot.on(events.ChatAction)
+@bot.on(events.ChatAction)
 async def _(event):
     cws = getcurrent_welcome_settings(event.chat_id)
     if (
@@ -73,8 +73,8 @@ async def _(event):
         )
 
 
-@icssbot.on(admin_cmd(pattern=r"رحب ?(.*)"))
-@icssbot.on(sudo_cmd(pattern=r"رحب ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"رحب ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"رحب ?(.*)", allow_sudo=True))
 async def save_welcome(event):
     if event.fwd_from:
         return
@@ -111,8 +111,8 @@ async def save_welcome(event):
     await edit_or_reply("خطأ لا يسمح بوضع ترحيب بهذه الدردشه")
 
 
-@icssbot.on(admin_cmd(pattern="حذف رحب$"))
-@icssbot.on(sudo_cmd(pattern="حذف رحب$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="حذف رحب$"))
+@bot.on(sudo_cmd(pattern="حذف رحب$", allow_sudo=True))
 async def del_welcome(event):
     if event.fwd_from:
         return
@@ -122,8 +122,8 @@ async def del_welcome(event):
         await edit_or_reply(event, "**⪼ انت لا تمتلك تـرحيب الخـاص لــ هذه الدردشـه 𓆰**")
 
 
-@icssbot.on(admin_cmd(pattern="قائمه رحب$"))
-@icssbot.on(sudo_cmd(pattern="قائمه رحب$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="قائمه رحب$"))
+@bot.on(sudo_cmd(pattern="قائمه رحب$", allow_sudo=True))
 async def show_welcome(event):
     if event.fwd_from:
         return
