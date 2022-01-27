@@ -7,7 +7,7 @@ from userbot import CMD_HELP
 from userbot.utils import sudo_cmd
 
 
-@icssbot.on(admin_cmd(pattern="الموقع ?(.*)"))
+@bot.on(admin_cmd(pattern="الموقع ?(.*)"))
 async def gps(event):
     if event.fwd_from:
         return
@@ -35,7 +35,7 @@ async def gps(event):
         await event.edit("i coudn't find it")
 
 
-@icssbot.on(sudo_cmd(pattern="الموقع ?(.*)", allow_sudo=True))
+@bot.on(sudo_cmd(pattern="الموقع ?(.*)", allow_sudo=True))
 async def gps(event):
     if event.fwd_from:
         return
