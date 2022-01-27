@@ -1,4 +1,4 @@
-#kingZelzal
+#Zelzal
 
 import asyncio
 import base64
@@ -46,7 +46,7 @@ ANTI_FLOOD_WARN_MODE = ChatBannedRights(
 )
 
 
-@icssbot.on(admin_cmd(incoming=True))
+@bot.on(admin_cmd(incoming=True))
 async def _(event):
     if not CHAT_FLOOD:
         return
@@ -85,8 +85,8 @@ async def _(event):
                  reply_to=event.message.id,
              )
 
-@icssbot.on(admin_cmd(pattern="ضع التكرار(?: |$)(.*)"))
-@icssbot.on(sudo_cmd(pattern="ضع التكرار(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ضع التكرار(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="ضع التكرار(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
