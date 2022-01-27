@@ -3,8 +3,8 @@
 from . import Mb
 from ..tosh import TBOT
 
-@icssbot.on(
-    icss_cmd(
+@bot.on(
+    admin_cmd(
        pattern="بوتي", outgoing=True
     )
 )
