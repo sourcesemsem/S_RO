@@ -38,8 +38,8 @@ def get_readable_time(seconds: int) -> str:
 # Dev: @zlzzl77
 
 
-@icssbot.on(admin_cmd(pattern="بنك$"))
-@icssbot.on(sudo_cmd(pattern="بنك$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="بنك$"))
+@bot.on(sudo_cmd(pattern="بنك$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
