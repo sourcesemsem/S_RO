@@ -8,10 +8,10 @@ import sys
 import traceback
 from . import Calc, C
 
-@icssbot.on(
-    icss_cmd(pattern="حاسبه (.*)")
+@bot.on(
+    admin_cmd(pattern="حاسبه (.*)")
 )
-@icssbot.on(sudo_cmd(
+@bot.on(sudo_cmd(
                pattern="حاسبه (.*)", 
                allow_sudo=True)
            )
