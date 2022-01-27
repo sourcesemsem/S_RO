@@ -6,8 +6,8 @@ from . import ALIVE_NAME
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Zed - Userbot "
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern="قاتل( (.*)|$)"))
-@icssbot.on(sudo_cmd(pattern="قاتل( (.*)|$)", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="قاتل( (.*)|$)"))
+@bot.on(sudo_cmd(pattern="قاتل( (.*)|$)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -32,8 +32,8 @@ async def _(event):
         await event.edit(animation_chars[i % 8])
 
 
-@icssbot.on(admin_cmd(pattern="عين$"))
-@icssbot.on(sudo_cmd(pattern="عين$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="عين$"))
+@bot.on(sudo_cmd(pattern="عين$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -63,8 +63,8 @@ async def _(event):
     await event.delete()
 
 
-@icssbot.on(admin_cmd(pattern="افكرر$"))
-@icssbot.on(sudo_cmd(pattern="افكرر$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="افكرر$"))
+@bot.on(sudo_cmd(pattern="افكرر$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -114,8 +114,8 @@ async def _(event):
         await event.edit(animation_chars[i % 36])
 
 
-@icssbot.on(admin_cmd(pattern=f"افعى$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="افعى$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"افعى$", outgoing=True))
+@bot.on(sudo_cmd(pattern="افعى$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -156,8 +156,8 @@ async def _(event):
         await event.edit(animation_chars[i % 27])
 
 
-@icssbot.on(admin_cmd(pattern=f"رجل$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="رجل$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"رجل$", outgoing=True))
+@bot.on(sudo_cmd(pattern="رجل$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -187,8 +187,8 @@ async def _(event):
         await event.edit(animation_chars[i % 16])
 
 
-@icssbot.on(admin_cmd(pattern=f"mc$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="mc$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"mc$", outgoing=True))
+@bot.on(sudo_cmd(pattern="mc$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -230,8 +230,8 @@ async def _(event):
         await event.edit(animation_chars[i % 28])
 
 
-@icssbot.on(admin_cmd(pattern="فايروس$"))
-@icssbot.on(sudo_cmd(pattern="فايروس$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="فايروس$"))
+@bot.on(sudo_cmd(pattern="فايروس$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -275,8 +275,8 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
 
-@icssbot.on(admin_cmd(pattern=r"ريبي$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="ريبي$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"ريبي$", outgoing=True))
+@bot.on(sudo_cmd(pattern="ريبي$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -320,8 +320,8 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
 
-@icssbot.on(admin_cmd(pattern=f"نيكول$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="نيكول$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"نيكول$", outgoing=True))
+@bot.on(sudo_cmd(pattern="نيكول$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -341,8 +341,8 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@icssbot.on(admin_cmd(pattern=f"موسيقى$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="موسيقى$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"موسيقى$", outgoing=True))
+@bot.on(sudo_cmd(pattern="موسيقى$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -367,8 +367,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@icssbot.on(admin_cmd(pattern=f"squ$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="squ$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"squ$", outgoing=True))
+@bot.on(sudo_cmd(pattern="squ$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
