@@ -12,7 +12,7 @@ from telethon import events
 import userbot.plugins.sql_helper.blacklist_sql as sql
 
 
-@icssbot.on(events.NewMessage(incoming=True))
+@bot.on(events.NewMessage(incoming=True))
 async def on_new_message(event):
     # TODO: exempt admins from locks
     name = event.raw_text
@@ -28,8 +28,8 @@ async def on_new_message(event):
             break
 
 
-@icssbot.on(admin_cmd(pattern="منع كلمه ((.|\n)*)"))
-@icssbot.on(sudo_cmd(pattern="منع كلمه ((.|\n)*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="منع كلمه ((.|\n)*)"))
+@bot.on(sudo_cmd(pattern="منع كلمه ((.|\n)*)", allow_sudo=True))
 async def on_add_black_list(event):
     text = event.pattern_match.group(1)
     to_blacklist = list(
@@ -44,8 +44,8 @@ async def on_add_black_list(event):
     )
 
 
-@icssbot.on(admin_cmd(pattern="الغاء منع ((.|\n)*)"))
-@icssbot.on(sudo_cmd(pattern="الغاء منع ((.|\n)*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="الغاء منع ((.|\n)*)"))
+@bot.on(sudo_cmd(pattern="الغاء منع ((.|\n)*)", allow_sudo=True))
 async def on_delete_blacklist(event):
     text = event.pattern_match.group(1)
     to_unblacklist = list(
@@ -64,8 +64,8 @@ async def on_delete_blacklist(event):
     )
 
 
-@icssbot.on(admin_cmd(pattern="الكلمات المحظوره$"))
-@icssbot.on(sudo_cmd(pattern="الكلمات المحظوره$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="الكلمات المحظوره$"))
+@bot.on(sudo_cmd(pattern="الكلمات المحظوره$", allow_sudo=True))
 async def on_view_blacklist(event):
     all_blacklisted = sql.get_chat_blacklist(event.chat_id)
     OUT_STR = "𓆩 𝑺𝑼𝑶𝑹𝑪𝑬 𝙕𝞝𝘿𝙏𝙃𝙊𝙉  -  𝑩𝑳𝑨𝑪𝑲𝑳𝑰𝑺𝑻 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n**⪼ قائمه الكلمات المحظوره :**\n"
