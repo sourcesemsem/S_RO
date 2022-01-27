@@ -599,7 +599,7 @@ def load_anim(shortname):
         mod.eor = eor
         mod.logger = logging.getLogger(shortname)
         sys.modules["uniborg.util"] = userbot.utils
-        mod.icssbot = bot
+        mod.zedthonbot = bot
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.animations." + shortname] = mod
         print('%s'% ani + shortname)
@@ -630,14 +630,14 @@ def load_tosha(shortname):
         mod.reply_id = reply_id
         mod.rd = reply_id
         mod.admin_cmd = admin_cmd
-        mod.icss_cmd = admin_cmd
+        mod.zelzal_cmd = admin_cmd
         mod.ed = ed
         mod.edit_delete = ed
         mod.eor = eor
         mod.edit_or_reply = eor
         mod.logger = logging.getLogger(shortname)
         sys.modules["uniborg.util"] = userbot.utils
-        mod.icssbot = bot
+        mod.zedthonbot = bot
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.tosha." + shortname] = mod
         print('%s'% tsh + shortname)
