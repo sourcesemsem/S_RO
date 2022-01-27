@@ -8,8 +8,8 @@ from . import ALIVE_NAME
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "zed"
 
 
-@icssbot.on(admin_cmd(pattern="غبي$"))
-@icssbot.on(sudo_cmd(pattern="غبي$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="غبي$"))
+@bot.on(sudo_cmd(pattern="غبي$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -37,8 +37,8 @@ async def _(event):
         await event.edit(animation_chars[i % 14])
 
 
-@icssbot.on(admin_cmd(pattern=f"قنابل$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"قنابل$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"قنابل$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"قنابل$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -65,8 +65,8 @@ async def _(event):
     await asyncio.sleep(2)
 
 
-@icssbot.on(admin_cmd(pattern=r"اتصل$"))
-@icssbot.on(sudo_cmd(pattern=r"اتصل$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"اتصل$"))
+@bot.on(sudo_cmd(pattern=r"اتصل$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -98,8 +98,8 @@ async def _(event):
         await event.edit(animation_chars[i % 18])
 
 
-@icssbot.on(admin_cmd(pattern=f"قتل$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"قتل$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"قتل$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"قتل$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -125,8 +125,8 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@icssbot.on(admin_cmd(pattern="شنو$"))
-@icssbot.on(sudo_cmd(pattern="شنو$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="شنو$"))
+@bot.on(sudo_cmd(pattern="شنو$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -145,8 +145,8 @@ async def _(event):
         await event.edit(animation_chars[i % 5], link_preview=True)
 
 
-@icssbot.on(admin_cmd(pattern="طوبه$"))
-@icssbot.on(sudo_cmd(pattern="طوبه$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="طوبه$"))
+@bot.on(sudo_cmd(pattern="طوبه$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -170,8 +170,8 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@icssbot.on(admin_cmd(pattern=f"شطرنج$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"شطرنج$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"شطرنج$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"شطرنج$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -200,8 +200,8 @@ async def _(event):
         await event.edit(animation_chars[i % 15])
 
 
-@icssbot.on(admin_cmd(pattern=r"حلويات$"))
-@icssbot.on(sudo_cmd(pattern=r"حلويات$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"حلويات$"))
+@bot.on(sudo_cmd(pattern=r"حلويات$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -213,8 +213,8 @@ async def _(event):
         deq.rotate(1)
 
 
-@icssbot.on(admin_cmd(pattern="gangasta$"))
-@icssbot.on(sudo_cmd(pattern="gangasta$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="gangasta$"))
+@bot.on(sudo_cmd(pattern="gangasta$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -236,8 +236,8 @@ async def _(event):
     await event.edit("EVERyBOdy iZ GangSTur UNtIL I ArRivE 🔥🔥🔥")
 
 
-@icssbot.on(admin_cmd(pattern=f"charging$"))
-@icssbot.on(sudo_cmd(pattern=f"charging$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"charging$"))
+@bot.on(sudo_cmd(pattern=f"charging$", allow_sudo=True))
 async def timer_blankx(e):
     if e.fwd_from:
         return
