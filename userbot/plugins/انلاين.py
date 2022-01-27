@@ -40,13 +40,13 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             elif TOSH:
                 result = builder.document(
                     TOSH,
-                    title="Icss Alive",
+                    title="ZED Alive",
                     text=query,
                     buttons=buttons,
                 )
             else:
                 result = builder.article(
-                    title="Icss Alive",
+                    title="ZED Alive",
                     text=query,
                     buttons=buttons,
                 )
