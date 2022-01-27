@@ -4,8 +4,8 @@
 import asyncio
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern="^\:/$"))
-@icssbot.on(sudo_cmd(pattern="^\:/$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="^\:/$"))
+@bot.on(sudo_cmd(pattern="^\:/$", allow_sudo=True))
 async def kek(keks):
     keks = await edit_or_reply(keks, ":\\")
     uio = ["/", "\\"]
@@ -15,8 +15,8 @@ async def kek(keks):
         await keks.edit(txt)
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern="^\-_-$"))
-@icssbot.on(sudo_cmd(pattern="^\-_-$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="^\-_-$"))
+@bot.on(sudo_cmd(pattern="^\-_-$", allow_sudo=True))
 async def lol(lel):
     lel = await edit_or_reply(lel, "-__-")
     okay = "-__-"
@@ -26,8 +26,8 @@ async def lol(lel):
         await lel.edit(okay)
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern="^\;_;$"))
-@icssbot.on(sudo_cmd(pattern="^\;_;$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="^\;_;$"))
+@bot.on(sudo_cmd(pattern="^\;_;$", allow_sudo=True))
 async def fun(e):
     e = await edit_or_reply(e, ";__;")
     t = ";__;"
@@ -37,8 +37,8 @@ async def fun(e):
         await e.edit(t)
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern="oof$"))
-@icssbot.on(sudo_cmd(pattern="oof$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="oof$"))
+@bot.on(sudo_cmd(pattern="oof$", allow_sudo=True))
 async def Oof(e):
     t = "Oof"
     catevent = await edit_or_reply(e, t)
@@ -48,8 +48,8 @@ async def Oof(e):
         await catevent.edit(t)
 
 
-@icssbot.on(admin_cmd(outgoing=True, pattern="اكتب (.*)"))
-@icssbot.on(sudo_cmd(pattern="اكتب (.*)", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="اكتب (.*)"))
+@bot.on(sudo_cmd(pattern="اكتب (.*)", allow_sudo=True))
 async def typewriter(typew):
     message = typew.pattern_match.group(1)
     sleep_time = 0.2
@@ -66,8 +66,8 @@ async def typewriter(typew):
         await asyncio.sleep(sleep_time)
 
 
-@icssbot.on(admin_cmd(pattern="كرر (\d*) (.*)", outgoing=True))
-@icssbot.on(sudo_cmd(pattern="كرر (\d*) (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="كرر (\d*) (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="كرر (\d*) (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -79,8 +79,8 @@ async def _(event):
     await event.delete()
 
 
-@icssbot.on(admin_cmd(pattern=f"ميمي", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"ميمي", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"ميمي", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"ميمي", allow_sudo=True))
 async def meme(event):
     memeVar = event.text
     sleepValue = 0.5
@@ -146,8 +146,8 @@ async def meme(event):
     await event.edit(memeVar)
 
 
-@icssbot.on(admin_cmd(pattern=f"جف", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"جف", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"جف", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"جف", allow_sudo=True))
 async def give(event):
     if event.fwd_from:
         return
@@ -193,8 +193,8 @@ async def give(event):
     await event.edit(lp + lp + lp + lp + lp + lp + lp + lp + lp)
 
 
-@icssbot.on(admin_cmd(pattern=f"sadmin$", outgoing=True))
-@icssbot.on(sudo_cmd(pattern=f"sadmin$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"sadmin$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"sadmin$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
