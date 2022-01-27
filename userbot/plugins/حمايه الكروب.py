@@ -10,8 +10,8 @@ from . import BOTLOG, get_user_from_event
 from .sql_helper.locks_sql import get_locks, is_locked, update_lock
 
 
-@icssbot.on(admin_cmd(pattern=r"قفل (.*)"))
-@icssbot.on(sudo_cmd(pattern=r"قفل (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"قفل (.*)"))
+@bot.on(sudo_cmd(pattern=r"قفل (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -169,8 +169,8 @@ async def _(event):
             )
 
 
-@icssbot.on(admin_cmd(pattern="فتح (.*)"))
-@icssbot.on(sudo_cmd(pattern="فتح (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="فتح (.*)"))
+@bot.on(sudo_cmd(pattern="فتح (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -328,8 +328,8 @@ async def _(event):
             )
 
 
-@icssbot.on(admin_cmd(pattern="الاعدادات$"))
-@icssbot.on(sudo_cmd(pattern="الاعدادات$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="الاعدادات$"))
+@bot.on(sudo_cmd(pattern="الاعدادات$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -381,8 +381,8 @@ async def _(event):
     await edit_or_reply(event, res)
 
 
-@icssbot.on(admin_cmd(pattern=r"تعطيل (.*)"))
-@icssbot.on(sudo_cmd(pattern=r"تعطيل (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"تعطيل (.*)"))
+@bot.on(sudo_cmd(pattern=r"تعطيل (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -609,8 +609,8 @@ async def _(event):
         )
 
 
-@icssbot.on(admin_cmd(pattern=r"تفعيل (.*)"))
-@icssbot.on(sudo_cmd(pattern=r"تفعيل (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"تفعيل (.*)"))
+@bot.on(sudo_cmd(pattern=r"تفعيل (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -840,8 +840,8 @@ async def _(event):
         )
 
 
-@icssbot.on(admin_cmd(pattern="uperm(?: |$)(.*)"))
-@icssbot.on(sudo_cmd(pattern="uperm(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="uperm(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="uperm(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -913,8 +913,8 @@ async def _(event):
     await edit_or_reply(event, output)
 
 
-@icssbot.on(events.MessageEdited())
-@icssbot.on(events.NewMessage())
+@bot.on(events.MessageEdited())
+@bot.on(events.NewMessage())
 async def check_incoming_messages(event):
     if not event.is_private:
         chat = await event.get_chat()
@@ -980,7 +980,7 @@ async def check_incoming_messages(event):
                 update_lock(peer_id, "الروابط", False)
 
 
-@icssbot.on(events.ChatAction())
+@bot.on(events.ChatAction())
 async def _(event):
     if not event.is_private:
         chat = await event.get_chat()
