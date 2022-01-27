@@ -1,4 +1,4 @@
-# Arabic userbot - SOURCE ICSS.
+# Arabic userbot - SOURCE ZEDThon.
 
 from sqlalchemy import Column, String
 
