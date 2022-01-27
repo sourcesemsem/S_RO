@@ -125,7 +125,7 @@ async def fetch_info(replied_user, event):
 
 
 @bot.on(
-    icss_cmd(pattern="رابط الحساب(?: |$)(.*)")
+    zelzal_cmd(pattern="رابط الحساب(?: |$)(.*)")
 )
 @bot.on(
     sudo_cmd(pattern="رابط الحساب(?: |$)(.*)", allow_sudo=True)
