@@ -33,7 +33,7 @@ async def _(e):
 
 
 @bot.on(admin_cmd(pattern="الغاء ازعاج$"))
-@icssbot.on(sudo_cmd(pattern="الغاء ازعاج$", allow_sudo=True))
+@bot.on(sudo_cmd(pattern="الغاء ازعاج$", allow_sudo=True))
 async def _(e):
     if e.fwd_from:
         return
