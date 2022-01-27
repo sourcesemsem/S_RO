@@ -7,8 +7,8 @@ import speedtest
 from . import reply_id
 
 
-@icssbot.on(admin_cmd(pattern="سرعه النت ?(.*)"))
-@icssbot.on(sudo_cmd(pattern="سرعه النت ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="سرعه النت ?(.*)"))
+@bot.on(sudo_cmd(pattern="سرعه النت ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
