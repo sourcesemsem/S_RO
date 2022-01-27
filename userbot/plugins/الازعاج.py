@@ -8,8 +8,8 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from .sql_helper.echo_sql import addecho, get_all_echos, is_echo, remove_echo
 from . import Echo, M
 
-@icssbot.on(icss_cmd(pattern="ازعاج$"))
-@icssbot.on(sudo_cmd(pattern="ازعاج$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ازعاج$"))
+@bot.on(sudo_cmd(pattern="ازعاج$", allow_sudo=True))
 async def _(e):
     if e.fwd_from:
         return
@@ -32,7 +32,7 @@ async def _(e):
         await eor(e, Echo[2].format(M))
 
 
-@icssbot.on(icss_cmd(pattern="الغاء ازعاج$"))
+@bot.on(admin_cmd(pattern="الغاء ازعاج$"))
 @icssbot.on(sudo_cmd(pattern="الغاء ازعاج$", allow_sudo=True))
 async def _(e):
     if e.fwd_from:
@@ -56,8 +56,8 @@ async def _(e):
         await eor(e, Echo[2].format(M))
 
 
-@icssbot.on(admin_cmd(pattern="قائمة الازعاج$"))
-@icssbot.on(sudo_cmd(pattern="قائمة الازعاج $", allow_sudo=True))
+@bot.on(admin_cmd(pattern="قائمة الازعاج$"))
+@bot.on(sudo_cmd(pattern="قائمة الازعاج $", allow_sudo=True))
 async def _(e):
     if e.fwd_from:
         return
@@ -84,7 +84,7 @@ async def _(e):
         await eor(e, output_str)
 
 
-@icssbot.on(events.NewMessage(incoming=True))
+@bot.on(events.NewMessage(incoming=True))
 async def samereply(e):
     if e.chat_id in Config.UB_BLACK_LIST_CHAT:
         return
