@@ -10,8 +10,8 @@ if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
     os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     
     
-@icssbot.on(admin_cmd(pattern="نصائح$"))
-@icssbot.on(sudo_cmd(pattern="نصائح$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="نصائح$"))
+@bot.on(sudo_cmd(pattern="نصائح$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -41,8 +41,8 @@ async def _(event):
         event = await edit_or_reply(event, OUTPUT)
 
 
-@icssbot.on(admin_cmd(pattern="حكم$"))
-@icssbot.on(sudo_cmd(pattern="حكم$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="حكم$"))
+@bot.on(sudo_cmd(pattern="حكم$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -72,8 +72,8 @@ async def _(event):
         event = await edit_or_reply(event, OUTPUT)
 
 
-@icssbot.on(admin_cmd(pattern="مشاهير$"))
-@icssbot.on(sudo_cmd(pattern="مشاهير$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="مشاهير$"))
+@bot.on(sudo_cmd(pattern="مشاهير$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -103,8 +103,8 @@ async def _(event):
         event = await edit_or_reply(event, OUTPUT)
 
 
-@icssbot.on(admin_cmd(pattern="اقتباس$"))
-@icssbot.on(sudo_cmd(pattern="اقتباس$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="اقتباس$"))
+@bot.on(sudo_cmd(pattern="اقتباس$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -134,8 +134,8 @@ async def _(event):
         event = await edit_or_reply(event, OUTPUT)
 
 
-@icssbot.on(admin_cmd(pattern="برمجيات$"))
-@icssbot.on(sudo_cmd(pattern="برمجيات$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="برمجيات$"))
+@bot.on(sudo_cmd(pattern="برمجيات$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
