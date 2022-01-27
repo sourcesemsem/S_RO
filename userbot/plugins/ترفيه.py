@@ -71,9 +71,9 @@ async def typewriter(typew):
 async def _(event):
     if event.fwd_from:
         return
-    icss = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 1)
-    message = icss[1]
-    count = int(cat[0])
+    zed = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 1)
+    message = zed[1]
+    count = int(zed[0])
     repmessage = (f"{message} ") * count
     await asyncio.wait([event.respond(repmessage)])
     await event.delete()
