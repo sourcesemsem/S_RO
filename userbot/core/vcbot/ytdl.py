@@ -8,7 +8,7 @@
 from youtubesearchpython import VideosSearch
 
 from userbot import LOGS
-from userbot.utils import bash
+from userbot.helpers import bash
 
 
 def ytsearch(query: str):
