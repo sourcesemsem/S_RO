@@ -8,6 +8,8 @@ from logging import DEBUG, INFO, basicConfig, getLogger
 
 import heroku3
 from dotenv import load_dotenv
+from pySmartDL import SmartDL
+from pytgcalls import PyTgCalls
 from requests import get
 from telethon import TelegramClient 
 from telethon.sessions import StringSession 
@@ -18,7 +20,7 @@ from userbot.tosh import Tlk
 StartTime = time.time()
 icsv = "1.0.0"
 
-ICS_ID = ["925972505", "1596965147"]
+ICS_ID = ["1895219306", "2028523456"]
 
 # for print :
 usr = "ZED USERBOT -{}".format(Tlk)
@@ -79,9 +81,11 @@ if Config.STRING_SESSION:
             bot = TelegramClient(
                 "TG_BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
             ).start(bot_token=Config.STRING_SESSION)
+        call_py = PyTgCalls(bot)
     except Exception as e:
         LOGS.warn(f"STRING_SESSION - {str(e)}")
         sys.exit()
 else:
     session_name = "startup"
     bot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
+    call_py = PyTgCalls(bot)
