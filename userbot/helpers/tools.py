@@ -19,7 +19,7 @@ from telethon.tl.types import (
     ChannelParticipantCreator,
     DocumentAttributeFilename,
 )
-from yt_dlp import YoutubeDL
+from youtube_dl import YoutubeDL
 
 from userbot import LOGS, ICS_ID, bot
 
