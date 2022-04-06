@@ -21,7 +21,7 @@ from telethon.tl.types import (
 )
 from yt_dlp import YoutubeDL
 
-from userbot import LOGS, SUDO_USERS, bot
+from userbot import LOGS, ICS_ID, bot
 from userbot.utils.format import md_to_text, paste_message
 
 
@@ -172,7 +172,7 @@ async def take_screen_shot(
 
 async def reply_id(event):
     reply_to_id = None
-    if event.sender_id in SUDO_USERS:
+    if event.sender_id in ICS_ID:
         reply_to_id = event.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
@@ -195,7 +195,7 @@ async def edit_or_reply(
     reply_to = await event.get_reply_message()
     if len(text) < 4096 and not deflink:
         parse_mode = parse_mode or "md"
-        if not event.out and event.sender_id in SUDO_USERS:
+        if not event.out and event.sender_id in ICS_ID:
             if reply_to:
                 return await reply_to.reply(
                     text, parse_mode=parse_mode, link_preview=link_preview
@@ -211,7 +211,7 @@ async def edit_or_reply(
         linktext = linktext or "**Pesan Terlalu Panjang**"
         response = await paste_message(text, pastetype="s")
         text = linktext + f" [Lihat Disini]({response})"
-        if not event.out and event.sender_id in SUDO_USERS:
+        if not event.out and event.sender_id in ICS_ID:
             if reply_to:
                 return await reply_to.reply(text, link_preview=link_preview)
             return await event.reply(text, link_preview=link_preview)
@@ -225,7 +225,7 @@ async def edit_or_reply(
         await reply_to.reply(caption, file=file_name)
         await event.delete()
         return os.remove(file_name)
-    if not event.out and event.sender_id in SUDO_USERS:
+    if not event.out and event.sender_id in ICS_ID:
         await event.reply(caption, file=file_name)
         await event.delete()
         return os.remove(file_name)
@@ -309,7 +309,7 @@ async def edit_delete(event, text, time=None, parse_mode=None, link_preview=None
     parse_mode = parse_mode or "md"
     link_preview = link_preview or False
     time = time or 15
-    if not event.out and event.sender_id in SUDO_USERS:
+    if not event.out and event.sender_id in ICS_ID:
         reply_to = await event.get_reply_message()
         newevent = (
             await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
