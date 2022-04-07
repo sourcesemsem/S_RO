@@ -28,7 +28,7 @@ def ytsearch(query: str):
 
 async def ytdl(link: str):
     stdout, stderr = await bash(
-        f'yt-dlp -g -f "best[height<=?720][width<=?1280]" {link}'
+        f'youtube_dl -g -f "best[height<=?720][width<=?1280]" {link}'
     )
     if stdout:
         return 1, stdout.split("\n")[0]
