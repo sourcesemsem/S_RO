@@ -11,7 +11,7 @@ from telethon.tl.functions.channels import JoinChannelRequest
 from telethon import TelegramClient as TC
 
 from userbot.tosh import *
-from userbot import LOGS, bot
+from userbot import LOGS, bot, call_py
 from userbot.Config import Config
 from userbot.utils import (
     load_module,
@@ -53,6 +53,7 @@ else:
             print(Mesg[3])
         else:
             bot.start()
+            call_py.start()
     except Exception as e:
         LOGS.error("{} -".format(Xt) + f"{str(e)}")
         sys.exit()
