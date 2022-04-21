@@ -2,17 +2,17 @@ from telethon import events
 
 from . import * 
 
-Raiis_BLACKLIST = [
+Ralls_BLACKLIST = [
     -1001236815136,
     -1001614012587,
     ]
 #
 
-@Raiisthon.on(QQ070_cmd(pattern=f"للمجموعات(?: |$)(.*)"))
+@Rallsthon.on(QQ070_cmd(pattern=f"للمجموعات(?: |$)(.*)"))
 async def gcast(event):
-    Raiisthon = event.pattern_match.group(1)
-    if Raiisthon:
-        msg = Raiisthon
+    Rallsthon = event.pattern_match.group(1)
+    if Rallsthon:
+        msg = Rallsthon
     elif event.is_reply:
         msg = await event.get_reply_message()
     else:
@@ -25,7 +25,7 @@ async def gcast(event):
         if x.is_group:
             chat = x.id
             try:
-                if chat not in Raiis_BLACKLIST:
+                if chat not in Ralls_BLACKLIST:
                     await event.client.send_message(chat, msg)
                     done += 1
             except BaseException:
@@ -34,11 +34,11 @@ async def gcast(event):
         f"**✾╎تمت الاذاعـه بنجـاح الـى ** `{done}` **من المجموعـات ، خطـأ في الارسـال الـى ** `{er}` **من المجموعـات**"
     )
     
-@Raiisthon.on(QQ070_cmd(pattern=f"للخاص(?: |$)(.*)"))
+@Rallsthon.on(QQ070_cmd(pattern=f"للخاص(?: |$)(.*)"))
 async def gucast(event):
-    Raiisthon = event.pattern_match.group(1)
-    if Raiisthon:
-        msg = Raiisthon
+    Rallsthon = event.pattern_match.group(1)
+    if Rallsthon:
+        msg = Rallsthon
     elif event.is_reply:
         msg = await event.get_reply_message()
     else:
@@ -60,7 +60,7 @@ async def gucast(event):
     )
     
 
-@Raiisthon.on(QQ070_cmd(pattern="خاص ?(.*)"))
+@Rallsthon.on(QQ070_cmd(pattern="خاص ?(.*)"))
 async def pmto(event):
     r = event.pattern_match.group(1)
     p = r.split(" ")
