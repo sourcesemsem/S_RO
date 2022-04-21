@@ -1,7 +1,7 @@
 """
 imported from nicegrill
 modified by @mrconfused
-edit by ~ @ZlZZl77
+edit by ~ @QQ070
 QuotLy: Avaible commands: .qbot
 """
 import os
