@@ -1,4 +1,4 @@
-#Raiisthon ®
+#Rallsthon ®
 
 from userbot.helpers import *
 import base64
@@ -44,23 +44,23 @@ from userbot.helpers.functions import deEmojify
 
 @bot.on(admin_cmd(pattern="بحث ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="بحث ?(.*)", allow_sudo=True))
-async def FindMusicPleaseBot(zed):
+async def FindMusicPleaseBot(Ralls):
 
-    song = zed.pattern_match.group(1)
+    song = Ralls.pattern_match.group(1)
 
     chat = "@FindMusicPleaseBot"
 
     if not song:
 
-        return await zed.edit("**❈╎قم باضافـة الاغنيـه للامـر .. بحث + اسـم الاغنيـه**")
+        return await Ralls.edit("**❈╎قم باضافـة الاغنيـه للامـر .. بحث + اسـم الاغنيـه**")
 
-    await zed.edit("**╮ جـارِ البحث ؏ـن الاغنيـٓه... 🎧♥️╰**")
+    await Ralls.edit("**╮ جـارِ البحث ؏ـن الاغنيـٓه... 🎧♥️╰**")
 
     await asyncio.sleep(2)
 
     async with bot.conversation(chat) as conv:
 
-        await zed.edit("**╮ ❐ جـارِ تحميـل الاغنيـٓه انتظـر قليلاً  ▬▭... 𓅫╰**")
+        await Ralls.edit("**╮ ❐ جـارِ تحميـل الاغنيـٓه انتظـر قليلاً  ▬▭... 𓅫╰**")
 
         try:
 
@@ -72,7 +72,7 @@ async def FindMusicPleaseBot(zed):
 
                 await bot.send_read_acknowledge(conv.chat_id)
 
-                return await zed.edit(f"**❈╎عـذراً .. لـم استطـع ايجـاد** {song}")
+                return await Ralls.edit(f"**❈╎عـذراً .. لـم استطـع ايجـاد** {song}")
 
             await conv.get_response()
 
@@ -80,16 +80,16 @@ async def FindMusicPleaseBot(zed):
 
         except YouBlockedUserError:
 
-            await zed.edit(
+            await Ralls.edit(
                 "**❈╎تحـقق من انـك لم تقـم بحظـر البوت @FindMusicPleaseBot .. ثم اعـد استخدام الامـر ...🤖♥️**"
             )
 
             return
 
-        await zed.edit("**╮ ❐ جـارِ ارسـال الاغنيـٓه انتظـر قليلاً  ▬▭... 𓅫╰**")
+        await Ralls.edit("**╮ ❐ جـارِ ارسـال الاغنيـٓه انتظـر قليلاً  ▬▭... 𓅫╰**")
 
-        await bot.send_file(zed.chat_id, lavde)
+        await bot.send_file(Ralls.chat_id, lavde)
 
         await bot.send_read_acknowledge(conv.chat_id)
 
-    await zed.delete()
+    await Ralls.delete()
