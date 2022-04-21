@@ -2,17 +2,17 @@ from telethon import events
 
 from . import * 
 
-ZED_BLACKLIST = [
+Raiis_BLACKLIST = [
     -1001236815136,
     -1001614012587,
     ]
 #
 
-@zedthon.on(zelzal_cmd(pattern=f"للمجموعات(?: |$)(.*)"))
+@Raiisthon.on(QQ070_cmd(pattern=f"للمجموعات(?: |$)(.*)"))
 async def gcast(event):
-    zedthon = event.pattern_match.group(1)
-    if zedthon:
-        msg = zedthon
+    Raiisthon = event.pattern_match.group(1)
+    if Raiisthon:
+        msg = Raiisthon
     elif event.is_reply:
         msg = await event.get_reply_message()
     else:
@@ -25,7 +25,7 @@ async def gcast(event):
         if x.is_group:
             chat = x.id
             try:
-                if chat not in ZED_BLACKLIST:
+                if chat not in Raiis_BLACKLIST:
                     await event.client.send_message(chat, msg)
                     done += 1
             except BaseException:
@@ -34,11 +34,11 @@ async def gcast(event):
         f"**✾╎تمت الاذاعـه بنجـاح الـى ** `{done}` **من المجموعـات ، خطـأ في الارسـال الـى ** `{er}` **من المجموعـات**"
     )
     
-@zedthon.on(zelzal_cmd(pattern=f"للخاص(?: |$)(.*)"))
+@Raiisthon.on(QQ070_cmd(pattern=f"للخاص(?: |$)(.*)"))
 async def gucast(event):
-    zedthon = event.pattern_match.group(1)
-    if zedthon:
-        msg = zedthon
+    Raiisthon = event.pattern_match.group(1)
+    if Raiisthon:
+        msg = Raiisthon
     elif event.is_reply:
         msg = await event.get_reply_message()
     else:
@@ -60,7 +60,7 @@ async def gucast(event):
     )
     
 
-@zedthon.on(zelzal_cmd(pattern="خاص ?(.*)"))
+@Raiisthon.on(QQ070_cmd(pattern="خاص ?(.*)"))
 async def pmto(event):
     r = event.pattern_match.group(1)
     p = r.split(" ")
