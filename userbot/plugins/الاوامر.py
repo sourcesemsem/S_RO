@@ -377,7 +377,7 @@ from telethon import events
 @Rallsthon.on(QQ070_cmd("المطور"))
 @Rallsthon.on(sudo_cmd("المطور", allow_sudo=True))
 async def _(Ralls):
-    await eor(Ralls, "𓆰 [𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒 - 𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹](t.me/RallsThon) 🧸♥️𓆪\n**𓍹━─━─━─━─𝐑𝐀𝐈𝐈𝐒─━─━─━─━𓍻**\n **𓄂**╺  𝑫𝑬𝑽 ❶╰──► @IllIl1I ༗\n\n **𓄂**╺  𝑫𝑬𝑽 ❷╰──► ⸙ المــــطور ؏َـــــلش الــــريـــــــس… ༗\n\n **𓄂**╺  𝑫𝑬𝑽 ❸╰──► @QQ070 ༗")
+    await eor(Ralls, "𓆰 [𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒 - 𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹](t.me/RallsThon) 🧸♥️𓆪\n**𓍹━─━─━─━─𝐑𝐀𝐈𝐈𝐒─━─━─━─━𓍻**\n **𓄂**╺  𝑫𝑬𝑽 ❶╰──► @QQ070 ༗\n\n **𓄂**╺  𝑫𝑬𝑽 ❷╰──► ⸙ @IllIl1I ༗")
 
 ########################  SOURCE Ralls ~ BY: QQ070 (@QQ070)  ########################
 
