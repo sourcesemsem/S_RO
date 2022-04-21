@@ -1,8 +1,4 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
-#الملـف حقـوق زلـزال الهيبـه ⤶ @zzzzl1l خاص بسـورس ⤶ 𝙕𝙚𝙙𝙏𝙝𝙤𝙣
-#الملف متعوب عليه So تخمط وماتذكـر المصـدر == اهينـك
-
-#هه
+#Raiisthon ®
 
 from userbot.helpers import *
 import base64
@@ -45,7 +41,6 @@ from ..helpers.utils import reply_id
 from userbot.helpers.functions import deEmojify
 
 
-#>>>>>>>>>>>>>>>>>>✓✓حقوق زلـزال الهيبــه - @zzzzl1l✓✓<<<<<<<<<<<<<<<<<<<
 
 @bot.on(admin_cmd(pattern="بحث ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="بحث ?(.*)", allow_sudo=True))
