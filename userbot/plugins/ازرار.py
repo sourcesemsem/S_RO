@@ -1,7 +1,7 @@
-#    Copyright (C) 2020  Zedthon
-# button post makker for ZedThon thanks to uniborg for the base
+#    Copyright (C) 2020  Raiisthon
+# button post makker for RaiisThon thanks to uniborg for the base
 # by @sandy1709 (@mrconfused)
-# edit @ZedThon (zed)
+# edit @RaiisThon (Raiis)
 
 import os
 import re
@@ -69,7 +69,7 @@ async def _(event):
         os.remove(tgbot_reply_message)
 
 
-# Zed Helpers
+# Raiis Helpers
 
 
 @bot.on(admin_cmd(pattern=r"كوول ?(.*)", outgoing=True))
@@ -108,10 +108,10 @@ CMD_HELP.update(
     \n\n**Button post helper**\
     \n•  **Syntax : **`.كول`\
     \n•  **Function :** __For working of this you need your bot({BOT_USERNAME}) in the group/channel you are using and Buttons must be in the format as [Name on button]<buttonurl:link you want to open> and markdown is Default to html__\
-    \n•  **Example :** `.كول + الجمله المراد اظهارها [المطـور]<buttonurl:https://t.me/ZlZZl77> [زد ثـون]<buttonurl:https://t.me/ZedThon> [اوامر السورس]<buttonurl:https://t.me/Zed_Thon>`\
+    \n•  **Example :** `.كول + الجمله المراد اظهارها [المطـور]<buttonurl:https://t.me/QQ070> [ىيس ثـون]<buttonurl:https://t.me/RaiisThon> [اوامر السورس]<buttonurl:https://t.me/Raiis_Thon>`\
     \n\n•  **Syntax : **`.كوول`\
     \n•  **Function :** __Buttons must be in the format as [Name on button]<buttonurl:link you want to open>__\
-    \n•  **Example :** `.كوول + الجمله المراد اظهارها [المطـور]<buttonurl:https://t.me/ZlZZl77> [زد ثـون]<buttonurl:https://t.me/ZedThon> [اوامر السورس]<buttonurl:https://t.me/Zed_Thon>`\
+    \n•  **Example :** `.كوول + الجمله المراد اظهارها [المطـور]<buttonurl:https://t.me/QQ070> [ىيس ثـون]<buttonurl:https://t.me/RaiisThon> [اوامر السورس]<buttonurl:https://t.me/Raiis_Thon>`\
     "
     }
 )
