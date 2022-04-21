@@ -1,4 +1,4 @@
-# whois code for Raiis edit by ~ @RaiisThon
+# whois code for Ralls edit by ~ @RallsThon
 
 import os
 
@@ -8,8 +8,8 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
 TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
-Raiis_TEXT = Config.CUSTOM_ALIVE_TEXT or "╮•⎚ مـعلومات الـشخص مـن بـوت زدثـون"
-RaiisM = Config.CUSTOM_ALIVE_EMOJI or " •❃ "
+Ralls_TEXT = Config.CUSTOM_ALIVE_TEXT or "╮•⎚ مـعلومات الـشخص مـن بـوت زدثـون"
+RallsM = Config.CUSTOM_ALIVE_EMOJI or " •❃ "
 
 @bot.on(admin_cmd(pattern="ا(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="ا(?: |$)(.*)", allow_sudo=True))
@@ -108,24 +108,24 @@ async def fetch_info(replied_user, event):
     user_bio = "لاتوجد نبذه" if not user_bio else user_bio
     rotbat = "「من مطـورين السورس 𓄂𓆃」" if user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 else (".「  العضـو 𓅫  」.") 
     rotbat = ".「 مـالك الحساب 𓀫 」." if user_id == (await event.client.get_me()).id and user_id != 2019189055 and user_id != 2019189055 and user_id != 1346542270 and user_id != 2019189055 and user_id != 1721284724 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 else rotbat
-    caption = f"<b> {Raiis_TEXT} </b>\n"
+    caption = f"<b> {Ralls_TEXT} </b>\n"
     caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
-    caption += f"<b> {RaiisM}| الاسـم    ⇦ </b> {first_name} {last_name}\n"
-    caption += f"<b> {RaiisM}| المعـرف  ⇦ </b> {username}\n"
-    caption += f"<b> {RaiisM}| الايـدي   ⇦ </b> <code>{user_id}</code>\n"
-    caption += f"<b> {RaiisM}| الرتبـــه  ⇦ {rotbat} </b>\n"
-    caption += f"<b> {RaiisM}| الصـور   ⇦ </b> {replied_user_profile_photos_count}\n"
-    caption += f"<b> {RaiisM}|الحسـاب ⇦ </b> "
+    caption += f"<b> {RallsM}| الاسـم    ⇦ </b> {first_name} {last_name}\n"
+    caption += f"<b> {RallsM}| المعـرف  ⇦ </b> {username}\n"
+    caption += f"<b> {RallsM}| الايـدي   ⇦ </b> <code>{user_id}</code>\n"
+    caption += f"<b> {RallsM}| الرتبـــه  ⇦ {rotbat} </b>\n"
+    caption += f"<b> {RallsM}| الصـور   ⇦ </b> {replied_user_profile_photos_count}\n"
+    caption += f"<b> {RallsM}|الحسـاب ⇦ </b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
-    caption += f"\n<b> {RaiisM}| الـمجموعات المشتـركة ⇦ </b> {common_chat} \n"
-    caption += f"<b> {RaiisM}| البايـو    ⇦ </b> {user_bio} \n"
+    caption += f"\n<b> {RallsM}| الـمجموعات المشتـركة ⇦ </b> {common_chat} \n"
+    caption += f"<b> {RallsM}| البايـو    ⇦ </b> {user_bio} \n"
     caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
-    caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒 𓆪 </b> - @RaiisThon "
+    caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒 𓆪 </b> - @RallsThon "
     return photo, caption
 
 
 @bot.on(
-    Raiis_cmd(pattern="رابط الحساب(?: |$)(.*)")
+    Ralls_cmd(pattern="رابط الحساب(?: |$)(.*)")
 )
 @bot.on(
     sudo_cmd(pattern="رابط الحساب(?: |$)(.*)", allow_sudo=True)
