@@ -1,5 +1,5 @@
-# ping for zed
-# by: @ZedThon
+# ping for Ralls
+# by: @RallsThon
 
 import time
 from datetime import datetime
@@ -35,7 +35,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-# Dev: @zlzzl77
+# Dev: @QQ070
 
 
 @bot.on(admin_cmd(pattern="بنك$"))
