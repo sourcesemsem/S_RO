@@ -1,4 +1,4 @@
-#ZedThon
+#RallsThon
 
 
 import asyncio
@@ -71,9 +71,9 @@ async def typewriter(typew):
 async def _(event):
     if event.fwd_from:
         return
-    zed = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 1)
-    message = zed[1]
-    count = int(zed[0])
+    Ralls = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 1)
+    message = Ralls[1]
+    count = int(Ralls[0])
     repmessage = (f"{message} ") * count
     await asyncio.wait([event.respond(repmessage)])
     await event.delete()
