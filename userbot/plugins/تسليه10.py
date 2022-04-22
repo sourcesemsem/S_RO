@@ -1,5 +1,4 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
-#الملـف حقـوق زلـزال الهيبـه ⤶ @zzzzl1l خاص بسـورس ⤶ 𝙕𝙚𝙙𝙏𝙝𝙤𝙣
+#RallsThon ®
 
 import asyncio
 import random
@@ -561,9 +560,9 @@ async def permalink(mention):
     user, custom = await get_user_from_event(mention)
     if not user:
         return
-    zedth = user.first_name.replace("\u2060", "") if user.first_name else user.username
-    zedth2 = user.last_name.replace("\u2060", "") if user.last_name else user.username
-    await edit_or_reply(mention, f"────▄▀▀▀▀▀▀▀▀▀▀▀▀▀▀█─█\n▀▀▀▀▄─█─█─█─█─█─█──█▀█\n─────▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀─▀\n\n**🚹 ╎ تنح واخذ الابره عزيزي 👨🏻‍⚕🤭😂** [{zedth}{zedth2}](tg://user?id={user.id})")
+    Rallsth = user.first_name.replace("\u2060", "") if user.first_name else user.username
+    Rallsth2 = user.last_name.replace("\u2060", "") if user.last_name else user.username
+    await edit_or_reply(mention, f"────▄▀▀▀▀▀▀▀▀▀▀▀▀▀▀█─█\n▀▀▀▀▄─█─█─█─█─█─█──█▀█\n─────▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀─▀\n\n**🚹 ╎ تنح واخذ الابره عزيزي 👨🏻‍⚕🤭😂** [{Rallsth}{Rallsth2}](tg://user?id={user.id})")
 
 
 
