@@ -1,12 +1,12 @@
 """
-©Zed : @ZedThon
-  - Telegraph Utils For Zed
+©Ralls : @RallsThon
+  - Telegraph Utils For Ralls
   - Telegraph Media Commend: .تلكراف ميديا
   - Telegraph Text Commend: .تلكراف نص
 """
 
 
-# telegraph utils for Source ZEDThon
+# telegraph utils for Source RallsThon
 
 import os
 from datetime import datetime
