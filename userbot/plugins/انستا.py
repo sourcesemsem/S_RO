@@ -1,7 +1,4 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
-#الملـف حقـوق زلـزال الهيبـه ⤶ @zzzzl1l خاص بسـورس ⤶ 𝙕𝙚𝙙𝙏𝙝𝙤𝙣
-
-#هه
+#Ralls𝙏𝙝𝙤𝙣 ®
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
