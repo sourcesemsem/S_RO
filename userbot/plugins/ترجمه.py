@@ -1,4 +1,4 @@
-# Translate code for zed edit by: @ZedThon
+# Translate code for Ralls edit by: @RallsThon
 
 from asyncio import sleep
 
