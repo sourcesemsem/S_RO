@@ -8,7 +8,7 @@ from telethon import __version__
 from . import ALIVE_NAME
 
 # ================= CONSTANT =================
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "zed"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ralls"
 # ============================================
 
 
@@ -16,7 +16,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "zed"
 @bot.on(sudo_cmd(allow_sudo=True, pattern=r"النظام$"))
 async def psu(event):
     uname = platform.uname()
-    softw = "** 𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 𝑺𝒀𝑺𝑻𝑬𝑴 𝑰𝑵𝑭𝑶 𓆪 **\n"
+    softw = "** 𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 𝑺𝒀𝑺𝑻𝑬𝑴 𝑰𝑵𝑭𝑶 𓆪 **\n"
     softw += f"** ⌔∮ النظام :↬ ** `{uname.system}`\n"
     softw += f"** ⌔∮ المرجع  :↬ ** `{uname.release}`\n"
     softw += f"** ⌔∮ الاصدار  :↬ ** `{uname.version}`\n"
@@ -77,7 +77,7 @@ async def _(event):
     cmd = "ics /proc/cpuinfo | grep 'model name'"
     o = (await _icssutils.runcmd(cmd))[0]
     await edit_or_reply(
-        event, f"**[- zed’s](tg://need_update_for_some_feature/) CPU Model:**\n{o}"
+        event, f"**[- Ralls’s](tg://need_update_for_some_feature/) CPU Model:**\n{o}"
     )
 
 
