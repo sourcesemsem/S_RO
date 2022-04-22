@@ -1,6 +1,6 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
+#Ralls ®
 # Port to UserBot
-# modified by @ZedThon
+# modified by @RallsThon
 # Copyright (C) 2022.
 
 import asyncio
