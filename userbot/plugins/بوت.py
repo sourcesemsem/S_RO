@@ -1,5 +1,5 @@
-#    Zed - Userbot
-#    Owner - @zlzzl77
+#    Ralls - Userbot
+#    Owner - @QQ070
 
 from telethon import events, Button
 from ..Config import Config
@@ -7,14 +7,14 @@ from . import TOSH, K, mention
 
 
 @asst_cmd("/repo|#repo")
-async def dev(zelzal):
-    await zelzal.reply(
-        "⌔∮ 𝙎𝙊𝙐𝙍𝘾𝙀 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 - 𝙍𝙀𝙋𝙊 𓆪",
+async def dev(QQ070):
+    await QQ070.reply(
+        "⌔∮ 𝙎𝙊𝙐𝙍𝘾𝙀 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝙍𝙀𝙋𝙊 𓆪",
         buttons=[[Button.url("🔗 𝙍𝙀𝙋𝙊 🔗", K)]]
     )
    
 
-TOSH_PIC = Config.ALIVE_PIC if Config.ALIVE_PIC else "https://telegra.ph/file/4c406eb5e6932d4834947.jpg"
+TOSH_PIC = Config.ALIVE_PIC if Config.ALIVE_PIC else "https://telegra.ph/file/57d51af1ca93d8cc8a958.jpg"
 
 if Config.TG_BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(events.InlineQuery)
@@ -26,8 +26,8 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         if query.startswith("بوت") and event.query.user_id == bot.uid:
             buttons = [
                 [
-                    Button.url("قنـاة السـورس ⚙️", "https://t.me/ZedThon"),
-                    Button.url("المطـور 👨🏻‍💻", "https://t.me/ZlZZl77"),
+                    Button.url("قنـاة السـورس ⚙️", "https://t.me/RallsThon"),
+                    Button.url("المطـور 👨🏻‍💻", "https://t.me/QQ070"),
                 ]
             ]
             if TOSH_PIC and TOSH_PIC.endswith((".jpg", ".png", "gif", "mp4")):
@@ -40,14 +40,14 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             elif TOSH_PIC:
                 result = builder.document(
                     TOSH_PIC,
-                    title="ZED - USERBOT",
+                    title="Ralls - USERBOT",
                     text=TOSH,
                     buttons=buttons,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
-                    title="ZED - USERBOT",
+                    title="Ralls - USERBOT",
                     text=TOSH,
                     buttons=buttons,
                     link_preview=False,
