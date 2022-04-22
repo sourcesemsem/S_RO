@@ -1,4 +1,4 @@
-#@ZedThon - زلـزال الهيبـه @ZZZZl1l
+#@RallsThon - الريس_علش @QQ070
 #كود الصورة الوقتيه  فكرتي وتعديلي الشخصي ومتعوب عليها + ماموجوده حتى بالسورسات الاجنبيه شلع قلع ..
 #اذا تريد تخمط بالعافيه عليك حبي بس اتمنه اتمنه اذا انته صدك مطور وتكول اني مطور تذكر الحقوق .. غيرها انته مطور فاشل ..
 
@@ -18,10 +18,10 @@ from telethon.tl import functions
 from . import AUTONAME, BOTLOG, BOTLOG_CHATID, DEFAULT_BIO
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
-DEFAULTUSERBIO = DEFAULT_BIO or "الحمد الله على كل شئ - @ZedThon"
+DEFAULTUSERBIO = DEFAULT_BIO or "الحمد الله على كل شئ - @RallsThon"
 CHANGE_TIME = Config.CHANGE_TIME
 DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
-ZEDT = Config.CUSTOM_ALIVE_EMZED or " "
+RallsT = Config.CUSTOM_ALIVE_EMRalls or " "
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
@@ -298,7 +298,7 @@ async def autoname_loop():
             if normal in normzltext:
               namefont = namerzfont[normzltext.index(normal)]
               HM = HM.replace(normal, namefont)
-        name = f"{ZEDT}{HM}™"
+        name = f"{RallsT}{HM}™"
         LOGS.info(name)
         try:
             await bot(functions.account.UpdateProfileRequest(first_name=name))
@@ -342,9 +342,9 @@ CMD_HELP.update(
   **╮•❐ الامـر ⦂ **`.الاسم تلقائي`
 •  **الشـرح •• **__لوضـع اسـم وقتـي لحسابـك يتغيـر تلقائيـاً كـل دقيقـه مـع الوقـت__
   **╮•❐ الامـر ⦂ **`.البروفايل تلقائي`
-•  **الشـرح •• **__لوضـع بروفايـل وقتـي يتغيـر تلقائيـاً مع حسابـك كل دقيقـه لشرح الامر اذهب الى https://t.me/ZED_Thon/63 __
+•  **الشـرح •• **__لوضـع بروفايـل وقتـي يتغيـر تلقائيـاً مع حسابـك كل دقيقـه لشرح الامر اذهب الى https://t.me/Ralls_Thon/63 __
   **╮•❐ الامـر ⦂ **`.البايو تلقائي`
-•  **الشـرح •• **__لوضـع بايـو وقتـي يتغيـر تلقائـياً مع الوقـت كـل دقيقـه لشرح الامر اذهب الى https://t.me/ZED_Thon/63 __
+•  **الشـرح •• **__لوضـع بايـو وقتـي يتغيـر تلقائـياً مع الوقـت كـل دقيقـه لشرح الامر اذهب الى https://t.me/Ralls_Thon/63 __
   **╮•❐ الامـر ⦂ **`.انهاء + ( الاسم تلقائي/البروفايل تلقائي/البايو تلقائي ) `
 •  **الشـرح •• **__لانهـاء الاوامـر الوقتيـه من حسابـك__
 """
