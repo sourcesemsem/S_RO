@@ -1,4 +1,4 @@
-#ZedThon
+#RallsThon
 
 import asyncio
 import random
@@ -20,7 +20,7 @@ Ulodya = [
        pattern="رموز", outgoing=True
     )
 )
-async def zed(zel):
+async def Ralls(zel):
    Ulo = random.choics(Ulodya)
    await zel.edit("**وجع انتظر...**")
    await asyncio.sleep(3)
