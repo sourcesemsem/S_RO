@@ -3,41 +3,41 @@ from userbot.plugins.sql_helper.autopost_sql import add_post, get_all_post, is_p
 from . import BOTLOG, get_user_from_event
 from . import *
 
-@zedthon.on(admin_cmd(pattern="نشر_تلقائي ?(.*)"))
+@Rallsthon.on(admin_cmd(pattern="نشر_تلقائي ?(.*)"))
 async def _(event):
     if (event.is_private or event.is_group):
         return await edit_or_reply(event, "**✾╎عـذراً .. النشر التلقائي خـاص بالقنـوات فقـط**")
     trz_ = event.pattern_match.group(1)
     if str(trz_).startswith("-100"):
-        zed = str(trz_).replace("-100", "")
+        Ralls = str(trz_).replace("-100", "")
     else:
-        zed = trz_
-    if not zed.isdigit():
+        Ralls = trz_
+    if not Ralls.isdigit():
         return await edit_or_reply(event, "**✾╎عـذراً .. قـم بوضـع ايـدي القنـاة اولاً**")
-    if is_post(zed , event.chat_id):
+    if is_post(Ralls , event.chat_id):
         return await edit_or_reply(event, "**✾╎تم تفعيـل النشر التلقـائي لهـذه القنـاة هنـا .. بنجـاح ✓**")
-    add_post(zed, event.chat_id)
+    add_post(Ralls, event.chat_id)
     await edit_or_reply(event, f"**✾╎جـاري بدء النشـر التلقـائي من القنـاة ** `{trz_}`")
 
 
-@zedthon.on(admin_cmd(pattern="ايقاف_النشر ?(.*)"))
+@Rallsthon.on(admin_cmd(pattern="ايقاف_النشر ?(.*)"))
 async def _(event):
     if (event.is_private or event.is_group):
         return await edit_or_reply(event, "**✾╎عـذراً .. النشر التلقائي خـاص بالقنـوات فقـط**")
     trz_ = event.pattern_match.group(1)
     if str(trz_).startswith("-100"):
-        zed = str(trz_).replace("-100", "")
+        Ralls = str(trz_).replace("-100", "")
     else:
-        zed = trz_
-    if not zed.isdigit():
+        Ralls = trz_
+    if not Ralls.isdigit():
         return await edit_or_reply(event, "**✾╎عـذراً .. قـم بوضـع ايـدي القنـاة اولاً**")
-    if not is_post(zed, event.chat_id):
+    if not is_post(Ralls, event.chat_id):
         return await edit_or_reply(event, "**✾╎تم تعطيـل النشر التلقـائي لهـذه القنـاة هنـا .. بنجـاح ✓**")
-    remove_post(zed, event.chat_id)
+    remove_post(Ralls, event.chat_id)
     await edit_or_reply(event, f"**✾╎تم ايقـاف النشـر التلقـائي من** `{trz_}`")
 
 
-@zedthon.on(admin_cmd(incoming=True))
+@Rallsthon.on(admin_cmd(incoming=True))
 async def _(event):
     if event.is_private:
         return
