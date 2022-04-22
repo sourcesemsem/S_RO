@@ -1,6 +1,6 @@
 """ Command: اوقات الصلاة لعواصم الدول باللغـة العربيـة
 Credit: @RallsThon
-@QQ070 -  زلــزال الهيبــه"""
+@QQ070 -  """
 
 import json
 import requests
