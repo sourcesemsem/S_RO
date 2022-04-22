@@ -1,8 +1,7 @@
 """
-©zed™
+©Ralls™
 """
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
-#الملـف حقـوق وكتابـة زلـزال الهيبـه ⤶ @zzzzl1l خاص بسـورس ⤶ 𝙕𝙚𝙙𝙏𝙝𝙤𝙣
+#RallsThon ®
 
 import asyncio
 import base64
@@ -334,7 +333,7 @@ async def _(event):
             os.remove(new_required_file_name)
             await event.delete()
             
-#ZedThon 
+#RallsThon 
 @bot.on(zelzal_cmd(pattern="متحركه ?(.*)"))
 @bot.on(sudo_cmd(pattern="متحركه ?(.*)", allow_sudo=True))
 async def gifs(ult):
