@@ -1,8 +1,4 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
-#الملـف حقـوق زلـزال الهيبـه ⤶ @zzzzl1l خاص بسـورس ⤶ 𝙕𝙚𝙙𝙏𝙝𝙤𝙣
-#الملف متعوب عليه So تخمط وماتذكـر المصـدر == اهينـك
-
-#هه
+#RallsThon ®
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
