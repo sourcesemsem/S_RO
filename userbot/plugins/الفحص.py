@@ -1,4 +1,4 @@
-#بنيتيM
+#الريس
 import random
 import re
 import time
@@ -40,8 +40,8 @@ def check_data_base_heal_th():
     return is_database_working, output
 
 
-@zedthon.on(admin_cmd(outgoing=True, pattern="فحص$"))
-@zedthon.on(sudo_cmd(pattern="فحص$", allow_sudo=True))
+@Rallsthon.on(admin_cmd(outgoing=True, pattern="فحص$"))
+@Rallsthon.on(sudo_cmd(pattern="فحص$", allow_sudo=True))
 async def zelzalalive(event):
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
@@ -51,10 +51,10 @@ async def zelzalalive(event):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     Z_EMOJI = Config.CUSTOM_ALIVE_EMOJI or "⎆┊"
-    ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "** بـوت  زدثــون 𝙕𝞝𝘿𝙏𝙃𝙊𝙉  يعمـل .. بنجـاح ☑️ 𓆩 **"
-    ZZL_IMG = Config.ALIVE_PIC or "https://telegra.ph/file/4c406eb5e6932d4834947.jpg"
-    zed_caption = Config.ZED_MEDIA or zedmp
-    caption = zed_caption.format(
+    ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "** بـوت  ريسثــون 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉  يعمـل .. بنجـاح ☑️ 𓆩 **"
+    ZZL_IMG = Config.ALIVE_PIC or "https://telegra.ph/file/57d51af1ca93d8cc8a958.jpg"
+    Ralls_caption = Config.Ralls_MEDIA or Rallsmp
+    caption = Ralls_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
         Z_EMOJI=Z_EMOJI,
         mention=mention,
@@ -85,12 +85,12 @@ async def zelzalalive(event):
         )
 
 
-zedmp = """{ALIVE_TEXT}
+Rallsmp = """{ALIVE_TEXT}
 
 **{Z_EMOJI} قاعدۿ البيانات :** تعمل بنـجاح
 **{Z_EMOJI} إصـدار التـيليثون :** `{telever}`
-**{Z_EMOJI} إصـدار زدثــون :** `{zdver}`
+**{Z_EMOJI} إصـدار ريسثــون :** `{zdver}`
 **{Z_EMOJI} إصـدار البـايثون :** `{pyver}`
 **{Z_EMOJI} الوقـت :** `{uptime}`
 **{Z_EMOJI} المسـتخدم:** {mention}
-**{Z_EMOJI} قنـاة السـورس :** [اضغـط هنـا](https://t.me/ZedThon)"""
+**{Z_EMOJI} قنـاة السـورس :** [اضغـط هنـا](https://t.me/RallsThon)"""
