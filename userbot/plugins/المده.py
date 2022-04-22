@@ -1,6 +1,6 @@
 """
-©Zed : @ZedThon
-  - zed UpTime
+©Ralls : @RallsThon
+  - Ralls UpTime
   - Commend: .المده
 """
 
@@ -8,29 +8,29 @@ import time
 
 from . import ALIVE_NAME, StartTime, get_readable_time, mention, reply_id
 
-DEFULTUSER = ALIVE_NAME or "ZEDbot"
-ZED_IMG = "https://telegra.ph/file/4c406eb5e6932d4834947.jpg"
-ZED_TEXT = "𓆩 𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 𓆪"
-ZEDEM = "**⌔∮**"
+DEFULTUSER = ALIVE_NAME or "Rallsbot"
+Ralls_IMG = "https://telegra.ph/file/57d51af1ca93d8cc8a958.jpg"
+Ralls_TEXT = "𓆩 𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 𓆪"
+RallsEM = "**⌔∮**"
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="المده$"))
 @bot.on(sudo_cmd(pattern="المده$", allow_sudo=True))
-async def uptzed(zed):
-    if zed.fwd_from:
+async def uptRalls(Ralls):
+    if Ralls.fwd_from:
         return
-    zedid = await reply_id(zed)
-    zedupt = await get_readable_time((time.time() - StartTime))
-    if ZED_IMG:
-        zed_c = f"**{ZED_TEXT}**\n"
-        zed_c += f"**{ZEDEM} المستخدم :** {mention}\n"
-        zed_c += f"**{ZEDEM} مدة التشغيل :** `{zedupt}`"
-        await zed.client.send_file(zed.chat_id, ZED_IMG, caption=zed_c, reply_to=zedid)
-        await zed.delete()
+    Rallsid = await reply_id(Ralls)
+    Rallsupt = await get_readable_time((time.time() - StartTime))
+    if Ralls_IMG:
+        Ralls_c = f"**{Ralls_TEXT}**\n"
+        Ralls_c += f"**{RallsEM} المستخدم :** {mention}\n"
+        Ralls_c += f"**{RallsEM} مدة التشغيل :** `{Rallsupt}`"
+        await Ralls.client.send_file(Ralls.chat_id, Ralls_IMG, caption=Ralls_c, reply_to=Rallsid)
+        await Ralls.delete()
     else:
         await edit_or_reply(
-            zed,
-            f"**{ZED_TEXT}**\n\n"
-            f"**{ZEDEM} المستخدم :** {mention}\n"
-            f"**{ZEDEM} مدة التشغيل :** `{zedupt}`",
+            Ralls,
+            f"**{Ralls_TEXT}**\n\n"
+            f"**{RallsEM} المستخدم :** {mention}\n"
+            f"**{RallsEM} مدة التشغيل :** `{Rallsupt}`",
         )
