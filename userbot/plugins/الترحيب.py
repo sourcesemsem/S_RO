@@ -1,6 +1,6 @@
 """
-©zed : @ZedThon
-  - Welcome Code For Zed
+©Ralls : @RallsThon
+  - Welcome Code For Ralls
   - Add Welcome Commend   : .ترحيب
   - list Welcome Commend  : .الترحيب
   - Remove Welcome Commend: .حذف ترحيب
