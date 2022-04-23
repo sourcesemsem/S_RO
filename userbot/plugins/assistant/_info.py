@@ -1,4 +1,4 @@
-# Zed - Userbot
+# Ralls - Userbot
 # Owner ~ <@QQ070>
 
 from . import Asstid
