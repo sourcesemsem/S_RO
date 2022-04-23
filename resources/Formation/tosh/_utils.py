@@ -1,5 +1,5 @@
-#    ZED - USERBOT
-#    ZelZal - @zzzzl1l
+#    Ralls - USERBOT
+#    @QQ070 - @QQ070
 
 import asyncio
 import os
