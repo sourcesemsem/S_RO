@@ -1,7 +1,7 @@
-#حقوق زدثـون ومتعوب عليها .. تخمط اذكر المصدر حبي
+#حقوق ريسثـون ومتعوب عليها .. تخمط اذكر المصدر حبي
 
 """
-©Zed : @ZedThon
+©Ralls : @RallsThon
 
 """
 
@@ -9,7 +9,7 @@
 from .. import reply_id as rd 
 from . import *
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب1$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب1$"))
 @bot.on(sudo_cmd(pattern="ب1$", allow_sudo=True))
 async def stswallpapersb(kim):
     if kim.fwd_from:
@@ -20,7 +20,7 @@ async def stswallpapersb(kim):
         await kim.client.send_file(kim.chat_id, sts_wallpapersb, caption=kim_c, reply_to=zel)
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب2$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب2$"))
 @bot.on(sudo_cmd(pattern="ب2$", allow_sudo=True))
 async def stswallpapersb(lon):
     if lon.fwd_from:
@@ -31,7 +31,7 @@ async def stswallpapersb(lon):
         await lon.client.send_file(lon.chat_id, sts_wallpapersb2, caption=ics_c, reply_to=lonid)
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب3$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب3$"))
 @bot.on(sudo_cmd(pattern="ب3$", allow_sudo=True))
 async def stswallpapersb(i):
     if i.fwd_from:
@@ -42,7 +42,7 @@ async def stswallpapersb(i):
         await i.client.send_file(i.chat_id, sts_wallpapersb3, caption=tumc, reply_to=sic_id)
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب4$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب4$"))
 @bot.on(sudo_cmd(pattern="ب4$", allow_sudo=True))
 async def stswallpapersb(lon):
     if lon.fwd_from:
@@ -55,7 +55,7 @@ async def stswallpapersb(lon):
         )
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب5$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب5$"))
 @bot.on(sudo_cmd(pattern="ب5$", allow_sudo=True))
 
 async def stswallpapersb(tosh):
@@ -69,7 +69,7 @@ async def stswallpapersb(tosh):
         )
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب6$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب6$"))
 @bot.on(sudo_cmd(pattern="ب6$", allow_sudo=True))
 
 async def stswallpapersb(kimo):
@@ -83,7 +83,7 @@ async def stswallpapersb(kimo):
         )
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب7$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب7$"))
 @bot.on(sudo_cmd(pattern="ب7$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -96,7 +96,7 @@ async def stswallpapersb(ics):
         )
         
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب8$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب8$"))
 @bot.on(sudo_cmd(pattern="ب8$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -108,7 +108,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb8, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب9$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب9$"))
 @bot.on(sudo_cmd(pattern="ب9$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -120,7 +120,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb9, caption=tumc, reply_to=reply_to_id
         )
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب10$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب10$"))
 @bot.on(sudo_cmd(pattern="ب10$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -132,7 +132,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb10, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب11$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب11$"))
 @bot.on(sudo_cmd(pattern="ب11$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -144,7 +144,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb11, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب12$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب12$"))
 @bot.on(sudo_cmd(pattern="ب12$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -156,7 +156,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb12, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب13$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب13$"))
 @bot.on(sudo_cmd(pattern="ب13$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -168,7 +168,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb13, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب14$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب14$"))
 @bot.on(sudo_cmd(pattern="ب14$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -180,7 +180,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb14, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب15$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب15$"))
 @bot.on(sudo_cmd(pattern="ب15$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -192,7 +192,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb15, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب16$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب16$"))
 @bot.on(sudo_cmd(pattern="ب16$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -204,7 +204,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb16, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب17$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب17$"))
 @bot.on(sudo_cmd(pattern="ب17$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -216,7 +216,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb17, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب18$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب18$"))
 @bot.on(sudo_cmd(pattern="ب18$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -228,7 +228,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb18, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب19$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب19$"))
 @bot.on(sudo_cmd(pattern="ب19$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
@@ -240,7 +240,7 @@ async def stswallpapersb(ics):
             ics.chat_id, sts_wallpapersb19, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ب20$"))
+@bot.on(QQ070_cmd(outgoing=True, pattern="ب20$"))
 @bot.on(sudo_cmd(pattern="ب20$", allow_sudo=True))
 async def stswallpapersb(ics):
     if ics.fwd_from:
