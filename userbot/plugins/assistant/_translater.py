@@ -1,6 +1,6 @@
-# Zed - Userbot
-# translater for Zed - Userbot
-# Owner ~ <@zzzzl1l>
+# Ralls - Userbot
+# translater for Ralls - Userbot
+# Owner ~ <@QQ070>
 
 from googletrans import Translator, LANGUAGES
 
