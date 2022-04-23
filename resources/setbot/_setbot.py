@@ -1,4 +1,4 @@
-#    Copyright (C) ZED ~ ZELZAL 2021
+#    Copyright (C) Rallsthon ~ @QQ070 2021
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
@@ -60,6 +60,6 @@ async def setbot():
         except Exception as e:
             LOGS.info(str(e))
 
-# End For zed bot Only
-# Owner ~ ZELZAL
-# Tele ~ @Zedthon
+# End For Ralls bot Only
+# Owner ~ @QQ070
+# Tele ~ @Rallsthon
