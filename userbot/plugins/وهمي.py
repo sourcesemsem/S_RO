@@ -9,16 +9,16 @@ from ..helpers import get_user_from_event
 from . import *
 import os
 
-@zedthon.on(zelzal_cmd(pattern="طقس (.*)"))
-@zedthon.on(sudo_cmd(pattern="طقس (.*)", allow_sudo=True))
+@Rallsthon.on(QQ070_cmd(pattern="طقس (.*)"))
+@Rallsthon.on(sudo_cmd(pattern="طقس (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    Zed = "adf0cf22618186fc11e9f89c090cb356"
+    Ralls = "adf0cf22618186fc11e9f89c090cb356"
     sample_url = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
     input_str = event.pattern_match.group(1)
     async with aiohttp.ClientSession() as session:
-        response_api_zero = await session.get(sample_url.format(input_str, Zed))
+        response_api_zero = await session.get(sample_url.format(input_str, Ralls))
     response_api = await response_api_zero.json()
     if response_api["cod"] == 200:
         country_code = response_api["sys"]["country"]
@@ -54,7 +54,7 @@ async def _(event):
         await edit_or_reply(event, response_api["message"])
 
 
-@zedthon.on(zelzal_cmd(pattern="يكتب(?: |$)(.*)"))
+@Rallsthon.on(QQ070_cmd(pattern="يكتب(?: |$)(.*)"))
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -72,7 +72,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@zedthon.on(zelzal_cmd(pattern="صوتيه(?: |$)(.*)"))
+@Rallsthon.on(QQ070_cmd(pattern="صوتيه(?: |$)(.*)"))
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -90,7 +90,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@zedthon.on(zelzal_cmd(pattern="فيد(?: |$)(.*)"))
+@Rallsthon.on(QQ070_cmd(pattern="فيد(?: |$)(.*)"))
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -108,7 +108,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@zedthon.on(zelzal_cmd(pattern="لعبه(?: |$)(.*)"))
+@Rallsthon.on(QQ070_cmd(pattern="لعبه(?: |$)(.*)"))
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
