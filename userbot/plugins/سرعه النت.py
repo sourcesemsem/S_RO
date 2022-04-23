@@ -1,4 +1,4 @@
-# speedtest for zed edit by @ZedThon
+# speedtest for Ralls edit by @RallsThon
 
 from datetime import datetime
 
@@ -61,7 +61,7 @@ async def _(event):
             await event.client.send_file(
                 event.chat_id,
                 speedtest_image,
-                caption="𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 - 𝑺𝑷𝑬𝑬𝑫𝑻𝑬𝑺𝑻 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n**⪼ اڪتمل اختبار السرعه في ** {} **ثانيه** 𓆰.".format(
+                caption="𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝑺𝑷𝑬𝑬𝑫𝑻𝑬𝑺𝑻 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n**⪼ اڪتمل اختبار السرعه في ** {} **ثانيه** 𓆰.".format(
                     ms
                 ),
                 force_document=as_document,
