@@ -1,6 +1,6 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
+#RallsThon ®
 # Port to UserBot
-# modified by @ZedThon
+# modified by @RallsThon
 # Copyright (C) 2022.
 
 import asyncio
@@ -11,8 +11,8 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from . import *
 
-@zedthon.on(zelzal_cmd(pattern="ساوند$", outgoing=True))
-@zedthon.on(sudo_cmd(pattern="ساوند$", allow_sudo=True))
+@Rallsthon.on(QQ070_cmd(pattern="ساوند$", outgoing=True))
+@Rallsthon.on(sudo_cmd(pattern="ساوند$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -45,15 +45,15 @@ async def _(event):
             await event.client.send_message(event.chat_id, response.message)
 
 
-@borg.on(zelzal_cmd(pattern="كلود ?(.*)"))
-async def zed(event):
+@borg.on(QQ070_cmd(pattern="كلود ?(.*)"))
+async def Ralls(event):
     if event.fwd_from:
         return
-    zedr = event.pattern_match.group(1)
-    zelzal = "@DeezerMusicBot"
+    Rallsr = event.pattern_match.group(1)
+    QQ070 = "@DeezerMusicBot"
     if event.reply_to_msg_id:
         await event.get_reply_message()
-    tap = await bot.inline_query(zelzal, zedr)
+    tap = await bot.inline_query(QQ070, Rallsr)
     await tap[0].click(event.chat_id)
     await event.delete()
 
