@@ -1,4 +1,4 @@
-#    Zed - UserBot
+#    Ralls - UserBot
 
 import re
 from userbot.plugins.assistant import *
@@ -15,8 +15,8 @@ from . import *
 from .. import mention
 from telegraph import Telegraph, upload_file
 
-# =================== OWNER - ZELZAL =================== #
-ALIVE_NAME = Config.ALIVE_NAME if Config.ALIVE_NAME else "@ZedThon"
+# =================== OWNER - QQ070 =================== #
+ALIVE_NAME = Config.ALIVE_NAME if Config.ALIVE_NAME else "@RallsThon"
 CUSTOM_PMPERMIT_TEXT = Config.CUSTOM_PMPERMIT_TEXT
 LOAD_MYBOT = Config.LOAD_MYBOT
 Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
@@ -28,7 +28,7 @@ if not os.path.isdir(path):
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
 auth_url = r["auth_url"]
-# =================== OWNER - ZELZAL =================== #
+# =================== OWNER - QQ070 =================== #
 
 # start-others
 @tgbot.on(events.NewMessage(pattern="^/start"))  # pylint: disable=oof
@@ -65,13 +65,13 @@ async def start_all(event):
                                   caption=startotherena,
                                   buttons=[
                                       [Button.inline(
-                                          "⚜️ 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="Zed")]
+                                          "⚜️ 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="Ralls")]
                                   ])
         else:
             await event.reply(startotherena,
                                      buttons=[
                                          [Button.inline(
-                                             "⚜️ 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="zed")]
+                                             "⚜️ 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="Ralls")]
                                      ])
 
 
@@ -88,7 +88,7 @@ async def owner(event):
                                  [Button.inline("⚜️ الاذاعه ⚜️",
                                                 data="toshbroad")],
                                  [Button.url("⚜️ الدعم ⚜️",
-                                             "https://t.me/ZedThon")]
+                                             "https://t.me/RallsThon")]
                              ])
 
 
@@ -111,10 +111,10 @@ async def logs(event):
         event.chat_id,
         "logs.txt",
         reply_to=event.id,
-        caption="**Heroku** Zed Logs",
+        caption="**Heroku** Ralls Logs",
         buttons=[
             [Button.url("💠 𝙑𝙄𝙀𝙒 𝙊𝙉𝙇𝙄𝙉𝙀 💠", f"{url}")],
-            [Button.url("💠 𝘾𝙍𝘼𝙎𝙃𝙀𝘿 💠", "t.me/ZedThon")]
+            [Button.url("💠 𝘾𝙍𝘼𝙎𝙃𝙀𝘿 💠", "t.me/RallsThon")]
         ])
     await asyncio.sleep(5)
     return os.remove('logs.txt')
@@ -129,30 +129,30 @@ async def settings(event):
                              "⌔∮ ليس هناك الكثير للقيام به هنا.",
                              buttons=[
                                      [Button.inline(
-                                         "⚜️ احصل على بوت زد ثـون بنفسك ⚜️", data="deployme")]
+                                         "⚜️ احصل على بوت ريس ثـون بنفسك ⚜️", data="deployme")]
                              ])
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"zed"))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"Ralls"))
           )  # pylint: disable=oof
 async def settings(event):
     await event.delete()
-    await event.reply(f"⌔∮ انا زد ثـون مساعد {mention}. الشخصي تستطيع الاتصال بي عن طريق هذا البوت",
+    await event.reply(f"⌔∮ انا ريس ثـون مساعد {mention}. الشخصي تستطيع الاتصال بي عن طريق هذا البوت",
                              buttons=[
                                      [Button.inline(
-                                         "⚜️ حصل على بوت زد ثـون بنفسك ⚜️", data="deployme")]
+                                         "⚜️ حصل على بوت ريس ثـون بنفسك ⚜️", data="deployme")]
                              ])
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"deployme"))
           )  # pylint: disable=oof
 async def settings(event):
-    await event.edit("** ⌔∮ هنا ستجد رابط زد ثـون ورابط التنصيب ايضا**:",
+    await event.edit("** ⌔∮ هنا ستجد رابط ريس ثـون ورابط التنصيب ايضا**:",
                      buttons=[
-                         [Button.url("🔗 رابط السورس🔗", url="https://github.com/Zedthon/ZED_USERBOT")],
-                         [Button.url("🔗 رابط التنصيب 🔗", url="https://t.me/ZedThon/105")],
+                         [Button.url("🔗 رابط السورس🔗", url="https://github.com/Rallsthon/Ralls_USERBOT")],
+                         [Button.url("🔗 رابط التنصيب 🔗", url="https://t.me/RallsThon/105")],
                          [Button.url("✨ الدعم ✨",
-                                     url="https://t.me/ZedThon")]
+                                     url="https://t.me/RallsThon")]
                      ])
 
 
@@ -170,12 +170,12 @@ async def settings(event):
                                          "⚜️ لتغير الايڤ وغيرها ⚜️ ⁦⁩", data="custom")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 
-# zed zag - زغرفه زدثون
+# Ralls zag - زغرفه ريسثون
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"icszag"))
-          )  # Zed - Userbot
+          )  # Ralls - Userbot
 async def settings(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
@@ -192,7 +192,7 @@ async def settings(event):
                                      "اسماء القنوات 🍇", data="chanlan")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 
 
@@ -213,7 +213,7 @@ async def settings(event):
                                          "اسماء بنات 🍇", data="girlan")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 
 # Boys zag - زغرفه اسماء الشباب
@@ -233,13 +233,13 @@ async def settings(event):
                                          "║ رجوع ║", data="icsname")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 
 
 # Boys zag list1 - قائمه اسماء الشباب الاولى
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"boysna1"))
-          )  # Zed - Userbot
+          )  # Ralls - Userbot
 async def settings(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
@@ -253,7 +253,7 @@ async def settings(event):
 
 # Boys zag list2 - قائمه اسماء الشباب الثانيه
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"boysna2"))
-          )  # Zed - Userbot
+          )  # Ralls - Userbot
 async def settings(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
@@ -283,13 +283,13 @@ async def settings(event):
                                          "║ رجوع ║", data="icsname")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 
 
 # girls zag list1 - قائمه اسماء بنات الاولى
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"girlan1"))
-          )  # Zed - Userbot
+          )  # Ralls - Userbot
 async def settings(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
@@ -304,7 +304,7 @@ async def settings(event):
 
 # girls zag list2 - قائمه اسماء بنات الثانيه
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"girlan2"))
-          )  # Zed - Userbot
+          )  # Ralls - Userbot
 async def settings(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
@@ -333,7 +333,7 @@ async def settings(event):
                                          "⫷ التالي ", data="icspio2")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 
 
@@ -354,7 +354,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio3")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 
 
@@ -375,7 +375,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio4")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 
 
@@ -396,7 +396,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio5")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 
 
@@ -417,7 +417,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio1")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 
 # Boys zag - زغرفه اسماء الشباب
@@ -437,7 +437,7 @@ async def settings(event):
                                          "║ رجوع ║", data="icszag")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 
 # Months - الاشهر
@@ -716,7 +716,7 @@ async def a_txt(event):
             mssg=f"** ⌔∮ تم تغير نص الايڤ من**\n  - `{old_alv}`\n** ⌔∮ الى **\n  - `{themssg}`\n"
             await xx.edit(mssg)
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon.", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon.", alert=True)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"alv_pic"))
            )  # pylint: disable=C0321
@@ -753,7 +753,7 @@ async def alv_pic(event):
         mssg=f"**⌔∮ تم تغير الصوره بنجاح انتظر قليلا **.\n"
         await xx.edit(mssg)
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon.", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon.", alert=True)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"pm_cus")))
 async def alv(event):
@@ -791,7 +791,7 @@ async def a_txt(event):
             mssg=f"**⌔∮ تم تغير رسالة الحمايه من**\n  - `{old_alv}`\n **⌔∮ الى **\n  - `{themssg}`\n"
             await xx.edit(mssg)
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"pm_pic"))
            )  # pylint: disable=C0321
@@ -828,4 +828,4 @@ async def alv_pic(event):
         mssg=f"**⌔∮ تم تغير صوره الحمايه الخاصه بك ✨**.\n"
         await xx.edit(mssg)
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @ZedThon.", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon.", alert=True)
