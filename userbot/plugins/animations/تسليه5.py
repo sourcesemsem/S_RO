@@ -1,4 +1,4 @@
-# animation5 for zeduserbot edit by ~ @zlzzl77
+# animation5 for Rallsuserbot edit by ~ @QQ070
 
 import asyncio
 
@@ -85,12 +85,12 @@ async def _(event):
         "😧",
         "😡",
         "😢",
-        "‎**سورس زد ثـون**",
+        "‎**سورس ريس ثـون**",
         "😁",
         "😧",
         "😡",
         "😢",
-        "__**[مطور السورس]**__(t.me/ZlZZl77)",
+        "__**[مطور السورس]**__(t.me/QQ070)",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
