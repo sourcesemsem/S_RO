@@ -1,7 +1,4 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
-#الملـف حقـوق وكتابـة زلـزال الهيبـه ⤶ @zzzzl1l خاص بسـورس ⤶ 𝙕𝙚𝙙𝙏𝙝𝙤𝙣
-#لأول مره ع تليثون أمر زغرفـه تمبلـر عدة زغـارف انكـلش بوقت واحد
-
+#RallsThon ®
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
@@ -19,7 +16,7 @@ async def _(event):
     reply_to_id = await reply_id(event)
     if event.reply_to_msg_id:
         reply_to_id = await event.get_reply_message()
-    chat = "@ZedThonbbot"
+    chat = "@@Ralls1_bot"
     catevent = await edit_or_reply(event, "**جـارِ الزغـرفـه💞🧸...**")
     async with event.client.conversation(chat) as conv:
         try:
@@ -30,7 +27,7 @@ async def _(event):
             response = await response
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await catevent.edit("**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @ZedThonbbot .. ثم اعـد استخدام الامـر ...🤖♥️**")
+            await catevent.edit("**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @@Ralls1_bot .. ثم اعـد استخدام الامـر ...🤖♥️**")
             return
         if response.text.startswith("I can't find that"):
             await catevent.edit("sorry i can't find it")
@@ -50,7 +47,7 @@ async def _(event):
     if not reply_message.text:
         await edit_or_reply(event, "**باضافـة الكلمـة المراد زغرفتها للأمـر .. مثال : .زغرفه + كلمـه 💞🧸.**")
         return
-    chat = "@ZedThonbbot"
+    chat = "@@Ralls1_bot"
     catevent = await edit_or_reply(event, "**باضافـة الكلمـة المراد زغرفتها للأمـر .. مثال : .زغرفه + كلمـه 💞🧸.**")
     async with event.client.conversation(chat) as conv:
         try:
@@ -62,7 +59,7 @@ async def _(event):
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
             await catevent.edit(
-                "**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @ZedThonbbot .. ثم اعـد استخدام الامـر ...🤖♥️**"
+                "**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @@Ralls1_bot .. ثم اعـد استخدام الامـر ...🤖♥️**"
             )
             return
         if response.text.startswith(""):
@@ -75,6 +72,6 @@ async def _(event):
 CMD_HELP.update(
     {
         "زخرفه انكلش": "`.زغرفه` + كلمه او بالـرد ع كلـمه :\
-      \n**الشـرح ••** زغـارف انكـلش تمبلـر مامطروقـه ولأول مـره ع تليـثون أمر يزغرف عدة زغـارف انكـلش بوقت واحد .. الملف حقوق زدثــون#.. . "
+      \n**الشـرح ••** زغـارف انكـلش تمبلـر مامطروقـه ولأول مـره ع تليـثون أمر يزغرف عدة زغـارف انكـلش بوقت واحد .. الملف حقوق ريسثــون#.. . "
     }
 )
