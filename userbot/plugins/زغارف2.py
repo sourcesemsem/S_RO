@@ -1,4 +1,4 @@
-# fonts for zed edit by: @zlzzl77
+# fonts for Ralls edit by: @QQ070
 
 import random
 
