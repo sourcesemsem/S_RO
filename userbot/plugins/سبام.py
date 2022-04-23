@@ -1,5 +1,5 @@
-# for -<*>~ SOURCE ZED ~<*>-
-# edit By: @ZedThon
+# for -<*>~ SOURCE Ralls ~<*>-
+# edit By: @RallsThon
 
 import asyncio
 import os
@@ -8,7 +8,7 @@ from . import *
 
 
 @bot.on(admin_cmd(pattern="تسبام"))
-async def zed(zel):
+async def Ralls(zel):
     tspam = str(zel.text[7:])
     message = tspam.replace(" ", "")
     for letter in message:
@@ -17,7 +17,7 @@ async def zed(zel):
 
 
 @bot.on(admin_cmd(pattern="سبام"))
-async def zed(zel):
+async def Ralls(zel):
     if not zel.text[0].isalpha() and zel.text[0] not in ("/", "#", "@", "!"):
         message = zel.text
         counter = int(message[6:8])
@@ -27,7 +27,7 @@ async def zed(zel):
 
 
 @bot.on(admin_cmd(pattern="بسبام"))
-async def zed(zel):
+async def Ralls(zel):
     if not zel.text[0].isalpha() and zel.text[0] not in ("/", "#", "@", "!"):
         message = zel.text
         counter = int(message[9:13])
