@@ -1,7 +1,7 @@
-#حقوق زد ثـون ومتعوب عليها .. تخمط اذكر المصدر حبي
+#حقوق ريس ثـون ومتعوب عليها .. تخمط اذكر المصدر حبي
 
 """
-©Zed : @ZedThon
+©Ralls : @RallsThon
   - Tumblr Gif -1
   - Tumblr Gif -2
   - Tumblr Gif -3
