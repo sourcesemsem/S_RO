@@ -1,5 +1,5 @@
-#  Zed - USERBOT
-#  TELE - @ZlZZl77
+#  Ralls - USERBOT
+#  TELE - @QQ070
 
 from . import Devt
 
