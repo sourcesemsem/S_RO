@@ -1,9 +1,9 @@
-# animation4 for zed by: @ZedThon
+# animation4 for Ralls by: @RallsThon
 
 import asyncio
 from . import ALIVE_NAME
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Zed - Userbot "
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ralls - Userbot "
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="قاتل( (.*)|$)"))
