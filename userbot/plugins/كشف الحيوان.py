@@ -1,6 +1,4 @@
-# This File for zed® written by ~ @ZlZZl77
-#الملف كتابتي وحقوقي + متعوب عليه
-#فلا تصير مطور براسي - اذا تريد تخمط اذكر المصدر حبي
+# This File for Ralls® written by ~ @QQ070
 
 import os
 import random
@@ -12,7 +10,7 @@ from telethon.utils import get_input_location
 
 TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 
-# حقوق زد ثــون -- زلـزال_الهيبـه -- @ZeDThoN
+# حقوق ريس ثــون -- الريس_علش -- @RallsThoN
 
 hhh = [
     "جلب شوارع 🐕‍🦺",
@@ -143,7 +141,7 @@ async def fetch_info(replied_user, event):
     caption += f"<b> • 🌚 | صـوره  ⇦ </b> {replied_user_profile_photos_count} </b>\n"
     caption += f"<b> • 🌚 | نــوعه   ⇦  {fof} </b>\n"
     caption += f"<b> • 🌚 | نسبتـه  ⇦  {yoy} </b>\n\n\n"
-    caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝙕𝞝𝘿 𓆪 </b> - @ZedThon "
+    caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒 𓆪 </b> - @RallsThon "
     return photo, caption
 
 CMD_HELP.update(
