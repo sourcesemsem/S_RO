@@ -1,4 +1,4 @@
-# animation3 for zed edit by: @zlzzl77
+# animation3 for Ralls edit by: @QQ070
 
 import asyncio
 from collections import deque
