@@ -1,5 +1,5 @@
 # Zed - Userbot
-# Owner ~ <@zzzzl1l>
+# Owner ~ <@QQ070>
 
 from . import Asstid
 from telethon.utils import pack_bot_file_id
