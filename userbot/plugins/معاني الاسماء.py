@@ -1,5 +1,4 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
-#الملـف حقـوق وكتابـة زلـزال الهيبـه ⤶ @zzzzl1l خاص بسـورس ⤶ 𝙕𝙚𝙙𝙏𝙝𝙤𝙣
+#Ralls ®
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -60,7 +59,7 @@ async def _(event):
         return await edit_or_reply(
             event, "**╮ .صفات + الاسـم ... للبحـث عن صفات الاسمـاء ...𓅫╰**"
         )
-    chat = "@zzzsfbot"
+    chat = "@SR7GBOT"
     catevent = await edit_or_reply(event, "**╮•⎚ جـارِ البحـث عـن صفـات الاسـم ... 🧸🎈**")
     async with event.client.conversation(chat) as conv:
         try:
@@ -71,7 +70,7 @@ async def _(event):
             response = await response
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await catevent.edit("**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @zzzsfbot .. ثم اعـد استخدام الامـر ...🤖♥️**")
+            await catevent.edit("**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @SR7GBOT .. ثم اعـد استخدام الامـر ...🤖♥️**")
             return
         if response.text.startswith("I can't find that"):
             await catevent.edit("**╮•⎚ عـذراً .. لـم استطـع ايجـاد المطلـوب ☹️💔**")
