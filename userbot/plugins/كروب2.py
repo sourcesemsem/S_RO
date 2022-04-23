@@ -1,4 +1,4 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
+#RallsThon ®
 
 import asyncio
 import time
@@ -105,7 +105,7 @@ NO_ADMIN = "**❈╎أنا لست مشرف هنا ** ."
 NO_PERM = "**❈╎ليس لدي أذونات كافية  🚮** ."
 CHAT_PP_CHANGED = "**❈╎تغيّرت صورة الدردشة  🌅** ."
 INVALID_MEDIA = "**⌔ ╎ ملحق غير صالح  📳** ."
-IMOGE_ZEDTHON = "❈╎"
+IMOGE_RallsTHON = "❈╎"
 
 
 
@@ -116,7 +116,7 @@ async def get_users(show):
     await reply_id(show)
     input_str = show.pattern_match.group(1)
     if input_str:
-        mentions = "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝙕𝞝𝘿𝙏𝙃𝙊𝙉 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n**❈╎الأعضاء في {} من المجموعات 𓎤:**\n".format(input_str)
+        mentions = "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n**❈╎الأعضاء في {} من المجموعات 𓎤:**\n".format(input_str)
         try:
             chat = await show.client.get_entity(input_str)
         except Exception as e:
@@ -604,7 +604,7 @@ async def _(event):
         elif i.status is None:
             n += 1
     if input_str:
-        required_string = """𓆰 𝑺𝑶𝑼𝑹𝑪𝑬 𝙕𝞝𝘿𝙏𝙃𝙊𝙉  - 𝑮𝑹𝑼𝑶𝑷 𝑫𝑨𝑻𝑨 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻
+        required_string = """𓆰 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉  - 𝑮𝑹𝑼𝑶𝑷 𝑫𝑨𝑻𝑨 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻
 **⌔∮ المطرودين {} / {} المستخدمين 
 **⌔∮ الحسابات المحذوفه :** {}
 **⌔∮ اخر ظهور منذ زمن طويل :** {}
@@ -618,7 +618,7 @@ async def _(event):
         await et.edit(required_string.format(c, p, d, y, m, w, o, q, r, b, n))
         await sleep(5)
     await et.edit(
-        """𓆰 𝑺𝑶𝑼𝑹𝑪𝑬 𝙕𝞝𝘿𝙏𝙃𝙊𝙉  - 𝑮𝑹𝑼𝑶𝑷 𝑫𝑨𝑻𝑨 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻
+        """𓆰 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉  - 𝑮𝑹𝑼𝑶𝑷 𝑫𝑨𝑻𝑨 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻
 **⌔∮ العدد : ** {} مستخدم 
 **⌔∮ الحسابات المحذوفه :** {}
 **⌔∮ اخر ظهور منذ زمن طويل :** {}
@@ -705,7 +705,7 @@ async def get_users(event):
         kno = await event.reply("**❈╎تتـم العـملية انتظـࢪ قليلا ..**")
     else:
         kno = await event.edit("**❈╎تتـم العـملية انتظـࢪ قليلا ..**.")
-    ZEDTHON = await get_chatinfo(event)
+    RallsTHON = await get_chatinfo(event)
     chat = await event.get_chat()
     if event.is_private:
         return await kno.edit("**❈╎لا يمكننـي اضافـة المـستخدمين هـنا**")
@@ -714,7 +714,7 @@ async def get_users(event):
     error = "None"
 
     await kno.edit("**❈╎حـالة الأضافة:**\n\n**❈╎تتـم جـمع معـلومات الـمستخدمين 🔄 ...⏣**")
-    async for user in event.client.iter_participants(ZEDTHON.full_chat.id):
+    async for user in event.client.iter_participants(RallsTHON.full_chat.id):
         try:
             if error.startswith("Too"):
                 return (
@@ -738,7 +738,7 @@ async def _(event):
     result = await event.client(functions.channels.GetParticipantRequest(event.chat_id, event.client.uid))
     if not result:
         return await edit_or_reply(event, "**❈╎ليس لديك صلاحيه الحظـر في هـذه الدردشـه**")
-    zedthonevent = await edit_or_reply(event, "**❈╎جـاري اتمـام العمليـه .. الرجـاء الانتظـار 🚸**")
+    Rallsthonevent = await edit_or_reply(event, "**❈╎جـاري اتمـام العمليـه .. الرجـاء الانتظـار 🚸**")
     admins = await event.client.get_participants(event.chat_id, filter=ChannelParticipantsAdmins)
     admins_id = [i.id for i in admins]
     total = 0
@@ -752,11 +752,11 @@ async def _(event):
                 await sleep(0.2)  
         except Exception as e:
             LOGS.info(str(e))
-    await zedthonevent.edit(f"**❈╎تـم  تفلـيش {total} عضـو .. بنجـاح ☑️🗑**")
+    await Rallsthonevent.edit(f"**❈╎تـم  تفلـيش {total} عضـو .. بنجـاح ☑️🗑**")
     
 async def ban_user(chat_id, i, rights):
     try:
-        await zedthon(functions.channels.EditBannedRequest(chat_id, i, rights))
+        await Rallsthon(functions.channels.EditBannedRequest(chat_id, i, rights))
         return True, None
     except Exception as exc:
         return False, str(exc)
@@ -1106,7 +1106,7 @@ async def _(event):  # sourcery no-metrics
     
 @bot.on(admin_cmd(pattern="الرابط ?(.*)"))
 @bot.on(sudo_cmd(pattern="الرابط ?(.*)", allow_sudo=True))
-async def zed(SLQ):
+async def Ralls(SLQ):
     await SLQ.edit("**⇜ جـاري جلـب رابـط المجموعـه ⇜**")
     try:
         l5 = await SLQ.client(
@@ -1118,7 +1118,7 @@ async def zed(SLQ):
     
 @bot.on(admin_cmd(pattern="رسائلي ?(.*)"))
 @bot.on(sudo_cmd(pattern="رسائلي ?(.*)", allow_sudo=True))
-async def zed(SLQ):
+async def Ralls(SLQ):
     k = await SLQ.get_reply_message()
     if k:
         a = await bot.get_messages(SLQ.chat_id, 0, from_user=k.sender_id)
