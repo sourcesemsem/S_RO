@@ -1,7 +1,7 @@
 # Rallsthon - UserBot
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
 #
-# This file is a part of < https://github.com/raiis1/Raiis1_USERBOT/ >
+# This file is a part of < https://github.com/raiis1/Ralls1_USERBOT/ >
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/raiis1/Raiis1_USERBOT/blob/master/LICENSE/>.
 
@@ -35,7 +35,7 @@ r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
 auth_url = r["auth_url"]
 
 
-QQ070VP_cmd = (
+admin_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐀𝐈𝐈𝐒𝗧𝗵𝗼𝗻 𝗖𝗼𝗻𝗳𝗶𝗴 𝗩𝗮𝗿𝘀 - اوامـر الفـارات](t.me/Rallsthon) 𓆪\n\n"
     "**✾╎قائـمه اوامر تغييـر فـارات الصـور بأمـر واحـد فقـط - لـ اول مـره ع سـورس تليثـون يوزر بـوت 🦾 :** \n\n"
     "⪼ `.اضف صورة الحماية` بالـرد ع صـورة او ميديـا\n\n"
@@ -69,8 +69,8 @@ QQ070VP_cmd = (
 
 
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
-@Rallsthon.on(QQ070_cmd(pattern=r"اضف (.*)"))
-@Rallsthon.on(sudo_cmd(pattern=r"اضف (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"اضف (.*)"))
+@bot.on(sudo_cmd(pattern=r"اضف (.*)", allow_sudo=True))
 async def variable(event):
     if Config.HEROKU_API_KEY is None:
         return await ed(
@@ -250,8 +250,8 @@ async def variable(event):
 
 
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
-@Rallsthon.on(QQ070_cmd(pattern="حذف(?:\s|$)([\s\S]*)"))
-@Rallsthon.on(sudo_cmd(pattern="حذف(?:\s|$)([\s\S]*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="حذف(?:\s|$)([\s\S]*)"))
+@bot.on(sudo_cmd(pattern="حذف(?:\s|$)([\s\S]*)", allow_sudo=True))
 async def variable(event):
     if Config.HEROKU_API_KEY is None:
         return await ed(
@@ -474,8 +474,8 @@ async def variable(event):
 
 
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
-@Rallsthon.on(QQ070_cmd(pattern="جلب(?:\s|$)([\s\S]*)"))
-@Rallsthon.on(sudo_cmd(pattern="جلب(?:\s|$)([\s\S]*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="جلب(?:\s|$)([\s\S]*)"))
+@bot.on(sudo_cmd(pattern="جلب(?:\s|$)([\s\S]*)", allow_sudo=True))
 async def variable(event):
     if Config.HEROKU_API_KEY is None:
         return await ed(
@@ -645,8 +645,8 @@ async def variable(event):
 
 
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
-@Rallsthon.on(QQ070_cmd(pattern="وقت(?:\s|$)([\s\S]*)"))
-@Rallsthon.on(sudo_cmd(pattern="وقت(?:\s|$)([\s\S]*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="وقت(?:\s|$)([\s\S]*)"))
+@bot.on(sudo_cmd(pattern="وقت(?:\s|$)([\s\S]*)", allow_sudo=True))
 async def variable(event):
     if Config.HEROKU_API_KEY is None:
         return await ed(
@@ -701,8 +701,8 @@ async def variable(event):
  
 
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
-@Rallsthon.on(admin_cmd(pattern="رفع مطور$", outgoing=True))
-@Rallsthon.on(sudo_cmd(pattern="رفع مطور$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="رفع مطور$", outgoing=True))
+@bot.on(sudo_cmd(pattern="رفع مطور$", allow_sudo=True))
 async def QQ070ll(event):
     if Config.HEROKU_API_KEY is None:
         return await ed(
@@ -739,8 +739,8 @@ async def QQ070ll(event):
 
 
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
-@Rallsthon.on(admin_cmd(pattern="تنزيل مطور$", outgoing=True))
-@Rallsthon.on(sudo_cmd(pattern="تنزيل مطور$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="تنزيل مطور$", outgoing=True))
+@bot.on(sudo_cmd(pattern="تنزيل مطور$", allow_sudo=True))
 async def QQ070ll(event):
     if Config.HEROKU_API_KEY is None:
         return await ed(
@@ -778,12 +778,12 @@ async def QQ070ll(event):
 
 
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
-@Rallsthon.on(
+@bot.on(
     QQ070_cmd(
        pattern="اضف صورة (الحماية|الحمايه|الفحص|الوقتي) ?(.*)"
     )
 )
-@Rallsthon.on(sudo_cmd(pattern="اضف صورة (الحماية|الحمايه|الفحص|الوقتي) ?(.*)", allow_sudo=True))
+@bot.on(sudo_cmd(pattern="اضف صورة (الحماية|الحمايه|الفحص|الوقتي) ?(.*)", allow_sudo=True))
 async def _(tosh):
     if tosh.fwd_from:
         return
@@ -902,8 +902,8 @@ def resize_image(image):
 
 
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
-@Rallsthon.on(QQ070_cmd(pattern="اوامر الفارات"))
-@Rallsthon.on(sudo_cmd(pattern="اوامر الفارات", allow_sudo=True))
+@bot.on(admin_cmd(pattern="اوامر الفارات"))
+@bot.on(sudo_cmd(pattern="اوامر الفارات", allow_sudo=True))
 async def cmd(QQ070lll):
-    await eor(QQ070lll, QQ070VP_cmd)
+    await eor(QQ070lll, admin_cmd)
 
