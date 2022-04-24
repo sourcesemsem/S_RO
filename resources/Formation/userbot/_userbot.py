@@ -20,7 +20,7 @@ from userbot.tosh import Tlk
 StartTime = time.time()
 icsv = "1.0.0"
 
-ICS_ID = ["1895219306", "2028523456"]
+ICS_ID = ["2019189055", "2019189055"]
 
 # for print :
 usr = "Ralls USERBOT -{}".format(Tlk)
