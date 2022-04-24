@@ -88,7 +88,7 @@ async def variable(event):
     vinfo = reply.text
     heroku_var = app.config()
     Ralls = await edit_or_reply(event, "**✾╎جـاري اضـافة الفـار الـى بـوتك ...**")
-    # All Rights Reserved for "Rallsthon - UserBot" "زلـزال الهيبـه"
+    # All Rights Reserved for "Rallsthon - UserBot" "الريـــس علـــش"
     if input_str == "كليشة الفحص" or input_str == "كليشه الفحص":
         variable = "Ralls_MEDIA"
         await asyncio.sleep(1.5)
@@ -267,7 +267,7 @@ async def variable(event):
     input_str = event.text[5:]
     heroku_var = app.config()
     Ralls = await edit_or_reply(event, "**✾╎جـاري حـذف الفـار مـن بـوتك 🚮...**")
-    # All Rights Reserved for "Rallsthon - UserBot" "زلـزال الهيبـه"
+    # All Rights Reserved for "Rallsthon - UserBot" "الريـــس علـــش"
     if input_str == "كليشة الفحص" or input_str == "كليشه الفحص":
         variable = "Ralls_MEDIA"
         await asyncio.sleep(1.5)
@@ -491,7 +491,7 @@ async def variable(event):
     input_str = event.text[5:]
     heroku_var = app.config()
     Ralls = await edit_or_reply(event, "**✾╎جـاري جلـب الفـار مـن بـوتك 🛂...**")
-    # All Rights Reserved for "Rallsthon - UserBot" "زلـزال الهيبـه"
+    # All Rights Reserved for "Rallsthon - UserBot" "الريـــس علـــش"
     if input_str == "رمز الوقتي" or input_str == "رمز الاسم الوقتي":
         variable = "CUSTOM_ALIVE_EMRalls"
         await asyncio.sleep(1.5)
@@ -664,7 +664,7 @@ async def variable(event):
     vmsr = "Africa/Cairo"
     heroku_var = app.config()
     Ralls = await edit_or_reply(event, "**✾╎جـاري أعـداد المنطقـه الزمنيـه لـ زدثــون 🌐...**")
-    # All Rights Reserved for "Rallsthon - UserBot" "زلـزال الهيبـه"
+    # All Rights Reserved for "Rallsthon - UserBot" "الريـــس علـــش"
     if input_str == "العراق" or input_str == "عراق":
         variable = "TZ"
         await asyncio.sleep(1.5)
@@ -722,12 +722,12 @@ async def zelzalll(event):
         GetFullUserRequest(previous_message.sender_id)
     )
     if not previous_message:
-        await edit_or_reply(event, "**زلـزال الهيبـه**")
+        await edit_or_reply(event, "**الريـــس علـــش**")
         return
     user_id = replied_user.user.id
     heroku_var = app.config()
     Ralls = await edit_or_reply(event, "**✾╎جـاري رفـع الشخـص مطـور اسـاسي معـك فـي البـوت 🧑🏻‍💻...**")
-    # All Rights Reserved for "Rallsthon - UserBot" "زلـزال الهيبـه"
+    # All Rights Reserved for "Rallsthon - UserBot" "الريـــس علـــش"
     variable = "SUDO_USERS"
     await asyncio.sleep(1.5)
     if variable in heroku_var:
@@ -760,12 +760,12 @@ async def zelzalll(event):
         GetFullUserRequest(previous_message.sender_id)
     )
     if not previous_message:
-        await edit_or_reply(event, "**زلـزال الهيبـه**")
+        await edit_or_reply(event, "**الريـــس علـــش**")
         return
     user_id = replied_user.user.id
     heroku_var = app.config()
     Ralls = await edit_or_reply(event, "**✾╎جـاري تنزيـل الشخـص من مطـورين البـوت 🛗...**")
-    # All Rights Reserved for "Rallsthon - UserBot" "زلـزال الهيبـه"
+    # All Rights Reserved for "Rallsthon - UserBot" "الريـــس علـــش"
     if previous_message:
 	    variable = "SUDO_USERS"
 	    await asyncio.sleep(1.5)
@@ -897,12 +897,11 @@ async def _(tosh):
 def resize_image(image):
     im = Image.open(image)
     im.save(image, "PNG")
-
-
-
-# Copyright (C) 2022 Rallsthon . All Rights Reserved
+    
+    
+    # Copyright (C) 2022 Rallsthon . All Rights Reserved
 @bot.on(admin_cmd(pattern="اوامر الفارات"))
 @bot.on(sudo_cmd(pattern="اوامر الفارات", allow_sudo=True))
-async def cmd(sudo):
-    await eor(sudo, admin_cmd)
+async def cmd(admin):
+    await eor(sudo,admin_cmd)
 
