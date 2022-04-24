@@ -34,7 +34,7 @@ r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
 auth_url = r["auth_url"]
 
 
-ZelzalVP_cmd = (
+admin_cmd = (
     "𓆩 [𝗦𝗼𝘂𝗿𝗰𝗲 𝐑𝐀𝐈𝐈𝐒𝗧𝗵𝗼𝗻 𝗖𝗼𝗻𝗳𝗶𝗴 𝗩𝗮𝗿𝘀 - اوامـر الفـارات](t.me/Rallsthon) 𓆪\n\n"
     "**✾╎قائـمه اوامر تغييـر فـارات الصـور بأمـر واحـد فقـط - لـ اول مـره ع سـورس تليثـون يوزر بـوت 🦾 :** \n\n"
     "⪼ `.اضف صورة الحماية` بالـرد ع صـورة او ميديـا\n\n"
@@ -700,7 +700,7 @@ async def variable(event):
  
 
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
-@Rallsthon.on(admin_cmd(pattern="رفع مطور$", outgoing=True))
+@bot.on(admin_cmd(pattern="رفع مطور$", outgoing=True))
 @bot.on(sudo_cmd(pattern="رفع مطور$", allow_sudo=True))
 async def zelzalll(event):
     if Config.HEROKU_API_KEY is None:
@@ -738,7 +738,7 @@ async def zelzalll(event):
 
 
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
-@Rallsthon.on(admin_cmd(pattern="تنزيل مطور$", outgoing=True))
+@bot.on(admin_cmd(pattern="تنزيل مطور$", outgoing=True))
 @bot.on(sudo_cmd(pattern="تنزيل مطور$", allow_sudo=True))
 async def zelzalll(event):
     if Config.HEROKU_API_KEY is None:
@@ -777,8 +777,8 @@ async def zelzalll(event):
 
 
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
-@Rallsthon.on(
-    zelzal_cmd(
+@bot.on(
+    admin_cmd(
        pattern="اضف صورة (الحماية|الحمايه|الفحص|الوقتي) ?(.*)"
     )
 )
@@ -903,6 +903,6 @@ def resize_image(image):
 # Copyright (C) 2022 Rallsthon . All Rights Reserved
 @bot.on(admin_cmd(pattern="اوامر الفارات"))
 @bot.on(sudo_cmd(pattern="اوامر الفارات", allow_sudo=True))
-async def cmd(zelzallll):
-    await eor(zelzallll, ZelzalVP_cmd)
+async def cmd(sudo):
+    await eor(sudo, admin_cmd)
 
