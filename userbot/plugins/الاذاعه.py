@@ -8,7 +8,7 @@ Ralls_BLACKLIST = [
     ]
 #
 
-@Rallsthon.on(QQ070_cmd(pattern=f"للمجموعات(?: |$)(.*)"))
+@bot.on(admin_cmd(pattern=f"للمجموعات(?: |$)(.*)"))
 async def gcast(event):
     Rallsthon = event.pattern_match.group(1)
     if Rallsthon:
@@ -34,7 +34,7 @@ async def gcast(event):
         f"**✾╎تمت الاذاعـه بنجـاح الـى ** `{done}` **من المجموعـات ، خطـأ في الارسـال الـى ** `{er}` **من المجموعـات**"
     )
     
-@Rallsthon.on(QQ070_cmd(pattern=f"للخاص(?: |$)(.*)"))
+@bot.on(admin_cmd(pattern=f"للخاص(?: |$)(.*)"))
 async def gucast(event):
     Rallsthon = event.pattern_match.group(1)
     if Rallsthon:
@@ -60,7 +60,7 @@ async def gucast(event):
     )
     
 
-@Rallsthon.on(QQ070_cmd(pattern="خاص ?(.*)"))
+@bot.on(admin_cmd(pattern="خاص ?(.*)"))
 async def pmto(event):
     r = event.pattern_match.group(1)
     p = r.split(" ")
