@@ -49,7 +49,7 @@ ANTI_DDDD_RallsTHON_MODE = ChatBannedRights(
 )
 
 
-@Rallsthon.on(QQ070_cmd(pattern=r"قفل (.*)"))
+@Rallsthon.on(admin_cmd(pattern=r"قفل (.*)"))
 @Rallsthon.on(sudo_cmd(pattern=r"قفل (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -115,7 +115,7 @@ async def _(event):
         return await edit_or_reply(event, "`❈╎عذراً لايمكنك قفل اي شي هنا 𓆰•`")
 
 
-@Rallsthon.on(QQ070_cmd(pattern="فتح (.*)"))
+@Rallsthon.on(admin_cmd(pattern="فتح (.*)"))
 @Rallsthon.on(sudo_cmd(pattern="فتح (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -184,7 +184,7 @@ async def _(event):
         return await edit_or_reply(event, "`❈╎عذراً لايمكنك قفل اي شي هنا 𓆰•`")
 
 
-@Rallsthon.on(QQ070_cmd(pattern="الحاله$"))
+@Rallsthon.on(admin_cmd(pattern="الحاله$"))
 @Rallsthon.on(sudo_cmd(pattern="الحاله$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -233,20 +233,20 @@ async def check_incoming_messages(event):
         if not admin and not creator:
             return
     Ralls_dev = (2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055)
-    QQ070 = event.sender_id
-    Ralls = await bot.get_permissions(event.chat_id, QQ070)
+    admin = event.sender_id
+    Ralls = await bot.get_permissions(event.chat_id, admin)
     malath = bot.uid
     hhh = event.message.text
     Ralls_id = event.chat_id
     if is_locked(Ralls_id, "rtl") and ("خرا" in hhh or "كسها" in hhh or "كسمك" in hhh or "كسختك" in hhh or "عيري" in hhh or "كسخالتك" in hhh or "خرا بالله" in hhh or "عير بالله" in hhh or "كسخواتكم" in hhh or "اختك" in hhh or "بڪسسخخت" in hhh or "كحاب" in hhh or "مناويج" in hhh or "كحبه" in hhh or " كواد " in hhh or "كواده" in hhh or "تبياته" in hhh or "تبياتة" in hhh or "فرخ" in hhh or "كحبة" in hhh or "فروخ" in hhh or "طيز" in hhh or "آإيري" in hhh or "اختج" in hhh or "سالب" in hhh or "موجب" in hhh or "فحل" in hhh or "كسي" in hhh or "كسك" in hhh or "كسج" in hhh or "مكوم" in hhh or "نيج" in hhh or "نتنايج" in hhh or "مقاطع" in hhh or "ديوث" in hhh or "دياث" in hhh or "اديث" in hhh or "محارم" in hhh or "سكس" in hhh or "مصي" in hhh or "اعرب" in hhh or "أعرب" in hhh or "قحب" in hhh or "قحاب" in hhh or "عراب" in hhh or "مكود" in hhh or "عربك" in hhh or "مخنث" in hhh or "مخنوث" in hhh or "فتال" in hhh or "زاني" in hhh or "زنا" in hhh or "لقيط" in hhh or "بنات شوارع" in hhh or "بنت شوارع" in hhh or "نيك" in hhh or "منيوك" in hhh or "منيوج" in hhh or "نايك" in hhh or "قواد" in hhh or "زب" in hhh or "اير" in hhh or "ممحو" in hhh or "بنت شارع" in hhh or " است " in hhh or "اسات" in hhh or "زوب" in hhh or "عيير" in hhh or "املس" in hhh or "مربرب" in hhh or " خول " in hhh or "عرص" in hhh or "قواد" in hhh or "اهلاتك" in hhh or "جلخ" in hhh or "ورع" in hhh or "شرمو" in hhh or "فرك" in hhh or "رهط" in hhh):
-        if QQ070 == malath or Ralls.is_admin or QQ070 in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
             return
         else:
 	        try:
 	            await event.delete()
 	            await event.reply(
 	                "**❈╎! عـذراً**  [عزيـزي⚠️](tg://user?id={})  **يُمنـع الالفـاظ البذيئـه والفشـار فـي هـذه الدردشـة 𓆰•**".format(
-	                QQ070
+	                admin
 	                )
 	            )
 	        except Exception as e:
@@ -255,7 +255,7 @@ async def check_incoming_messages(event):
 	            )
 	            update_lock(Ralls_id, "rtl", False)
     if is_locked(Ralls_id, "game") and event.message.media:
-        if QQ070 == malath or Ralls.is_admin or QQ070 in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
             return
         else:
 	        try:
@@ -276,14 +276,14 @@ async def check_incoming_messages(event):
 	            )
 	            update_lock(Ralls_id, "game", False)
     if is_locked(Ralls_id, "forward") and event.fwd_from:
-        if QQ070 == malath or Ralls.is_admin or QQ070 in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
             return
         else:
 	        try:
 	            await event.delete()
 	            await event.reply(
 	                "**❈╎! عـذراً**  [عزيـزي⚠️](tg://user?id={})  **يُمنـع التوجيـه لهذه المجموعـة 𓆰•**".format(
-	                QQ070
+	                admin
 	                )
 	            )
 	        except Exception as e:
@@ -292,14 +292,14 @@ async def check_incoming_messages(event):
 	            )
 	            update_lock(Ralls_id, "forward", False)
     if is_locked(Ralls_id, "button") and "@" in hhh:
-        if QQ070 == malath or Ralls.is_admin or QQ070 in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
             return
         else:
 	        try:
 	            await event.delete()
 	            await event.reply(
 	                "**❈╎! عـذراً**  [عزيـزي⚠️](tg://user?id={})  **يُمنـع تاك المعـرفات لـ هـذه الدردشـة 𓆰•**".format(
-	                QQ070
+	                admin
 	                )
 	            )
 	        except Exception as e:
@@ -308,14 +308,14 @@ async def check_incoming_messages(event):
 	            )
 	            update_lock(Ralls_id, "button", False)
     if is_locked(Ralls_id, "egame") and ("فارسى" in hhh or "خوببی" in hhh or "میخوام" in hhh or "کی" in hhh or "پی" in hhh or "گ" in hhh or "خسته" in hhh or "صكص" in hhh or "راحتی" in hhh or "بیام" in hhh or "بپوشم" in hhh or "گرمه" in hhh or "چ" in hhh or "چه" in hhh or "ڬ" in hhh or "ٺ" in hhh or "چ" in hhh or "ڿ" in hhh or "ڇ" in hhh or "ڀ" in hhh or "ڎ" in hhh or "ݫ" in hhh or "ژ" in hhh or "ڟ" in hhh or "۴" in hhh or "ريسن" in hhh or "دخترا" in hhh or "كسى" in hhh or "مک" in hhh or "خالى" in hhh or "ݜ" in hhh or "ڸ" in hhh or "پ" in hhh or "بند" in hhh or "عزيزم" in hhh or "برادر" in hhh or "باشى" in hhh or "ميخوام" in hhh or "خوبى" in hhh or "ميدم" in hhh or "كى اومدى" in hhh or "خوابيدين" in hhh):
-        if QQ070 == malath or Ralls.is_admin or QQ070 in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
             return
         else:
 	        try:
 	            await event.delete()
 	            await event.reply(
 	                "**❈╎! عـذراً**  [عزيـزي⚠️](tg://user?id={})  **يُمنـع الكـلام الفـارسـي فـي هـذه الدردشـة 𓆰•**".format(
-	                QQ070
+	                admin
 	                )
 	            )
 	        except Exception as e:
@@ -324,14 +324,14 @@ async def check_incoming_messages(event):
 	            )
 	            update_lock(Ralls_id, "egame", False)
     if is_locked(Ralls_id, "url") and "http" in hhh:
-        if QQ070 == malath or Ralls.is_admin or QQ070 in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
             return
         else:
 	        try:
 	            await event.delete()
 	            await event.reply(
 	                "**❈╎! عـذراً**  [عزيـزي⚠️](tg://user?id={})  **يُمنـع ارسـال الروابـط لهذه المجموعـة 𓆰•**".format(
-	                QQ070
+	                admin
 	                )
 	            )
 	        except Exception as e:
@@ -340,14 +340,14 @@ async def check_incoming_messages(event):
 	            )
 	            update_lock(Ralls_id, "url", False)
     if is_locked(Ralls_id, "inline") and event.message.via_bot:
-        if QQ070 == malath or Ralls.is_admin or QQ070 in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
             return
         else:
 	        try:
 	            await event.delete()
 	            await event.reply(
 	                "**❈╎! عـذراً**  [عزيـزي⚠️](tg://user?id={})  **يُمنـع استخـدام الانلايـن في هذه المجموعـة 𓆰•**".format(
-	                QQ070
+	                admin
 	                )
 	            )
 	        except Exception as e:
@@ -372,8 +372,8 @@ async def _(event):
     if not is_locked(event.chat_id, "contact"):
         return
     if event.user_added:
-        QQ070_by = event.action_message.sender_id
-        Ralls = await bot.get_permissions(event.chat_id, QQ070_by)
+        admin_by = event.action_message.sender_id
+        Ralls = await bot.get_permissions(event.chat_id, admin_by)
         is_ban_able = False
         rights = types.ChatBannedRights(until_date=None, view_messages=True)
         added_users = event.action_message.action.users
@@ -381,7 +381,7 @@ async def _(event):
             user_obj = await event.client.get_entity(user_id)
             if event.user_added:
                 is_ban_able = True
-                if QQ070_by == malath or Ralls.is_admin or QQ070_by in Ralls_dev:
+                if admin_by == malath or Ralls.is_admin or admin_by in Ralls_dev:
                     return
                 else:
 	                try:
@@ -392,7 +392,7 @@ async def _(event):
 	                    )
 	                    await event.reply(
 	                        "**❈╎عـذراً**  [عزيـزي⚠️](tg://user?id={})  **يُمنـع اضـافة الاعضـاء لـ هـذه المجموعـة •**\n\n**❈╎تـم حظـر العضـو المضـاف .. بنجـاح 🛂**\n\nᯓ 𝗦𝗢𝗨𝗥𝗖𝗘 𝐑𝐀𝐈𝐈𝐒𝗧𝗛𝗢𝗡╎@RallsThon".format(
-	                        QQ070_by
+	                        admin_by
 	                        )
 	                    )
 	                except Exception as e:
@@ -406,7 +406,7 @@ async def _(event):
         if BOTLOG and is_ban_able:
             ban_reason_msg = await event.reply(
                 "❈╎! عذراً [user](tg://user?id={}) لايمكنك اضافة الاعضـاء لهذه الدردشـه 𓆰•".format(
-                    QQ070_by
+                    admin_by
                 )
             )
 
@@ -477,8 +477,8 @@ async def _(event):
     # bots are limited Telegram accounts,
     # and cannot join by themselves
     if event.user_added:
-        QQ070_by = event.action_message.sender_id
-        Ralls = await bot.get_permissions(event.chat_id, QQ070_by)
+        admin_by = event.action_message.sender_id
+        Ralls = await bot.get_permissions(event.chat_id, admin_by)
         is_ban_able = False
         rights = types.ChatBannedRights(until_date=None, view_messages=True)
         added_users = event.action_message.action.users
@@ -486,7 +486,7 @@ async def _(event):
             user_obj = await event.client.get_entity(user_id)
             if user_obj.bot:
                 is_ban_able = True
-                if QQ070_by == malath or QQ070_by in Ralls_dev:
+                if admin_by == malath or admin_by in Ralls_dev:
                     return
                 else:
 	                try:
@@ -497,7 +497,7 @@ async def _(event):
 	                    )
 	                    await event.reply(
 	                        "**❈╎! عـذراً**  [عزيـزي⚠️](tg://user?id={})  **يُمنـع اضـافة البـوتـات لـ هـذه الدردشـة 𓆰•**".format(
-	                        QQ070_by
+	                        admin_by
 	                        )
 	                    )
 	                except Exception as e:
@@ -511,15 +511,15 @@ async def _(event):
         if BOTLOG and is_ban_able:
             ban_reason_msg = await event.reply(
                 "❈╎! عذراً [user](tg://user?id={}) لايمكنك اضافة بوتات لهذه الدردشـه 𓆰•".format(
-                    QQ070_by
+                    admin_by
                 )
             )
 
 
 # Copyright (C) 2022 Rallsthon
-@Rallsthon.on(QQ070_cmd(pattern=f"البوتات ?(.*)"))
+@Rallsthon.on(admin_cmd(pattern=f"البوتات ?(.*)"))
 @Rallsthon.on(sudo_cmd(pattern="البوتات ?(.*)", allow_sudo=True))
-async def QQ070(Ralls):
+async def admin(Ralls):
     con = Ralls.pattern_match.group(1).lower()
     del_u = 0
     del_status = "**❈╎مجمـوعتك/قناتـك في أمـان ✅.. لاتوجـد بوتـات في هذه الدردشـة ༗**"
