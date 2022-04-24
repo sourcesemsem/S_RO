@@ -46,7 +46,7 @@ UNBAN_RIGHTS = ChatBannedRights(
 
 
 @bot.on(
-    QQ070_cmd(
+    admin_cmd(
        pattern=r"حظر(?: |$)(.*)"
     )
 )
@@ -129,7 +129,7 @@ async def icsgban(ics):
 
 
 @bot.on(
-    QQ070_cmd(
+    admin_cmd(
        pattern=r"الغاء حظر(?: |$)(.*)"
     )
 )
