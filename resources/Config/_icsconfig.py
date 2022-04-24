@@ -1,4 +1,4 @@
-#    ZED - THON
+#    Ralls - THON
 
 import os
 from telethon.tl.types import ChatBannedRights
@@ -22,7 +22,7 @@ class Config(object):
     TOSH_START = os.environ.get("TOSH_START", None)
     TZ = os.environ.get("TZ", "Asia/Baghdad")
     UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/Zedthon/ZED_USERBOT.git"
+        "UPSTREAM_REPO", "https://github.com/raiis1/Ralls_USERBOT.git"
     )
 
     AUTONAME = os.environ.get("AUTONAME", None)
@@ -43,9 +43,9 @@ class Config(object):
     PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL") or 0)
     CUSTOM_ALIVE_TEXT = os.environ.get("CUSTOM_ALIVE_TEXT", None)
     CUSTOM_ALIVE_EMOJI = os.environ.get("CUSTOM_ALIVE_EMOJI", None)
-    CUSTOM_ALIVE_EMZED = os.environ.get("CUSTOM_ALIVE_EMZED", None)
+    CUSTOM_ALIVE_EMRalls = os.environ.get("CUSTOM_ALIVE_EMRalls", None)
     CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
-    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Zed - UserBot")
+    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Ralls - UserBot")
     CLEAN_WELCOME = os.environ.get("CLEAN_WELCOME", True)
     THUMB_IMAGE = os.environ.get(
         "THUMB_IMAGE", "https://telegra.ph/file/4c406eb5e6932d4834947.jpg"
@@ -56,7 +56,7 @@ class Config(object):
     NO_LOAD = [x for x in os.environ.get("NO_LOAD", "").split()]
     ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
     BOT_PIC = os.environ.get("BOT_PIC", None)
-    ZED_MEDIA = os.environ.get("ZED_MEDIA", None)
+    Ralls_MEDIA = os.environ.get("Ralls_MEDIA", None)
     BOT_HANDLER = os.environ.get("BOT_HANDLER", "^;")
     PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
     DIGITAL_PIC = os.environ.get("DIGITAL_PIC", None)
