@@ -73,7 +73,7 @@ R = (
     "  ⓲ **⪼**  [الالـوان 🔮](https://t.me/gamee?game=ColorHit)   \n"
     "  ⓳ **⪼**  [مدفع الكرات🏮](https://t.me/gamee?game=NeonBlaster)   \n\n\n"
     "**𓄂-** 𝙎𝙊𝙐𝙍𝘾𝙀 𝘿𝙀𝙑 **⪼**  [𐇮 الريـــس علـــش 𐇮](t.me/QQ070)   \n"
-    "**𓆰** 𝙎𝙊𝙐𝙍𝘾𝙀 𝙍𝙀𝙋𝙊 **⪼**  [𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉](https://t.me/RallsThon/102)  "
+    "**𓆰** 𝙎𝙊𝙐𝙍𝘾𝙀 𝙍𝙀𝙋𝙊 **⪼**  [𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉](https://t.me/RallsThon)  "
 )
 K = "https://github.com/Rallsthon/Ralls_USERBOT"
 
