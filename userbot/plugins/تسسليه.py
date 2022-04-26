@@ -1,12 +1,7 @@
-# edit by: @RallsThon for Ralls
-
 import asyncio
 from collections import deque
-
 from . import ALIVE_NAME
-
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ralls"
-
 
 
 @bot.on(admin_cmd(pattern="بيبي$"))
@@ -121,52 +116,6 @@ async def _(event):
     await event.delete()
 
 
-@bot.on(admin_cmd(pattern="هلكوبتر$"))
-async def _(event):
-    "جاري تشغيل الهلكوبتر"
-    animation_interval = 1.0
-    animation_ttl = range(60)
-    animation_chars = [
-        """".
-    🔲 ▬▬▬.◙.▬▬▬ 🔳
-            ═▂▄▄▓▄▄▂ 
-           ◢◤    █▀▀████▄▄▄▄◢◤ 
-           █▄ █ █▄ ███▀▀▀▀▀▀▀╬
-           ◥█████◤ 
-             ══╩══╩══ 
-                      ╬═╬ 
-                      ╬═╬     
-                      ╬═╬ ☻/ 👞
-                      ╬═╬/▌ 
-                      ╬═╬/ \"""",
-        """".
-    🔳 ▬▬▬.◙.▬▬▬ 🔲
-            ═▂▄▄▓▄▄▂ 
-           ◢◤    █▀▀████▄▄▄▄◢◤ 
-           █▄ █ █▄ ███▀▀▀▀▀▀▀╬
-           ◥█████◤ 
-             ══╩══╩══ 
-                      ╬═╬ 
-                      ╬═╬     
-                      ╬═╬ ☻/ 
-                      ╬═╬/▌ 👞
-                      ╬═╬/ \"""",
-        """".
-    🔲 ▬▬▬.◙.▬▬▬ 🔳
-            ═▂▄▄▓▄▄▂ 
-           ◢◤    █▀▀████▄▄▄▄◢◤ 
-           █▄ █ █▄ ███▀▀▀▀▀▀▀╬
-           ◥█████◤ 
-             ══╩══╩══ 
-                      ╬═╬ 
-                      ╬═╬     
-                      ╬═╬ ☻/ 
-                      ╬═╬/▌ 
-                      ╬═╬/ \👞""""",
-    ]
-    event = await edit_or_reply(event, "جاري تشغيل الهلكوبتر")
-    await asyncio.sleep(4)
-
 @bot.on(admin_cmd(pattern="زرفه$"))
 async def _(event):
     catevent = await edit_or_reply(event, "**💦 جاي زرف الشخص تف**")
@@ -185,4 +134,4 @@ async def _(event):
     animation_chars = ["🤵       👰", "🤵     👰", "🤵  👰", "🤵👼👰"]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
-        await catevent.edit(animation_chars[i % 4]).
+        await catevent.edit(animation_chars[i % 4])
