@@ -136,7 +136,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await catevent.edit(animation_chars[i % 4])
 
-@bot.on(admin_cmd(pattern="جوه الدرج$"))
+@bot.on(admin_cmd(pattern="جوه درج$"))
 async def _(event):
     animation_interval = 3
     animation_ttl = range(0, 103)
@@ -153,7 +153,7 @@ async def _(event):
             "😎 \n/\\_,__😫 \n  //    //       \\",
             "😖 \n/\\_,💦_😋  \n  //         //        \\",
             "  😭      ☺️ \n  /|\\   /(👶)\\ \n  /!\\   / \\ ",
-            "😅`"
+            "😅 @RallsThon `"
             ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
