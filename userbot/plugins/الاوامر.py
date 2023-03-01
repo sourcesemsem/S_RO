@@ -7,10 +7,10 @@ from telethon import events
 
 @bot.on(admin_cmd(pattern="الاوامر"))
 @bot.on(sudo_cmd(pattern="الاوامر", allow_sudo=True))
-async def cmds(Ralls):
-    await eor(Ralls, Cmds)
+async def cmds(Roger):
+    await eor(Roger, Cmds)
 
-########################  SOURCE Ralls ~ BY: QQ070 (@RallsThon)  ########################
+########################  SOURCE Repthon ~ BY: ZQ_LO (@Repthon)  ########################
 
 
 import random
