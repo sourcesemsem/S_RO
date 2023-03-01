@@ -27,9 +27,9 @@ ALIVE_NAME = Config.ALIVE_NAME
 AUTONAME = Config.AUTONAME
 DEFAULT_BIO = Config.DEFAULT_BIO
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ralls Userbot"
-BOT_USERNAME = Config.TG_BOT_USERNAME
-ICSBOT = Config.TG_BOT_USERNAME
-ICSB = Config.TG_BOT_USERNAME
+BOT_USERNAME = Config.BOT_USERNAME
+ICSBOT = Config.BOT_USERNAME
+ICSB = Config.BOT_USERNAME
 
 # =================== Owner - QQ070 ===================
 
@@ -42,17 +42,17 @@ TOSHA_ID = bot.me.id
 
 # Dev tag
 tosh = ( 
-    "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹 𓆪\n"
-    "𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧ𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉ⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n"
-    "𓄂†  𝑫𝑬𝑽 𝑼𝑺𝑬𝑹 1 ↬ @QQ070 ༗\n"
-    "𓄂†  𝑫𝑬𝑽 𝑼𝑺𝑬𝑹 2 ↬ @IllIl1I ༗\n"
-    "𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧ𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉ⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
+    "𓆩 𝚂𝚘𝚞𝚛𝚌𝚎 𝚁𝚎𝚙𝚝𝚑𝚘𝚗 - 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 𓆪\n"
+    "𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧ𝚁𝚎𝚙𝚝𝚑𝚘𝚗ⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n"
+    "𓄂†  𝑫𝑬𝑽 𝑼𝑺𝑬𝑹 1 ↬ @E_7_V ༗\n"
+    "𓄂†  𝑫𝑬𝑽 𝑼𝑺𝑬𝑹 2 ↬ @ul4ul ༗\n"
+    "𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧ𝚁𝚎𝚙𝚝𝚑𝚘𝚗ⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
 )
 
 # بلاي 
 R = (
-    "**𓆰**  𝙎𝙊𝙐𝙍𝘾𝙀 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉   **العـاب الاونلايـن** 🎮𓆪 \n"
-    "◐━─━─━─━─𝐑𝐀𝐈𝐈𝐒─━─━─━─━◐\n\n"
+    "**𓆰**  𝚂𝚘𝚞𝚛𝚌𝚎 𝚁𝚎𝚙𝚝𝚑𝚘𝚗  **العـاب الاونلايـن** 🎮𓆪 \n"
+    "◐━─━─━─━─𝚁𝚎𝚙𝚝𝚑𝚘𝚗─━─━─━─━◐\n\n"
     "  ❶ **⪼**  [حرب الفضاء 🛸](https://t.me/gamee?game=ATARIAsteroids)   \n"
     "  ❷ **⪼**  [لعبة فلابي بيرد 🐥](https://t.me/awesomebot?game=FlappyBird)   \n"
     "  ❸ **⪼**  [القط المشاكس 🐱](https://t.me/gamee?game=CrazyCat)   \n"
@@ -72,16 +72,16 @@ R = (
     "  ⓱ **⪼**  [جيت واي 🚨](https://t.me/gamee?game=Getaway)   \n"
     "  ⓲ **⪼**  [الالـوان 🔮](https://t.me/gamee?game=ColorHit)   \n"
     "  ⓳ **⪼**  [مدفع الكرات🏮](https://t.me/gamee?game=NeonBlaster)   \n\n\n"
-    "**𓄂-** 𝙎𝙊𝙐𝙍𝘾𝙀 𝘿𝙀𝙑 **⪼**  [𐇮 الريـــس علـــش 𐇮](t.me/QQ070)   \n"
-    "**𓆰** 𝙎𝙊𝙐𝙍𝘾𝙀 𝙍𝙀𝙋𝙊 **⪼**  [𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉](https://t.me/RallsThon)  "
+    "**𓄂-** 𝙎𝙊𝙐𝙍𝘾𝙀 𝘿𝙀𝙑 **⪼**  [𓄂 روجـــر 𓄂](t.me/E_7_V)   \n"
+    "**𓆰** 𝙎𝙊𝙐𝙍𝘾𝙀 𝙍𝙀𝙋𝙊 **⪼**  [𝚁𝚎𝚙𝚝𝚑𝚘𝚗](https://t.me/Repthon)  "
 )
 K = "https://github.com/Rallsthon/Ralls_USERBOT"
 
 # Alive Bot 
 TOSH = (
-       f"**⌔∮ بوت ريس ثـون يعمل بنجاح 🖤❕**\n"
+       f"**⌔∮ بوت ريبـــثون يعمل بنجاح 🖤❕**\n"
        f"**   - اصدار التليثون :** `{version.__version__}\n`"
-       f"**   - اصدار ريس ثـون :** `{icsv}`\n"
+       f"**   - اصدار ريبـــثون :** `{icsv}`\n"
        f"**   - البوت المستخدم :** `{ICSB}`\n"
        f"**   - اصدار البايثون :** `{python_version()}\n`"
        f"**   - المستخدم :** {mention}\n"
@@ -219,11 +219,11 @@ async def icsa():
         dyno = f"{AppHours}h {AppMinutes}m/{hours}h {minutes}m"
     except Exception as e:
         dyno = e
-    return f"**⌔∮ معلومات بوت ريس ثـون***\
-                 \n - قاعده البيانات : {check_sgnirts}\
-                  \n - سودو : {sudo}\
-                  \n - مدة التشغيل : {uptime}\
-                  \n - مده الاستخدام : {dyno}\
+    return f"**⌔∮ مـــعـــلـــومـــات بـــوت ريبـــثون***\
+                 \n - قـــاعـــده الـــبـــيـــانـــات : {check_sgnirts}\
+                  \n - ســـودو : {sudo}\
+                  \n - مـــدة التـــشـــغـــيـــل : {uptime}\
+                  \n - مـــده الاســـتـــخـــدام : {dyno}\
                   "
 
 
