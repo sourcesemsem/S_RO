@@ -1,4 +1,4 @@
-#@RallsThon - الريس_علش @QQ070
+#@Repthon - روجر @ZQ_LO
 #كود الصورة الوقتيه  فكرتي وتعديلي الشخصي ومتعوب عليها + ماموجوده حتى بالسورسات الاجنبيه شلع قلع ..
 #اذا تريد تخمط بالعافيه عليك حبي بس اتمنه اتمنه اذا انته صدك مطور وتكول اني مطور تذكر الحقوق .. غيرها انته مطور فاشل ..
 
@@ -36,7 +36,7 @@ autophoto_path = os.path.join(os.getcwd(), "userbot", "photo_pfp.png")
 digitalpfp = Config.DIGITAL_PIC
 
 
-@bot.on(admin_cmd(pattern="الصورة تلقائي ?(.*)"))
+@bot.on(admin_cmd(pattern="الصورة الوقتية ?(.*)"))
 async def autopic(event):
     if event.fwd_from:
         return
@@ -68,7 +68,7 @@ async def autopic(event):
     await autopicloop()
 
 
-@bot.on(admin_cmd(pattern="البروفايل تلقائي$"))
+@bot.on(admin_cmd(pattern="البروفايل الوقتي$"))
 async def main(event):
     if event.fwd_from:
         return
@@ -89,7 +89,7 @@ async def main(event):
     await digitalpicloop()
 
 
-@bot.on(admin_cmd(pattern="الاسم تلقائي$"))
+@bot.on(admin_cmd(pattern="اسم وقتي$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -100,7 +100,7 @@ async def _(event):
     await autoname_loop()
 
 
-@bot.on(admin_cmd(pattern="البايو تلقائي$"))
+@bot.on(admin_cmd(pattern="بايو وقتي$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -116,7 +116,7 @@ async def _(event):  # sourcery no-metrics
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
-    if input_str == "الصورة تلقائي":
+    if input_str == "الصورة الوقتية":
         if gvarstatus("autopic") is not None and gvarstatus("autopic") == "true":
             delgvar("autopic")
             if os.path.exists(autopic_path):
@@ -126,9 +126,9 @@ async def _(event):  # sourcery no-metrics
                     os.remove(autopic_path)
                 except BaseException:
                     return
-            return await edit_delete(event, "** تم انهاء  البروفايل التلقائي الان 𓆰**")
-        return await edit_delete(event, "** لم يتم تمكين  البروفايل التلقائي 𓆰**")
-    if input_str == "البروفايل تلقائي":
+            return await edit_delete(event, "** تم انهاء  البروفايل الوقتي الان 𓆰**")
+        return await edit_delete(event, "** لم يتم تمكين  البروفايل الوقتي𓆰**")
+    if input_str == "البروفايل الوقتي":
         if gvarstatus("digitalpic") is not None and gvarstatus("digitalpic") == "true":
             delgvar("digitalpic")
             await event.client(
@@ -136,8 +136,8 @@ async def _(event):  # sourcery no-metrics
                     await bot.get_profile_photos("me", limit=1)
                 )
             )
-            return await edit_delete(event, "** تم انهاء  البروفايل التلقائي الان 𓆰**")
-        return await edit_delete(event, "** لم يتم تمكين  البروفايل التلقائي 𓆰**")
+            return await edit_delete(event, "** تم انهاء  البروفايل الوقتي الان 𓆰**")
+        return await edit_delete(event, "** لم يتم تمكين  البروفايل الوقتي 𓆰**")
     if input_str == "bloom":
         if gvarstatus("bloom") is not None and gvarstatus("bloom") == "true":
             delgvar("bloom")
@@ -150,22 +150,22 @@ async def _(event):  # sourcery no-metrics
                     return
             return await edit_delete(event, "`Bloom has been stopped now`")
         return await edit_delete(event, "`Bloom haven't enabled`")
-    if input_str == "الاسم تلقائي":
+    if input_str == "اسم وقتي":
         if gvarstatus("autoname") is not None and gvarstatus("autoname") == "true":
             delgvar("autoname")
             await event.client(
                 functions.account.UpdateProfileRequest(first_name=DEFAULTUSER)
             )
-            return await edit_delete(event, "**تم إيقاف لاسم التلقائي الآن 𓆰**")
-        return await edit_delete(event, "**لم يتم تمكين الاسم التلقائي 𓆰**")
-    if input_str == "البايو تلقائي":
+            return await edit_delete(event, "**تم إيقاف لاسم الوقتي الآن 𓆰**")
+        return await edit_delete(event, "**لم يتم تمكين الاسم الوقتي 𓆰**")
+    if input_str == "بايو وقتي":
         if gvarstatus("autobio") is not None and gvarstatus("autobio") == "true":
             delgvar("autobio")
             await event.client(
                 functions.account.UpdateProfileRequest(about=DEFAULTUSERBIO)
             )
-            return await edit_delete(event, "** تم انهاء  البايو التلقائي الان 𓆰**")
-        return await edit_delete(event, "** لم يتم تمكين  البايو التلقائي 𓆰**")
+            return await edit_delete(event, "** تم انهاء  البايو الوقتي الان 𓆰**")
+        return await edit_delete(event, "** لم يتم تمكين  البايو الوقتي 𓆰**")
 
 
 async def autopicloop():
@@ -339,11 +339,11 @@ bot.loop.create_task(autobio_loop())
 CMD_HELP.update(
     {
         "الوقتي": """**اسم الاضافـه : **`الوقتي`
-  **╮•❐ الامـر ⦂ **`.الاسم تلقائي`
+  **╮•❐ الامـر ⦂ **`.الاسم وقتي`
 •  **الشـرح •• **__لوضـع اسـم وقتـي لحسابـك يتغيـر تلقائيـاً كـل دقيقـه مـع الوقـت__
-  **╮•❐ الامـر ⦂ **`.البروفايل تلقائي`
+  **╮•❐ الامـر ⦂ **`.البروفايل الوقتي`
 •  **الشـرح •• **__لوضـع بروفايـل وقتـي يتغيـر تلقائيـاً مع حسابـك كل دقيقـه لشرح الامر اذهب الى https://t.me/Ralls_Thon/63 __
-  **╮•❐ الامـر ⦂ **`.البايو تلقائي`
+  **╮•❐ الامـر ⦂ **`.بايو الوقتي`
 •  **الشـرح •• **__لوضـع بايـو وقتـي يتغيـر تلقائـياً مع الوقـت كـل دقيقـه لشرح الامر اذهب الى https://t.me/Ralls_Thon/63 __
   **╮•❐ الامـر ⦂ **`.انهاء + ( الاسم تلقائي/البروفايل تلقائي/البايو تلقائي ) `
 •  **الشـرح •• **__لانهـاء الاوامـر الوقتيـه من حسابـك__
