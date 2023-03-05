@@ -8,21 +8,21 @@ class Config(object):
     LOGGER = True
 
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
-    APP_ID = int(os.environ.get("APP_ID", 6))
+    API_ID = int(os.environ.get("API_ID", 6))
     API_HASH = os.environ.get("API_HASH") or None
     DB_URI = os.environ.get("DATABASE_URL", None)
-    STRING_SESSION = os.environ.get("STRING_SESSION", None)
-    TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN") or os.environ.get(
-        "TG_BOT_TOKEN_BF_HER", None
+    SESSION = os.environ.get("SESSION", None)
+    BOT_TOKEN = os.environ.get("BOT_TOKEN") or os.environ.get(
+        "BOT_TOKEN_BF_HER", None
     )
-    TG_BOT_USERNAME = os.environ.get("TG_BOT_USERNAME") or os.environ.get(
-        "TG_BOT_USER_NAME_BF_HER", None
+    BOT_USERNAME = os.environ.get("BOT_USERNAME") or os.environ.get(
+        "BOT_USER_NAME_BF_HER", None
     )
     LOAD_MYBOT = os.environ.get("LOAD_MYBOT", "True")
     TOSH_START = os.environ.get("TOSH_START", None)
     TZ = os.environ.get("TZ", "Asia/Baghdad")
     UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/raiis1/Ralls_USERBOT.git"
+        "UPSTREAM_REPO", "https://github.com/rogerpq/Ralls_USERBOT.git"
     )
 
     AUTONAME = os.environ.get("AUTONAME", None)
