@@ -5,7 +5,7 @@ O = Config.OWNER_ID
 Name = bot.me.first_name
 M = f"[{Name}](tg://user?id={O})"
 
-A = "https://t.me/ZedThon/105"
+A = "https://t.me/Repthon/117"
 
 B = "**⌔∮ اهلا عزيزي - {} \n⌔∮ رابط التنصيب - [اضغط هنا]({})**"
 
