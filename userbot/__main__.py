@@ -13,13 +13,7 @@ from telethon import TelegramClient as TC
 from userbot.tosh import *
 from userbot import LOGS, bot, call_py
 from userbot.Config import Config
-from userbot.utils import (
-    load_module,
-    load_admin, 
-    load_anim, 
-    load_tosha, 
-    load_assistant,
-)
+
 
 async def startupmessage():
     try:
