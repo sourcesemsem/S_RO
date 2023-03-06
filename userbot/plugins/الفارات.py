@@ -5,7 +5,7 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/raiis1/Ralls_USERBOT/blob/master/LICENSE/>.
 
-""" وصـف الملـف : اوامـر اضـافة الفـارات باللغـة العربيـة كـاملة ولا حـرف انكلـش🤘 تخمـط اذكـر المصـدر يولـد
+"""وصـف الملـف : اوامـر اضـافة الفـارات باللغـة العربيـة كـاملة ولا حـرف انكلـش🤘 تخمـط اذكـر المصـدر يولـد
 اضـافة فـارات صـورة ( الحمايـة - الفحـص - الوقتـي ) بـ امـر واحـد فقـط
 حقـوق للتـاريخ : @RallsThon
 
@@ -413,7 +413,7 @@ async def variable(event):
         del heroku_var[variable]
 
     elif input_str == "التوكن" or input_str == "توكن البوت":
-        variable = "TG_BOT_TOKEN"
+        variable = "BOT_TOKEN"
         await asyncio.sleep(1.5)
         if variable not in heroku_var:
         	return await Ralls.edit("**✾╎عـذراً .. فـار {} غير موجود اصـلاً...**".format(input_str))
@@ -422,7 +422,7 @@ async def variable(event):
         del heroku_var[variable]
 
     elif input_str == "معرف البوت" or input_str == "معرف بوت":
-        variable = "TG_BOT_USERNAME"
+        variable = "BOT_USERNAME"
         await asyncio.sleep(1.5)
         if variable not in heroku_var:
         	return await Ralls.edit("**✾╎عـذراً .. فـار {} غير موجود اصـلاً...**".format(input_str))
