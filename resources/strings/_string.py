@@ -4,7 +4,7 @@ from userbot.Config import Config # Ok - 🖤
 
 USERID = Config.OWNER_ID
 Name = Config.ALIVE_NAME
-DEFAULTUSER = str(Name) if Name else "Ralls THON"
+DEFAULTUSER = str(Name) if Name else "Repthon"
 mention = f"[{Name}](tg://user?id={USERID})"
 
 Plugin = "userbot/plugins/{}.py"
@@ -14,27 +14,27 @@ Tosh = "userbot/plugins/tosha/{}.py"
 Assistant = "userbot/plugins/assistant/{}.py"
 AssistantPm = "userbot/plugins/assistant/PmTosh/{}.py"
 
-Xtbot = "\"TG_BOT_TOKEN\""
-Xt = "TG_BOT_TOKEN"
-Xe = "STRING_SESSION"
+Xtbot = "\"BOT_TOKEN\""
+Xt = "BOT_TOKEN"
+Xe = "SESSION"
 
-A = Config.APP_ID
+A = Config.API_ID
 H = Config.API_HASH
-B = Config.TG_BOT_TOKEN
+B = Config.BOT_TOKEN
 N = Config.NO_LOAD
 
 Start = (
     """
     <------------------------------------>
-         يتم تحميل ملفات السورس ريس ثـون
+            يتم تحميل ملفات السورس ريبـــثون
     <------------------------------------>
     """
 )
 
 TOSHA = Config.PRIVATE_GROUP_BOT_API_ID
-TBOT = Config.TG_BOT_USERNAME
+TBOT = Config.BOT_USERNAME
 T = Config.COMMAND_HAND_LER or "."
-DEVL = "@Rallsthon"
+DEVL = "@Repthon"
 
 C = "**⌔╎المعادله ⪼** {}\n  **- الحل ⪼** {}"
 Calc = (
@@ -84,18 +84,18 @@ Pmt = "userbot/plugins/assistant/PmTosh/*.py"
 
 Message = (
 """       ⫷ تم الانتهاء من التنصيب ⫸
-⫷ بوت ريس ثـون يعمل بنجاح الان ⫸
+⫷ بوت ريبـــثون يعمل بنجاح الان ⫸
    ⫷ المستخدم: {} - البوت: {} ⫸
    ⫷ ارجع الى حسابك ودز الامر (.الاوامر) ⫸
-⫷ @RallsThon - اذا كنت بحاجه الى مساعده فتوجه الى ⫸
-⫷ @QQ070 - تحياتي : الريـــس علـــش ⫸"""
+⫷ @Repthon_support - اذا كنت بحاجه الى مساعده فتوجه الى ⫸
+⫷ @E_7_V - تحياتي : روجـــر | بـــاقـــر⫸"""
 )
 
 Mesg = [
-    '⫷ يتم تحميل انلاين ريس ثـون ⫸',
-    '⫷ اكتمل تنزيل انلاين ريس ثـون بدون اخطاء ⫸',
-    '⫷ يتم بدء بوت ريس ثـون ⫸',
-    '⫷ اكتمل بدء بوت ريس ثـون ⫸'
+    '⫷ يتم تحميل انلاين ريبـــثون ⫸',
+    '⫷ اكتمل تنزيل انلاين ريبـــثون بدون اخطاء ⫸',
+    '⫷ يتم بدء بوت ريـص ⫸',
+    '⫷ اكتمل بدء بوت ريبـــثون ⫸'
 ]
 
 Quotly = [
