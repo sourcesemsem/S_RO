@@ -85,7 +85,7 @@ async def zelzalalive(event):
         )
 
 
-Rallsmp = """{ALIVE_TEXT}
+Repthonmp = """{ALIVE_TEXT}
 
 **{Z_EMOJI} قاعدۿ البيانات :** تعمل بنـجاح
 **{Z_EMOJI} إصـدار التـيليثون :** `{telever}`
