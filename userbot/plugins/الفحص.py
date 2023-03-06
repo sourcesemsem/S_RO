@@ -54,7 +54,7 @@ async def zelzalalive(event):
     ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "** بـوت  ريبـــثون 𝐑𝐄𝐏𝐓𝐇𝐎𝐍 يعمـل .. بنجـاح ☑️ 𓆩 **"
     ZZL_IMG = Config.ALIVE_PIC or "https://graph.org/file/615da9bbf808580163ca4.jpg"
     Repthon_caption = Config.Repthon_MEDIA or Repthonmp
-    caption = Ralls_caption.format(
+    caption = Repthon_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
         Z_EMOJI=Z_EMOJI,
         mention=mention,
