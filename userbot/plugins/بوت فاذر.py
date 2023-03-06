@@ -14,14 +14,14 @@ from telethon import functions
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot, BotInlineDisabledError as noinline, YouBlockedUserError
 
-botname = Config.TG_BOT_USERNAME
+botname = Config.BOT_USERNAME
 
 @bot.on(admin_cmd(pattern="انلاين تفعيل ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="انلاين تفعيل ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    tgbotusername = Config.TG_BOT_USERNAME
+    tgbotusername = Config.BOT_USERNAME
     chat = "@Botfather"
     if tgbotusername is not None:
         try:
@@ -31,20 +31,20 @@ async def _(event):
             )
             await event.delete()
         except:
-            QQ070 = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎تـم تفعيـل انـلاين بـوتك .. بنجـاح ☑️**\n\n**❈╎جـاري اعـادة تشغيل البـوت الرجـاء الانتظـار  ▬▭...𓅫**")
+            ZQ_LO = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎تـم تفعيـل انـلاين بـوتك .. بنجـاح ☑️**\n\n**❈╎جـاري اعـادة تشغيل البـوت الرجـاء الانتظـار  ▬▭...𓅫**")
             async with bot.conversation(chat) as conv:
                 try:
                     first = await conv.send_message("/setinline")
                     second = await conv.get_response()
                     third = await conv.send_message(tgbotusername)
                     fourth = await conv.get_response()
-                    fifth = await conv.send_message("RallsThon")
+                    fifth = await conv.send_message("ريبـــثون")
                     sixth = await conv.get_response()
                     seventh = await conv.send_message(perf)
                     eighth = await conv.get_response()
                     await bot.send_read_acknowledge(conv.chat_id)
                 except YouBlockedUserError:
-                    return await QQ070.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
+                    return await ZQ_LO.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
                 await bot.edit(f"**❈╎تـم تفعيـل انـلاين بـوتك .. بنجـاح ☑️**")
             await bot.delete_messages(
                 conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
@@ -58,7 +58,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    tgbotusername = Config.TG_BOT_USERNAME
+    tgbotusername = Config.BOT_USERNAME
     chat = "@Botfather"
     if tgbotusername is not None:
         try:
@@ -68,7 +68,7 @@ async def _(event):
             )
             await event.delete()
         except:
-            QQ070 = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎تـم تعطيـل انـلاين بـوتك .. بنجـاح ☑️**\n\n**❈╎جـاري اعـادة تشغيل البـوت الرجـاء الانتظـار  ▬▭...𓅫**")
+            ZQ_LO = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎تـم تعطيـل انـلاين بـوتك .. بنجـاح ☑️**\n\n**❈╎جـاري اعـادة تشغيل البـوت الرجـاء الانتظـار  ▬▭...𓅫**")
             async with bot.conversation(chat) as conv:
                 try:
                     first = await conv.send_message("/setinline")
@@ -81,7 +81,7 @@ async def _(event):
                     eighth = await conv.get_response()
                     await bot.send_read_acknowledge(conv.chat_id)
                 except YouBlockedUserError:
-                    return await QQ070.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
+                    return await ZQ_LO.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
                 await bot.edit(f"**❈╎تـم تعطيـل انـلاين بـوتك .. بنجـاح ☑️**")
             await bot.delete_messages(
                 conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
@@ -96,7 +96,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    tgbotusername = Config.TG_BOT_USERNAME
+    tgbotusername = Config.BOT_USERNAME
     chat = "@Botfather"
     if tgbotusername is not None:
         try:
@@ -106,7 +106,7 @@ async def _(event):
             )
             await event.delete()
         except:
-            QQ070 = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎ارسـل الامـر التـالي لـوضع النبذة ☑️**\n\n**❈╎.وضع نبذة + نبذتـك ...𓅫**")
+            ZQ_LO = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎ارسـل الامـر التـالي لـوضع النبذة ☑️**\n\n**❈╎.وضع نبذة + نبذتـك ...𓅫**")
             async with bot.conversation(chat) as conv:
                 try:
                     first = await conv.send_message("/setabouttext")
@@ -117,7 +117,7 @@ async def _(event):
                     sixth = await conv.get_response()
                     await bot.send_read_acknowledge(conv.chat_id)
                 except YouBlockedUserError:
-                    return await QQ070.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
+                    return await ZQ_LO.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
                 await bot.edit(f"**❈╎تـم تفعيـل نبـذة بـوتك .. بنجـاح ☑️**")
             await bot.delete_messages(
                 conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
@@ -131,7 +131,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    tgbotusername = Config.TG_BOT_USERNAME
+    tgbotusername = Config.BOT_USERNAME
     chat = "@Botfather"
     if tgbotusername is not None:
         try:
@@ -141,7 +141,7 @@ async def _(event):
             )
             await event.delete()
         except:
-            QQ070 = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎ارسـل الامـر التـالي لـوضع الوصف ☑️**\n\n**❈╎.وضع وصف + وصفـك ...𓅫**")
+            ZQ_LO = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎ارسـل الامـر التـالي لـوضع الوصف ☑️**\n\n**❈╎.وضع وصف + وصفـك ...𓅫**")
             async with bot.conversation(chat) as conv:
                 try:
                     first = await conv.send_message("/setdescription")
@@ -152,7 +152,7 @@ async def _(event):
                     sixth = await conv.get_response()
                     await bot.send_read_acknowledge(conv.chat_id)
                 except YouBlockedUserError:
-                    return await QQ070.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
+                    return await ZQ_LO.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
                 await bot.edit(f"**❈╎تـم تفعيـل وصـف بـوتك .. بنجـاح ☑️**")
             await bot.delete_messages(
                 conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
@@ -166,7 +166,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    tgbotusername = Config.TG_BOT_USERNAME
+    tgbotusername = Config.BOT_USERNAME
     chat = "@Botfather"
     if tgbotusername is not None:
         try:
@@ -176,7 +176,7 @@ async def _(event):
             )
             await event.delete()
         except:
-            QQ070 = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎ارسـل الامـر التـالي لـوضع الاسم ☑️**\n\n**❈╎.وضع اسم + اسـم البـوت ...𓅫**")
+            ZQ_LO = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎ارسـل الامـر التـالي لـوضع الاسم ☑️**\n\n**❈╎.وضع اسم + اسـم البـوت ...𓅫**")
             async with bot.conversation(chat) as conv:
                 try:
                     first = await conv.send_message("/setname")
@@ -187,7 +187,7 @@ async def _(event):
                     sixth = await conv.get_response()
                     await bot.send_read_acknowledge(conv.chat_id)
                 except YouBlockedUserError:
-                    return await QQ070.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
+                    return await ZQ_LO.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
                 await bot.edit(f"**❈╎تـم تفعيـل اسـم بـوتك .. بنجـاح ☑️**")
             await bot.delete_messages(
                 conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
@@ -201,7 +201,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    tgbotusername = Config.TG_BOT_USERNAME
+    tgbotusername = Config.BOT_USERNAME
     chat = "@Botfather"
     if tgbotusername is not None:
         try:
@@ -211,7 +211,7 @@ async def _(event):
             )
             await event.delete()
         except:
-            QQ070 = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎ارسـل الامـر التـالي لـوضع الصورة ☑️**\n\n**❈╎.وضع صورة بالـرد عـلى صـورة ...𓅫**")
+            ZQ_LO = await eor(event, "**❈╎جـارِ الاتصـال ببـوت فـاذر ...⏣**\n**❈╎ارسـل الامـر التـالي لـوضع الصورة ☑️**\n\n**❈╎.وضع صورة بالـرد عـلى صـورة ...𓅫**")
             async with bot.conversation(chat) as conv:
                 try:
                     first = await conv.send_message("/setuserpic")
@@ -222,7 +222,7 @@ async def _(event):
                     sixth = await conv.get_response()
                     await bot.send_read_acknowledge(conv.chat_id)
                 except YouBlockedUserError:
-                    return await QQ070.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
+                    return await ZQ_LO.edit("**❈╎قـم بإلغـاء الحظـر عـن بـوت فـاذر اولا @Botfather .. ثـم اعـد المحـاوله**")
                 await bot.edit(f"**❈╎تـم تفعيـل صـورة بـوتك .. بنجـاح ☑️**")
             await bot.delete_messages(
                 conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
