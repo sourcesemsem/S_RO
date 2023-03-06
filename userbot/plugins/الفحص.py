@@ -1,4 +1,4 @@
-#الريس
+#روجر كان هنا🗿
 import random
 import re
 import time
@@ -51,16 +51,16 @@ async def zelzalalive(event):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     Z_EMOJI = Config.CUSTOM_ALIVE_EMOJI or "⎆┊"
-    ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "** بـوت  ريسثــون 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉  يعمـل .. بنجـاح ☑️ 𓆩 **"
-    ZZL_IMG = Config.ALIVE_PIC or "https://telegra.ph/file/57d51af1ca93d8cc8a958.jpg"
-    Ralls_caption = Config.Ralls_MEDIA or Rallsmp
+    ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "** بـوت  ريبـــثون 𝐑𝐄𝐏𝐓𝐇𝐎𝐍 يعمـل .. بنجـاح ☑️ 𓆩 **"
+    ZZL_IMG = Config.ALIVE_PIC or "https://graph.org/file/615da9bbf808580163ca4.jpg"
+    Repthon_caption = Config.Repthon_MEDIA or Repthonmp
     caption = Ralls_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
         Z_EMOJI=Z_EMOJI,
         mention=mention,
         uptime=uptime,
         telever=version.__version__,
-        zdver="7.7.3",
+        zdver="3.1.3",
         pyver=python_version(),
         dbhealth=check_sgnirts,
         ping=ms,
@@ -89,8 +89,8 @@ Rallsmp = """{ALIVE_TEXT}
 
 **{Z_EMOJI} قاعدۿ البيانات :** تعمل بنـجاح
 **{Z_EMOJI} إصـدار التـيليثون :** `{telever}`
-**{Z_EMOJI} إصـدار ريسثــون :** `{zdver}`
+**{Z_EMOJI} إصـدار ريبـــثون :** `{zdver}`
 **{Z_EMOJI} إصـدار البـايثون :** `{pyver}`
 **{Z_EMOJI} الوقـت :** `{uptime}`
 **{Z_EMOJI} المسـتخدم:** {mention}
-**{Z_EMOJI} قنـاة السـورس :** [اضغـط هنـا](https://t.me/RallsThon)"""
+**{Z_EMOJI} قنـاة السـورس :** [اضغـط هنـا](https://t.me/Repthon)"""
