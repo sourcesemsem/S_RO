@@ -1,4 +1,4 @@
-# commands for source Ralls by ~ @QQ070
+# commands for source Repthon by ~ @ZQ_LO
 
 
 import random
