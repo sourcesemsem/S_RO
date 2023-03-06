@@ -1,7 +1,7 @@
-FROM raiis1/Ralls_USERBOT:latest
+FROM rogerpq/Ralls_USERBOT:latest
 
 # نسخ رابط السورس 
-RUN git clone https://github.com/raiis1/Ralls_USERBOT.git /root/userbot
+RUN git clone https://github.com/rogerpq/Ralls_USERBOT.git /root/userbot
 # اخـراج العـمل 
 WORKDIR /root/userbot
 
