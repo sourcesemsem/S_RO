@@ -70,22 +70,22 @@ SUDO_LIST = {}
 INT_PLUG = ""
 LOAD_PLUG = {}
 
-if Config.STRING_SESSION:
-    session_name = str(Config.STRING_SESSION)
+if Config.SESSION:
+    session_name = str(Config.SESSION)
     try:
         if session_name.endswith("="):
             bot = TelegramClient(
-                StringSession(session_name), Config.APP_ID, Config.API_HASH
+                StringSession(session_name), Config.API_ID, Config.API_HASH
             )
         else:
             bot = TelegramClient(
-                "TG_BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
-            ).start(bot_token=Config.STRING_SESSION)
+                "BOT_TOKEN", api_id=Config.API_ID, api_hash=Config.API_HASH
+            ).start(bot_token=Config.SESSION)
         call_py = PyTgCalls(bot)
     except Exception as e:
-        LOGS.warn(f"STRING_SESSION - {str(e)}")
+        LOGS.warn(f"SESSION - {str(e)}")
         sys.exit()
 else:
     session_name = "startup"
-    bot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
+    bot = TelegramClient(session_name, Config.API_ID, Config.API_HASH)
     call_py = PyTgCalls(bot)
