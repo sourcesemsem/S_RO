@@ -8,7 +8,7 @@ import time
 from os.path import basename
 from typing import Optional, Union
 
-from emoji import get_emoji_regexp
+
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from html_telegraph_poster import TelegraphPoster
