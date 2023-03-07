@@ -9,7 +9,7 @@ print("")
 API_ID = int(input("⌔∮ ENTER APP ID HERE - "))
 API_HASH = input("⌔∮ ENTER API HASH HERE - ")
 
-with tc(ss(), APP_ID, API_HASH) as client:
+with tc(ss(), API_ID, API_HASH) as client:
     ics = client.send_message("me", client.session.save())
     ics.reply("⌔∮ هذا هو كود التيرمكس الخاص بك.\n⌔∮ المطور - @ZQ_LO. ")
     print("")
