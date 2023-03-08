@@ -1,4 +1,4 @@
-#RallsThon ®
+#Repthon ®
 
 import os
 import random
@@ -14,7 +14,7 @@ from . import mention
 
 TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 
-FANAN = "<b> 𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝐑𝐀𝐈𝐈𝐒 - 💞🤵💞 𓆪 </b>"
+FANAN = "<b> 𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 - 💞🤵💞 𓆪 </b>"
 VANAN = "<b> ⋄︙افيشش 🥺💘 </b>"
 sts_fanan = "https://telegra.ph/file/50caf0efa9a2453985364.jpg"
 sts_fanan2 = "https://telegra.ph/file/dda7dd09f7d697fe92ff6.jpg" 
@@ -35,17 +35,17 @@ sts_fanan16 = "https://telegra.ph/file/f2683a9c2f6aec9f16850.jpg"
 sts_fanan17 = "https://telegra.ph/file/8775bf7b8edde56243897.jpg"
 sts_fanan18 = "https://telegra.ph/file/b544499b6853568ce475f.jpg"
 
-ZEED_IMG = sts_fanan or sts_fanan2 or sts_fanan3 or sts_fanan4 or sts_fanan5
+REP_IMG = sts_fanan or sts_fanan2 or sts_fanan3 or sts_fanan4 or sts_fanan5
 
 @bot.on(admin_cmd(pattern="مشهور(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="مشهور(?: |$)(.*)", allow_sudo=True))
 async def who(event):
-    Ralls = await eor(event, "⇆")
+    Repthon = await eor(event, "⇆")
     replied_user = await get_user(event)
     try:
-        ZEED_IMG, caption = await fetch_info(replied_user, event)
+        REP_IMG, caption = await fetch_info(replied_user, event)
     except AttributeError:
-        await eor(Ralls, "..")
+        await eor(Repthon, "..")
         return
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
@@ -53,7 +53,7 @@ async def who(event):
     try:
         await event.client.send_file(
             event.chat_id,
-            ZEED_IMG,
+            REP_IMG,
             caption=caption,
             link_preview=False,
             force_document=False,
@@ -61,7 +61,7 @@ async def who(event):
             parse_mode="html",
         )
     except TypeError:
-        await Ralls.edit(caption, parse_mode="html")
+        await Repthon.edit(caption, parse_mode="html")
 
 
 async def get_user(event):
@@ -101,7 +101,7 @@ async def fetch_info(replied_user, event):
     replied_user.user.bot
     replied_user.user.restricted
     replied_user.user.verified
-    ZEED_IMG
+    REP_IMG
     x = random.randrange(1, 18)
     if x == 1:
        caption = f"<b> {FANAN} </b>\n\n\n"
