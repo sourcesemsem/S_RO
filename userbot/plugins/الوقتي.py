@@ -36,16 +36,33 @@ autophoto_path = os.path.join(os.getcwd(), "userbot", "photo_pfp.png")
 digitalpfp = Config.DIGITAL_PIC
 
 
-@bot.on(admin_cmd(pattern="الصورة الوقتية ?(.*)"))
-async def autopic(event):
-    if event.fwd_from:
-        return
-    if Config.DEFAULT_PIC is None:
-        return await edit_delete(
-            event,
-            "**عـذرا هنـاك خطـأ**\n وظيفة الصورة التـلقائيـة تحتاج إلى ضبط DEFAULT PIC var في Heroku vars",
-            parse_mode=parse_pre,
-        )
+@bot.om(admin_cmd(pattern=f"الصورة الوقتية")
+
+async def _(event):
+
+    digitalpfp = gvarstatus("DIGITAL_PIC")
+
+    downloader = SmartDL(digitalpfp, digitalpic_path, progress_bar=False)
+
+    downloader.start(blocking=False)
+
+    while not downloader.isFinished():
+
+        pass
+
+    if gvarstatus("DIGITAL_PIC") is None:
+
+        return await edit_delete(event, "**- فار الصـورة الوقتيـه غيـر موجـود ؟!**\n**- ارسـل صورة ثم قم بالـرد عليهـا بالامـر :**\n\n`.اضف صورة الوقتي`")
+
+    if gvarstatus("digitalpic") is not None and gvarstatus("digitalpic") == "true":
+
+        return await edit_delete(event, "**⎉╎البروفـايل الوقتـي .. تم تفعيلهـا سابقـاً**")
+
+    addgvar("digitalpic", True)
+
+    await edit_delete(event, "**⎉╎تـم بـدء البروفـايل الوقتـي .. بنجـاح ✓**")
+
+    await digitalpicloop()
     downloader = SmartDL(Config.DEFAULT_PIC, autopic_path, progress_bar=False)
     downloader.start(blocking=False)
     while not downloader.isFinished():
