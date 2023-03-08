@@ -65,7 +65,7 @@ async def digitalpicloop():
         current_time = datetime.now().strftime("%I:%M")
         img = Image.open(autophoto_path)
         drawn_text = ImageDraw.Draw(img)
-        fnt = ImageFont.truetype(f"{zedfont}", 35)
+        fnt = ImageFont.truetype(f"{repfont}", 35)
         drawn_text.text((140, 70), current_time, font=fnt, fill=(280, 280, 280))
         img.save(autophoto_path)
         file = await bot.upload_file(autophoto_path)
@@ -73,7 +73,7 @@ async def digitalpicloop():
             if i > 0:
                 await bot(
                     functions.photos.DeletePhotosRequest(
-                        await zedub.get_profile_photos("me", limit=1)
+                        await bot.get_profile_photos("me", limit=1)
                     )
                 )
             i += 1
