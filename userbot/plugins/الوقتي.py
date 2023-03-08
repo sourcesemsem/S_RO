@@ -1,13 +1,13 @@
-# @Zed-Thon - ZelZal
-# Copyright (C) 2022 ZedThon . All Rights Reserved
-#< https://t.me/ZedThon >
-# This file is a part of < https://github.com/Zed-Thon/ZelZal/ >
+# @Repthon - Roger|Baqir
+# Copyright (C) 2022 Repthon . All Rights Reserved
+#< https://t.me/Repthon >
+# This file is a part of < https://github.com/rogerpq/Ralls_USERBOT/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Zed-Thon/ZelZal/blob/main/LICENSE/>.
+# <https://www.github.com/rogerpq/Ralls_USERBOT/blob/master/LICENSE/>.
 #كـود الصورة الوقتيه كتـابتي وتعديلـي من زمان ومتعوب عليها 
 #+ كـود زخـرفة الصورة الوقتيه
 #+ دددي لا ابلـع حســابك بـانـد بطـعـم الليمــون 🍋😹🤘
-#زلــزال الهيبــه يـ ولــد - حقــوق لـ التــاريـخ ®
+بــاقــر كــانـ هــنا يـ ولــد - حقــوق لـ التــاريـخ ®
 #هههههههههههههههههههههههههههههههههههههههههههههههههه
 
 import asyncio
@@ -29,7 +29,7 @@ from telethon.tl.types import MessageEntityMentionName
 from ..Config import Config
 from ..helpers.utils import _format
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
-from . import edit_delete, zedub, logging
+from . import edit_delete, bot, logging
 
 plugin_category = "الادوات"
 DEFAULTUSER = gvarstatus("ALIVE_NAME") or Config.ALIVE_NAME
@@ -39,14 +39,14 @@ FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 normzltext = "1234567890"
 
-autopic_path = os.path.join(os.getcwd(), "zthon", "original_pic.png")
-digitalpic_path = os.path.join(os.getcwd(), "zthon", "digital_pic.png")
-autophoto_path = os.path.join(os.getcwd(), "zthon", "photo_pfp.png")
+autopic_path = os.path.join(os.getcwd(), "userbot", "original_pic.png")
+digitalpic_path = os.path.join(os.getcwd(), "userbot", "digital_pic.png")
+autophoto_path = os.path.join(os.getcwd(), "userbot", "photo_pfp.png")
 
 
-NAUTO = gvarstatus("Z_NAUTO") or "(الاسم تلقائي|الاسم الوقتي|اسم وقتي|اسم تلقائي)"
-PAUTO = gvarstatus("Z_PAUTO") or "(البروفايل تلقائي|الصوره الوقتيه|الصورة الوقتية|صوره وقتيه|البروفايل)"
-BAUTO = gvarstatus("Z_BAUTO") or "(البايو تلقائي|البايو الوقتي|بايو وقتي|نبذه وقتيه|النبذه الوقتيه)"
+ROGER = gvarstatus("R_ROGER") or "(الاسم تلقائي|الاسم الوقتي|اسم وقتي|اسم تلقائي)"
+BAQIR = gvarstatus("R_BAQIR") or "(البروفايل تلقائي|الصوره الوقتيه|الصورة الوقتية|صوره وقتيه|البروفايل)"
+NARCISSUS = gvarstatus("R_NARCISSUS") or "(البايو تلقائي|البايو الوقتي|بايو وقتي|نبذه وقتيه|النبذه الوقتيه)"
 
 
 async def digitalpicloop():
@@ -59,7 +59,7 @@ async def digitalpicloop():
             downloader.start(blocking=False)
             while not downloader.isFinished():
                 pass
-        zedfont = gvarstatus("DEFAULT_PIC") or "zthon/helpers/styles/Papernotes.ttf"
+        repfont = gvarstatus("DEFAULT_PIC") or "userbot/helpers/styles/Papernotes.ttf"
         shutil.copy(digitalpic_path, autophoto_path)
         Image.open(autophoto_path)
         current_time = datetime.now().strftime("%I:%M")
@@ -71,13 +71,13 @@ async def digitalpicloop():
         file = await zedub.upload_file(autophoto_path)
         try:
             if i > 0:
-                await zedub(
+                await bot(
                     functions.photos.DeletePhotosRequest(
                         await zedub.get_profile_photos("me", limit=1)
                     )
                 )
             i += 1
-            await zedub(functions.photos.UploadProfilePhotoRequest(file))
+            await bot(functions.photos.UploadProfilePhotoRequest(file))
             os.remove(autophoto_path)
             await asyncio.sleep(CHANGE_TIME)
         except BaseException:
@@ -91,14 +91,14 @@ async def autoname_loop():
         HM = time.strftime("%I:%M")
         for normal in HM:
             if normal in normzltext:
-              namerzfont = gvarstatus("ZI_FN") or "𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝟬"
+              namerzfont = gvarstatus("BA_FN") or "𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝟬"
               namefont = namerzfont[normzltext.index(normal)]
               HM = HM.replace(normal, namefont)
-        ZEDT = gvarstatus("CUSTOM_ALIVE_EMZED") or "⏐"
+        REPT = gvarstatus("CUSTOM_ALIVE_EMZED") or " ⏐ "
         name = f"{HM}{ZEDT}"
         LOGS.info(name)
         try:
-            await zedub(functions.account.UpdateProfileRequest(first_name=name))
+            await bot(functions.account.UpdateProfileRequest(first_name=name))
         except FloodWaitError as ex:
             LOGS.warning(str(ex))
             await asyncio.sleep(ex.seconds)
@@ -113,14 +113,14 @@ async def autobio_loop():
         HM = time.strftime("%I:%M")
         for normal in HM:
             if normal in normzltext:
-              namerzfont = gvarstatus("ZI_FN") or "𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝟬"
+              namerzfont = gvarstatus("BA_FN") or "𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝟬"
               namefont = namerzfont[normzltext.index(normal)]
               HM = HM.replace(normal, namefont)
         DEFAULTUSERBIO = gvarstatus("DEFAULT_BIO") or "الحمد الله على كل شئ - @ZedThon"
         bio = f"{DEFAULTUSERBIO} ⏐ {HM}"
         LOGS.info(bio)
         try:
-            await zedub(functions.account.UpdateProfileRequest(about=bio))
+            await bot(functions.account.UpdateProfileRequest(about=bio))
         except FloodWaitError as ex:
             LOGS.warning(str(ex))
             await asyncio.sleep(ex.seconds)
@@ -128,7 +128,7 @@ async def autobio_loop():
         AUTOBIOSTART = gvarstatus("autobio") == "true"
 
 
-@zedub.zed_cmd(pattern=f"{PAUTO}$")
+@bot.on(admin_cmd(pattern=f"{BAQIR}$")
 async def _(event):
     digitalpfp = gvarstatus("DIGITAL_PIC")
     downloader = SmartDL(digitalpfp, digitalpic_path, progress_bar=False)
@@ -144,7 +144,7 @@ async def _(event):
     await digitalpicloop()
 
 
-@zedub.zed_cmd(pattern=f"{NAUTO}$")
+@bot.on(admin_cmd(pattern=f"{ROGRR}$")
 async def _(event):
     if gvarstatus("autoname") is not None and gvarstatus("autoname") == "true":
         return await edit_delete(event, "**⎉╎الاسـم الوقتـي .. تم تفعيلـه سابقـاً**")
@@ -153,7 +153,7 @@ async def _(event):
     await autoname_loop()
 
 
-@zedub.zed_cmd(pattern=f"{BAUTO}$")
+@bot.on(admin_cmd(pattern=f"{NARCISSUS}$")
 async def _(event):
     if gvarstatus("DEFAULT_BIO") is None:
         return await edit_delete(event, "**- فار النبـذة الوقتيـه غيـر موجـود ؟!**\n**- ارسـل نـص النبـذه ثم قم بالـرد عليهـا بالامـر :**\n\n`.اضف البايو`")
@@ -164,7 +164,7 @@ async def _(event):
     await autobio_loop()
 
 
-@zedub.zed_cmd(
+@bot.on(admin_cmd(
     pattern="الغاء ([\s\S]*)",
     command=("الغاء", plugin_category),
     info={
@@ -211,7 +211,7 @@ async def _(event):  # sourcery no-metrics
         return await edit_delete(event, "**⎉╎النبـذه الوقتيـه .. غيـر مفعـله اصـلاً ؟!**")
 
 
-@zedub.zed_cmd(
+@bot.on(admin_cmd(
     pattern="ايقاف ([\s\S]*)",
     command=("ايقاف", plugin_category),
     info={
@@ -259,7 +259,7 @@ async def _(event):  # sourcery no-metrics
 
 
 
-@zedub.zed_cmd(
+@bot.on(admin_cmd(
     pattern="انهاء ([\s\S]*)",
     command=("انهاء", plugin_category),
     info={
@@ -326,6 +326,6 @@ async def _(event):  # sourcery no-metrics
         )
 
 
-zedub.loop.create_task(digitalpicloop())
-zedub.loop.create_task(autoname_loop())
-zedub.loop.create_task(autobio_loop())
+bot.loop.create_task(digitalpicloop())
+bot.loop.create_task(autoname_loop())
+bot.loop.create_task(autobio_loop())
