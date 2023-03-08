@@ -13,7 +13,7 @@ Repthon_TEXT = Config.CUSTOM_ALIVE_TEXT or "╮•⎚ مـعلومات الـش�
 RepthonM = Config.CUSTOM_ALIVE_EMOJI or " •❃ "
 
 @Raillsthon(admin_cmd(pattern="ا(?: |$)(.*)"))
-@Raillsthon(sudo_cmd(pattern="ا(?: |$)(.*)", allow_sudo=True))
+@Raillsthon(sudo_cmd(pattern="ا(?: |$)(.*)"))
 async def who(event):
     ics = await eor(event, "⇆")
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
