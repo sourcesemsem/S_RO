@@ -6,13 +6,14 @@ from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
+from userbot import Raillsthon
 
 TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 Repthon_TEXT = Config.CUSTOM_ALIVE_TEXT or "╮•⎚ مـعلومات الـشخص مـن بـوت ريبـــثون"
 RepthonM = Config.CUSTOM_ALIVE_EMOJI or " •❃ "
 
-@bot.on(admin_cmd(pattern="ا(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="ا(?: |$)(.*)", allow_sudo=True))
+@Raillsthon(admin_cmd(pattern="ا(?: |$)(.*)"))
+@Raillsthon(sudo_cmd(pattern="ا(?: |$)(.*)", allow_sudo=True))
 async def who(event):
     ics = await eor(event, "⇆")
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
