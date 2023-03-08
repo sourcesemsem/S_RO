@@ -78,46 +78,23 @@ async def main(event):
             "**عـذرا هنـاك خطـأ**\n وظيفة الصورة التـلقائيـة تحتاج إلى ضبط DIGITAL_PIC var في Heroku vars",
             parse_mode=parse_pre,
         )
-    repfont = gvarstatus("DEFAULT_PIC") or "userbot/helpers/styles/Papernotes.ttf"
+    downloader = SmartDL(digitalpfp, digitalpic_path, progress_bar=False)
 
-        shutil.copy(digitalpic_path, autophoto_path)
+    downloader.start(blocking=False)
 
-        Image.open(autophoto_path)
+    while not downloader.isFinished():
 
-        current_time = datetime.now().strftime("%I:%M")
+        pass
 
-        img = Image.open(autophoto_path)
+    if gvarstatus("digitalpic") is not None and gvarstatus("digitalpic") == "true":
 
-        drawn_text = ImageDraw.Draw(img)
+        return await edit_delete(event, f"**التـغير التـلقائـي لصورتك ممكن بالفعل 𓆰**")
 
-        fnt = ImageFont.truetype(f"{repfont}", 35)
-
-        drawn_text.text((140, 70), current_time, font=fnt, fill=(280, 280, 280))
-
-        img.save(autophoto_path)
-
-        file = await bot.upload_file(autophoto_path)
-
-        try:
-
-            if i > 0:
-
-                await bot(
-
-                    functions.photos.DeletePhotosRequest(
-
-                        await bot.get_profile_photos("me", limit=1)
-                        
-                        return await edit_delete(event, f"**التـغير التـلقائـي لصورتك ممكن بالفعل 𓆰**")
-
+    addgvar("digitalpic", True)
 
     await edit_delete(event, f"**تـم تفـعيل التـغير التـلقائـي لصورتك 𓆰**")
 
-    await digitalpicloop()
-
-                    )
-
-                )
+    await digitalpicloop
 
 
 @bot.on(admin_cmd(pattern="اسم وقتي$"))
