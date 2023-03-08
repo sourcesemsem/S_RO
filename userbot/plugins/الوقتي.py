@@ -128,7 +128,7 @@ async def autobio_loop():
         AUTOBIOSTART = gvarstatus("autobio") == "true"
 
 
-@bot.on(sudo_cmd(pattern=f"{BAQIR}$")
+@Raillsthon(admin_cmd(pattern=f"{BAQIR}$")
 async def _(event):
     digitalpfp = gvarstatus("DIGITAL_PIC")
     downloader = SmartDL(digitalpfp, digitalpic_path, progress_bar=False)
