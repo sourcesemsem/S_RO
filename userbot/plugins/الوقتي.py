@@ -1,4 +1,4 @@
-#@Repthon - روجر @ZQ_LO - @E_7_V
+# @Repthon - روجر @ZQ_LO - @E_7_V
 #كود الصورة الوقتيه  فكرتي وتعديلي الشخصي ومتعوب عليها + ماموجوده حتى بالسورسات الاجنبيه شلع قلع ..
 #اذا تريد تخمط بالعافيه عليك حبي بس اتمنه اتمنه اذا انته صدك مطور وتكول اني مطور تذكر الحقوق .. غيرها انته مطور فاشل ..
 
@@ -15,7 +15,7 @@ from pySmartDL import SmartDL
 from telethon.errors import FloodWaitError
 from telethon.tl import functions
 
-from . import AUTONAME, BOTLOG, BOTLOG_CHATID, DEFAULT_BIO
+from . import AUTONAME, BOTLOG, BOTLOG_CHATID, DEFAULT_BIO, AUTOPIC, AUTOPHOTO
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 DEFAULTUSERBIO = DEFAULT_BIO or "الحمد الله على كل شئ - @RallsThon"
@@ -78,15 +78,39 @@ async def main(event):
             "**عـذرا هنـاك خطـأ**\n وظيفة الصورة التـلقائيـة تحتاج إلى ضبط DIGITAL_PIC var في Heroku vars",
             parse_mode=parse_pre,
         )
-    downloader = SmartDL(digitalpfp, digitalpic_path, progress_bar=False)
-    downloader.start(blocking=False)
-    while not downloader.isFinished():
-        pass
-    if gvarstatus("digitalpic") is not None and gvarstatus("digitalpic") == "true":
-        return await edit_delete(event, f"**التـغير التـلقائـي لصورتك ممكن بالفعل 𓆰**")
-    addgvar("digitalpic", True)
-    await edit_delete(event, f"**تـم تفـعيل التـغير التـلقائـي لصورتك 𓆰**")
-    await digitalpicloop()
+    repfont = gvarstatus("DEFAULT_PIC") or "userbot/helpers/styles/Papernotes.ttf"
+
+        shutil.copy(digitalpic_path, autophoto_path)
+
+        Image.open(autophoto_path)
+
+        current_time = datetime.now().strftime("%I:%M")
+
+        img = Image.open(autophoto_path)
+
+        drawn_text = ImageDraw.Draw(img)
+
+        fnt = ImageFont.truetype(f"{repfont}", 35)
+
+        drawn_text.text((140, 70), current_time, font=fnt, fill=(280, 280, 280))
+
+        img.save(autophoto_path)
+
+        file = await bot.upload_file(autophoto_path)
+
+        try:
+
+            if i > 0:
+
+                await bot(
+
+                    functions.photos.DeletePhotosRequest(
+
+                        await bot.get_profile_photos("me", limit=1)
+
+                    )
+
+                )
 
 
 @bot.on(admin_cmd(pattern="اسم وقتي$"))
