@@ -68,7 +68,7 @@ async def digitalpicloop():
         fnt = ImageFont.truetype(f"{zedfont}", 35)
         drawn_text.text((140, 70), current_time, font=fnt, fill=(280, 280, 280))
         img.save(autophoto_path)
-        file = await zedub.upload_file(autophoto_path)
+        file = await bot.upload_file(autophoto_path)
         try:
             if i > 0:
                 await bot(
