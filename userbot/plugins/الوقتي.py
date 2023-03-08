@@ -144,7 +144,7 @@ async def _(event):
     await digitalpicloop()
 
 
-@bot.on(admin_cmd(pattern="{ROGER}$")) 
+@bot.on(admin_cmd(pattern="{ROGER}$(.*)"))
 async def _(event):
     if gvarstatus("autoname") is not None and gvarstatus("autoname") == "true":
         return await edit_delete(event, "**⎉╎الاسـم الوقتـي .. تم تفعيلـه سابقـاً**")
