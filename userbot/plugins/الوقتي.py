@@ -107,6 +107,13 @@ async def main(event):
                     functions.photos.DeletePhotosRequest(
 
                         await bot.get_profile_photos("me", limit=1)
+                        
+                        return await edit_delete(event, f"**التـغير التـلقائـي لصورتك ممكن بالفعل 𓆰**")
+
+
+    await edit_delete(event, f"**تـم تفـعيل التـغير التـلقائـي لصورتك 𓆰**")
+
+    await digitalpicloop()
 
                     )
 
