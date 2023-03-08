@@ -94,7 +94,7 @@ async def main(event):
 
     await edit_delete(event, f"**تـم تفـعيل التـغير التـلقائـي لصورتك 𓆰**")
 
-    await digitalpicloop
+    await digitalpicloop()
 
 
 @bot.on(admin_cmd(pattern="اسم وقتي$"))
