@@ -19,10 +19,10 @@ async def _(event):
         channel_entity = await bot.get_entity(bot_username)
         await bot.send_message('@t06bot', '/start')
         await asyncio.sleep(5)
-        msg0 = await jepiq.get_messages('@t06bot', limit=1)
+        msg0 = await bot.get_messages('@t06bot', limit=1)
         await msg0[0].click(2)
         await asyncio.sleep(5)
-        msg1 = await jepiq.get_messages('@t06bot', limit=1)
+        msg1 = await bot.get_messages('@t06bot', limit=1)
         await msg1[0].click(0)
 
         chs = 1
