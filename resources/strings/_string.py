@@ -66,12 +66,12 @@ IS = "⫷ لايمكن تحميل - {} بسبب {} ⫸"
 
 #- TOSH is the most beautiful girl in the world -#
 ICSJ = "<ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ>"
-StartLoaded = "<ⵧⵧⵧⵧⵧⵧ⫷ - Ralls PLUGINS - ⫸ⵧⵧⵧⵧⵧⵧ>"
-ASSISTANT = "<ⵧⵧⵧⵧⵧⵧ⫷ - Ralls ASSISTANT - ⫸ⵧⵧⵧⵧⵧⵧ>"
-KIMOTOSHA = "<ⵧⵧⵧⵧⵧⵧⵧⵧ⫷ - Ralls TOSHA - ⫸ⵧⵧⵧⵧⵧⵧⵧ>"
-ANIMATIONS = "<ⵧⵧⵧⵧⵧⵧ⫷ - Ralls ANIMATIONS - ⫸ⵧⵧⵧⵧⵧ>"
-ADMIN = "<ⵧⵧⵧⵧⵧ⫷ - Ralls ADMIN TOOLS - ⫸ⵧⵧⵧⵧⵧ>"
-ASSISTANTPM = "<ⵧⵧⵧⵧⵧ⫷ - Ralls ASSISTANT PM - ⫸ⵧⵧⵧⵧⵧ>"
+StartLoaded = "<ⵧⵧⵧⵧⵧⵧ⫷ - REPTHON PLUGINS - ⫸ⵧⵧⵧⵧⵧⵧ>"
+ASSISTANT = "<ⵧⵧⵧⵧⵧⵧ⫷ - REPTHON ASSISTANT - ⫸ⵧⵧⵧⵧⵧⵧ>"
+KIMOTOSHA = "<ⵧⵧⵧⵧⵧⵧⵧⵧ⫷ - REPTHON TOSHA - ⫸ⵧⵧⵧⵧⵧⵧⵧ>"
+ANIMATIONS = "<ⵧⵧⵧⵧⵧⵧ⫷ - REPTHON ANIMATIONS - ⫸ⵧⵧⵧⵧⵧ>"
+ADMIN = "<ⵧⵧⵧⵧⵧ⫷ - REPTHON ADMIN TOOLS - ⫸ⵧⵧⵧⵧⵧ>"
+ASSISTANTPM = "<ⵧⵧⵧⵧⵧ⫷ - REPTHON ASSISTANT PM - ⫸ⵧⵧⵧⵧⵧ>"
 ICSW = "<ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ>"
 # --- MESSI IS THE BEST PLAYER IN THE WORLD --- #
 
@@ -94,7 +94,7 @@ Message = (
 Mesg = [
     '⫷ يتم تحميل انلاين ريبـــثون ⫸',
     '⫷ اكتمل تنزيل انلاين ريبـــثون بدون اخطاء ⫸',
-    '⫷ يتم بدء بوت ريـص ⫸',
+    '⫷ يتم بدء بوت ريبـــثون ⫸',
     '⫷ اكتمل بدء بوت ريبـــثون ⫸'
 ]
 
