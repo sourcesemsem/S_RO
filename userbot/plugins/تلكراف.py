@@ -73,7 +73,7 @@ async def _(tosh):
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
                 await ice.edit(
-                    "**⌔∮ الرابط : **[اضغط هنا](https://telegra.ph{})\
+                    "**⌔∮ الرابط : **[اضغط هنا](https://graph.org{})\
                     \n**⌔∮ الوقت : **`{} ثانيه.` \n**⌔∮ تم التحميل بواسطه :** {}".format(
                         media_urls[0], (ms + ms_two), (mention)
                     ),
