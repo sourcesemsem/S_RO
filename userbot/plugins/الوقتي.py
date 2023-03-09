@@ -25,7 +25,7 @@ RallsT = Config.CUSTOM_ALIVE_EMRalls or " "
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
-#@RR9R7 - @zzzzl1l
+# @Repthon - @E_7_V
 normzltext = "1234567890"
 namerzfont = Config.BA_FN or "𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝟬"
 
@@ -222,7 +222,7 @@ async def digitalpicloop():
         current_time = datetime.now().strftime("  %I:%M ")
         img = Image.open(autophoto_path)
         drawn_text = ImageDraw.Draw(img)
-        cat = str(base64.b64decode("dXNlcmJvdC9oZWxwZXJzL3N0eWxlcy9QYXliQWNrLnR0Zg=="))[
+        cat = str(base64.b64decode("dXNlcmJvdC9oZWxwZXJzL3N0eWxlcy9QYXBlcm5vdGVzLnR0Zg=="))[
             2:36
         ]
         fnt = ImageFont.truetype(cat, 70)
@@ -298,7 +298,7 @@ async def autoname_loop():
             if normal in normzltext:
               namefont = namerzfont[normzltext.index(normal)]
               HM = HM.replace(normal, namefont)
-        name = f"{RallsT}{HM}™"
+        name = f"{RallsT}{HM}"
         LOGS.info(name)
         try:
             await bot(functions.account.UpdateProfileRequest(first_name=name))
