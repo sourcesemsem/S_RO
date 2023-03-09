@@ -89,10 +89,10 @@ async def variable(event):
     reply = await event.get_reply_message()
     vinfo = reply.text
     heroku_var = app.config()
-    rep = await edit_or_reply(event, "**✾╎جـاري اضـافة الفـار الـى بـوتك ...**")
+    bot = await edit_or_reply(event, "**✾╎جـاري اضـافة الفـار الـى بـوتك ...**")
     # All Rights Reserved for "Zedthon - UserBot" "زلـزال الهيبـه"
     if input_str == "كليشة الفحص" or input_str == "كليشه الفحص":
-        variable = "Raills_MEDIA"
+        variable = "Ralls_MEDIA"
         await asyncio.sleep(1.5)
         if variable in heroku_var:
             await bot.edit("**✾╎تم تغييـر {} بنجـاح ☑️**\n**✾╎المتغير : ↶**\n `{}` \n**✾╎يتم الان اعـادة تشغيـل بـوت زد ثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(input_str, vinfo))
@@ -268,10 +268,10 @@ async def variable(event):
         )
     input_str = event.text[5:]
     heroku_var = app.config()
-    rep = await edit_or_reply(event, "**✾╎جـاري حـذف الفـار مـن بـوتك 🚮...**")
+    bot = await edit_or_reply(event, "**✾╎جـاري حـذف الفـار مـن بـوتك 🚮...**")
     # All Rights Reserved for "Zedthon - UserBot" "زلـزال الهيبـه"
     if input_str == "كليشة الفحص" or input_str == "كليشه الفحص":
-        variable = "ZED_MEDIA"
+        variable = "Ralls_MEDIA"
         await asyncio.sleep(1.5)
         if variable not in heroku_var:
         	return await bot.edit("**✾╎عـذراً .. فـار {} غير موجود اصـلاً...**".format(input_str))
@@ -283,7 +283,7 @@ async def variable(event):
         variable = "CUSTOM_PMPERMIT_TEXT"
         await asyncio.sleep(1.5)
         if variable not in heroku_var:
-        	return await zed.edit("**✾╎عـذراً .. فـار {} غير موجود اصـلاً...**".format(input_str))
+        	return await bot.edit("**✾╎عـذراً .. فـار {} غير موجود اصـلاً...**".format(input_str))
 
         await bot.edit("**✾╎تم حـذف {} بنجـاح ☑️**\n**✾╎المتغيـر المحـذوف : ↶**\n `{}` \n**✾╎يتم الان اعـادة تشغيـل بـوت زد ثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(input_str, heroku_var[variable]))
         del heroku_var[variable]
@@ -292,7 +292,7 @@ async def variable(event):
         variable = "ALIVE_PIC"
         await asyncio.sleep(1.5)
         if variable not in heroku_var:
-        	return await zed.edit("**✾╎عـذراً .. فـار {} غير موجود اصـلاً...**".format(input_str))
+        	return await bot.edit("**✾╎عـذراً .. فـار {} غير موجود اصـلاً...**".format(input_str))
 
         await bot.edit("**✾╎تم حـذف {} بنجـاح ☑️**\n**✾╎المتغيـر المحـذوف : ↶**\n `{}` \n**✾╎يتم الان اعـادة تشغيـل بـوت زد ثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(input_str, heroku_var[variable]))
         del heroku_var[variable]
@@ -301,7 +301,7 @@ async def variable(event):
         variable = "PMPERMIT_PIC"
         await asyncio.sleep(1.5)
         if variable not in heroku_var:
-        	return await zed.edit("**✾╎عـذراً .. فـار {} غير موجود اصـلاً...**".format(input_str))
+        	return await bot.edit("**✾╎عـذراً .. فـار {} غير موجود اصـلاً...**".format(input_str))
 
         await bot.edit("**✾╎تم حـذف {} بنجـاح ☑️**\n**✾╎المتغيـر المحـذوف : ↶**\n `{}` \n**✾╎يتم الان اعـادة تشغيـل بـوت زد ثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(input_str, heroku_var[variable]))
         del heroku_var[variable]
@@ -465,7 +465,7 @@ async def variable(event):
         if variable not in heroku_var:
         	return await bot.edit("**✾╎عـذراً .. فـار {} غير موجود اصـلاً...**".format(input_str))
 
-        await zed.edit("**✾╎تم حـذف {} بنجـاح ☑️**\n**✾╎المتغيـر المحـذوف : ↶**\n `{}` \n**✾╎يتم الان اعـادة تشغيـل بـوت زد ثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(input_str, heroku_var[variable]))
+        await bot.edit("**✾╎تم حـذف {} بنجـاح ☑️**\n**✾╎المتغيـر المحـذوف : ↶**\n `{}` \n**✾╎يتم الان اعـادة تشغيـل بـوت زد ثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(input_str, heroku_var[variable]))
         del heroku_var[variable]
     else:
         if input_str:
@@ -492,7 +492,7 @@ async def variable(event):
         )
     input_str = event.text[5:]
     heroku_var = app.config()
-    rep = await edit_or_reply(event, "**✾╎جـاري جلـب الفـار مـن بـوتك 🛂...**")
+    bot = await edit_or_reply(event, "**✾╎جـاري جلـب الفـار مـن بـوتك 🛂...**")
     # All Rights Reserved for "Zedthon - UserBot" "زلـزال الهيبـه"
     if input_str == "رمز الوقتي" or input_str == "رمز الاسم الوقتي":
         variable = "CUSTOM_ALIVE_EMZED"
@@ -766,7 +766,7 @@ async def zelzalll(event):
         return
     user_id = replied_user.user.id
     heroku_var = app.config()
-    zed = await edit_or_reply(event, "**✾╎جـاري تنزيـل الشخـص من مطـورين البـوت 🛗...**")
+    bot = await edit_or_reply(event, "**✾╎جـاري تنزيـل الشخـص من مطـورين البـوت 🛗...**")
     # All Rights Reserved for "Zedthon - UserBot" "زلـزال الهيبـه"
     if previous_message:
 	    variable = "SUDO_USERS"
@@ -801,7 +801,7 @@ async def _(tosh):
             "✾╎اضبط Var المطلوب في Heroku على وظيفة هذا بشكل طبيعي `HEROKU_APP_NAME` اسم التطبيق اذا كنت لاتعلم.",
         )
     heroku_var = app.config()
-    zed = await eor(tosh, "**✾╎جـاري اضـافة فـار الصـورة الـى بـوتك ...**")
+    bot = await eor(tosh, "**✾╎جـاري اضـافة فـار الصـورة الـى بـوتك ...**")
     if not os.path.isdir(Config.TEMP_DIR):
         os.makedirs(Config.TEMP_DIR)
         #     if BOTLOG:
@@ -822,7 +822,7 @@ async def _(tosh):
             )
             end = datetime.now()
             ms = (end - start).seconds
-            await zed.edit(
+            await bot.edit(
                 f"**✾╎تم تحميل {downloaded_file_name} في وقت {ms} ثانيه.**"
             )
             if downloaded_file_name.endswith((".webp")):
