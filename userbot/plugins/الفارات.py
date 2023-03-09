@@ -70,8 +70,8 @@ ZelzalVP_cmd = (
 
 
 # Copyright (C) 2022 Zedthon . All Rights Reserved
-@zedthon.on(zelzal_cmd(pattern=r"اضف (.*)"))
-@zedthon.on(sudo_cmd(pattern=r"اضف (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"اضف (.*)"))
+@bot.on(sudo_cmd(pattern=r"اضف (.*)", allow_sudo=True))
 async def variable(event):
     if Config.HEROKU_API_KEY is None:
         return await ed(
