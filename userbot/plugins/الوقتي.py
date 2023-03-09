@@ -18,7 +18,7 @@ from telethon.tl import functions
 from . import AUTONAME, BOTLOG, BOTLOG_CHATID, DEFAULT_BIO
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
-DEFAULTUSERBIO = DEFAULT_BIO or "الحمد الله على كل شئ - @RallsThon"
+DEFAULTUSERBIO = DEFAULT_BIO or "الحمد الله على كل شئ - @Repthon"
 CHANGE_TIME = Config.CHANGE_TIME
 DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
 RallsT = Config.CUSTOM_ALIVE_EMRalls or " "
