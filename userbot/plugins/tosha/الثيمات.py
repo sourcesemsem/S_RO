@@ -1,7 +1,7 @@
-#حقوق ريس ثـون ومتعوب عليها .. تخمط اذكر المصدر حبي
+#حقوق ريبـــثون ومتعوب عليها .. تخمط اذكر المصدر حبي
 
 """
-©Ralls : @RallsThon
+©Repthon : @Repthon
   - Tumblr Gif -1
   - Tumblr Gif -2
   - Tumblr Gif -3
@@ -16,7 +16,7 @@
 from .. import reply_id as rd 
 from . import *
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث1$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث1$"))
 @bot.on(sudo_cmd(pattern="ث1$", allow_sudo=True))
 async def stsTHMAT(kim):
     if kim.fwd_from:
@@ -27,7 +27,7 @@ async def stsTHMAT(kim):
         await kim.client.send_file(kim.chat_id, sts_attheme, caption=kim_c, reply_to=zel)
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث2$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث2$"))
 @bot.on(sudo_cmd(pattern="ث2$", allow_sudo=True))
 async def stsTHMAT(lon):
     if lon.fwd_from:
@@ -38,7 +38,7 @@ async def stsTHMAT(lon):
         await lon.client.send_file(lon.chat_id, sts_attheme2, caption=ics_c, reply_to=lonid)
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث3$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث3$"))
 @bot.on(sudo_cmd(pattern="ث3$", allow_sudo=True))
 async def stsTHMAT(i):
     if i.fwd_from:
@@ -49,7 +49,7 @@ async def stsTHMAT(i):
         await i.client.send_file(i.chat_id, sts_attheme3, caption=tumc, reply_to=sic_id)
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث4$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث4$"))
 @bot.on(sudo_cmd(pattern="ث4$", allow_sudo=True))
 async def stsTHMAT(lon):
     if lon.fwd_from:
@@ -62,7 +62,7 @@ async def stsTHMAT(lon):
         )
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث5$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث5$"))
 @bot.on(sudo_cmd(pattern="ث5$", allow_sudo=True))
 
 async def stsTHMAT(tosh):
@@ -76,7 +76,7 @@ async def stsTHMAT(tosh):
         )
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث6$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث6$"))
 @bot.on(sudo_cmd(pattern="ث6$", allow_sudo=True))
 
 async def stsTHMAT(kimo):
@@ -90,7 +90,7 @@ async def stsTHMAT(kimo):
         )
 
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث7$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث7$"))
 @bot.on(sudo_cmd(pattern="ث7$", allow_sudo=True))
 async def stsTHMAT(ics):
     if ics.fwd_from:
@@ -103,7 +103,7 @@ async def stsTHMAT(ics):
         )
         
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث8$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث8$"))
 @bot.on(sudo_cmd(pattern="ث8$", allow_sudo=True))
 async def stsTHMAT(ics):
     if ics.fwd_from:
@@ -115,7 +115,7 @@ async def stsTHMAT(ics):
             ics.chat_id, sts_attheme8, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث9$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث9$"))
 @bot.on(sudo_cmd(pattern="ث9$", allow_sudo=True))
 async def stsTHMAT(ics):
     if ics.fwd_from:
@@ -127,7 +127,7 @@ async def stsTHMAT(ics):
             ics.chat_id, sts_attheme9, caption=tumc, reply_to=reply_to_id
         )
 
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث10$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث10$"))
 @bot.on(sudo_cmd(pattern="ث10$", allow_sudo=True))
 async def stsTHMAT(ics):
     if ics.fwd_from:
@@ -139,7 +139,7 @@ async def stsTHMAT(ics):
             ics.chat_id, sts_attheme10, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث11$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث11$"))
 @bot.on(sudo_cmd(pattern="ث11$", allow_sudo=True))
 async def stsTHMAT(ics):
     if ics.fwd_from:
@@ -151,7 +151,7 @@ async def stsTHMAT(ics):
             ics.chat_id, sts_attheme11, caption=tumc, reply_to=reply_to_id
         )
         
-@bot.on(zelzal_cmd(outgoing=True, pattern="ث12$"))
+@bot.on(admin_cmd(outgoing=True, pattern="ث12$"))
 @bot.on(sudo_cmd(pattern="ث12$", allow_sudo=True))
 async def stsTHMAT(ics):
     if ics.fwd_from:
