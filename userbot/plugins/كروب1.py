@@ -145,7 +145,7 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 100):
         mentions += f"\n**-** @{x.username} "
-    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.client.send_message(bot.chat_id, mentions)
     await bot.delete()
 @bot.on(admin_cmd(pattern="معرفات 200(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="معرفات 200(?: |$)(.*)", allow_sudo=True))
@@ -154,7 +154,7 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 200):
         mentions += f"\n**-** @{x.username} "
-    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.client.send_message(bot.chat_id, mentions)
     await bot.delete()
 @bot.on(admin_cmd(pattern="معرفات 300(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="معرفات 300(?: |$)(.*)", allow_sudo=True))
@@ -163,7 +163,7 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 300):
         mentions += f"\n**-** @{x.username} "
-    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.client.send_message(bot.chat_id, mentions)
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 500(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 500(?: |$)(.*)", allow_sudo=True))
@@ -172,7 +172,7 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 500):
         mentions += f"- @{x.username} "
-    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.client.send_message(bot.chat_id, mentions)
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 1k(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 1k(?: |$)(.*)", allow_sudo=True))
@@ -181,7 +181,7 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 1000):
         mentions += f"- @{x.username} "
-    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.client.send_message(bot.chat_id, mentions)
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 300(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 300(?: |$)(.*)", allow_sudo=True))
@@ -190,7 +190,7 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 300):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) "
-    await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
+    await Rallsthon.client.send_message(bot.chat_id, mentions)
     await Rallsthon.delete()
 @bot.on(admin_cmd(pattern="تاك 200(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 200(?: |$)(.*)", allow_sudo=True))
@@ -199,7 +199,7 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 200):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) "
-    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.client.send_message(bot.chat_id, mentions)
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 150(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 150(?: |$)(.*)", allow_sudo=True))
@@ -208,7 +208,7 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 150):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) "
-    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.client.send_message(bot.chat_id, mentions)
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 100(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 100(?: |$)(.*)", allow_sudo=True))
@@ -217,7 +217,7 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 100):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) "
-    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.client.send_message(bot.chat_id, mentions)
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 50(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 50(?: |$)(.*)", allow_sudo=True))
@@ -226,7 +226,7 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 50):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) "
-    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.client.send_message(bot.chat_id, mentions)
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 10(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 10(?: |$)(.*)", allow_sudo=True))
@@ -235,7 +235,7 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 10):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) \n"
-    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.client.send_message(bot.chat_id, mentions)
     await bot.delete()
 
 @bot.on(admin_cmd(pattern=r"تك ?(.*)", outgoing=True))
