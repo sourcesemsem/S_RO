@@ -1,7 +1,7 @@
 cle = ("""
- ©Ralls™
+ ©Repthon™
  من اجل نسخ صوره ومعلومات الحساب الشخص الاخر  
- Syntax: .نسخ @username
+ Syntax: .انتحال @username
 """)
 
 
@@ -17,11 +17,11 @@ DEFAULTUSER = str(AUTONAME) if AUTONAME else str(ALIVE_NAME)
 DEFAULTUSERBIO = (
     str(DEFAULT_BIO)
     if DEFAULT_BIO
-    else "- ‏وحدي أضيء، وحدي أنطفئ انا قمري و كُل نجومي..🤍"
+    else "@Repthon - ‏وحدي أضيء، وحدي أنطفئ انا قمري و كُل نجومي..🤍"
 )
 
-@bot.on(admin_cmd(pattern="نسخ$"))
-@bot.on(sudo_cmd(pattern="نسخ$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="انتحال$"))
+@bot.on(sudo_cmd(pattern="انتحال$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -58,7 +58,7 @@ async def _(event):
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID,
-            f"#النسخ\n ⪼ تم نسخ ↫ [{first_name}](tg://user?id={user_id }) بنجاح ✅",
+            f"#انتحال\n ⪼ تم الانتحال ↫ [{first_name}](tg://user?id={user_id }) بنجاح ✅",
         )
 
 
