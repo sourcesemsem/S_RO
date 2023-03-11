@@ -109,7 +109,7 @@ async def fetch_info(replied_user, event):
 # الـرتب الوهميـه & البريميـوم كتـابـة الكـود - روجر  @E_7_V
     if user_id in roger: # code by t.me/E_7_V
         rotbat = "⌁ مطـور السـورس 𓄂𓆃 ⌁" 
-    elif user_id in zel_dev:
+    elif user_id in rep_dev:
         rotbat = "⌁ مطـور 𐏕⌁" 
     elif user_id == (await event.client.get_me()).id and user_id not in zed_dev:
         rotbat = "⌁ مـالك الحساب 𓀫 ⌁" 
