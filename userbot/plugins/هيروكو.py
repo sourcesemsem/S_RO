@@ -1,4 +1,4 @@
-# Heroku manager for Ralls
+# Heroku manager for Repthon
 
 import asyncio
 import math
@@ -16,13 +16,13 @@ HEROKU_APP_NAME = Config.HEROKU_APP_NAME
 HEROKU_API_KEY = Config.HEROKU_API_KEY
 
 Heroku_cmd = (
-    "𓆰 [𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒 - هيـروكو الفـارات](t.me/Rallsthon) 𓆪\n"
+    "𓆰 [𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 - هيـروكو الفـارات](t.me/Repthon) 𓆪\n"
     "**⌔∮ قائـمه اوامر هيروكو :** \n"
     "⪼ `.ضع فار` + الفار + المتغير\n"
     "⪼ `.جلب فار` + الفار لعرض ما في المتغير \n"
     "⪼ `.حذف فار` + الفار لحذف الفار \n"
     "⪼ `.استخدامي` \n"
-    "\n𓆩 [𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒](t.me/Rallsthon) 𓆪"
+    "\n𓆩 [𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻](t.me/Repthon) 𓆪"
 )
 
 @bot.on(admin_cmd(pattern=r"(ضع|جلب|حذف) فار (.*)", outgoing=True))
@@ -49,11 +49,11 @@ async def variable(var):
             variable = var.pattern_match.group(2).split()[0]
             if variable in heroku_var:
                 return await ics.edit(
-                    "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
+                    "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
                     f"\n **⌔∮** `{variable} = {heroku_var[variable]}` .\n"
                 )
             return await ics.edit(
-                "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
+                "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
                 f"\n **⌔∮ خطا :**\n-> {variable} غيـر موجود. "
             )
         except IndexError:
@@ -131,11 +131,11 @@ async def variable(var):
             variable = var.pattern_match.group(2).split()[0]
             if variable in heroku_var:
                 return await ics.edit(
-                    "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
+                    "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
                     f"\n **⌔∮** `{variable} = {heroku_var[variable]}` .\n"
                 )
             return await ics.edit(
-                "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
+                "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
                 f"\n **⌔∮ خطا :**\n-> {variable} غيـر موجود. "
             )
         except IndexError:
@@ -245,11 +245,11 @@ async def dyno_usage(dyno):
     AppMinutes = math.floor(AppQuotaUsed % 60)
     await asyncio.sleep(1.5)
     return await dyno.edit(
-        "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝑫𝒀𝑵𝑶 𝑼𝑺𝑨𝑮𝑬 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n"
+        "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 - 𝑫𝒀𝑵𝑶 𝑼𝑺𝑨𝑮𝑬 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n"
         f"**⌔∮ اسم التطبيق في هيروكو :**\n"
         f"**    - معرف اشتراكك ⪼ {Config.HEROKU_APP_NAME}**"
         f"\n\n"
-        f" **⌔∮ مدة اسـتخدامك لبوت ريس ثـون : **\n"
+        f" **⌔∮ مدة اسـتخدامك لبوت ريبـــثون : **\n"
         f"     -  `{AppHours}`**ساعه**  `{AppMinutes}`**دقيقه**  "
         f"**⪼**  `{AppPercentage}`**%**"
         "\n\n"
@@ -273,7 +273,7 @@ async def _(dyno):
         app = Heroku.app(HEROKU_APP_NAME)
     except BaseException:
         return await dyno.reply(
-            "**- عذرا لا يمكنك استخدام اوامر الفارات وهيروكو الا بعد اضافة كود هيروكو الى الفارات شرح الاضافة [اضغط هنا](https://t.me/Ralls_Thon)**"
+            "**- عذرا لا يمكنك استخدام اوامر الفارات وهيروكو الا بعد اضافة كود هيروكو الى الفارات شرح الاضافة [اضغط هنا](https://t.me/Repthon_vars)**"
         )
     data = app.get_log()
     await edit_or_reply(
