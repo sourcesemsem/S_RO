@@ -71,13 +71,13 @@ Which 𝒅𝒐𝒏'𝒕 𝑬𝒙𝒊𝒔𝒕.
 """,
 ]
 
-# thx for @Uzumaki_Naruto_XD
-# edit @RallsThon
+# thx for @ul4ul
+# edit @Repthon
 
 
 @bot.on(admin_cmd(pattern="انكلش"))
-async def ics(zel):
-    await zel.edit("**⌔∮ اهلا عزيزي يتم تجهيز نبذه لاجلك.**")
+async def ics(bot):
+    await bot.edit("**⌔∮ اهلا عزيزي يتم تجهيز نبذه لاجلك.**")
     await asyncio.sleep(2)
     tosh = random.choice(MALATH)
-    return await zel.edit(f"{tosh}")
+    return await bot.edit(f"{tosh}")
