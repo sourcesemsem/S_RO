@@ -1,4 +1,4 @@
-#RallsThon
+#Repthon
 
 import random
 
@@ -11,16 +11,16 @@ from . import Build_Poll
 
 @bot.on(admin_cmd(pattern="استفتاء( (.*)|$)"))
 @bot.on(sudo_cmd(pattern="استفتاء( (.*)|$)", allow_sudo=True))
-async def pollcreator(Rallspoll):
+async def pollcreator(Repthon):
     reply_to_id = None
-    if Rallspoll.reply_to_msg_id:
-        reply_to_id = Rallspoll.reply_to_msg_id
-    string = "".join(Rallspoll.text.split(maxsplit=1)[1:])
+    if Repthon.reply_to_msg_id:
+        reply_to_id = Repthon.reply_to_msg_id
+    string = "".join(Repthon.text.split(maxsplit=1)[1:])
     if not string:
         options = Build_Poll(["- ايي 😊✌️", "- لاع 😏😕", "- مادري 🥱🙄"])
         try:
             await bot.send_message(
-                Rallspoll.chat_id,
+                Repthon.chat_id,
                 file=InputMediaPoll(
                     poll=Poll(
                         id=random.getrandbits(32),
@@ -30,45 +30,45 @@ async def pollcreator(Rallspoll):
                 ),
                 reply_to=reply_to_id,
             )
-            await Rallspoll.delete()
+            await Repthon.delete()
         except PollOptionInvalidError:
             await edit_or_reply(
-                Rallspoll,
+                Repthon,
                 "⌔∮ الاستفتاء المستخدم غير صالح (قد تكون المعلومات طويلة جدا).",
             )
         except ForbiddenError:
-            await edit_or_reply(Rallspoll, "⌔∮ هذه الدردشة تحظر استطلاعات الرأي. ")
+            await edit_or_reply(Repthon, "⌔∮ هذه الدردشة تحظر استطلاعات الرأي. ")
         except exception as e:
-            await edit_or_reply(Rallspoll, str(e))
+            await edit_or_reply(Repthon, str(e))
     else:
-        Rallsinput = string.split("|")
-        if len(Rallsinput) > 2 and len(Rallsinput) < 12:
-            options = Build_Poll(Rallsinput[1:])
+        Repthon = string.split("|")
+        if len(Repinput) > 2 and len(Repinput) < 12:
+            options = Build_Poll(Repinput[1:])
             try:
                 await bot.send_message(
                     Rallspoll.chat_id,
                     file=InputMediaPoll(
                         poll=Poll(
                             id=random.getrandbits(32),
-                            question=Rallsinput[0],
+                            question=Repinput[0],
                             answers=options,
                         )
                     ),
                     reply_to=reply_to_id,
                 )
-                await Rallspoll.delete()
+                await Repthon.delete()
             except PollOptionInvalidError:
                 await edit_or_reply(
                     icsspoll,
                     "⌔∮ الاستفتاء المستخدم غير صالح (قد تكون المعلومات طويلة جدا).",
                 )
             except ForbiddenError:
-                await edit_or_reply(Rallspoll, "⌔∮ هذه الدردشة تحظر استطلاعات الرأي. ")
+                await edit_or_reply(Repthon, "⌔∮ هذه الدردشة تحظر استطلاعات الرأي. ")
             except Exception as e:
-                await edit_or_reply(Rallspoll, str(e))
+                await edit_or_reply(Repthon, str(e))
         else:
             await edit_or_reply(
-                Rallspoll,
+                Repthon,
                 "**⌔∮ انت تكتب الامر بشكل خاطئ يجب عليك كتابته بهذا الشكل** `.استفتاء السؤال | الجواب الاول | الجواب الثاني`",
             )
 
