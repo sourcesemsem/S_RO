@@ -1,3 +1,4 @@
+# روجر كان هنا🍋🍋
 from telethon.errors import (
     ChannelInvalidError,
     ChannelPrivateError,
@@ -75,7 +76,7 @@ async def get_users(event):
         eva = await event.reply("**╮  جـاري الاضـافه .. الࢪجـاء الانتظـار ...𓅫╰**")
     else:
         eva = await event.edit("**╮  جـاري الاضـافه .. الࢪجـاء الانتظـار ...𓅫╰**.")
-    RallsTHON = await get_chatinfo(event)
+    Repthon = await get_chatinfo(event)
     chat = await event.get_chat()
     if event.is_private:
         return await eva.edit("**╮  لا استطـيع اضافـة الاعضـاء هـنا 𓅫╰**")
