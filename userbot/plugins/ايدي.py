@@ -1,4 +1,4 @@
-# whois code for Ralls edit by ~ @RallsThon
+# whois code for Repthon edit by ~ @Repthon
 
 import os
 
@@ -8,22 +8,18 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
 TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
-Ralls_TEXT = Config.CUSTOM_ALIVE_TEXT or "╮•⎚ مـعلومات الـشخص مـن بـوت ريسثـون"
-RallsM = Config.CUSTOM_ALIVE_EMOJI or " •❃ "
+Rep_TEXT = Config.CUSTOM_ALIVE_TEXT or "╮•⎚ مـعلومات الـشخص مـن بـوت ريبـــثون"
+RepM = Config.CUSTOM_ALIVE_EMOJI or " •❃ "
 
 @bot.on(admin_cmd(pattern="ايدي(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="ايدي(?: |$)(.*)", allow_sudo=True))
-async def who(event):
+async def _(event):
     ics = await eor(event, "⇆")
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TMP_DOWNLOAD_DIRECTORY)
     replied_user = await get_user(event)
     try:
-        photo, caption = await fetch_info(replied_user, event)
-    except AttributeError:
-        await eor(ics, "لايمكنني العثور ع المستخدم")
-        return
-    message_id_to_reply = event.message.reply_to_msg_id
+        photo, caption = await fetch_info(replied_user, event)   message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = None
     try:
@@ -108,19 +104,19 @@ async def fetch_info(replied_user, event):
     user_bio = "لاتوجد نبذه" if not user_bio else user_bio
     rotbat = "「من مطـورين السورس 𓄂𓆃」" if user_id == 5502537272 or user_id == 1260465030 else (".「  العضـو 𓅫  」.") 
     rotbat = ".「 مـالك الحساب 𓀫 」." if user_id == (await event.client.get_me()).id and user_id != 5502537272 and user_id != 1260465030 and user_id != 5502537272 and user_id != 1260465030 and user_id != 5053611726 and user_id != 1103095942 and user_id != 973964946 and user_id != 5039479259 and user_id != 5069440634 and user_id != 1355571767 and user_id != 5361336053 and user_id != 1928739580 and user_id != 5147860170 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 5502537272 and user_id != 1260465030 and user_id != 5502537272 and user_id != 1260465030 and user_id != 5502537272 and user_id != 1260465030 and user_id != 5502537272 else rotbat
-    caption = f"<b> {Ralls_TEXT} </b>\n"
+    caption = f"<b> {Rep_TEXT} </b>\n"
     caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
-    caption += f"<b> {RallsM}| الاسـم    ⇦ </b> {first_name} {last_name}\n"
-    caption += f"<b> {RallsM}| المعـرف  ⇦ </b> {username}\n"
-    caption += f"<b> {RallsM}| الايـدي   ⇦ </b> <code>{user_id}</code>\n"
-    caption += f"<b> {RallsM}| الرتبـــه  ⇦ {rotbat} </b>\n"
-    caption += f"<b> {RallsM}| الصـور   ⇦ </b> {replied_user_profile_photos_count}\n"
-    caption += f"<b> {RallsM}|الحسـاب ⇦ </b> "
+    caption += f"<b> {RepM}| الاسـم    ⇦ </b> {first_name} {last_name}\n"
+    caption += f"<b> {RepM}| المعـرف  ⇦ </b> {username}\n"
+    caption += f"<b> {RepM}| الايـدي   ⇦ </b> <code>{user_id}</code>\n"
+    caption += f"<b> {RepM}| الرتبـــه  ⇦ {rotbat} </b>\n"
+    caption += f"<b> {RepM}| الصـور   ⇦ </b> {replied_user_profile_photos_count}\n"
+    caption += f"<b> {RepM}|الحسـاب ⇦ </b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
-    caption += f"\n<b> {RallsM}| الـمجموعات المشتـركة ⇦ </b> {common_chat} \n"
-    caption += f"<b> {RallsM}| البايـو    ⇦ </b> {user_bio} \n"
+    caption += f"\n<b> {RepM}| الـمجموعات المشتـركة ⇦ </b> {common_chat} \n"
+    caption += f"<b> {RepM}| البايـو    ⇦ </b> {user_bio} \n"
     caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
-    caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝘳ꫀρ𝓽ꫝꪮꪀ ‌ਊ 𓆪 </b> - @Repthon "
+    caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 𓆪 </b> - @Repthon "
     return photo, caption
 
 
@@ -133,9 +129,6 @@ async def who(event):
     replied_user = await get_user(event)
     try:
         photo, caption = await fetch_info(replied_user, event)
-    except AttributeError:
-        await eor(ics, "لايمكنني العثور على المستخدم")
-        return
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = None
@@ -221,24 +214,24 @@ async def fetch_info(replied_user, event):
     user_bio = "لاتوجد نبذه" if not user_bio else user_bio
     rotbat = "「من مطـورين السورس 𓄂𓆃」" if user_id == 5502537272 or user_id == 1260465030 else (".「  العضـو 𓅫  」.") 
     rotbat = ".「 مـالك الحساب 𓀫 」." if user_id == (await event.client.get_me()).id and user_id != 2019189055 and user_id != 1590465585 and user_id != 1691343402 and user_id != 2131150492 and user_id != 5053611726 and user_id != 1103095942 and user_id != 973964946 and user_id != 5069440634 and user_id != 1355571767 and user_id != 5361336053 and user_id != 1928739580 and user_id != 5147860170 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 else rotbat
-    caption = f"<b> {Ralls_TEXT} </b>\n"
+    caption = f"<b> {Rep_TEXT} </b>\n"
     caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
-    caption += f"<b> {RallsM}| الاسـم    ⇦ </b> {first_name} {last_name}\n"
-    caption += f"<b> {RallsM}| المعـرف  ⇦ </b> {username}\n"
-    caption += f"<b> {RallsM}| الايـدي   ⇦ </b> <code>{user_id}</code>\n"
-    caption += f"<b> {RallsM}| الرتبـــه  ⇦ {rotbat} </b>\n"
-    caption += f"<b> {RallsM}| الصـور   ⇦ </b> {replied_user_profile_photos_count}\n"
-    caption += f"<b> {RallsM}|الحسـاب ⇦ </b> "
+    caption += f"<b> {RepM}| الاسـم    ⇦ </b> {first_name} {last_name}\n"
+    caption += f"<b> {RepM}| المعـرف  ⇦ </b> {username}\n"
+    caption += f"<b> {RepM}| الايـدي   ⇦ </b> <code>{user_id}</code>\n"
+    caption += f"<b> {RepM}| الرتبـــه  ⇦ {rotbat} </b>\n"
+    caption += f"<b> {RepM}| الصـور   ⇦ </b> {replied_user_profile_photos_count}\n"
+    caption += f"<b> {RepM}|الحسـاب ⇦ </b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
-    caption += f"\n<b> {RallsM}| الـمجموعات المشتـركة ⇦ </b> {common_chat} \n"
-    caption += f"<b> {RallsM}| البايـو    ⇦ </b> {user_bio} \n"
+    caption += f"\n<b> {RepM}| الـمجموعات المشتـركة ⇦ </b> {common_chat} \n"
+    caption += f"<b> {RepM}| البايـو    ⇦ </b> {user_bio} \n"
     caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
-    caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝘳ꫀρ𝓽ꫝꪮꪀ ‌ਊ 𓆪 </b> - @repthon "
+    caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 𓆪 </b> - @repthon "
     return photo, caption
 
 
 @bot.on(
-    zelzal_cmd(pattern="رابط الحساب(?: |$)(.*)")
+    admin_cmd(pattern="رابط الحساب(?: |$)(.*)")
 )
 @bot.on(
     sudo_cmd(pattern="رابط الحساب(?: |$)(.*)", allow_sudo=True)
