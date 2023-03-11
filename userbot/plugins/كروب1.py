@@ -1,4 +1,4 @@
-# for -<*>~ SOURCE Ralls ~<*>- edit By: @RallsTHON
+# for -<*>~ SOURCE Repthon ~<*>- edit By: @Repthon
 
 import asyncio
 import io
@@ -48,7 +48,7 @@ async def kickme(leave):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n** ⪼ المشرفـون في ۿذه المجموعه :** \n"
+    mentions = "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n** ⪼ المشرفـون في ۿذه المجموعه :** \n"
     reply_message = None
     if event.reply_to_msg_id:
         reply_message = await event.get_reply_message()
@@ -57,7 +57,7 @@ async def _(event):
     chat = None
     if input_str:
         mentions_heading = (
-            "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n**⪼ مشرفـون في {} المجموعه :** \n".format(
+            "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n**⪼ مشرفـون في {} المجموعه :** \n".format(
                 input_str
             )
         )
@@ -105,7 +105,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n** ⪼ البوتـات في ۿذه المجموعه :** \n"
+    mentions = "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n** ⪼ البوتـات في ۿذه المجموعه :** \n"
     input_str = event.pattern_match.group(1)
     to_write_chat = await event.get_input_chat()
     chat = None
@@ -113,7 +113,7 @@ async def _(event):
         chat = to_write_chat
     else:
         mentions = (
-            "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n**⪼ البوتـات في {} المجموعه :**\n".format(
+            "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n**⪼ البوتـات في {} المجموعه :**\n".format(
                 input_str
             )
         )
@@ -140,110 +140,110 @@ async def _(event):
 
 @bot.on(admin_cmd(pattern="معرفات 100(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="معرفات 100(?: |$)(.*)", allow_sudo=True))
-async def Ralls(Rallsthon):
-    mentions = Rallsthon.text[8:]
-    chat = await Rallsthon.get_input_chat()
-    async for x in Rallsthon.client.iter_participants(chat, 100):
+async def Rep(Roger):
+    mentions = bot.text[8:]
+    chat = await bot.get_input_chat()
+    async for x in bot.client.iter_participants(chat, 100):
         mentions += f"\n**-** @{x.username} "
-    await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
-    await Rallsthon.delete()
+    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.delete()
 @bot.on(admin_cmd(pattern="معرفات 200(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="معرفات 200(?: |$)(.*)", allow_sudo=True))
-async def Ralls(Rallsthon):
-    mentions = Rallsthon.text[8:]
-    chat = await Rallsthon.get_input_chat()
-    async for x in Rallsthon.client.iter_participants(chat, 200):
+async def Rep(Roger):
+    mentions = bot.text[8:]
+    chat = await bot.get_input_chat()
+    async for x in bot.client.iter_participants(chat, 200):
         mentions += f"\n**-** @{x.username} "
-    await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
-    await Rallsthon.delete()
+    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.delete()
 @bot.on(admin_cmd(pattern="معرفات 300(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="معرفات 300(?: |$)(.*)", allow_sudo=True))
-async def Ralls(Rallsthon):
-    mentions = Rallsthon.text[8:]
-    chat = await Rallsthon.get_input_chat()
-    async for x in Rallsthon.client.iter_participants(chat, 300):
+async def Rep(Roger):
+    mentions = bot.text[8:]
+    chat = await bot.get_input_chat()
+    async for x in bot.client.iter_participants(chat, 300):
         mentions += f"\n**-** @{x.username} "
-    await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
-    await Rallsthon.delete()
+    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 500(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 500(?: |$)(.*)", allow_sudo=True))
-async def Ralls(Rallsthon):
-    mentions = Rallsthon.text[8:]
-    chat = await Rallsthon.get_input_chat()
-    async for x in Rallsthon.client.iter_participants(chat, 500):
+async def Rep(Roger):
+    mentions = bot.text[8:]
+    chat = await bot.get_input_chat()
+    async for x in bot.client.iter_participants(chat, 500):
         mentions += f"- @{x.username} "
-    await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
-    await Rallsthon.delete()
+    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 1k(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 1k(?: |$)(.*)", allow_sudo=True))
-async def Ralls(Rallsthon):
-    mentions = Rallsthon.text[8:]
-    chat = await Rallsthon.get_input_chat()
-    async for x in Rallsthon.client.iter_participants(chat, 1000):
+async def Rep(Roger):
+    mentions = bot.text[8:]
+    chat = await bot.get_input_chat()
+    async for x in bot.client.iter_participants(chat, 1000):
         mentions += f"- @{x.username} "
-    await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
-    await Rallsthon.delete()
+    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 300(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 300(?: |$)(.*)", allow_sudo=True))
-async def Ralls(Rallsthon):
-    mentions = Rallsthon.text[8:]
-    chat = await Rallsthon.get_input_chat()
-    async for x in Rallsthon.client.iter_participants(chat, 300):
+async def Rep(Roger):
+    mentions = bot.text[8:]
+    chat = await bot.get_input_chat()
+    async for x in bot.client.iter_participants(chat, 300):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) "
     await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
     await Rallsthon.delete()
 @bot.on(admin_cmd(pattern="تاك 200(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 200(?: |$)(.*)", allow_sudo=True))
-async def Ralls(Rallsthon):
-    mentions = Rallsthon.text[8:]
-    chat = await Rallsthon.get_input_chat()
-    async for x in Rallsthon.client.iter_participants(chat, 200):
+async def Rep(Roger):
+    mentions = bot.text[8:]
+    chat = await bot.get_input_chat()
+    async for x in bot.client.iter_participants(chat, 200):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) "
-    await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
-    await Rallsthon.delete()
+    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 150(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 150(?: |$)(.*)", allow_sudo=True))
-async def Ralls(Rallsthon):
-    mentions = Rallsthon.text[8:]
-    chat = await Rallsthon.get_input_chat()
-    async for x in Rallsthon.client.iter_participants(chat, 150):
+async def Rep(Roger):
+    mentions = bot.text[8:]
+    chat = await bot.get_input_chat()
+    async for x in bot.client.iter_participants(chat, 150):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) "
-    await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
-    await Rallsthon.delete()
+    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 100(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 100(?: |$)(.*)", allow_sudo=True))
-async def Ralls(Rallsthon):
-    mentions = Rallsthon.text[8:]
-    chat = await Rallsthon.get_input_chat()
-    async for x in Rallsthon.client.iter_participants(chat, 100):
+async def Rep(Roger):
+    mentions = bot.text[8:]
+    chat = await bot.get_input_chat()
+    async for x in bot.client.iter_participants(chat, 100):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) "
-    await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
-    await Rallsthon.delete()
+    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 50(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 50(?: |$)(.*)", allow_sudo=True))
-async def Ralls(Rallsthon):
-    mentions = Rallsthon.text[8:]
-    chat = await Rallsthon.get_input_chat()
-    async for x in Rallsthon.client.iter_participants(chat, 50):
+async def Rep(Roger):
+    mentions = bot.text[8:]
+    chat = await bot.get_input_chat()
+    async for x in bot.client.iter_participants(chat, 50):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) "
-    await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
-    await Rallsthon.delete()
+    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 10(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 10(?: |$)(.*)", allow_sudo=True))
-async def Ralls(Rallsthon):
-    mentions = Rallsthon.text[8:]
-    chat = await Rallsthon.get_input_chat()
-    async for x in Rallsthon.client.iter_participants(chat, 10):
+async def Rep(Roger):
+    mentions = bot.text[8:]
+    chat = await bot.get_input_chat()
+    async for x in bot.client.iter_participants(chat, 10):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) \n"
-    await Rallsthon.client.send_message(Rallsthon.chat_id, mentions)
-    await Rallsthon.delete()
+    await bot.client.send_message(Rallsthon.chat_id, mentions)
+    await bot.delete()
 
 @bot.on(admin_cmd(pattern=r"تك ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"تك ?(.*)", allow_sudo=True))
 async def get_users(show):
     if show.fwd_from:
         return
-    mentions = "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 𝑮𝑹𝑶𝑼𝑷 𝙏𝘼𝙂 𓆪\n**⪼ هييه تعالـو يحبابين**  𓎤: \n"
+    mentions = "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 𝑮𝑹𝑶𝑼𝑷 𝙏𝘼𝙂 𓆪\n**⪼ هييه تعالـو يحبابين**  𓎤: \n"
     reply_to_id = None
     if show.reply_to_msg_id:
         reply_to_id = show.reply_to_msg_id
@@ -255,7 +255,7 @@ async def get_users(show):
             return
     else:
         mentions_heading = (
-            "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n⪼ الاعضاء  في {} المجموعه : \n".format(
+            "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 𝑮𝑹𝑶𝑼𝑷 𝑫𝑨𝑻𝑨 𓆪\n⪼ الاعضاء  في {} المجموعه : \n".format(
                 input_str
             )
         )
@@ -462,7 +462,7 @@ async def _(event):
         elif i.status is None:
             n += 1
     if input_str:
-        required_string = """𓆰 𝑺𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉  - 𝑮𝑹𝑼𝑶𝑷 𝑺𝑻𝑨𝑻𝑺 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻 
+        required_string = """𓆰 𝑺𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁  - 𝑮𝑹𝑼𝑶𝑷 𝑺𝑻𝑨𝑻𝑺 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻 
 ⪼ المطرودين {} / {} المستخدمين
 ⪼ **الحسابات المحذوفه ↫** {}
 ⪼ **اخر ظهور منذ زمن طويل ↫** {}
@@ -476,7 +476,7 @@ async def _(event):
         await et.edit(required_string.format(c, p, d, y, m, w, o, q, r, b, n))
         await asyncio.sleep(5)
     await et.edit(
-        """𓆰 𝑺𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉  - 𝑮𝑹𝑼𝑶𝑷 𝑺𝑻𝑨𝑻𝑺 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻
+        """𓆰 𝑺𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁  - 𝑮𝑹𝑼𝑶𝑷 𝑺𝑻𝑨𝑻𝑺 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻
 ⪼ **العدد ↫ {} **مستخدماً
 ⪼ **الحسابات المحذوفه ↫** {}
 ⪼ **اخر ظهور منذ زمن طويل ↫** {}
@@ -735,7 +735,7 @@ async def fetch_info(chat, event):
         for bot in bots_list:
             bots += 1
 
-    caption = "<b> 𓆰 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉  - 𝑮𝑹𝑼𝑶𝑷 𝑫𝑨𝑻𝑨 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻 </b>\n"
+    caption = "<b> 𓆰 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁  - 𝑮𝑹𝑼𝑶𝑷 𝑫𝑨𝑻𝑨 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻 </b>\n"
     caption += f"⪼ ايـدي المجمـوعه : <code>{chat_obj_info.id}</code>\n"
     if chat_title is not None:
         caption += f"⪼ اسـم {chat_type} : {chat_title}\n"
@@ -808,7 +808,7 @@ async def fetch_info(chat, event):
         #         caption += f"تم التحقق بواسطة تلكرام: {verified}\n"
         #     if description:
         caption += f"الوصف: \n<code>{description}</code>\n"
-        caption = f"<b>𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝘿𝙀𝙑 - @QQ070 𓆪</b>"
+        caption = f"<b>𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝘿𝙀𝙑 - @E_7_V 𓆪</b>"
     return caption
 
 
