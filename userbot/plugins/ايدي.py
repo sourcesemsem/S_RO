@@ -1,15 +1,15 @@
-# Zed-Thon - ZelZal
-# Copyright (C) 2021 Zedthon . All Rights Reserved
+# Repthon - Roger
+# Copyright (C) 2021 Roger. All Rights Reserved
 #
-# This file is a part of < https://github.com/Zed-Thon/ZelZal/ >
+# This file is a part of < https://github.com/rogerpq/Ralls_USERBOT/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Zed-Thon/ZelZal/blob/main/LICENSE/>.
+# <https://www.github.com/rogerpq/Ralls_USERBOT/blob/master/LICENSE/>.
 
 """
-ZThon - ZelZal
+Repthon - Roger
 - كتـابـة الاضـافـات
-زلــزال الـهيبــه - @zzzzl1l
-- حقـوق زدثـــون @ZedThon
+ روجر - @E_7_V
+- حقـوق ريبـــثون @Repthon
 - تخمـط صيـر مطـور كفــوو واذكــر المصــدر
 """
 
@@ -25,24 +25,22 @@ from requests import get
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 
-from zthon import zedub
-from zthon.core.logger import logging
+from userbot import repthon
 
 from ..Config import Config
-from ..core.managers import edit_or_reply, edit_delete
 from ..helpers import reply_id
 from ..sql_helper.globals import gvarstatus
 from . import spamwatch
 
 plugin_category = "العروض"
 LOGS = logging.getLogger(__name__)
-# code by t.me/zzzzl1l
-ZED_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•⎚• مـعلومـات المسـتخـدم مـن بـوت زدثــون"
-ZEDM = gvarstatus("CUSTOM_ALIVE_EMOJI") or "✦ "
-ZEDF = gvarstatus("CUSTOM_ALIVE_FONT") or "⋆─┄─┄─┄─ ᶻᵗʰᵒᶰ ─┄─┄─┄─⋆"
-zed_dev = (2095357462, 1895219306, 925972505, 1346542270, 1885375980, 1721284724, 1951523146, 1243462298, 1037828349, 1985711199, 2028523456, 2045039090, 1764272868, 2067387667, 294317157, 2066568220, 1403932655, 1389046667, 444672531, 2055451976, 294317157, 2134101721, 1719023510, 1985225531, 2107283646, 2146086267, 1850533212, 5280339206, 5261694915, 5806311540)
-zel_dev = (2095357462, 1346542270, 1885375980, 1721284724, 1951523146, 1243462298, 1037828349, 1985711199, 2028523456, 2045039090, 1764272868, 2067387667, 294317157, 2066568220, 1403932655, 1389046667, 444672531, 2055451976, 294317157, 2134101721, 1719023510, 1985225531, 2107283646, 2146086267, 1850533212, 5280339206, 5261694915, 5806311540)
-zelzal = (925972505, 1895219306, 5280339206)
+# code by t.me/E_7_V
+REP_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•⎚• مـعلومـات المسـتخـدم مـن بـوت ريبـــثون"
+REPM = gvarstatus("CUSTOM_ALIVE_EMOJI") or "✦ "
+REPF = gvarstatus("CUSTOM_ALIVE_FONT") or "⋆─┄─┄─┄─ ᴿᴱᴾᵀᴴᴼᴺ ─┄─┄─┄─⋆"
+rep_dev = (5502537272)
+rep_dev = (5502537272)
+roger = (5502537272)
 
 
 async def get_user_from_event(event):
@@ -93,7 +91,7 @@ async def fetch_info(replied_user, event):
     is_bot = replied_user.bot
     restricted = replied_user.restricted
     verified = replied_user.verified
-    zilzal = (await event.client.get_entity(user_id)).premium
+    roger = (await event.client.get_entity(user_id)).premium
     photo = await event.client.download_profile_photo(
         user_id,
         Config.TMP_DOWNLOAD_DIRECTORY + str(user_id) + ".jpg",
@@ -108,8 +106,8 @@ async def fetch_info(replied_user, event):
     username = "@{}".format(username) if username else ("لا يـوجـد")
     user_bio = "لا يـوجـد" if not user_bio else user_bio
 # Copyright (C) 2021 Zed-Thon . All Rights Reserved
-# الـرتب الوهميـه & البريميـوم كتـابـة الكـود - زلــزال الـهيبــه @zzzzl1l
-    if user_id in zelzal: # code by t.me/zzzzl1l
+# الـرتب الوهميـه & البريميـوم كتـابـة الكـود - روجر  @E_7_V
+    if user_id in roger: # code by t.me/E_7_V
         rotbat = "⌁ مطـور السـورس 𓄂𓆃 ⌁" 
     elif user_id in zel_dev:
         rotbat = "⌁ مطـور 𐏕⌁" 
@@ -117,25 +115,25 @@ async def fetch_info(replied_user, event):
         rotbat = "⌁ مـالك الحساب 𓀫 ⌁" 
     else:
         rotbat = "⌁ العضـو 𓅫 ⌁"
-    caption = f"<b> {ZED_TEXT} </b>\n"
-    caption += f"ٴ<b>{ZEDF}</b>\n"
-    caption += f"<b>{ZEDM}الاسـم    ⇠ </b> "
+    caption = f"<b> {REP_TEXT} </b>\n"
+    caption += f"ٴ<b>{REPF}</b>\n"
+    caption += f"<b>{REPM}الاسـم    ⇠ </b> "
     caption += f'<a href="tg://user?id={user_id}">{full_name}</a>'
-    caption += f"\n<b>{ZEDM}المعـرف  ⇠  {username}</b>"
-    caption += f"\n<b>{ZEDM}الايـدي   ⇠ </b> <code>{user_id}</code>\n"
-    caption += f"<b>{ZEDM}الرتبـــه   ⇠ {rotbat} </b>\n"
-    if zilzal == True or user_id in zelzal: # code by t.me/zzzzl1l
-        caption += f"<b>{ZEDM}الحسـاب ⇠  بـريميـوم 🌟</b>\n"
-    caption += f"<b>{ZEDM}الصـور    ⇠ </b> {replied_user_profile_photos_count}\n"
-    if user_id != (await event.client.get_me()).id: # code by t.me/zzzzl1l
-        caption += f"<b>{ZEDM}الـمجموعات المشتـركة ⇠ </b> {common_chat} \n"
-    caption += f"<b>{ZEDM}البايـو     ⇠  {user_bio}</b> \n"
-    caption += f"ٴ<b>{ZEDF}</b>"
+    caption += f"\n<b>{REPM}المعـرف  ⇠  {username}</b>"
+    caption += f"\n<b>{REPM}الايـدي   ⇠ </b> <code>{user_id}</code>\n"
+    caption += f"<b>{REPM}الرتبـــه   ⇠ {rotbat} </b>\n"
+    if roger == True or user_id in roger: # code by t.me/E_7_V
+        caption += f"<b>{REPM}الحسـاب ⇠  بـريميـوم 🌟</b>\n"
+    caption += f"<b>{REPM}الصـور    ⇠ </b> {replied_user_profile_photos_count}\n"
+    if user_id != (await event.client.get_me()).id: # code by t.me/E_7_V
+        caption += f"<b>{REPM}الـمجموعات المشتـركة ⇠ </b> {common_chat} \n"
+    caption += f"<b>{REPM}البايـو     ⇠  {user_bio}</b> \n"
+    caption += f"ٴ<b>{REPF}</b>"
     return photo, caption
-# Copyright (C) 2021 Zed-Thon . All Rights Reserved
+# Copyright (C) 2021 Repthon . All Rights Reserved
 
 
-@zedub.zed_cmd(
+@repthon.on(
     pattern="ايدي(?: |$)(.*)",
     command=("ايدي", plugin_category),
     info={
@@ -152,7 +150,7 @@ async def who(event):
     try:
         photo, caption = await fetch_info(replied_user, event)
     except (AttributeError, TypeError):
-        return await edit_or_reply(zed, "**- لـم استطـع العثــور ع الشخــص ؟!**")
+        return await edit_or_reply(repthon, "**- لـم استطـع العثــور ع الشخــص ؟!**")
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = None
@@ -168,12 +166,12 @@ async def who(event):
         )
         if not photo.startswith("http"):
             os.remove(photo)
-        await zed.delete()
+        await repthon.delete()
     except TypeError:
-        await zed.edit(caption, parse_mode="html")
+        await repthon.edit(caption, parse_mode="html")
 
 
-@zedub.zed_cmd(
+@repthon.on(
     pattern="ا(?: |$)(.*)",
     command=("ا", plugin_category),
     info={
@@ -190,7 +188,7 @@ async def who(event):
     try:
         photo, caption = await fetch_info(replied_user, event)
     except (AttributeError, TypeError):
-        return await edit_or_reply(zed, "**- لـم استطـع العثــور ع الشخــص ؟!**")
+        return await edit_or_reply(repthon, "**- لـم استطـع العثــور ع الشخــص ؟!**")
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = None
@@ -206,12 +204,12 @@ async def who(event):
         )
         if not photo.startswith("http"):
             os.remove(photo)
-        await zed.delete()
+        await repthon.delete()
     except TypeError:
-        await zed.edit(caption, parse_mode="html")
+        await repthon.edit(caption, parse_mode="html")
 
 
-@zedub.zed_cmd(
+@repthon.on(
     pattern="صورته(?:\s|$)([\s\S]*)",
     command=("صورته", plugin_category),
     info={
