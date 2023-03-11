@@ -25,7 +25,7 @@ from requests import get
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 
-from userbot import repthon
+from userbot import *
 
 from ..Config import Config
 from ..helpers import reply_id
@@ -105,7 +105,7 @@ async def fetch_info(replied_user, event):
     full_name = full_name or first_name
     username = "@{}".format(username) if username else ("لا يـوجـد")
     user_bio = "لا يـوجـد" if not user_bio else user_bio
-# Copyright (C) 2021 Zed-Thon . All Rights Reserved
+# Copyright (C) 2021 Repthon . All Rights Reserved
 # الـرتب الوهميـه & البريميـوم كتـابـة الكـود - روجر  @E_7_V
     if user_id in roger: # code by t.me/E_7_V
         rotbat = "⌁ مطـور السـورس 𓄂𓆃 ⌁" 
@@ -133,8 +133,8 @@ async def fetch_info(replied_user, event):
 # Copyright (C) 2021 Repthon . All Rights Reserved
 
 
-@repthon.on(
-    pattern="ايدي(?: |$)(.*)",
+@bot.on(admin_cmd(pattern="ايدي(?: |$)(.*)",
+@bot.on(sudo_cmd(pattern="ايدي(?: |$)(.*)",                  
     command=("ايدي", plugin_category),
     info={
         "header": "لـ عـرض معلومـات الشخـص",
@@ -143,7 +143,7 @@ async def fetch_info(replied_user, event):
 )
 async def who(event):
     "Gets info of an user"
-    zed = await edit_or_reply(event, "⇆")
+    bot = await edit_or_reply(event, "⇆")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     replied_user = await get_user_from_event(event)
@@ -166,13 +166,13 @@ async def who(event):
         )
         if not photo.startswith("http"):
             os.remove(photo)
-        await repthon.delete()
+        await bot.delete()
     except TypeError:
-        await repthon.edit(caption, parse_mode="html")
+        await bot.edit(caption, parse_mode="html")
 
 
-@repthon.on(
-    pattern="ا(?: |$)(.*)",
+@bot.on(admin_cmd(pattern="ا(?: |$)(.*)",
+@bot.on(sudo_cmd(pattern="ا(?: |$)(.*)",                  
     command=("ا", plugin_category),
     info={
         "header": "امـر مختصـر لـ عـرض معلومـات الشخـص",
@@ -181,7 +181,7 @@ async def who(event):
 )
 async def who(event):
     "Gets info of an user"
-    zed = await edit_or_reply(event, "⇆")
+    bot = await edit_or_reply(event, "⇆")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     replied_user = await get_user_from_event(event)
@@ -209,8 +209,8 @@ async def who(event):
         await repthon.edit(caption, parse_mode="html")
 
 
-@repthon.on(
-    pattern="صورته(?:\s|$)([\s\S]*)",
+@bot.on(admin_cmd(pattern="صورته(?:\s|$)([\s\S]*)",
+@bot.on(sudo_cmd(pattern="صورته(?:\s|$)([\s\S]*)                  
     command=("صورته", plugin_category),
     info={
         "header": "لـ جـلب بـروفـايـلات الشخـص",
