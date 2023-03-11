@@ -140,7 +140,7 @@ async def _(event):
 
 @bot.on(admin_cmd(pattern="معرفات 100(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="معرفات 100(?: |$)(.*)", allow_sudo=True))
-async def Rep(Roger):
+async def Rep(bot):
     mentions = bot.text[8:]
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 100):
@@ -149,7 +149,7 @@ async def Rep(Roger):
     await bot.delete()
 @bot.on(admin_cmd(pattern="معرفات 200(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="معرفات 200(?: |$)(.*)", allow_sudo=True))
-async def Rep(Roger):
+async def Rep(bot):
     mentions = bot.text[8:]
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 200):
@@ -158,7 +158,7 @@ async def Rep(Roger):
     await bot.delete()
 @bot.on(admin_cmd(pattern="معرفات 300(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="معرفات 300(?: |$)(.*)", allow_sudo=True))
-async def Rep(Roger):
+async def Rep(bot):
     mentions = bot.text[8:]
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 300):
@@ -167,7 +167,7 @@ async def Rep(Roger):
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 500(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 500(?: |$)(.*)", allow_sudo=True))
-async def Rep(Roger):
+async def Rep(bot):
     mentions = bot.text[8:]
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 500):
@@ -176,7 +176,7 @@ async def Rep(Roger):
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 1k(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 1k(?: |$)(.*)", allow_sudo=True))
-async def Rep(Roger):
+async def Rep(bot):
     mentions = bot.text[8:]
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 1000):
@@ -185,7 +185,7 @@ async def Rep(Roger):
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 300(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 300(?: |$)(.*)", allow_sudo=True))
-async def Rep(Roger):
+async def Rep(bot):
     mentions = bot.text[8:]
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 300):
@@ -194,7 +194,7 @@ async def Rep(Roger):
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 200(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 200(?: |$)(.*)", allow_sudo=True))
-async def Rep(Roger):
+async def Rep(bot):
     mentions = bot.text[8:]
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 200):
@@ -203,7 +203,7 @@ async def Rep(Roger):
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 150(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 150(?: |$)(.*)", allow_sudo=True))
-async def Rep(Roger):
+async def Rep(bot):
     mentions = bot.text[8:]
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 150):
@@ -212,7 +212,7 @@ async def Rep(Roger):
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 100(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 100(?: |$)(.*)", allow_sudo=True))
-async def Rep(Roger):
+async def Rep(bot):
     mentions = bot.text[8:]
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 100):
@@ -221,7 +221,7 @@ async def Rep(Roger):
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 50(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 50(?: |$)(.*)", allow_sudo=True))
-async def Rep(Roger):
+async def Rep(bot):
     mentions = bot.text[8:]
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 50):
@@ -230,7 +230,7 @@ async def Rep(Roger):
     await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 10(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 10(?: |$)(.*)", allow_sudo=True))
-async def Rep(Roger):
+async def Rep(bot):
     mentions = bot.text[8:]
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 10):
