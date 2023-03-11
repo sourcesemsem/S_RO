@@ -2,7 +2,7 @@ from telethon import events
 
 from . import * 
 
-Ralls_BLACKLIST = [
+Repthon_BLACKLIST = [
     -1001236815136,
     -1001614012587,
     ]
@@ -10,9 +10,9 @@ Ralls_BLACKLIST = [
 
 @bot.on(admin_cmd(pattern=f"للمجموعات(?: |$)(.*)"))
 async def gcast(event):
-    Rallsthon = event.pattern_match.group(1)
-    if Rallsthon:
-        msg = Rallsthon
+    Repthon = event.pattern_match.group(1)
+    if Repthon:
+        msg = Repthon
     elif event.is_reply:
         msg = await event.get_reply_message()
     else:
@@ -36,9 +36,9 @@ async def gcast(event):
     
 @bot.on(admin_cmd(pattern=f"للخاص(?: |$)(.*)"))
 async def gucast(event):
-    Rallsthon = event.pattern_match.group(1)
-    if Rallsthon:
-        msg = Rallsthon
+    Repthon = event.pattern_match.group(1)
+    if Repthon:
+        msg = Repthon
     elif event.is_reply:
         msg = await event.get_reply_message()
     else:
