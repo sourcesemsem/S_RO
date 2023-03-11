@@ -111,7 +111,7 @@ async def fetch_info(replied_user, event):
         rotbat = "⌁ مطـور السـورس 𓄂𓆃 ⌁" 
     elif user_id in rep_dev:
         rotbat = "⌁ مطـور 𐏕⌁" 
-    elif user_id == (await event.client.get_me()).id and user_id not in zed_dev:
+    elif user_id == (await event.client.get_me()).id and user_id not in rep_dev:
         rotbat = "⌁ مـالك الحساب 𓀫 ⌁" 
     else:
         rotbat = "⌁ العضـو 𓅫 ⌁"
@@ -150,7 +150,7 @@ async def who(event):
     try:
         photo, caption = await fetch_info(replied_user, event)
     except (AttributeError, TypeError):
-        return await edit_or_reply(repthon, "**- لـم استطـع العثــور ع الشخــص ؟!**")
+        return await edit_or_reply(bot, "**- لـم استطـع العثــور ع الشخــص ؟!**")
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = None
@@ -188,7 +188,7 @@ async def who(event):
     try:
         photo, caption = await fetch_info(replied_user, event)
     except (AttributeError, TypeError):
-        return await edit_or_reply(repthon, "**- لـم استطـع العثــور ع الشخــص ؟!**")
+        return await edit_or_reply(bot, "**- لـم استطـع العثــور ع الشخــص ؟!**")
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = None
