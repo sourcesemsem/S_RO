@@ -190,8 +190,8 @@ async def Rep(Roger):
     chat = await bot.get_input_chat()
     async for x in bot.client.iter_participants(chat, 300):
         mentions += f"\n**𒀭╎**  [{x.first_name}](tg://user?id={x.id}) "
-    await Rallsthon.client.send_message(bot.chat_id, mentions)
-    await Rallsthon.delete()
+    await bot.client.send_message(bot.chat_id, mentions)
+    await bot.delete()
 @bot.on(admin_cmd(pattern="تاك 200(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="تاك 200(?: |$)(.*)", allow_sudo=True))
 async def Rep(Roger):
