@@ -1,4 +1,4 @@
-#Ralls ®
+#Repthon ®
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -24,7 +24,7 @@ async def _(event):
         return await edit_or_reply(
             event, "**╮ .معاني + الاسـم ... للبحـث عن معانـي الاسمـاء ...𓅫╰**"
         )
-    chat = "@RallsN_bot"
+    chat = "@Repthon_name_bot"
     catevent = await edit_or_reply(event, "**╮•⎚ جـارِ البحـث عـن معنـى الاسـم ... 🧸🎈**")
     async with event.client.conversation(chat) as conv:
         try:
@@ -59,7 +59,7 @@ async def _(event):
         return await edit_or_reply(
             event, "**╮ .صفات + الاسـم ... للبحـث عن صفات الاسمـاء ...𓅫╰**"
         )
-    chat = "@SR7GBOT"
+    chat = "@Repthon_name2_bot"
     catevent = await edit_or_reply(event, "**╮•⎚ جـارِ البحـث عـن صفـات الاسـم ... 🧸🎈**")
     async with event.client.conversation(chat) as conv:
         try:
