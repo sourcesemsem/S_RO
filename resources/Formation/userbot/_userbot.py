@@ -23,12 +23,12 @@ icsv = "1.0.0"
 ICS_ID = ["5502537272"]
 
 # for print :
-usr = "𝚁𝚎𝚙𝚝𝚑𝚘𝚗 USERBOT -{}".format(Tlk)
-adn = "𝚁𝚎𝚙𝚝𝚑𝚘𝚗 ADMIN TOOLS -{}".format(Tlk)
-ani = "𝚁𝚎𝚙𝚝𝚑𝚘𝚗 ANIMATIONS -{}".format(Tlk)
-tsh = "𝚁𝚎𝚙𝚝𝚑𝚘𝚗 TOSHA -{}".format(Tlk)
-ast = "𝚁𝚎𝚙𝚝𝚑𝚘𝚗 ASSISTANT -{}".format(Tlk)
-pmt = "𝚁𝚎𝚙𝚝𝚑𝚘𝚗 ASSISTANT PM -{}".format(Tlk)
+usr = "REPTHON USERBOT -{}".format(Tlk)
+adn = "REPTHON ADMIN TOOLS -{}".format(Tlk)
+ani = "REPTHON ANIMATIONS -{}".format(Tlk)
+tsh = "REPTHON TOSHA -{}".format(Tlk)
+ast = "REPTHON ASSISTANT -{}".format(Tlk)
+pmt = "REPTHON ASSISTANT PM -{}".format(Tlk)
 
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
