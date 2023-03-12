@@ -53,7 +53,7 @@
 * هنا بدل كلمة pass بأي كلمة سر ترغب بها
 - `ALTER USER postgres WITH PASSWORD 'pass';`
 
-* نصنع قاعده بيانات يمكنك تغيير كلمة zthon الى اي اسم او تبقيه كما هو
+* نصنع قاعده بيانات يمكنك تغيير كلمة Repthon الى اي اسم او تبقيه كما هو
 - `CREATE DATABASE Repthon;`
 
 - `\q`
