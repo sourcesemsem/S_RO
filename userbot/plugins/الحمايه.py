@@ -1,4 +1,4 @@
-# edit by: @QQ070
+# edit by: @E_7_V - @PPF22
 
 import asyncio
 
@@ -24,9 +24,9 @@ PMPERMIT_PIC = Config.PMPERMIT_PIC or None
 ICSS_PIC = (
     PMPERMIT_PIC
     if PMPERMIT_PIC
-    else "https://telegra.ph/file/cefd38640cef54bc915c2.jpg"
+    else "https://graph.org/file/cefd38640cef54bc915c2.jpg"
 )
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Rallsbot"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Repthon-bot"
 USER_BOT_WARN_ZERO = "⪼ لقد حذرتك من تكرار الرسائل . الآن تم حظرك والإبلاغ عنك حتى إشعار آخر.\n**- #ججـاو 🚶🏼‍♂️❕،** "
 
 
@@ -219,7 +219,7 @@ if Config.PRIVATE_GROUP_ID is not None:
                 f"** ⌔∮ يـجب تفعيـل امـر الحـمايـه اولاً بإرسـال `.الحمايه تفعيل` لـيشتغل هذا الأمـر ...**",
             )
         approved_users = pmpermit_sql.get_all_approved()
-        APPROVED_PMs = "𓆰 𝙎𝙊𝙐𝙍𝘾𝙀 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 ‌ਊ - 𝑨𝑷𝑷𝑹𝑶𝑽𝑬𝑫𝑺 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧ𝗥𝗲𝗽ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n"
+        APPROVED_PMs = "𓆰 𝙎𝙊𝙐𝙍𝘾𝙀 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 - 𝑨𝑷𝑷𝑹𝑶𝑽𝑬𝑫𝑺 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧ𝗥𝗲𝗽ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n"
         if len(approved_users) > 0:
             for sender in approved_users:
                 if sender.reason:
@@ -340,7 +340,7 @@ if Config.PRIVATE_GROUP_ID is not None:
             else:
 
                 USER_BOT_NO_WARN = (
-                    f"𓆩𝙎𝙊𝙐𝙍𝘾𝙀 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 ‌ਊ - 𝑷𝑴 𝑺𝑬𝑪𝑼𝑹𝑰𝑻𝒀𓆪\n◐━─━─━─━─𝗥𝗲𝗽─━─━─━─━◐\n\n❞ **هها هلو**  {mention} ❝\n\n **⤶ انا مشغـول حـالياً لا تقـم بازعـاجي وارسـال رسـائل كثيـره والا سـوف يتم حظـرك تلقـائياً.....**"
+                    f"𓆩𝙎𝙊𝙐𝙍𝘾𝙀 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 - 𝑷𝑴 𝑺𝑬𝑪𝑼𝑹𝑰𝑻𝒀𓆪\n◐━─━─━─━─𝗥𝗲𝗽─━─━─━─━◐\n\n❞ **هها هلو**  {mention} ❝\n\n **⤶ انا مشغـول حـالياً لا تقـم بازعـاجي وارسـال رسـائل كثيـره والا سـوف يتم حظـرك تلقـائياً.....**"
                     f"**فقط قل سبب مجيئك وانتظـر حتى اعـود لكـي تتـم الموافقـه عليك**.\
                                     \n\n ⤶ ❨ **عندك** {warns}/{totalwarns} **تحذيرات** ❩"
                 )
@@ -363,7 +363,7 @@ if Config.PRIVATE_GROUP_ID is not None:
                 )
             else:
                 USER_BOT_NO_WARN = (
-                    f"𓆩𝙎𝙊𝙐𝙍𝘾𝙀 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 ‌ਊ - 𝑷𝑴 𝑺𝑬𝑪𝑼𝑹𝑰𝑻𝒀𓆪\n◐━─━─━─━─𝗥𝗲𝗽─━─━─━─━◐\n\n❞ **هها هلو**  {mention} ❝\n\n **⤶ انا مشغـول حـالياً لا تقـم بازعـاجي وارسـال رسـائل كثيـره والا سـوف يتم حظـرك تلقـائياً.....**"
+                    f"𓆩𝙎𝙊𝙐𝙍𝘾𝙀 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 - 𝑷𝑴 𝑺𝑬𝑪𝑼𝑹𝑰𝑻𝒀𓆪\n◐━─━─━─━─𝗥𝗲𝗽─━─━─━─━◐\n\n❞ **هها هلو**  {mention} ❝\n\n **⤶ انا مشغـول حـالياً لا تقـم بازعـاجي وارسـال رسـائل كثيـره والا سـوف يتم حظـرك تلقـائياً.....**"
                     f"**فقط قل سبب مجيئك وانتظـر حتى اعـود لكـي تتـم الموافقـه عليك**.\
                                     \n\n ⤶ ❨ **عندك** {warns}/{totalwarns} **تحذيرات** ❩"
                 )
@@ -386,7 +386,7 @@ async def hehehe(event):
     if event.is_private:
         if not pmpermit_sql.is_approved(chat.id):
             pmpermit_sql.approve(chat.id, "**مطوري الغـالي هنا يتمشى 🥳♥️𓆰**")
-            await borg.send_message(chat, "**⪼ اطـلق هـلاو مطـوري الغـالي  باقر اننـي محظـوظ لقدومـك الـي 🙈♥️𓆰**")
+            await borg.send_message(chat, "**⪼ اطـلق هـلاو مطـوري الغـالي بــاقــر اننـي محظـوظ لقدومـك الـي 🙈♥️𓆰**")
 
 #علا-أص-تمس-ملا-مجهول-رام-علش-ابرا-اسا-انا
 @bot.on(events.NewMessage(incoming=True, from_users=(5502537272, 1260465030, 5502537272, 1260465030, 5502537272, 1260465030)))
