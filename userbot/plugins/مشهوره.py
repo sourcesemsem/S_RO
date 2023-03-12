@@ -1,4 +1,4 @@
-#RallsThon ®
+#Repthon ®
 
 import os
 import random
@@ -14,7 +14,7 @@ from . import mention
 
 TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 
-FANAN = "<b> 𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝐑𝐀𝐈𝐈𝐒 - 💞👰🏻‍♀💞 𓆪 </b>"
+FANAN = "<b> 𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 - 💞👰🏻‍♀💞 𓆪 </b>"
 VANAN = "<b> ⋄︙افيشش 🥺💘 </b>"
 sts_fanan = "https://telegra.ph/file/1f79aad6235f08ea76166.jpg"
 sts_fanan2 = "https://telegra.ph/file/e04b22171d7bb524e7f44.jpg" 
@@ -45,7 +45,7 @@ async def who(event):
     try:
         ZEED_IMG, caption = await fetch_info(replied_user, event)
     except AttributeError:
-        await eor(zed, "..")
+        await eor(zed, {ZEED_IMG})
         return
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
