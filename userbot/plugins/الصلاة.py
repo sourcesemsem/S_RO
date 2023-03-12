@@ -6,7 +6,7 @@ import json
 import requests
 from . import *
 
-@repthon.on(admin_cmd(pattern="صلاة(?: |$)(.*)"))
+@bot.on(admin_cmd(pattern="صلاة(?: |$)(.*)"))
 async def get_adzan(adzan):
     ZQ_LO = adzan.pattern_match.group(1)
     if ZQ_LO == "صنعاء" or ZQ_LO == "اليمن":
