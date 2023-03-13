@@ -7,9 +7,8 @@
 الآن سأظهر نص قصير لإظهار تكوين البرنامج النصي المطلوب.
 ```python3
 H = "Hi im BAQIR"
-
-@bot.on    
-admin_cmd(pattern="hello")
+    
+@bot.on(admin_cmd(pattern="hello")
 async def hi(Repthon):
     await eor(Roger, H)
 ```
