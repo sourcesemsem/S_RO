@@ -1,7 +1,7 @@
 import asyncio
 from collections import deque
 from . import ALIVE_NAME
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ralls"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Repthon"
 
 
 @bot.on(admin_cmd(pattern="بيبي$"))
@@ -153,7 +153,7 @@ async def _(event):
             "😎 \n/\\_,__😫 \n  //    //       \\",
             "😖 \n/\\_,💦_😋  \n  //         //        \\",
             "  😭      ☺️ \n  /|\\   /(👶)\\ \n  /!\\   / \\ ",
-            "😅 @RallsThon `"
+            "😅 @Repthon `"
             ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
