@@ -1,4 +1,4 @@
-# animation code for Ralls edit by @QQ070
+# animation code for Repthon edit by @E_7_V
 
 import asyncio
 from collections import deque
