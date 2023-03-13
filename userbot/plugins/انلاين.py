@@ -1,5 +1,5 @@
-#    Ralls - UserBot    #
-#    Owner - @QQ070 #
+#    Repthon - UserBot    #
+#    Owner - @E_7_V #
 
 import io
 import json
@@ -15,7 +15,7 @@ from . import CMD_LIST, icsa
 TOSH = Config.ALIVE_PIC or None
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
 
-if Config.TG_BOT_USERNAME is not None and tgbot is not None:
+if Config.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(events.InlineQuery)
     async def inline_handler(event):
@@ -28,7 +28,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             buttons = [
                 (
                     custom.Button.inline("Stats", data="stats"),
-                    Button.url("Repo", "https://github.com/raiis1/Raiis_USERBOT"),
+                    Button.url("Repo", "https://github.com/rogerpq/Raiis_USERBOT"),
                 )
             ]
             if TOSH and TOSH.endswith((".jpg", ".png")):
@@ -40,13 +40,13 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             elif TOSH:
                 result = builder.document(
                     TOSH,
-                    title="Ralls Alive",
+                    title="Repthon Alive",
                     text=query,
                     buttons=buttons,
                 )
             else:
                 result = builder.article(
-                    title="Ralls Alive",
+                    title="Repthon Alive",
                     text=query,
                     buttons=buttons,
                 )
@@ -55,7 +55,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             rev_text = query[::-1]
             buttons = paginate_help(0, CMD_LIST, "helpme")
             result = builder.article(
-                "©Rallsbot Help",
+                "©Repthon Help",
                 text="{}\n\n⌔∮ عدد الاضافات : {}**".format(query, len(CMD_LIST)),
                 buttons=buttons,
                 link_preview=False,
