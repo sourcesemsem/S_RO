@@ -1,6 +1,6 @@
 """
-©Ralls : @RallsThon
-  - Telegraph Utils For Ralls
+©Repthon : @Repthon
+  - Telegraph Utils For Repthon
   - Telegraph Media Commend: .تلكراف ميديا
   - Telegraph Text Commend: .تلكراف نص
 """
@@ -102,7 +102,7 @@ async def _(tosh):
             response = telegraph.create_page(title_of_page, html_content=page_content)
             end = datetime.now()
             ms = (end - start).seconds
-            kimo = f"https://telegra.ph/{response['path']}"
+            kimo = f"https://graph.org/{response['path']}"
             await ice.edit(
                 f"**الرابط : ** [اضغط هنا]({kimo})\
                  \n**الوقت : **`{ms} ثانيه.`",
