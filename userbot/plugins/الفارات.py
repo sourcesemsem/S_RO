@@ -116,7 +116,7 @@ async def variable(event):
             await bot.edit("**✾╎تم اضافـة {} بنجـاح ☑️** \n**✾╎المضاف اليه :**\n `{}` \n**✾╎يتم الان اعـادة تشغيـل بـوت ريبـــثون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(input_str, vinfo))
         heroku_var[variable] = vinfo
     elif input_str == "زخرفه الوقتي" or input_str == "زخرفة الوقتي":
-        variable = "ZI_FN"
+        variable = "BA_FN"
         await asyncio.sleep(1.5)
         if variable in heroku_var:
             await bot.edit("**✾╎تم تغييـر {} بنجـاح ☑️**\n**✾╎المتغيـر : ↶**\n `{}` \n**✾╎يتم الان اعـادة تشغيـل بـوت ريبـــثون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(input_str, vinfo))
@@ -325,7 +325,7 @@ async def variable(event):
         del heroku_var[variable]
 
     elif input_str == "زخرفه الوقتي" or input_str == "زخرفة الوقتي":
-        variable = "ZI_FN"
+        variable = "BA_FN"
         await asyncio.sleep(1.5)
         if variable not in heroku_var:
         	return await bot.edit("**✾╎عـذراً .. فـار {} غير موجود اصـلاً...**".format(input_str))
@@ -503,7 +503,7 @@ async def variable(event):
             await bot.edit("**✾╎ الفـار {} غيـر موجـود ❌** \n**✾╎المتغيـر :**\n `{}` \n**✾╎قنـاة السـورس : @ZEDThon**".format(input_str, heroku_var[variable]))
  
     elif input_str == "زخرفه الوقتي" or input_str == "زخرفة الوقتي":
-        variable = "ZI_FN"
+        variable = "BA_FN"
         await asyncio.sleep(1.5)
         if variable in heroku_var:
             await bot.edit("**✾╎الفـار {} موجـود ☑️**\n**✾╎المتغيـر : ↶**\n `{}` \n**✾╎قنـاة السـورس : @ZEDThon**".format(input_str, heroku_var[variable]))
