@@ -1,4 +1,4 @@
-#    Ralls - UserBot
+#    Repthon - Userbot - owner <@E_7_V>
 
 import re
 from userbot.plugins.assistant import *
@@ -15,7 +15,7 @@ from . import *
 from .. import mention
 from telegraph import Telegraph, upload_file
 
-# =================== OWNER - QQ070 =================== #
+# =================== OWNER - E_7_V =================== #
 ALIVE_NAME = Config.ALIVE_NAME if Config.ALIVE_NAME else "@RallsThon"
 CUSTOM_PMPERMIT_TEXT = Config.CUSTOM_PMPERMIT_TEXT
 LOAD_MYBOT = Config.LOAD_MYBOT
@@ -65,13 +65,13 @@ async def start_all(event):
                                   caption=startotherena,
                                   buttons=[
                                       [Button.inline(
-                                          "⚜️ 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="Ralls")]
+                                          "⚜️ 𝙍𝙀𝙋𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="Repthon")]
                                   ])
         else:
             await event.reply(startotherena,
                                      buttons=[
                                          [Button.inline(
-                                             "⚜️ 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="Ralls")]
+                                             "⚜️ 𝙍𝙀𝙋𝙏𝙃𝙊𝙉 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="Repthon")]
                                      ])
 
 
@@ -88,7 +88,7 @@ async def owner(event):
                                  [Button.inline("⚜️ الاذاعه ⚜️",
                                                 data="toshbroad")],
                                  [Button.url("⚜️ الدعم ⚜️",
-                                             "https://t.me/RallsThon")]
+                                             "https://t.me/Repthon_support")]
                              ])
 
 
@@ -114,7 +114,7 @@ async def logs(event):
         caption="**Heroku** Ralls Logs",
         buttons=[
             [Button.url("💠 𝙑𝙄𝙀𝙒 𝙊𝙉𝙇𝙄𝙉𝙀 💠", f"{url}")],
-            [Button.url("💠 𝘾𝙍𝘼𝙎𝙃𝙀𝘿 💠", "t.me/RallsThon")]
+            [Button.url("💠 𝘾𝙍𝘼𝙎𝙃𝙀𝘿 💠", "t.me/Repthon")]
         ])
     await asyncio.sleep(5)
     return os.remove('logs.txt')
@@ -129,15 +129,15 @@ async def settings(event):
                              "⌔∮ ليس هناك الكثير للقيام به هنا.",
                              buttons=[
                                      [Button.inline(
-                                         "⚜️ احصل على بوت ريس ثـون بنفسك ⚜️", data="deployme")]
+                                         "⚜️ احصل على بوت ريبـــثون بنفسك ⚜️", data="deployme")]
                              ])
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"Ralls"))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"Repthon"))
           )  # pylint: disable=oof
 async def settings(event):
     await event.delete()
-    await event.reply(f"⌔∮ انا ريس ثـون مساعد {mention}. الشخصي تستطيع الاتصال بي عن طريق هذا البوت",
+    await event.reply(f"⌔∮ انا ريبــــــثون مساعد {mention}. الشخصي تستطيع الاتصال بي عن طريق هذا البوت",
                              buttons=[
                                      [Button.inline(
                                          "⚜️ حصل على بوت ريس ثـون بنفسك ⚜️", data="deployme")]
@@ -147,12 +147,12 @@ async def settings(event):
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"deployme"))
           )  # pylint: disable=oof
 async def settings(event):
-    await event.edit("** ⌔∮ هنا ستجد رابط ريس ثـون ورابط التنصيب ايضا**:",
+    await event.edit("** ⌔∮ هنا ستجد رابط ريبـــثون ورابط التنصيب ايضا**:",
                      buttons=[
-                         [Button.url("🔗 رابط السورس🔗", url="https://github.com/Rallsthon/Ralls_USERBOT")],
-                         [Button.url("🔗 رابط التنصيب 🔗", url="https://t.me/RallsThon/105")],
+                         [Button.url("🔗 رابط السورس🔗", url="https://github.com/rogerpq/Ralls_USERBOT")],
+                         [Button.url("🔗 رابط التنصيب 🔗", url="https://t.me/Repthon/117")],
                          [Button.url("✨ الدعم ✨",
-                                     url="https://t.me/RallsThon")]
+                                     url="https://t.me/Repthon")]
                      ])
 
 
@@ -170,7 +170,7 @@ async def settings(event):
                                          "⚜️ لتغير الايڤ وغيرها ⚜️ ⁦⁩", data="custom")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
 # Ralls zag - زغرفه ريسثون
@@ -192,7 +192,7 @@ async def settings(event):
                                      "اسماء القنوات 🍇", data="chanlan")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
 
@@ -213,7 +213,7 @@ async def settings(event):
                                          "اسماء بنات 🍇", data="girlan")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
 # Boys zag - زغرفه اسماء الشباب
@@ -233,7 +233,7 @@ async def settings(event):
                                          "║ رجوع ║", data="icsname")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
 
@@ -283,7 +283,7 @@ async def settings(event):
                                          "║ رجوع ║", data="icsname")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
 
@@ -333,7 +333,7 @@ async def settings(event):
                                          "⫷ التالي ", data="icspio2")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
 
@@ -354,7 +354,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio3")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
 
@@ -375,7 +375,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio4")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
 
@@ -396,7 +396,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio5")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
 
@@ -417,7 +417,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio1")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
 # Boys zag - زغرفه اسماء الشباب
@@ -437,7 +437,7 @@ async def settings(event):
                                          "║ رجوع ║", data="icszag")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
 # Months - الاشهر
@@ -537,7 +537,7 @@ async def bot(event):
             media = await event.client.download_media(response, "Bot_Pic")
             try:
                 x = upload_file(media)
-                url = f"https://telegra.ph/{x[0]}"
+                url = f"https://graph.org/{x[0]}"
                 os.remove(media)
             except BaseException:
                 return await conv.send_message("** ⌔∮ خطا **")
@@ -716,7 +716,7 @@ async def a_txt(event):
             mssg=f"** ⌔∮ تم تغير نص الايڤ من**\n  - `{old_alv}`\n** ⌔∮ الى **\n  - `{themssg}`\n"
             await xx.edit(mssg)
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon.", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon .", alert=True)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"alv_pic"))
            )  # pylint: disable=C0321
@@ -753,7 +753,7 @@ async def alv_pic(event):
         mssg=f"**⌔∮ تم تغير الصوره بنجاح انتظر قليلا **.\n"
         await xx.edit(mssg)
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon.", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon .", alert=True)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"pm_cus")))
 async def alv(event):
@@ -791,7 +791,7 @@ async def a_txt(event):
             mssg=f"**⌔∮ تم تغير رسالة الحمايه من**\n  - `{old_alv}`\n **⌔∮ الى **\n  - `{themssg}`\n"
             await xx.edit(mssg)
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"pm_pic"))
            )  # pylint: disable=C0321
@@ -812,7 +812,7 @@ async def alv_pic(event):
             media=await event.client.download_media(response, "PM_PIC")
             try:
                 x = upload_file(media)
-                url = f"https://telegra.ph/{x[0]}"
+                url = f"https://graph.org/{x[0]}"
                 os.remove(media)
             except BaseException:
                 return await conv.send_message("** ⌔∮ خطا **")
@@ -828,4 +828,4 @@ async def alv_pic(event):
         mssg=f"**⌔∮ تم تغير صوره الحمايه الخاصه بك ✨**.\n"
         await xx.edit(mssg)
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @RallsThon.", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon .", alert=True)
