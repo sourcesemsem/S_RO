@@ -1,4 +1,4 @@
-# Ralls - UserBot
+# Repthon - UserBot
 # format for plugins
 
 import math
@@ -219,7 +219,7 @@ async def icsa():
         dyno = f"{AppHours}h {AppMinutes}m/{hours}h {minutes}m"
     except Exception as e:
         dyno = e
-    return f"**⌔∮ مـــعـــلـــومـــات بـــوت ريبـــثون***\
+    return f"**⌔∮ مـــعـــلـــومـــات بـــوت ريبـــــثون***\
                  \n - قـــاعـــده الـــبـــيـــانـــات : {check_sgnirts}\
                   \n - ســـودو : {sudo}\
                   \n - مـــدة التـــشـــغـــيـــل : {uptime}\
