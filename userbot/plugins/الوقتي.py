@@ -27,7 +27,7 @@ FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 # @Repthon - @E_7_V
 normzltext = "1234567890"
-namerzfont = Config.ZI_FN or "𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝟬"
+namerzfont = Config.BA_FN or "𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝟬"
 
 autopic_path = os.path.join(os.getcwd(), "userbot", "original_pic.png")
 digitalpic_path = os.path.join(os.getcwd(), "userbot", "digital_pic.png")
@@ -46,7 +46,7 @@ async def autopic(event):
             "**عـذرا هنـاك خطـأ**\n وظيفة الصورة التـلقائيـة تحتاج إلى ضبط DEFAULT PIC var في Heroku vars",
             parse_mode=parse_pre,
         )
-    downloader = SmartDL(Config.DEFAULT_PIC, autopic_path, progress_bar=False)
+    downloader = SmartDL(Config.DEFAULT_PIC, autopic_path, progress_bar=True)
     downloader.start(blocking=False)
     while not downloader.isFinished():
         pass
@@ -78,7 +78,7 @@ async def main(event):
             "**عـذرا هنـاك خطـأ**\n وظيفة الصورة التـلقائيـة تحتاج إلى ضبط DIGITAL_PIC var في Heroku vars",
             parse_mode=parse_pre,
         )
-    downloader = SmartDL(digitalpfp, digitalpic_path, progress_bar=False)
+    downloader = SmartDL(digitalpfp, digitalpic_path, progress_bar=True)
     downloader.start(blocking=False)
     while not downloader.isFinished():
         pass
