@@ -139,11 +139,11 @@ elif str(Config.PM_LOGGER_GROUP_ID)[0] != "-":
     Config.PM_LOGGER_GROUP_ID = int("-" + str(Config.PM_LOGGER_GROUP_IDill verify the both loggers group
 async def verifyLoggerGroup():
 
-    """
+"""
 
-    التاكد من كروب التخزين
+التاكد من كروب التخزين
 
-    """
+"""
 
     flag = False
 
@@ -151,7 +151,7 @@ async def verifyLoggerGroup():
 
         try:
 
-            entity = await bot.get_entity(BOTLOG_CHATID)
+        entity = await bot.get_entity(BOTLOG_CHATID)
 
             if not isinstance(entity, types.User) and not entity.creator:
 
