@@ -1,4 +1,4 @@
-#    Ralls - THON
+#    Rep - THON
 
 import os
 from telethon.tl.types import ChatBannedRights
@@ -16,7 +16,7 @@ class Config(object):
         "BOT_TOKEN_BF_HER", None
     )
     BOT_USERNAME = os.environ.get("BOT_USERNAME") or os.environ.get(
-        "BOT_USER_NAME_BF_HER", None
+        "BOT_USERNAME_BF_HER", None
     )
     LOAD_MYBOT = os.environ.get("LOAD_MYBOT", "True")
     TOSH_START = os.environ.get("TOSH_START", None)
@@ -26,9 +26,9 @@ class Config(object):
     )
 
     AUTONAME = os.environ.get("AUTONAME", None)
-    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID") or 0)
+    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID") or -100)
     PRIVATE_GROUP_ID = int(os.environ.get("PRIVATE_GROUP_ID") or 0)
-    PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID") or 0)
+    PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID") or -100)
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     OWNER_ID = int(os.environ.get("OWNER_ID") or 0)
@@ -45,10 +45,10 @@ class Config(object):
     CUSTOM_ALIVE_EMOJI = os.environ.get("CUSTOM_ALIVE_EMOJI", None)
     CUSTOM_ALIVE_EMRalls = os.environ.get("CUSTOM_ALIVE_EMRalls", None)
     CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
-    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Ralls - UserBot")
+    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Repthon - UserBot")
     CLEAN_WELCOME = os.environ.get("CLEAN_WELCOME", True)
     THUMB_IMAGE = os.environ.get(
-        "THUMB_IMAGE", "https://telegra.ph/file/4c406eb5e6932d4834947.jpg"
+        "THUMB_IMAGE", "https://graph.org/file/9fe877a9c16a0c3dcfcdb.jpg"
     )
     UB_BLACK_LIST_CHAT = {
         int(x) for x in os.environ.get("UB_BLACK_LIST_CHAT", "").split()
@@ -63,7 +63,7 @@ class Config(object):
     DEFAULT_PIC = os.environ.get("DEFAULT_PIC", None)
     DEFAULT_BIO = os.environ.get("DEFAULT_BIO", None)
     DEFAULT_NAME = os.environ.get("DEFAULT_NAME", None)
-    ZI_FN = os.environ.get("ZI_FN", "𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝟬")
+    BA_FN = os.environ.get("BA_FN", "𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝟬")
     CUSTOM_PMPERMIT_TEXT = os.environ.get("CUSTOM_PMPERMIT_TEXT", None)
     NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD = int(
         os.environ.get("NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD", 7)
