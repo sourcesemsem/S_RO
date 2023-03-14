@@ -1,5 +1,5 @@
-#  Ralls - THON
-#  TELE - @RallsThon
+#  Rep - THON
+#  TELE - @E_7_V
 
 import time
 from datetime import datetime
@@ -7,8 +7,8 @@ from userbot.Config import Config
 from userbot.plugins import mention
 
 # Ralls
-K = "https://t.me/RallsThon"
-D = "** ⌔∮ مطور بوت ريس ثـون**"
+K = "https://t.me/E_7_V"
+D = "** ⌔∮ مطور بوت ريبـــثون **"
 
 OWNER_ID = Config.OWNER_ID
 ALIVE_NAME = Config.ALIVE_NAME if Config.ALIVE_NAME else "@RallsThon"
@@ -40,13 +40,13 @@ startotherena = MSSG
 startowner = f"** ⌔∮ اهلا بك مجدداً {ALIVE_NAME}. اختر احد الخيارات الاتيه:**"
 
 # for alive
-Def = str(ALIVE_NAME) if ALIVE_NAME else "Ralls - User"
-asst_p = "https://telegra.ph/file/57d51af1ca93d8cc8a958.jpg"
+Def = str(ALIVE_NAME) if ALIVE_NAME else "Repthon - User"
+asst_p = "https://graph.org/file/9fe877a9c16a0c3dcfcdb.jpg"
 asst_c = "➥ **ASSISTANT IS:** `ONLINE`\n"
 asst_c += f"➥ **My Boss** : {Def} \n"
 asst_c += "➥ **Heroku Database** : `AWS - Working Properly`\n"
-asst_c += "➥ **Copyright** : By [𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉](https://github.com/raiis1)\n"
-asst_c += "[Assistant By ](https://t.me/RallsThon)"
+asst_c += "➥ **Copyright** : By [𝙍𝙀𝙋𝙏𝙃𝙊𝙉](https://github.com/RepthonArabic)\n"
+asst_c += "[Assistant By ](https://t.me/Repthon)"
 
 # for ping
 def get_readable_time(seconds: int) -> str:
@@ -374,7 +374,7 @@ SetMsg = [
     "⌔∮ يتم اكمال تنصيب بوتك في @BotFather",
     "⌔∮ تم تنصيب بوتك"
 ]
-SetDec = "- 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 𝘼𝙎𝙎𝙄𝙎𝙏𝘼𝙉𝙏 𝘽𝙊𝙏 🔱\n- Ralls 𝘽𝙊𝙏 𝙁𝙊𝙍 ~ {}\n- 𝙎𝙊𝙐𝙍𝘾𝙀 𝘿𝙀𝙑 ~ @RallsThon 𖤨"
-SetAbt = "- 𝙎𝙊𝙐𝙍𝘾𝙀 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 🔱\n- Ralls 𝘽𝙊𝙏 𝙁𝙊𝙍 ~ {}"
+SetDec = "- 𝙍𝙀𝙋𝙏𝙃𝙊𝙉 𝘼𝙎𝙎𝙄𝙎𝙏𝘼𝙉𝙏 𝘽𝙊𝙏 🔱\n- 𝙍𝙀𝙋𝙏𝙃𝙊𝙉 𝘽𝙊𝙏 𝙁𝙊𝙍 ~ {}\n- 𝙎𝙊𝙐𝙍𝘾𝙀 𝘿𝙀𝙑 ~ @E_7_V 𖤨"
+SetAbt = "- 𝙎𝙊𝙐𝙍𝘾𝙀 𝙍𝙀𝙋𝙏𝙃𝙊𝙉 🔱\n- 𝙍𝙀𝙋𝙏𝙃𝙊𝙉 𝘽𝙊𝙏 𝙁𝙊𝙍 ~ {}"
 
-# This is For Ralls - Userbot only!!
+# This is For 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 - Userbot only!!
