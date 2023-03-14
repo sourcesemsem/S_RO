@@ -193,7 +193,7 @@ LOGS.error("᯽︙تـأكد من فـار المجـموعة  PRIVATE_GROUP_BOT
 
   else:
 
-descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @Repthon"
+descript = "عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها - @Repthon"
 
 photobt = await bot.upload_file(file="userbot/extras/Repthon1.jpg")
 
@@ -251,7 +251,7 @@ LOGS.error(
 
 else:
 
-descript = "᯽︙ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @Repthon"
+descript = "᯽︙ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي - @Repthon"
 
 photobt = await bot.upload_file(file="userbot/extras/Repthon2.jpg")
 
