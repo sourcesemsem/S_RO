@@ -70,6 +70,14 @@ SUDO_LIST = {}
 INT_PLUG = ""
 LOAD_PLUG = {}
 
+# Variables
+
+BOTLOG = Config.BOTLOG
+
+BOTLOG_CHATID = Config.BOTLOG_CHATID
+
+PM_LOGGER_GROUP_ID = Config.PM_LOGGER_GROUP_ID
+
 if Config.SESSION:
     session_name = str(Config.SESSION)
     try:
