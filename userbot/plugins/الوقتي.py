@@ -40,7 +40,7 @@ digitalpfp = Config.DIGITAL_PIC
 async def autopic(event):
     if event.fwd_from:
         return
-    if Config.DEFAULT_PIC "https://graph.org/file/63a826d5e5f0003e006a0.jpg"
+    if Config.DEFAULT_PIC or "https://graph.org/file/63a826d5e5f0003e006a0.jpg":
         return await edit_delete(
             event,
             "**عـذرا هنـاك خطـأ**\n وظيفة الصورة التـلقائيـة تحتاج إلى ضبط DEFAULT PIC var في Heroku vars",
