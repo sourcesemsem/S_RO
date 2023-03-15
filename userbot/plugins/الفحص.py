@@ -40,9 +40,9 @@ def check_data_base_heal_th():
     return is_database_working, output
 
 
-@Rallsthon.on(admin_cmd(outgoing=True, pattern="فحص$"))
-@Rallsthon.on(sudo_cmd(pattern="فحص$", allow_sudo=True))
-async def zelzalalive(event):
+@bot.on(baqir_cmd(outgoing=True, pattern="فحص$"))
+@bot.on(sudo_cmd(pattern="فحص$", allow_sudo=True))
+async def baqiralive(event):
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
