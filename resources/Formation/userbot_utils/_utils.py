@@ -1,5 +1,5 @@
-#   Ralls - Userbot
-#   Ralls - Utils
+#   Repthon - Userbot
+#   Repthon - Utils
 
 import asyncio
 import datetime
@@ -90,8 +90,8 @@ def load_module(shortname):
         # support for uniborg
         sys.modules["uniborg.util"] = userbot.utils
         mod.borg = bot
-        mod.Rallsthonbot = bot
-        mod.Rallsthon = bot
+        mod.bot = bot
+        mod.bot = bot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
@@ -245,7 +245,7 @@ def errors_handler(func):
         try:
             await func(errors)
         except BaseException:
-            if Config.PRIVATE_GROUP_BOT_API_ID != -100:
+            if Config.PRIVATE_GROUP_BOT_API_ID != 0:
                 return
             date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
             ftext = "\nDisclaimer:\nThis file is pasted only here ONLY here,"
@@ -558,14 +558,14 @@ def load_admin(shortname):
         mod.reply_id = reply_id
         mod.rd = reply_id
         mod.admin_cmd = admin_cmd
-        mod.zelzal_cmd = admin_cmd
+        mod.baqir_cmd = baqir_cmd
         mod.ed = ed
         mod.edit_delete = ed
         mod.eor = eor
         mod.edit_or_reply = eor
         mod.logger = logging.getLogger(shortname)
         sys.modules["uniborg.util"] = userbot.utils
-        mod.Rallsthonbot = bot
+        mod.bot = bot
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.Admin." + shortname] = mod
         print('%s'% adn + shortname)
@@ -599,7 +599,7 @@ def load_anim(shortname):
         mod.eor = eor
         mod.logger = logging.getLogger(shortname)
         sys.modules["uniborg.util"] = userbot.utils
-        mod.Rallsthonbot = bot
+        mod.bot = bot
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.animations." + shortname] = mod
         print('%s'% ani + shortname)
@@ -637,7 +637,7 @@ def load_tosha(shortname):
         mod.edit_or_reply = eor
         mod.logger = logging.getLogger(shortname)
         sys.modules["uniborg.util"] = userbot.utils
-        mod.Rallsthonbot = bot
+        mod.bot = bot
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.tosha." + shortname] = mod
         print('%s'% tsh + shortname)
@@ -738,4 +738,4 @@ def load_asstpm(shortname):
         print('%s'% pmt + shortname)
 
 # ==============
-# Ralls - Userbot: Utils end
+# Repthon - Userbot: Utils end
