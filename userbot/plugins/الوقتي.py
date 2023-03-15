@@ -40,13 +40,13 @@ digitalpfp = Config.DIGITAL_PIC
 async def autopic(event):
     if event.fwd_from:
         return
-    if Config.DEFAULT_PIC is None:
+    if Config.DEFAULT_PIC or "https://graph.org/file/63a826d5e5f0003e006a0.jpg"
         return await edit_delete(
             event,
             "**عـذرا هنـاك خطـأ**\n وظيفة الصورة التـلقائيـة تحتاج إلى ضبط DEFAULT PIC var في Heroku vars",
             parse_mode=parse_pre,
         )
-    downloader = SmartDL(Config.DEFAULT_PIC, autopic_path, progress_bar=True)
+    downloader = SmartDL(Config.DEFAULT_PIC, autopic_path, progress_bar=False)
     downloader.start(blocking=False)
     while not downloader.isFinished():
         pass
@@ -72,13 +72,13 @@ async def autopic(event):
 async def main(event):
     if event.fwd_from:
         return
-    if Config.DIGITAL_PIC is None:
+    if Config.DIGITAL_PIC or "https://graph.org/file/63a826d5e5f0003e006a0.jpg"
         return await edit_delete(
             event,
             "**عـذرا هنـاك خطـأ**\n وظيفة الصورة التـلقائيـة تحتاج إلى ضبط DIGITAL_PIC var في Heroku vars",
             parse_mode=parse_pre,
         )
-    downloader = SmartDL(digitalpfp, digitalpic_path, progress_bar=True)
+    downloader = SmartDL(digitalpfp, digitalpic_path, progress_bar=False)
     downloader.start(blocking=False)
     while not downloader.isFinished():
         pass
@@ -170,7 +170,7 @@ async def _(event):  # sourcery no-metrics
 
 async def autopicloop():
     AUTOPICSTART = gvarstatus("autopic") == "true"
-    if AUTOPICSTART and Config.DEFAULT_PIC is None:
+    if AUTOPICSTART and Config.DEFAULT_PIC or "https://graph.org/file/63a826d5e5f0003e006a0.jpg"
         if BOTLOG:
             return await bot.send_message(
                 BOTLOG_CHATID,
@@ -247,7 +247,7 @@ async def digitalpicloop():
 
 async def bloom_pfploop():
     BLOOMSTART = gvarstatus("bloom") == "true"
-    if BLOOMSTART and Config.DEFAULT_PIC is None:
+    if BLOOMSTART and Config.DEFAULT_PIC or "https://graph.org/file/63a826d5e5f0003e006a0.jpg"
         if BOTLOG:
             return await bot.send_message(
                 BOTLOG_CHATID,
@@ -301,7 +301,7 @@ async def autoname_loop():
         name = f"{RallsT}{HM}"
         LOGS.info(name)
         try:
-            await bot(functions.account.UpdateProfileRequest(first_name=name))
+            await bot(functions.account.UpdateProfileRequest(last_name=name))
         except FloodWaitError as ex:
             LOGS.warning(str(ex))
             await asyncio.sleep(ex.seconds)
