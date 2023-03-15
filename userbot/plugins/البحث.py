@@ -1,4 +1,4 @@
-#Rallsthon ®
+#Repthon ®
 
 from userbot.helpers import *
 import base64
