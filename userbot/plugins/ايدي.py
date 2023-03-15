@@ -18,8 +18,6 @@ async def _(event):
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TMP_DOWNLOAD_DIRECTORY)
     replied_user = await get_user(event)
-    try:
-        photo, caption = await fetch_info(replied_user, event)   message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = None
     try:
