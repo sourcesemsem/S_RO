@@ -21,7 +21,7 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 DEFAULTUSERBIO = DEFAULT_BIO or "الحمد الله على كل شئ - @Repthon"
 CHANGE_TIME = Config.CHANGE_TIME
 DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
-RallsT = Config.CUSTOM_ALIVE_EMRalls or " "
+RepT = Config.CUSTOM_ALIVE_EM_Rep or ""
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
@@ -298,10 +298,10 @@ async def autoname_loop():
             if normal in normzltext:
               namefont = namerzfont[normzltext.index(normal)]
               HM = HM.replace(normal, namefont)
-        name = f"{RallsT}{HM}"
+        name = f"{RepT}{HM}"
         LOGS.info(name)
         try:
-            await bot(functions.account.UpdateProfileRequest(first_name=name))
+            await bot(functions.account.UpdateProfileRequest(last_name=name))
         except FloodWaitError as ex:
             LOGS.warning(str(ex))
             await asyncio.sleep(ex.seconds)
