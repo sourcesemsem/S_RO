@@ -23,7 +23,7 @@ CHANGE_TIME = Config.CHANGE_TIME
 DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
 RallsT = Config.CUSTOM_ALIVE_EMRalls or " "
 
-FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/Papernotes.ttf"
 
 # @Repthon - @E_7_V
 normzltext = "1234567890"
@@ -72,7 +72,7 @@ async def autopic(event):
 async def main(event):
     if event.fwd_from:
         return
-    if Config.DIGITAL_PIC or "https://graph.org/file/63a826d5e5f0003e006a0.jpg"
+    if Config.DIGITAL_PIC or "https://graph.org/file/63a826d5e5f0003e006a0.jpg":
         return await edit_delete(
             event,
             "**عـذرا هنـاك خطـأ**\n وظيفة الصورة التـلقائيـة تحتاج إلى ضبط DIGITAL_PIC var في Heroku vars",
@@ -170,7 +170,7 @@ async def _(event):  # sourcery no-metrics
 
 async def autopicloop():
     AUTOPICSTART = gvarstatus("autopic") == "true"
-    if AUTOPICSTART and Config.DEFAULT_PIC or "https://graph.org/file/63a826d5e5f0003e006a0.jpg"
+    if AUTOPICSTART and Config.DEFAULT_PIC or "https://graph.org/file/63a826d5e5f0003e006a0.jpg":
         if BOTLOG:
             return await bot.send_message(
                 BOTLOG_CHATID,
@@ -247,7 +247,7 @@ async def digitalpicloop():
 
 async def bloom_pfploop():
     BLOOMSTART = gvarstatus("bloom") == "true"
-    if BLOOMSTART and Config.DEFAULT_PIC or "https://graph.org/file/63a826d5e5f0003e006a0.jpg"
+    if BLOOMSTART and Config.DEFAULT_PIC or "https://graph.org/file/63a826d5e5f0003e006a0.jpg":
         if BOTLOG:
             return await bot.send_message(
                 BOTLOG_CHATID,
