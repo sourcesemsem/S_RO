@@ -10,7 +10,7 @@ from . import *
 import os
 
 @bot.on(baqir_cmd(pattern="طقس (.*)"))
-@Rallsthon.on(sudo_cmd(pattern="طقس (.*)", allow_sudo=True))
+@bot.on(sudo_cmd(pattern="طقس (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
