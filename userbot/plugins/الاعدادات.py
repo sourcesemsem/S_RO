@@ -1,4 +1,4 @@
-#RallsThon
+#Repthon
 
 import asyncio
 import io
@@ -85,7 +85,7 @@ async def _(event):
     )
     stdout, stderr = await process.communicate()
     o = stdout.decode()
-    OUTPUT = f"**⌔∮ [𝗦𝗢𝗨𝗥𝗖𝗘 𝐑𝐀𝐈𝐈𝐒](tg://need_update_for_some_feature/) الالاضافات:**\n{o}"
+    OUTPUT = f"**⌔∮ [𝗦𝗢𝗨𝗥𝗖𝗘 𝗥𝗲𝗽𝘁𝗵𝗼𝗻](tg://need_update_for_some_feature/) الاضافات:**\n{o}"
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
@@ -136,7 +136,7 @@ async def _(event):
         event = await edit_or_reply(event, OUTPUT)
 
 
-@bot.on(admin_cmd(pattern="الفارات$"))
+@bot.on(admin_cmd(pattern="فاراتي$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -151,7 +151,7 @@ async def _(event):
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     OUTPUT = (
-        f"**[𝗦𝗢𝗨𝗥𝗖𝗘 𝐑𝐀𝐈𝐈𝐒](tg://need_update_for_some_feature/) Environment Module:**\n\n\n{o}"
+        f"**[𝗦𝗢𝗨𝗥𝗖𝗘 𝗥𝗲𝗽𝘁𝗵𝗼𝗻](tg://need_update_for_some_feature/) Environment Module:**\n\n\n{o}"
     )
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
@@ -189,7 +189,7 @@ async def _(event):
     )
     stdout, stderr = await process.communicate()
     o = stdout.decode()
-    OUTPUT = f"**[𝗦𝗢𝗨𝗥𝗖𝗘 𝐑𝐀𝐈𝐈𝐒](tg://need_update_for_some_feature/) , تم حساب سرعة السيرفر:**\n{o}"
+    OUTPUT = f"**[𝗦𝗢𝗨𝗥𝗖𝗘 𝗥𝗲𝗽𝘁𝗵𝗼𝗻](tg://need_update_for_some_feature/) , تم حساب سرعة السيرفر:**\n{o}"
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
@@ -217,7 +217,7 @@ CMD_HELP.update(
     \n**الشـرح •• **يعرض لك قائمة الالاضافات الموجودة في البوت\
     \n\n**╮•❐ الامـر ⦂ **`.تاريخ`\
     \n**الشـرح •• **يعرض لك التاريخ باليوم\
-    \n\n**╮•❐ الامـر ⦂ **`.الفارات`\
+    \n\n**╮•❐ الامـر ⦂ **`.فاراتي`\
     \n**الشـرح •• **لعـرض قائمـه بكل الفارات في حسـابك على هيروكـو\
     \n\n**╮•❐ الامـر ⦂ **`.السرعه`\
     \n**الشـرح •• **لــ حساب السرعــه\
