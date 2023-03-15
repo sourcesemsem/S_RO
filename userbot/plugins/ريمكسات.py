@@ -1,6 +1,6 @@
-#Ralls ®
+# Repthon ®
 # Port to UserBot
-# modified by @RallsThon
+# modified by @Repthon
 # Copyright (C) 2022.
 
 import asyncio
@@ -26,7 +26,7 @@ def bruh(name):
     os.system("instantmusic -q -s " + name)
 
 
-@zedthon.on(admin_cmd(pattern="ريماكس ?(.*)"))
+@bot.on(admin_cmd(pattern="ريماكس ?(.*)"))
 
 async def remaxzedthon(zedrm):
     ok = zedrm.pattern_match.group(1)
@@ -58,7 +58,7 @@ async def zed(event):
     await event.delete()
 
 
-@zedthon.on(admin_cmd(pattern="^.dzd(?: |$)(.*)", outgoing=True))
+@bot.on(admin_cmd(pattern="^.dzd(?: |$)(.*)", outgoing=True))
 async def DeezLoader(Deezlod):
     if Deezlod.fwd_from:
         return
