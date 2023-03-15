@@ -29,9 +29,9 @@ async def writer(e):
         text = e.text.split(maxsplit=1)[1]
     else:
         return await e.edit("**- بالـرد على نص او .رساله + النص**")
-    img = Image.open("ZED-BOT/malath/ppho.jpg")
+    img = Image.open("Zilzal/malath/ppho.jpg")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("ZED-BOT/malath/zarz.ttf", 30)
+    font = ImageFont.truetype("Zilzal/malath/zarz.ttf", 30)
     x, y = 150, 140
     lines = text_set(text)
     line_height = font.getsize("hg")[1]
