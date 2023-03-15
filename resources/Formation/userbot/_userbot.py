@@ -137,13 +137,15 @@ if Config.PM_LOGGER_GROUP_ID == 0:
 elif str(Config.PM_LOGGER_GROUP_ID)[0] != "-":
 
     Config.PM_LOGGER_GROUP_ID = int("-" + str(Config.PM_LOGGER_GROUP_IDill verify the both loggers group
+    
 async def verifyLoggerGroup():
+                                             
 
-"""
+    """
 
-التاكد من كروب التخزين
+    كروب التخزين
 
-"""
+    """
 
     flag = False
 
@@ -151,7 +153,7 @@ async def verifyLoggerGroup():
 
         try:
 
-        entity = await bot.get_entity(BOTLOG_CHATID)
+            entity = await jmub.get_entity(BOTLOG_CHATID)
 
             if not isinstance(entity, types.User) and not entity.creator:
 
@@ -187,11 +189,11 @@ async def verifyLoggerGroup():
 
         descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  𓆰."
 
-        photobt = await bot.upload_file(file="userbot/extras/Repthon1.jpg")
+        photobt = await jmub.upload_file(file="razan/pic/Jmthonp.jpg")
 
         _, groupid = await create_supergroup(
 
-            "مــجــمــوعــة اشــعــارات ريبـــثون", bot, Config.BOT_USERNAME, descript, photobt
+            "كروب بوت جمثون", jmub, Config.TG_BOT_USERNAME, descript, photobt
 
         )
 
@@ -237,12 +239,13 @@ async def verifyLoggerGroup():
 
         descript = "❃ لا تحذف او تغادر المجموعه وظيفتها حفظ رسائل التي تأتي على الخاص"
 
-        photobt = await bot.upload_file(file="userbot/extras/Repthon2.jpg")
+        photobt = await jmub.upload_file(file="razan/pic/Jmthonp.jpg")
 
         _, groupid = await create_supergroup(
 
-            "مجموعة التخزين", bot, Config.BOT_USERNAME
-          )
+            "مجموعة التخزين", jmub, Config.TG_BOT_USERNAME, descript, photobt
+
+        )
 
         addgvar("PM_LOGGER_GROUP_ID", groupid)
 
@@ -254,8 +257,12 @@ async def verifyLoggerGroup():
 
         executable = sys.executable.replace(" ", "\\ ")
 
-        args = [executable, "-m", "userbot"]
+        args = [executable, "-m", "jmub"]
 
         os.execle(executable, *args, os.environ)
 
         sys.exit(0)
+
+                                      
+        
+
