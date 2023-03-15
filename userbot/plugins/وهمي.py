@@ -9,12 +9,12 @@ from ..helpers import get_user_from_event
 from . import *
 import os
 
-@Rallsthon.on(QQ070_cmd(pattern="طقس (.*)"))
+@bot.on(baqir_cmd(pattern="طقس (.*)"))
 @Rallsthon.on(sudo_cmd(pattern="طقس (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    Ralls = "adf0cf22618186fc11e9f89c090cb356"
+    Rep = "adf0cf22618186fc11e9f89c090cb356"
     sample_url = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
     input_str = event.pattern_match.group(1)
     async with aiohttp.ClientSession() as session:
@@ -54,7 +54,7 @@ async def _(event):
         await edit_or_reply(event, response_api["message"])
 
 
-@Rallsthon.on(QQ070_cmd(pattern="يكتب(?: |$)(.*)"))
+@bot.on(baqir_cmd(pattern="يكتب(?: |$)(.*)"))
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -72,7 +72,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@Rallsthon.on(QQ070_cmd(pattern="صوتيه(?: |$)(.*)"))
+@bot.on(baqir_cmd(pattern="صوتيه(?: |$)(.*)"))
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -90,7 +90,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@Rallsthon.on(QQ070_cmd(pattern="فيد(?: |$)(.*)"))
+@bot.on(baqir_cmd(pattern="فيد(?: |$)(.*)"))
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -108,7 +108,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@Rallsthon.on(QQ070_cmd(pattern="لعبه(?: |$)(.*)"))
+@bot.on(baqir_cmd(pattern="لعبه(?: |$)(.*)"))
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
