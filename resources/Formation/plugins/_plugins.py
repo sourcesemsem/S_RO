@@ -30,6 +30,13 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ralls Userbot"
 BOT_USERNAME = Config.BOT_USERNAME
 ICSBOT = Config.BOT_USERNAME
 ICSB = Config.BOT_USERNAME
+REPTHON_IMG = 
+[Repthon_1.jpg,
+Repthon_2.jpg,
+Repthon2_.jpg,
+IMG_20230308_213410_285.jpg,
+IMG_20230308_213406_400.jpg,
+IMG_20230308_213404_524.jpg,]
 
 # =================== Owner - QQ070 ===================
 
@@ -75,7 +82,7 @@ R = (
     "**𓄂-** 𝙎𝙊𝙐𝙍𝘾𝙀 𝘿𝙀𝙑 **⪼**  [𓄂 روجـــر 𓄂](t.me/E_7_V)   \n"
     "**𓆰** 𝙎𝙊𝙐𝙍𝘾𝙀 𝙍𝙀𝙋𝙊 **⪼**  [𝚁𝚎𝚙𝚝𝚑𝚘𝚗](https://t.me/Repthon)  "
 )
-K = "https://github.com/Rallsthon/Ralls_USERBOT"
+K = "https://github.com/rogerpq/Ralls_USERBOT"
 
 # Alive Bot 
 TOSH = (
