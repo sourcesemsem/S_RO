@@ -1,4 +1,4 @@
-#RallsThon ®
+#Repthon ®
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
@@ -16,7 +16,7 @@ async def _(event):
     reply_to_id = await reply_id(event)
     if event.reply_to_msg_id:
         reply_to_id = await event.get_reply_message()
-    chat = "@@Ralls1_bot"
+    chat = "@Qivlbot"
     catevent = await edit_or_reply(event, "**جـارِ الزغـرفـه💞🧸...**")
     async with event.client.conversation(chat) as conv:
         try:
@@ -27,7 +27,7 @@ async def _(event):
             response = await response
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await catevent.edit("**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @@Ralls1_bot .. ثم اعـد استخدام الامـر ...🤖♥️**")
+            await catevent.edit("**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @Qivlbot .. ثم اعـد استخدام الامـر ...🤖♥️**")
             return
         if response.text.startswith("I can't find that"):
             await catevent.edit("sorry i can't find it")
@@ -47,7 +47,7 @@ async def _(event):
     if not reply_message.text:
         await edit_or_reply(event, "**باضافـة الكلمـة المراد زغرفتها للأمـر .. مثال : .زغرفه + كلمـه 💞🧸.**")
         return
-    chat = "@@Ralls1_bot"
+    chat = "@Qivlbot"
     catevent = await edit_or_reply(event, "**باضافـة الكلمـة المراد زغرفتها للأمـر .. مثال : .زغرفه + كلمـه 💞🧸.**")
     async with event.client.conversation(chat) as conv:
         try:
@@ -59,7 +59,7 @@ async def _(event):
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
             await catevent.edit(
-                "**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @@Ralls1_bot .. ثم اعـد استخدام الامـر ...🤖♥️**"
+                "**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @Qivlbot .. ثم اعـد استخدام الامـر ...🤖♥️**"
             )
             return
         if response.text.startswith(""):
