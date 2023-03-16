@@ -50,13 +50,13 @@ async def baqiralive(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
-    R_EMOJI = Config.CUSTOM_ALIVE_EMOJI or "⎆┊"
+    Z_EMOJI = Config.CUSTOM_ALIVE_EMOJI or "⎆┊"
     ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "** بـوت ريبـــثون 𝗥𝗘𝗣𝗧𝗛𝗢𝗡 يعمـل .. بنجـاح ☑️ 𓆩 **"
-    ROG_IMG = Config.ALIVE_PIC or "userbot/extras/Repthon_1.jpg"
-    Repthon_caption = Config.Repthon_MEDIA or Repmp
+    ZZL_IMG = Config.ALIVE_PIC or "userbot/extras/Repthon_1.jpg"
+    Ralls_caption = Config.Ralls_MEDIA or Rallsmp
     caption = Repthon_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
-        R_EMOJI=R_EMOJI,
+        Z_EMOJI=Z_EMOJI,
         mention=mention,
         uptime=uptime,
         telever=version.__version__,
@@ -65,9 +65,9 @@ async def baqiralive(event):
         dbhealth=check_sgnirts,
         ping=ms,
     )
-    if ROG_IMG:
-        ROG = [x for x in ROG_IMG.split()]
-        PIC = random.choice(ROG)
+    if ZZL_IMG:
+        ROG = [x for x in ZZL_IMG.split()]
+        PIC = random.choice(ZLL)
         try:
             await event.client.send_file(
                 event.chat_id, PIC, caption=caption, reply_to=reply_to_id
@@ -85,7 +85,7 @@ async def baqiralive(event):
         )
 
 
-Repmp = """{ALIVE_TEXT}
+Rallsmp = """{ALIVE_TEXT}
 
 **{Z_EMOJI} قاعدۿ البيانات :** تعمل بنـجاح
 **{Z_EMOJI} إصـدار التـيليثون :** `{telever}`
