@@ -1,10 +1,10 @@
-# Rallsthon - UserBot
-# Copyright (C) 2022 Rallsthon . All Rights Reserved
+# Repthon - UserBot
+# Copyright (C) Repthon. All Rights Reserved
 # PLease read the GNU Affero General Public License in
 
 """ Command: اوامـر حمـاية المجمـوعات والقنـوات بالمسـح والطـرد والتقييـد
-Credit: @RallsThon
-@QQ070 - كتـابـة الملـف :  الريس"""
+Credit: @Repthon
+@E_7_V - كتـابـة الملـف :  روجــر"""
 
 
 import asyncio
@@ -49,8 +49,8 @@ ANTI_DDDD_RallsTHON_MODE = ChatBannedRights(
 )
 
 
-@Rallsthon.on(admin_cmd(pattern=r"قفل (.*)"))
-@Rallsthon.on(sudo_cmd(pattern=r"قفل (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"قفل (.*)"))
+@bot.on(sudo_cmd(pattern=r"قفل (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -115,8 +115,8 @@ async def _(event):
         return await edit_or_reply(event, "`❈╎عذراً لايمكنك قفل اي شي هنا 𓆰•`")
 
 
-@Rallsthon.on(admin_cmd(pattern="فتح (.*)"))
-@Rallsthon.on(sudo_cmd(pattern="فتح (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="فتح (.*)"))
+@bot.on(sudo_cmd(pattern="فتح (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -184,12 +184,12 @@ async def _(event):
         return await edit_or_reply(event, "`❈╎عذراً لايمكنك قفل اي شي هنا 𓆰•`")
 
 
-@Rallsthon.on(admin_cmd(pattern="الحاله$"))
-@Rallsthon.on(sudo_cmd(pattern="الحاله$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="الحاله$"))
+@bot.on(sudo_cmd(pattern="الحاله$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-   # All Rights Reserved for "Rallsthon - UserBot" "الريس"
+   # All Rights Reserved for "Repthon - UserBot" "روجــر"
     res = ""
     current_Ralls_locks = get_locks(event.chat_id)
     if not current_Ralls_locks:
@@ -223,8 +223,8 @@ async def _(event):
         logger.info(str(e))
     await edit_or_reply(event, res)
 
-@Rallsthon.on(events.MessageEdited())
-@Rallsthon.on(events.NewMessage())
+@bot.on(events.MessageEdited())
+@bot.on(events.NewMessage())
 async def check_incoming_messages(event):
     if not event.is_private:
         chat = await event.get_chat()
@@ -232,7 +232,7 @@ async def check_incoming_messages(event):
         creator = chat.creator
         if not admin and not creator:
             return
-    Ralls_dev = (2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055)
+    Rep_dev = (5502537272, 1260465030, 5502537272, 1260465030)
     admin = event.sender_id
     Ralls = await bot.get_permissions(event.chat_id, admin)
     malath = bot.uid
@@ -276,7 +276,7 @@ async def check_incoming_messages(event):
 	            )
 	            update_lock(Ralls_id, "game", False)
     if is_locked(Ralls_id, "forward") and event.fwd_from:
-        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Rep_dev:
             return
         else:
 	        try:
@@ -292,7 +292,7 @@ async def check_incoming_messages(event):
 	            )
 	            update_lock(Ralls_id, "forward", False)
     if is_locked(Ralls_id, "button") and "@" in hhh:
-        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Rep_dev:
             return
         else:
 	        try:
@@ -308,7 +308,7 @@ async def check_incoming_messages(event):
 	            )
 	            update_lock(Ralls_id, "button", False)
     if is_locked(Ralls_id, "egame") and ("فارسى" in hhh or "خوببی" in hhh or "میخوام" in hhh or "کی" in hhh or "پی" in hhh or "گ" in hhh or "خسته" in hhh or "صكص" in hhh or "راحتی" in hhh or "بیام" in hhh or "بپوشم" in hhh or "گرمه" in hhh or "چ" in hhh or "چه" in hhh or "ڬ" in hhh or "ٺ" in hhh or "چ" in hhh or "ڿ" in hhh or "ڇ" in hhh or "ڀ" in hhh or "ڎ" in hhh or "ݫ" in hhh or "ژ" in hhh or "ڟ" in hhh or "۴" in hhh or "ريسن" in hhh or "دخترا" in hhh or "كسى" in hhh or "مک" in hhh or "خالى" in hhh or "ݜ" in hhh or "ڸ" in hhh or "پ" in hhh or "بند" in hhh or "عزيزم" in hhh or "برادر" in hhh or "باشى" in hhh or "ميخوام" in hhh or "خوبى" in hhh or "ميدم" in hhh or "كى اومدى" in hhh or "خوابيدين" in hhh):
-        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Rep_dev:
             return
         else:
 	        try:
@@ -324,7 +324,7 @@ async def check_incoming_messages(event):
 	            )
 	            update_lock(Ralls_id, "egame", False)
     if is_locked(Ralls_id, "url") and "http" in hhh:
-        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Rep_dev:
             return
         else:
 	        try:
@@ -340,7 +340,7 @@ async def check_incoming_messages(event):
 	            )
 	            update_lock(Ralls_id, "url", False)
     if is_locked(Ralls_id, "inline") and event.message.via_bot:
-        if admin == malath or Ralls.is_admin or admin in Ralls_dev:
+        if admin == malath or Ralls.is_admin or admin in Rep_dev:
             return
         else:
 	        try:
@@ -357,8 +357,8 @@ async def check_incoming_messages(event):
 	            update_lock(Ralls_id, "inline", False)
 
 
-# Copyright (C) 2022 Rallsthon
-@Rallsthon.on(events.ChatAction())
+# Copyright (C) 2022 Repthon
+@bot.on(events.ChatAction())
 async def _(event):
     if not event.is_private:
         chat = await event.get_chat()
@@ -366,8 +366,8 @@ async def _(event):
         creator = chat.creator
         if not admin and not creator:
             return
-    # All Rights Reserved for "Rallsthon - UserBot" "الريس"
-    Ralls_dev = (2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055)
+    # All Rights Reserved for "Repthon - UserBot" "ريبـــثون"
+    Rep_dev = (5502537272, 1260465030, 5502537272, 1260465030)
     malath = bot.uid
     if not is_locked(event.chat_id, "contact"):
         return
@@ -381,7 +381,7 @@ async def _(event):
             user_obj = await event.client.get_entity(user_id)
             if event.user_added:
                 is_ban_able = True
-                if admin_by == malath or Ralls.is_admin or admin_by in Ralls_dev:
+                if admin_by == malath or Ralls.is_admin or admin_by in Rep_dev:
                     return
                 else:
 	                try:
@@ -411,8 +411,8 @@ async def _(event):
             )
 
 
-# Copyright (C) 2022 Rallsthon
-@Rallsthon.on(events.ChatAction())
+# Copyright (C) 2022 Repthon
+@bot.on(events.ChatAction())
 async def _(event):
     if not event.is_private:
         chat = await event.get_chat()
@@ -421,7 +421,7 @@ async def _(event):
         if not admin and not creator:
             return
     # All Rights Reserved for "Rallsthon - UserBot" "الريس"
-    Ralls_dev = (2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055)
+    Rep_dev = (5502537272, 1260465030, 5502537272, 1260465030)
     if not is_locked(event.chat_id, "location"):
         return
     if event.user_joined: 
@@ -430,7 +430,7 @@ async def _(event):
         rights = types.ChatBannedRights(until_date=None, view_messages=True)
         if event.user_joined:
             is_ban_able = True
-            if Rallsy.id in Ralls_dev:
+            if Rallsy.id in Rep_dev:
                 return
             else:
 	            try:
@@ -461,7 +461,7 @@ async def _(event):
 
 
 # Copyright (C) 2022 Rallsthon
-@Rallsthon.on(events.ChatAction())
+@bot.on(events.ChatAction())
 async def _(event):
     if not event.is_private:
         chat = await event.get_chat()
@@ -470,7 +470,7 @@ async def _(event):
         if not admin and not creator:
             return
     # All Rights Reserved for "Rallsthon - UserBot" "الريس"
-    Ralls_dev = (2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055, 2019189055)
+    Rep_dev = (5502537272, 1260465030, 5502537272, 1260465030)
     malath = bot.uid
     if not is_locked(event.chat_id, "bots"):
         return
@@ -486,7 +486,7 @@ async def _(event):
             user_obj = await event.client.get_entity(user_id)
             if user_obj.bot:
                 is_ban_able = True
-                if admin_by == malath or admin_by in Ralls_dev:
+                if admin_by == malath or admin_by in Rep_dev:
                     return
                 else:
 	                try:
@@ -516,9 +516,9 @@ async def _(event):
             )
 
 
-# Copyright (C) 2022 Rallsthon
-@Rallsthon.on(admin_cmd(pattern=f"البوتات ?(.*)"))
-@Rallsthon.on(sudo_cmd(pattern="البوتات ?(.*)", allow_sudo=True))
+# Copyright (C) 2022 Repthon
+@bot.on(admin_cmd(pattern=f"البوتات ?(.*)"))
+@bot.on(sudo_cmd(pattern="البوتات ?(.*)", allow_sudo=True))
 async def admin(Ralls):
     con = Ralls.pattern_match.group(1).lower()
     del_u = 0
@@ -530,7 +530,7 @@ async def admin(Ralls):
                 del_u += 1
                 await sleep(0.5)
         if del_u > 0:
-            del_status = f"🛂**┊كشـف البـوتات -** 𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉\
+            del_status = f"🛂**┊كشـف البـوتات -** 𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻\
                            \n\n**❈╎تم العثور على** **{del_u}**  **بـوت**\
                            \n**❈╎لطـرد البوتات استخدم الامـر التالي ⩥** `.البوتات طرد`"
         await event.edit(del_status)
@@ -559,7 +559,7 @@ async def admin(Ralls):
     if del_u > 0:
         del_status = f"**❈╎تم طـرد  {del_u}  بـوت .. بنجـاح🚮**"
     if del_a > 0:
-        del_status = f"❇️**┊طـرد البـوتات -** 𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉\
+        del_status = f"❇️**┊طـرد البـوتات -** 𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻\
                            \n\n**❈╎تم طـرد  {del_u}  بـوت بنجـاح** 🚮 \
                            \n**❈╎لـم يتـم طـرد  {del_a}  بـوت لانـها اشـراف ..⅏** \
                            \n\n**❈╎الان لـ الحفـاظ علـى كروبك/قناتك من التصفيـر ارسـل ⩥** `.قفل البوتات`"
