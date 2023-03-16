@@ -141,7 +141,7 @@ async def fetch_info(replied_user, event):
     caption += f"<b> • 🌚 | صـوره  ⇦ </b> {replied_user_profile_photos_count} </b>\n"
     caption += f"<b> • 🌚 | نــوعه   ⇦  {fof} </b>\n"
     caption += f"<b> • 🌚 | نسبتـه  ⇦  {yoy} </b>\n\n\n"
-    caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒 𓆪 </b> - @RallsThon "
+    caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 𓆪 </b> - @Repthon "
     return photo, caption
 
 CMD_HELP.update(
