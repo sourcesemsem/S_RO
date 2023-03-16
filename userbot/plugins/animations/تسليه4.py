@@ -3,7 +3,7 @@
 import asyncio
 from . import ALIVE_NAME
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ralls - Userbot "
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else ""
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="قاتل( (.*)|$)"))
