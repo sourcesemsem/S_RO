@@ -40,7 +40,7 @@ def check_data_base_heal_th():
     return is_database_working, output
 
 
-@bot.on(baqir_cmd(outgoing=True, pattern="فحص$"))
+@bot.on(admin_cmd(outgoing=True, pattern="فحص$"))
 @bot.on(sudo_cmd(pattern="فحص$", allow_sudo=True))
 async def baqiralive(event):
     reply_to_id = await reply_id(event)
