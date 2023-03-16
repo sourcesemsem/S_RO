@@ -52,7 +52,7 @@ async def baqiralive(event):
     _, check_sgnirts = check_data_base_heal_th()
     Z_EMOJI = Config.CUSTOM_ALIVE_EMOJI or "⎆┊"
     ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "** بـوت ريبـــثون 𝗥𝗘𝗣𝗧𝗛𝗢𝗡 يعمـل .. بنجـاح ☑️ 𓆩 **"
-    ZZL_IMG = Config.ALIVE_PIC or "userbot/extras/Repthon_1.jpg"
+    ZZL_IMG = Config.ALIVE_PIC or "https://graph.org/file/615da9bbf808580163ca4.jpg"
     Ralls_caption = Config.Ralls_MEDIA or Rallsmp
     caption = Repthon_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
