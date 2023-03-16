@@ -1,4 +1,4 @@
-# This File for Ralls® written by ~ @QQ070
+# This File for Repthon© written by ~ @E_7_V
 
 import os
 import random
@@ -10,7 +10,7 @@ from telethon.utils import get_input_location
 
 TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 
-# حقوق ريس ثــون -- الريس_علش -- @RallsThoN
+# حقوق ريبـــثون -- بــاقــر_روجــر -- @Repthon
 
 hhh = [
     "جلب شوارع 🐕‍🦺",
@@ -49,7 +49,7 @@ async def who(event):
     try:
         photo, caption = await fetch_info(replied_user, event)
     except AttributeError:
-        await eor(ics, "لايمكنني العثور ع الحيوان")
+        await eor()
         return
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
