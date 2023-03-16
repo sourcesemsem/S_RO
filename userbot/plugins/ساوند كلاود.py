@@ -11,7 +11,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from . import *
 
-@bot.on(baqir_cmd(pattern="ساوند$", outgoing=True))
+@bot.on(admin_cmd(pattern="ساوند$", outgoing=True))
 @bot.on(sudo_cmd(pattern="ساوند$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -45,7 +45,7 @@ async def _(event):
             await event.client.send_message(event.chat_id, response.message)
 
 
-@borg.on(baqir_cmd(pattern="كلود ?(.*)"))
+@borg.on(admin_cmd(pattern="كلود ?(.*)"))
 async def Rep(event):
     if event.fwd_from:
         return
