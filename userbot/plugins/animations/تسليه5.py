@@ -2,8 +2,8 @@
 
 import asyncio
 
-@bot.on(admin_cmd(pattern=f"تتحميل$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"تتحميل$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"تحميل$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"تحميل$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -85,12 +85,12 @@ async def _(event):
         "😧",
         "😡",
         "😢",
-        "‎**سورس ريس ثـون**",
+        "‎**سورس ريبـــثون**",
         "😁",
         "😧",
         "😡",
         "😢",
-        "__**[مطور السورس]**__(t.me/QQ070)",
+        "__**[مطور السورس]**__(t.me/E_7_V)",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
