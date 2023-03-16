@@ -40,7 +40,7 @@ def check_data_base_heal_th():
     return is_database_working, output
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="فحص$"))
+@bot.on(baqir_cmd(outgoing=True, pattern="فحص$"))
 @bot.on(sudo_cmd(pattern="فحص$", allow_sudo=True))
 async def baqiralive(event):
     reply_to_id = await reply_id(event)
@@ -50,24 +50,24 @@ async def baqiralive(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
-    Z_EMOJI = Config.CUSTOM_ALIVE_EMOJI or "⎆┊"
-    ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "** بـوت  ريبـــثون 𝐑𝐄𝐏𝐓𝐇𝐎𝐍 يعمـل .. بنجـاح ☑️ 𓆩 **"
-    ZZL_IMG = Config.ALIVE_PIC or "https://graph.org/file/615da9bbf808580163ca4.jpg"
-    Ralls_caption = Config.Ralls_MEDIA or Rallsmp
-    caption = Ralls_caption.format(
+    R_EMOJI = Config.CUSTOM_ALIVE_EMOJI or "⎆┊"
+    ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "** بـوت ريبـــثون 𝗥𝗘𝗣𝗧𝗛𝗢𝗡 يعمـل .. بنجـاح ☑️ 𓆩 **"
+    ROG_IMG = Config.ALIVE_PIC or "userbot/extras/Repthon_1.jpg"
+    Repthon_caption = Config.Repthon_MEDIA or Repmp
+    caption = Repthon_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
-        Z_EMOJI=Z_EMOJI,
+        R_EMOJI=R_EMOJI,
         mention=mention,
         uptime=uptime,
         telever=version.__version__,
-        zdver="3.1.3",
+        repver="3.1.3",
         pyver=python_version(),
         dbhealth=check_sgnirts,
         ping=ms,
     )
-    if ZZL_IMG:
-        ZZL = [x for x in ZZL_IMG.split()]
-        PIC = random.choice(ZZL)
+    if ROG_IMG:
+        ROG = [x for x in ROG_IMG.split()]
+        PIC = random.choice(ROG)
         try:
             await event.client.send_file(
                 event.chat_id, PIC, caption=caption, reply_to=reply_to_id
@@ -85,11 +85,11 @@ async def baqiralive(event):
         )
 
 
-Rallsmp = """{ALIVE_TEXT}
+Repmp = """{ALIVE_TEXT}
 
 **{Z_EMOJI} قاعدۿ البيانات :** تعمل بنـجاح
 **{Z_EMOJI} إصـدار التـيليثون :** `{telever}`
-**{Z_EMOJI} إصـدار ريبـــثون :** `{zdver}`
+**{Z_EMOJI} إصـدار ريبـــثون :** `{repver}`
 **{Z_EMOJI} إصـدار البـايثون :** `{pyver}`
 **{Z_EMOJI} الوقـت :** `{uptime}`
 **{Z_EMOJI} المسـتخدم:** {mention}
