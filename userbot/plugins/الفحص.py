@@ -66,8 +66,10 @@ async def baqiralive(event):
         ping=ms,
     )
     if ZZL_IMG:
-        ZLL_IMG = [x for x in ZZL_IMG.split()]
-        PIC = random.choice(ZLL)
+     
+    ZZL = [x for x in ZZL_IMG.split()]
+
+    PIC = random.choice(ZZL)
         try:
             await event.client.send_file(
                 event.chat_id, PIC, caption=caption, reply_to=reply_to_id
