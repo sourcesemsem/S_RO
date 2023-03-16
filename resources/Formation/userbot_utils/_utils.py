@@ -73,7 +73,7 @@ def load_module(shortname):
         mod.reply_id = reply_id
         mod.rd = reply_id
         mod.admin_cmd = admin_cmd
-        mod.admin_cmd = baqir_cmd
+        mod.baqir_cmd = admin_cmd
         mod._icssutils = _icssutils
         mod.icut = _icssutils
         mod._icsstools = _icsstools
@@ -558,7 +558,7 @@ def load_admin(shortname):
         mod.reply_id = reply_id
         mod.rd = reply_id
         mod.admin_cmd = admin_cmd
-        mod.admin_cmd = baqir_cmd
+        mod.baqir_cmd = admin_cmd
         mod.ed = ed
         mod.edit_delete = ed
         mod.eor = eor
@@ -630,7 +630,7 @@ def load_tosha(shortname):
         mod.reply_id = reply_id
         mod.rd = reply_id
         mod.admin_cmd = admin_cmd
-        mod.admin_cmd = baqir_cmd
+        mod.baqir_cmd = admin_cmd
         mod.ed = ed
         mod.edit_delete = ed
         mod.eor = eor
