@@ -1,7 +1,6 @@
 import os
 from PIL import Image, ImageDraw, ImageFont
 from . import *
-from . import ALIVE_NAME, *
 
 
 def text_set(text):
@@ -20,7 +19,7 @@ def text_set(text):
     return lines[:25]
     
 
-@bot.on(baqir_cmd(pattern="رساله ?(.*)"))
+@bot.on(admin_cmd(pattern="رساله ?(.*)"))
 async def writer(e):
     if e.reply_to:
         reply = await e.get_reply_message()
