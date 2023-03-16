@@ -1,11 +1,11 @@
-#RallsThon ®
+#Repthon ®
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 
-@bot.on(admin_cmd(pattern="تيكتوك$", outgoing=True))
-@bot.on(sudo_cmd(pattern="تيكتوك$", allow_sudo=True))
+@bot.on(baqir_cmd(pattern="تيك توك$", outgoing=True))
+@bot.on(sudo_cmd(pattern="تيك توك$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -21,7 +21,7 @@ async def _(event):
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=1332941342)
+                events.NewMessage(incoming=True, from_users=5502537272)
             )
             await event.client.forward_messages(chat, reply_message)
             response = await response
@@ -41,7 +41,7 @@ async def _(event):
 CMD_HELP.update(
     {
         "تيك توك": "**اسم الاضافـه : **`تيك توك`\
-    \n\n**╮•❐ الامـر ⦂ **`.تيكتوك` بالرد على الرابط\
+    \n\n**╮•❐ الامـر ⦂ **`.تيك توك` بالرد على الرابط\
     \n**الشـرح •• **تحميل مقاطـع الفيديـو من تيـك تـوك"
     }
 )
