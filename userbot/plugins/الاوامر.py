@@ -1058,7 +1058,7 @@ import time
 from . import StartTime, get_readable_time, reply_id
 
 DEFAULTUSER = "Repthon"
-CAT_IMG = "userbot/extras/Repthon_1"
+CAT_IMG = "userbot/extras/Repthon_1.jpg"
 CUSTOM_ALIVE_TEXT = "𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 - 𝑫𝑬𝑽𝑳𝑶𝑷𝑬𝑹 𓆪"
 EMOJI = "𓄂†"
 
