@@ -65,10 +65,8 @@ async def baqiralive(event):
         dbhealth=check_sgnirts,
         ping=ms,
     )
-    if ZZL_IMG:
-     
+    if ZZL_IMG:     
     ZZL = [x for x in ZZL_IMG.split()]
-
     PIC = random.choice(ZZL)
         try:
             await event.client.send_file(
