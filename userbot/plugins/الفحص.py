@@ -35,7 +35,7 @@ def check_data_base_heal_th():
         output = f"❌ {str(e)}"
         is_database_working = False
     else:
-        output = "تعمل بنجاح"
+        output = "تــعــمــل بــنــجــاح"
         is_database_working = True
     return is_database_working, output
 
