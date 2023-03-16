@@ -30,13 +30,6 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ralls Userbot"
 BOT_USERNAME = Config.BOT_USERNAME
 ICSBOT = Config.BOT_USERNAME
 ICSB = Config.BOT_USERNAME
-REPTHON_IMG = 
-[Repthon_1.jpg,
-Repthon_2.jpg,
-Repthon2_.jpg,
-IMG_20230308_213410_285.jpg,
-IMG_20230308_213406_400.jpg,
-IMG_20230308_213404_524.jpg,]
 
 # =================== Owner - QQ070 ===================
 
