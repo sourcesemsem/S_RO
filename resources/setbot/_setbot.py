@@ -39,7 +39,7 @@ async def setbot():
                await asyncio.sleep(1)
                await bot.send_message("@botfather", UL)
                await asyncio.sleep(1)
-               await bot.send_file("@botfather", "userbot/extras/ex_7.jpeg")
+               await bot.send_file("@botfather", "userbot/extras/Repthon3.jpg")
                await asyncio.sleep(2)
                await bot.send_message("@botfather", "/setabouttext")
                await asyncio.sleep(1)
