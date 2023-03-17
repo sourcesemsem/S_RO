@@ -10,6 +10,7 @@ from . import *
 
 from userbot import bot
 
+from userbot.plugins.sql_helper.globals import addgvar, delgvar, gvarstatus
 
 a = "qwertyuiopassdfghjklzxcvbnm"
 b = "1234567890"
