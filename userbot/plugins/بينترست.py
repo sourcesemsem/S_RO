@@ -1,3 +1,4 @@
+# كتابة الملف - @E_7_V
 import os
 import re
 
@@ -25,7 +26,7 @@ def get_download_url(link):
     return download_url
 
 
-@bot.on(admin_cmd(pattern="ترست?(?:\s|$)([\s\S]*)"))
+@bot.on(admin_cmd(pattern="بينس?(?:\s|$)([\s\S]*)"))
 async def _(event):
     M = event.pattern_match.group(1)
     links = re.findall(r"\bhttps?://.*\.\S+", M)
@@ -37,15 +38,15 @@ async def _(event):
     else:
         pass
     A = await event.respond("**╮•⎚ جـارِ التحميل ... 🧸🎈**")
-    QQ070 = get_download_url(M)
-    await event.client.send_file(event.chat.id, QQ070)
+    ZQ_LO = get_download_url(M)
+    await event.client.send_file(event.chat.id, ZQ_LO)
     await A.delete()
 
 
 CMD_HELP.update(
     {
         "بنترست": "**اسم الاضافـه :**`بنترست`\
-    \n\n**  ╮•❐ الامـر ⦂** `.ترست + رابط ` )`\
+    \n\n**  ╮•❐ الامـر ⦂** `.بينس + رابط ` )`\
     \n**  •  الشـرح •• **تحمـيل مقاطـع الفيديـو والصـور مـن موقـع بنترست عبـر الرابـط."
     }
 )
