@@ -1,4 +1,4 @@
-#الريس
+#🗿روجر كان هنا
 import random
 import re
 import time
@@ -24,7 +24,7 @@ from . import reply_id as rd
 
 def check_data_base_heal_th():
     is_database_working = False
-    output = "لم يتم تعيين قاعدة بيانات"
+    output = "لــم يــتــم تــعــيــيــن قــاعــدة بــيــانــات"
     if not Config.DB_URI:
         return is_database_working, output
     from userbot.plugins.sql_helper import SESSION
@@ -35,14 +35,14 @@ def check_data_base_heal_th():
         output = f"❌ {str(e)}"
         is_database_working = False
     else:
-        output = "تعمل بنجاح"
+        output = "تــعــمــل بــنــجــاح"
         is_database_working = True
     return is_database_working, output
 
 
-@Rallsthon.on(admin_cmd(outgoing=True, pattern="فحص$"))
-@Rallsthon.on(sudo_cmd(pattern="فحص$", allow_sudo=True))
-async def zelzalalive(event):
+@bot.on(admin_cmd(outgoing=True, pattern="فحص$"))
+@bot.on(sudo_cmd(pattern="فحص$", allow_sudo=True))
+async def baqiralive(event):
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
@@ -51,8 +51,8 @@ async def zelzalalive(event):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     Z_EMOJI = Config.CUSTOM_ALIVE_EMOJI or "⎆┊"
-    ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "** بـوت  ريسثــون 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉  يعمـل .. بنجـاح ☑️ 𓆩 **"
-    ZZL_IMG = Config.ALIVE_PIC or "https://telegra.ph/file/57d51af1ca93d8cc8a958.jpg"
+    ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "**بـوت ريبـــثون 𝗥𝗘𝗣𝗧𝗛𝗢𝗡 يعمـل .. بنجـاح ☑️ 𓆩**"
+    ZZL_IMG = Config.ALIVE_PIC or "https://graph.org/file/615da9bbf808580163ca4.jpg"
     Ralls_caption = Config.Ralls_MEDIA or Rallsmp
     caption = Ralls_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
@@ -60,7 +60,7 @@ async def zelzalalive(event):
         mention=mention,
         uptime=uptime,
         telever=version.__version__,
-        zdver="7.7.3",
+        repver="3.1.3",
         pyver=python_version(),
         dbhealth=check_sgnirts,
         ping=ms,
@@ -89,8 +89,8 @@ Rallsmp = """{ALIVE_TEXT}
 
 **{Z_EMOJI} قاعدۿ البيانات :** تعمل بنـجاح
 **{Z_EMOJI} إصـدار التـيليثون :** `{telever}`
-**{Z_EMOJI} إصـدار ريسثــون :** `{zdver}`
+**{Z_EMOJI} إصـدار ريبـــثون :** `{repver}`
 **{Z_EMOJI} إصـدار البـايثون :** `{pyver}`
 **{Z_EMOJI} الوقـت :** `{uptime}`
 **{Z_EMOJI} المسـتخدم:** {mention}
-**{Z_EMOJI} قنـاة السـورس :** [اضغـط هنـا](https://t.me/RallsThon)"""
+**{Z_EMOJI} قنـاة السـورس :** [اضغـط هنـا](https://t.me/Repthon)"""
