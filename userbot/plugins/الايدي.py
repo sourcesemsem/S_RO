@@ -1,4 +1,4 @@
-# get id code for Ralls edit by @RallsThon
+# get id code for Ralls edit by @Repthon
 
 from telethon.utils import pack_bot_file_id
 
@@ -35,12 +35,12 @@ async def _(event):
             bot_api_file_id = pack_bot_file_id(r_msg.media)
             await edit_or_reply(
                 event,
-                f"⪼ **ايدي الدردشه : **`{str(event.chat_id)}` 𓆰.\n**⪼ ايدي المستخدم : **`{str(r_msg.sender_id)}` 𓆰.\n⪼ **ايدي الميديا : **`{bot_api_file_id}` 𓆰.",
+                f"⪼ **ايدي الدردشة : **`{str(event.chat_id)}` 𓆰.\n**⪼ ايدي المستخدم : **`{str(r_msg.sender_id)}` 𓆰.\n⪼ **ايدي الميديا : **`{bot_api_file_id}` 𓆰.",
             )
         else:
             await edit_or_reply(
                 event,
-                f"⪼ **ايدي الدردشه : **`{str(event.chat_id)}` 𓆰.\n⪼ **ايدي المستخدم: **`{str(r_msg.sender_id)}` 𓆰.",
+                f"⪼ **ايدي الدردشة : **`{str(event.chat_id)}` 𓆰.\n⪼ **ايدي المستخدم: **`{str(r_msg.sender_id)}` 𓆰.",
             )
     else:
         await edit_or_reply(event, f"⪼ **ايدي الدردشه : **`{str(event.chat_id)}` 𓆰.")
