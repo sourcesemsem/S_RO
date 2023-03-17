@@ -1,4 +1,4 @@
-# by: t.me/Dar4k  ~ t.me/R0R77
+# by: t.me/Dar4k  ~ t.me/E_7_V
 
 import asyncio
 import random
@@ -8,7 +8,7 @@ import telethon
 from telethon.sync import functions
 from user_agent import generate_user_agent
 
-from jmub import jmub
+from userbot import bot
 
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 
@@ -48,13 +48,13 @@ def gen_user(choice):
         random.shuffle(f)
         username = "".join(f)
 
-    elif choice == "ثلاثيات":
+    elif choice == "ثلاثي":
         c = random.choices(a)
         d = random.choices(b)
         s = random.choices(e)
         f = [c[0], "_", d[0], "_", s[0]]
         username = "".join(f)
-    elif choice == "سداسيات":
+    elif choice == "سداسي":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], c[0], c[0], c[0], c[0], d[0]]
@@ -84,7 +84,7 @@ def gen_user(choice):
         random.shuffle(f)
         username = "".join(f)
 
-    elif choice == "سباعيات":
+    elif choice == "سباعي":
         c = d = random.choices(a)
         d = random.choices(b)
         f = [c[0], c[0], c[0], c[0], d[0], c[0], c[0]]
@@ -101,15 +101,16 @@ def gen_user(choice):
     return username
 
 
-@jmub.ar_cmd(pattern="الصيد")
+@bot.on(admin_cmd(pattern="الصيد")
+@bot.on(sudo_cmd(pattern="الصيد", allow_sudo=True))
 async def _(event):
     await event.edit(
         """
-أوامر الصيد الخاصة بسورس جمثون : 
+أوامــر الــصــيــد الــخــاصــة بــســورس ريبـــثون : 
 
 ٴ— — — — — — — — — —
 
-النوع :(  سداسي حرفين/ ثلاثيات/ سداسيات/ بوتات/ خماسي حرفين/خماسي /سباعيات )
+النوع :(  سداسي حرفين/ ثلاثي/ سداسيات/ بوتات/ خماسي حرفين/خماسي /سباعي )
 
 الامر:  `.صيد` + النوع
 - يقوم بصيد معرفات عشوائية حسب النوع
@@ -124,13 +125,14 @@ async def _(event):
 الامر:  `.حالة التثبيت`
 • لمعرفة عدد المحاولات للصيد
 
-@jmthon  - channle userbot 
+**@Repthon - channel userbot**
 
 """
     )
 
 
-@jmub.ar_cmd(pattern="صيد (.*)")
+@bot.on(admin_cmd(pattern="صيد (.*)")
+@bot.on(admin_cmd(pattern="الصيد" (.*)"), allow_sudo=True))
 async def hunterusername(event):
     msg = event.text.split()
     choice = str(msg[1])
@@ -141,16 +143,16 @@ async def hunterusername(event):
         await event.edit(f"حسناً سيتم بدء الصيد في @{ch} .")
     except:
         try:
-            ch = await jmub(
+            ch = await bot(
                 functions.channels.CreateChannelRequest(
-                    title="JMTHON HUNTER - صيد جمثون",
-                    about="This channel to hunt username by - @jmthon ",
+                    title="REPTHON HUNTER - صيد جمثون",
+                    about="This channel to hunt username by - @Repthon ",
                 )
             )
             ch = ch.updates[1].channel_id
             await event.edit(f"**- تم تفعيل الصيد بنجاح الان**")
         except Exception as e:
-            await jmub.send_message(
+            await bot.send_message(
                 event.chat_id, f"خطأ في انشاء القناة , الخطأ**-  : {str(e)}**"
             )
     delgvar("isclaim")
@@ -163,14 +165,14 @@ async def hunterusername(event):
         isav = check_user(username)
         if isav == True:
             try:
-                await jmub(
+                await bot(
                     functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username
                     )
                 )
                 await event.client.send_message(
                     event.chat_id,
-                    f"- Done : @{username} !\n- By : @R0R77 - @JMTHON !\n- Hunting Log {trys2[0]}",
+                    f"- Done : @{username} !\n- By : @E_7_V - @Repthon !\n- Hunting Log {trys2[0]}",
                 )
                 break
             except telethon.errors.rpcerrorlist.UsernameInvalidError:
@@ -179,7 +181,7 @@ async def hunterusername(event):
                 if "(caused by UpdateUsernameRequest)" in str(baned):
                     pass
             except telethon.errors.FloodError as e:
-                await jmub.send_message(
+                await bot.send_message(
                     event.chat_id,
                     f"للاسف تبندت , مدة الباند**-  ({e.seconds}) ثانية .**",
                     event.chat_id,
@@ -190,7 +192,7 @@ async def hunterusername(event):
                 if "the username is already" in str(eee):
                     pass
                 else:
-                    await jmub.send_message(
+                    await bot.send_message(
                         event.chat_id,
                         f"""- خطأ مع @{username} , الخطأ :{str(eee)}""",
                     )
@@ -202,7 +204,8 @@ async def hunterusername(event):
     await event.client.send_message(event.chat_id, "**- تم بنجاح الانتهاء من الصيد**")
 
 
-@jmub.ar_cmd(pattern="تثبيت (.*)")
+@bot.on(admin_cmd(pattern="تثبيت (.*)")
+@bot.on(sudo_cmd(pattern="تثبيت" (.*)"), allow_sudo=True))
 async def _(event):
     msg = event.text.split()
     try:
@@ -210,16 +213,16 @@ async def _(event):
         await event.edit(f"حسناً سيتم بدء التثبيت في**-  @{ch} .**")
     except:
         try:
-            ch = await jmub(
+            ch = await bot(
                 functions.channels.CreateChannelRequest(
-                    title="JMTHON HUNTER - صيد جمثون",
-                    about="This channel to hunt username by - @jmthon ",
+                    title="REPTHON HUNTER - صيد ريبـــثون",
+                    about="This channel to hunt username by - @Repthon ",
                 )
             )
             ch = ch.updates[1].channel_id
             await event.edit(f"**- تم بنجاح بدأ التثبيت**")
         except Exception as e:
-            await jmub.send_message(
+            await bot.send_message(
                 event.chat_id, f"خطأ في انشاء القناة , الخطأ : {str(e)}"
             )
     delgvar("isauto")
@@ -230,14 +233,14 @@ async def _(event):
         isav = check_user(username)
         if isav == True:
             try:
-                await jmub(
+                await bot(
                     functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username
                     )
                 )
                 await event.client.send_message(
                     event.chat_id,
-                    f"- Done : @{username} !\n- By : @R0R77 - @JMTHON !\n- Hunting Log {trys2[0]}",
+                    f"- Done : @{username} !\n- By : @E_7_V - @Repthon !\n- Hunting Log {trys2[0]}",
                 )
                 break
             except telethon.errors.rpcerrorlist.UsernameInvalidError:
@@ -246,12 +249,12 @@ async def _(event):
                 )
                 break
             except telethon.errors.FloodError as e:
-                await jmub.send_message(
+                await bot.send_message(
                     event.chat_id, f"للاسف تبندت , مدة الباند ({e.seconds}) ثانية ."
                 )
                 break
             except Exception as eee:
-                await jmub.send_message(
+                await bot.send_message(
                     event.chat_id,
                     f"""خطأ مع {username} , الخطأ :{str(eee)}""",
                 )
@@ -262,10 +265,11 @@ async def _(event):
 
         await asyncio.sleep(1.3)
     delgvar("isauto")
-    await jmub.send_message(event.chat_id, "**- تم الانتهاء من التثبيت بنجاح**")
+    await bot.send_message(event.chat_id, "**- تم الانتهاء من التثبيت بنجاح**")
 
 
-@jmub.ar_cmd(pattern="حالة الصيد")
+@bot.on(admin_cmd(pattern="حالة الصيد")
+@bot.on(sudo_cmd(pattern="حالة الصيد", allow_sudo=True))
 async def _(event):
     if gvarstatus("isclaim"):
         await event.edit(f"**- الصيد وصل لـ({trys[0]}) **من المحاولات")
@@ -275,7 +279,8 @@ async def _(event):
         await event.edit("- لقد حدث خطأ ما وتوقف الامر لديك")
 
 
-@jmub.ar_cmd(pattern="حالة التثبيت")
+@bot.on(admin_cmd(pattern="حالة التثبيت")
+@bot.on(admin_cmd(pattern="حالة التثبيت", allow_sudo=True))
 async def _(event):
     if gvarstatus("isauto"):
         await event.edit(f"**- التثبيت وصل لـ({trys2[0]}) من المحاولات**")
