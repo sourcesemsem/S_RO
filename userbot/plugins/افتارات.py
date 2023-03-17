@@ -24,6 +24,7 @@ from . import reply_id
 
 @bot.on(admin_cmd(pattern="حالات$")
 @bot.on(sudo_cmd(pattern="حالات$", allow_sudo=True))
+
 async def _(event):
     zzevent = await edit_or_reply(event, "**╮•⎚ جـارِ تحميـل حـالات واتـس ...**")
     try:
