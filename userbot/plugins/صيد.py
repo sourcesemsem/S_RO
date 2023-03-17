@@ -132,7 +132,7 @@ async def _(event):
 
 
 @bot.on(admin_cmd(pattern="صيد (.*)"))
-@bot.on(admin_cmd(pattern="الصيد" (.*)"), allow_sudo=True))
+@bot.on(admin_cmd(pattern="الصيد", allow_sudo=True))
 async def hunterusername(event):
     msg = event.text.split()
     choice = str(msg[1])
