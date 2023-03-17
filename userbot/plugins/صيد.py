@@ -6,11 +6,11 @@ import random
 import requests
 import telethon
 from telethon.sync import functions
-from . import *
+from user_agent import generate_user_agent
 
 from userbot import bot
 
-from userbot.plugins.sql_helper.globals import addgvar, delgvar, gvarstatus, SESSION
+from userbot.plugins.sql_helper.globals import addgvar, delgvar, gvarstatus
 
 a = "qwertyuiopassdfghjklzxcvbnm"
 b = "1234567890"
