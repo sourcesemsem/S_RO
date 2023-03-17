@@ -205,7 +205,7 @@ async def hunterusername(event):
 
 
 @bot.on(admin_cmd(pattern="تثبيت (.*)"))
-@bot.on(sudo_cmd(pattern="تثبيت" (.*)"), allow_sudo=True))
+@bot.on(sudo_cmd(pattern="تثبيت", allow_sudo=True))
 async def _(event):
     msg = event.text.split()
     try:
