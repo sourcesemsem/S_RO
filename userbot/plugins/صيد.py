@@ -101,7 +101,7 @@ def gen_user(choice):
     return username
 
 
-@bot.on(admin_cmd(pattern="الصيد")
+@bot.on(admin_cmd(pattern="الصيد"))
 @bot.on(sudo_cmd(pattern="الصيد", allow_sudo=True))
 async def _(event):
     await event.edit(
