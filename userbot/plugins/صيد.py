@@ -10,7 +10,7 @@ from . import *
 
 from userbot import bot
 
-from userbot.plugins.sql_helper.globals import addgvar, delgvar, gvarstatus
+from userbot.plugins.sql_helper.globals import addgvar, delgvar, gvarstatus, SESSION
 
 a = "qwertyuiopassdfghjklzxcvbnm"
 b = "1234567890"
@@ -132,7 +132,7 @@ async def _(event):
 
 
 @bot.on(admin_cmd(pattern="صيد (.*)"))
-@bot.on(admin_cmd(pattern="الصيد", allow_sudo=True))
+@bot.on(admin_cmd(pattern="صيد", allow_sudo=True))
 async def hunterusername(event):
     msg = event.text.split()
     choice = str(msg[1])
