@@ -145,7 +145,7 @@ async def hunterusername(event):
         try:
             ch = await bot(
                 functions.channels.CreateChannelRequest(
-                    title="REPTHON HUNTER - صيد جمثون",
+                    title="REPTHON HUNTER - صيد ريبــــــثون",
                     about="This channel to hunt username by - @Repthon ",
                 )
             )
