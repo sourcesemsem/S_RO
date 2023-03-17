@@ -6,7 +6,7 @@ import random
 import requests
 import telethon
 from telethon.sync import functions
-from user_agent import generate_user_agent
+from telethon.tl import generate_user_agent
 
 from userbot import bot
 
