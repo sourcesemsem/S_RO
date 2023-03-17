@@ -1,5 +1,5 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
-#الملـف حقـوق وكتابـة زلـزال الهيبـه ⤶ @zzzzl1l خاص بسـورس ⤶ 𝙕𝙚𝙙𝙏𝙝𝙤𝙣
+#𝗥𝗲𝗽𝘁𝗵𝗼𝗻 ®
+#الملـف حقـوق وكتابـة زلـزال الهيبـه ⤶ @E_7_V خاص بسـورس ⤶ 𝗥𝗲𝗽𝘁𝗵𝗼𝗻
 
 import asyncio
 import os
@@ -11,19 +11,19 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import InputMessagesFilterVideo, InputMessagesFilterVoice, InputMessagesFilterPhotos
 
-from zthon import zedub
+from userbot import bot
 
-from zthon.core.logger import logging
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 from . import ALIVE_NAME, mention
 from ..helpers import get_user_from_event
-from ..helpers.utils import _format
+from ..userbot.utils import _format
 
 from . import reply_id
 
 
-@zedub.zed_cmd(pattern="حالات$")
+@bot.on(admin_cmd(pattern="حالات$")
+@bot.on(sudo_cmd(pattern="حالات$", allow_sudo=True))
 async def _(event):
     zzevent = await edit_or_reply(event, "**╮•⎚ جـارِ تحميـل حـالات واتـس ...**")
     try:
@@ -37,14 +37,15 @@ async def _(event):
         await event.client.send_file(
             event.chat_id,
             file=random.choice(ZTHONR),
-            caption=f"**🎆┊حـالات واتـس قصيـرة 🧸♥️**\n\n[➧𝙎𝙤𝙪𝙧𝙘𝙚 𝙕𝙚𝙙𝙏𝙝𝙤𝙣](https://t.me/ZedThon)",
+            caption=f"**🎆┊حـالات واتـس قصيـرة 🧸♥️**\n\n[➧𝙎𝙤𝙪𝙧𝙘𝙚 𝗥𝗲𝗽𝘁𝗵𝗼𝗻](https://t.me/Repthon)",
         )
         await zzevent.delete()
     except Exception:
         await zzevent.edit("**╮•⎚ عـذراً .. لـم استطـع ايجـاد المطلـوب ☹️💔**")
 
 
-@zedub.zed_cmd(pattern="ستوري انمي$")
+@bot.on(admin_cmd(pattern="ستوري انمي$")
+@bot.on(admin_cmd(pattern="ستوري انمي$", allow_sudo=True))
 async def _(event):
     zzevent = await edit_or_reply(event, "**╮•⎚ جـارِ تحميـل الستـوري ...**")
     try:
@@ -58,14 +59,15 @@ async def _(event):
         await event.client.send_file(
             event.chat_id,
             file=random.choice(ZTHONR),
-            caption=f"**🎆┊ستـوريات آنمـي قصيـرة 🖤🧧**\n\n[➧𝙎𝙤𝙪𝙧𝙘𝙚 𝙕𝙚𝙙𝙏𝙝𝙤𝙣](https://t.me/ZedThon)",
+            caption=f"**🎆┊ستـوريات آنمـي قصيـرة 🖤🧧**\n\n[➧𝙎𝙤𝙪𝙧𝙘𝙚 𝗥𝗲𝗽𝘁𝗵𝗼𝗻](https://t.me/Repthon)",
         )
         await zzevent.delete()
     except Exception:
         await zzevent.edit("**╮•⎚ عـذراً .. لـم استطـع ايجـاد المطلـوب ☹️💔**")
 
 
-@zedub.zed_cmd(pattern="رقيه$")
+@bot.on(admin_cmd(pattern="رقيه$")
+@bot.on(sudo_cmd(pattern="رقيه$", allow_sudo=True)
 async def _(event):
     zzevent = await edit_or_reply(event, "**╮•⎚ جـارِ تحميـل الرقيـه ...**")
     try:
@@ -79,14 +81,15 @@ async def _(event):
         await event.client.send_file(
             event.chat_id,
             file=random.choice(zedgan),
-            caption=f"**◞مقاطـع رقيـه شرعيـة ➧🕋🌸◟**\n\n[➧𝙎𝙤𝙪𝙧𝙘𝙚 𝙕𝙚𝙙𝙏𝙝𝙤𝙣](https://t.me/ZedThon)",
+            caption=f"**◞مقاطـع رقيـه شرعيـة ➧🕋🌸◟**\n\n[➧𝙎𝙤𝙪𝙧𝙘𝙚 𝗥𝗲𝗽𝘁𝗵𝗼𝗻](https://t.me/Repthon)",
         )
         await zzevent.delete()
     except Exception:
         await zzevent.edit("**╮•⎚ عـذراً .. لـم استطـع ايجـاد المطلـوب ☹️💔**")
 
 
-@zedub.zed_cmd(pattern="رمادي$")
+@bot.on(admin_cmd(pattern="رمادي$")
+@bot.on(sudo_cmd(pattern="رمادي$", allow_sudo=True)
 async def _(event):
     zzevent = await edit_or_reply(event, "**╮•⎚ جـارِ تحميـل الافتـار ...**")
     try:
@@ -359,7 +362,7 @@ async def _(event):
         await zzevent.edit("**╮•⎚ عـذراً .. لـم استطـع ايجـاد المطلـوب ☹️💔**")
 
 
-@zedub.zed_cmd(pattern="ولد انمي$")
+@bot.on(admin_cmd(pattern="ولد انمي$")
 async def _(event):
     zzevent = await edit_or_reply(event, "**╮ - جـارِ تحميـل الآفتـار ...𓅫╰**")
     try:
