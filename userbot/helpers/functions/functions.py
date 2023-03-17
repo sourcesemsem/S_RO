@@ -22,8 +22,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
 
 from ...Config import Config
-from ...core.logger import logging
-from ...sql_helper.globals import gvarstatus
+from userbot.plugins.sql_helper.globals import gvarstatus
 from ..resources.states import states
 
 LOGS = logging.getLogger(__name__)
@@ -96,8 +95,8 @@ async def covidindia(state):
 async def post_to_telegraph(
     page_title,
     html_format_content,
-    auth_name="jmthon",
-    auth_url="https://t.me/jmthon",
+    auth_name="Repthon",
+    auth_url="https://t.me/Repthon",
 ):
     post_client = TelegraphPoster(use_api=True)
     post_client.create_api_token(auth_name)
