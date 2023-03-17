@@ -131,7 +131,7 @@ async def _(event):
     )
 
 
-@bot.on(admin_cmd(pattern="صيد (.*)")
+@bot.on(admin_cmd(pattern="صيد (.*)"))
 @bot.on(admin_cmd(pattern="الصيد" (.*)"), allow_sudo=True))
 async def hunterusername(event):
     msg = event.text.split()
@@ -204,7 +204,7 @@ async def hunterusername(event):
     await event.client.send_message(event.chat_id, "**- تم بنجاح الانتهاء من الصيد**")
 
 
-@bot.on(admin_cmd(pattern="تثبيت (.*)")
+@bot.on(admin_cmd(pattern="تثبيت (.*)"))
 @bot.on(sudo_cmd(pattern="تثبيت" (.*)"), allow_sudo=True))
 async def _(event):
     msg = event.text.split()
@@ -268,7 +268,7 @@ async def _(event):
     await bot.send_message(event.chat_id, "**- تم الانتهاء من التثبيت بنجاح**")
 
 
-@bot.on(admin_cmd(pattern="حالة الصيد")
+@bot.on(admin_cmd(pattern="حالة الصيد"))
 @bot.on(sudo_cmd(pattern="حالة الصيد", allow_sudo=True))
 async def _(event):
     if gvarstatus("isclaim"):
@@ -279,7 +279,7 @@ async def _(event):
         await event.edit("- لقد حدث خطأ ما وتوقف الامر لديك")
 
 
-@bot.on(admin_cmd(pattern="حالة التثبيت")
+@bot.on(admin_cmd(pattern="حالة التثبيت"))
 @bot.on(admin_cmd(pattern="حالة التثبيت", allow_sudo=True))
 async def _(event):
     if gvarstatus("isauto"):
