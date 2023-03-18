@@ -22,7 +22,7 @@ async def _(event):
         REPTHON = [
             roger
             async for roger in event.client.iter_messages(
-                "@AA_Zll", filter=InputMessagesFilterVideo
+               "@Repthon_Anime", filter=InputMessagesFilterVideo
             )
         ]
         aing = await event.client.get_me()
