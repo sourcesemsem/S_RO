@@ -7,7 +7,7 @@
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from telethon import InputMessagesFilterVideo 
+from . import InputMessagesFilterVideo 
 
 from userbot.utils import sudo_cmd
 
