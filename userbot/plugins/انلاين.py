@@ -24,7 +24,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         query = event.text
         tosh = re.compile("secret (.*) (.*)")
         match = re.findall(tosh, query)
-        if query.startswith("**RallsBot") and event.query.user_id == bot.uid:
+        if query.startswith("**RepBot") and event.query.user_id == bot.uid:
             buttons = [
                 (
                     custom.Button.inline("Stats", data="stats"),
