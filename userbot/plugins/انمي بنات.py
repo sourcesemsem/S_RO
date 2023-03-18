@@ -1,5 +1,5 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
-#الملـف حقـوق وكتابـة زلـزال الهيبـه ⤶ @zzzzl1l خاص بسـورس ⤶ 𝙕𝙚𝙙𝙏𝙝𝙤𝙣
+#𝙍𝙀𝙋𝙏𝙃𝙊𝙉 ®
+#الملـف حقـوق وكتابـة روجر⤶ @E_7_V خاص بسـورس ⤶ 𝙍𝙀𝙋𝙏𝙃𝙊𝙉
 
 
 #هههههههههههههههههه
@@ -16,38 +16,23 @@ from . import reply_id
 @bot.on(admin_cmd(pattern="بنت ?(.*)"))
 @bot.on(sudo_cmd(pattern="بنت ?(.*)", allow_sudo=True))
 async def _(event):
-    if event.fwd_from:
-        return
-    input_str = event.pattern_match.group(1)
-    reply_to_id = await reply_id(event)
-    if event.reply_to_msg_id and not event.pattern_match.group(1):
-        reply_to_id = await event.get_reply_message()
-        reply_to_id = str(reply_to_id.message)
-    else:
-        reply_to_id = str(event.pattern_match.group(1))
-    if not reply_to_id:
-        return await edit_or_reply(
-            event, "**╮ . اكثـر مـن 1000 افتـارات انمـي بنـات ممطـروقـه.. ارسـل ..بنت انمي 𓅫╰**"
-        )
-    chat = "@Maroooosh_bot"
-    catevent = await edit_or_reply(event, "**╮•⎚ جـارِ تحميـل الافتـار ...**")
-    async with event.client.conversation(chat) as conv:
-        try:
-            response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=1000915223)
+    rrevent = await edit_or_reply(event, "**╮ - جـارِ تحميـل الآفتـار ...𓅫╰**")
+    try:
+        repph = [
+            roger
+            async for roger in event.client.iter_messages(
+                "@shhdhn", filter=InputMessagesFilterPhotos
             )
-            await event.client.send_message(chat, "{}".format(input_str))
-            response = await response
-            await event.client.send_read_acknowledge(conv.chat_id)
-        except YouBlockedUserError:
-            await catevent.edit("**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @Maroooosh_bot .. ثم اعـد استخدام الامـر ...🤖♥️**")
-            return
-        if response.text.startswith("I can't find that"):
-            await catevent.edit("**╮•⎚ عـذراً .. لـم استطـع ايجـاد المطلـوب ☹️💔**")
-        else:
-            await catevent.delete()
-            await event.client.send_message(event.chat_id, response.message)
-
+        ]
+        aing = await event.client.get_me()
+        await event.client.send_file(
+            event.chat_id,
+            file=random.choice(repph),
+            caption=f"**◞افتـارات آنمي بنـات ➧🎆🧚🏻‍♀◟**\n\n[➧𝙎𝙤𝙪𝙧𝙘𝙚 𝙍𝙀𝙋𝙏𝙃𝙊𝙉](https://t.me/Repthon)",
+        )
+        await rrevent.delete()
+    except Exception:
+        await rrevent.edit("**╮•⎚ عـذراً .. لـم استطـع ايجـاد المطلـوب ☹️💔**")
 
 CMD_HELP.update(
     {
