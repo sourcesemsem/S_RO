@@ -140,7 +140,7 @@ async def settings(event):
     await event.reply(f"⌔∮ انا ريبــــــثون مساعد {mention}. الشخصي تستطيع الاتصال بي عن طريق هذا البوت",
                              buttons=[
                                      [Button.inline(
-                                         "⚜️ حصل على بوت ريس ثـون بنفسك ⚜️", data="deployme")]
+                                         "⚜️ حصل على بوت ريبـــثون بنفسك ⚜️", data="deployme")]
                              ])
 
 
@@ -737,7 +737,7 @@ async def alv_pic(event):
             media=await event.client.download_media(response, "Alive_Pic")
             try:
                 x = upload_file(media)
-                url = f"https://telegra.ph/{x[0]}"
+                url = f"https://graph.org/{x[0]}"
                 os.remove(media)
             except BaseException:
                 return await conv.send_message("**⌔∮ خطا ⚜️.**")
