@@ -112,5 +112,5 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 
 # Dev
-   <a href="https://t.me/E_7_V"><img src="https://img.shields.io/badge/Source%20Dev-Repthon-inactive?&style=black?&logo=telegram" width=220px></a></p>
+   <a href="https://t.me/E_7_V"><img src="https://img.shields.io/badge/Source%20Dev-𝐁𝐀𝐐𝐈𝐑-𝗘_𝟳_𝗩-inactive?&style=black?&logo=telegram" width=220px></a></p>
  - 𐇮 بــاقــر 𐇮
