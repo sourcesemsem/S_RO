@@ -16,7 +16,7 @@ from telethon.errors import FloodWaitError
 from telethon.tl import functions
 
 from . import AUTONAME, BOTLOG, BOTLOG_CHATID, DEFAULT_BIO
-from .sql_helper.globals import addgvar, delgvar, gvarstatus
+from userbot.plugins.sql_helper.globals import addgvar, delgvar, gvarstatus
 
 DEFAULTUSERBIO = DEFAULT_BIO or "الحمد الله على كل شئ - @Repthon"
 CHANGE_TIME = Config.CHANGE_TIME
