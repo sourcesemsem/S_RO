@@ -69,7 +69,7 @@ async def autopic(event):
 
 
 @bot.on(admin_cmd(pattern="البروفايل الوقتي$"))
-async def main(event):
+async def autophoto(event):
     if event.fwd_from:
         return
     if Config.DIGITAL_PIC is None:
