@@ -6,7 +6,7 @@
 
 
 from telethon import events
-from telethon.tl import InputMessagesFilterVideo
+from telethon.tl.types import InputMessagesFilterPhotos
 
 from userbot.utils import sudo_cmd
 
