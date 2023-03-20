@@ -92,13 +92,6 @@ async def fetch_info(replied_user, event):
 
 @bot.on(admin_cmd(pattern="كشف(?:\s|$)([\s\S]*)",))
 @bot.on(sudo_cmd(pattern="كشف(?:\s|$)([\s\S]*)", allow_sudo=True))
-    command=("كشف", plugin_category),
-    info={
-        "header": "Gets information of an user such as restrictions ban by spamwatch or cas.",
-        "description": "That is like whether he banned is spamwatch or cas and small info like groups in common, dc ..etc.",
-        "usage": "{tr}userinfo <username/userid/reply>",
-    },
-)
 async def _(event):
     "Gets information of an user such as restrictions ban by spamwatch or cas"
     replied_user = await get_user_from_event(event)
@@ -159,12 +152,6 @@ async def _(event):
 
 @bot.on(admin_cmd(pattern="ايدي(?: |$)(.*)",))
 @bot.on(sudo_cmd(pattern="ايدي(?: |$)(.*)", allow_sudo=True))             
-    command=("ايدي", plugin_category),
-    info={
-        "header": "لـ عـرض معلومـات الشخـص",
-        "الاستـخـدام": " {tr}ايدي بالـرد او {tr}ايدي + معـرف/ايـدي الشخص",
-    },
-)
 async def who(event):
     "Gets info of an user"
     cat = await edit_or_reply(event, "⇆")
@@ -189,12 +176,6 @@ async def who(event):
 #تعديل وترتيب  @E_7_V
 @bot.on(admin_cmd(pattern="رابط الحساب(?:\s|$)([\s\S]*)",))
 @bot.on(admin_cmd(pattern="رابط الحساب(?:\s|$)([\s\S]*)", allow_sudo=True))
-    command=("رابط الحساب", plugin_category),
-    info={
-        "header": "Generates a link to the user's PM .",
-        "usage": "{tr}link <username/userid/reply>",
-    },
-)
 async def permalink(mention):
     """Generates a link to the user's PM with a custom text."""
     user, custom = await get_user_from_event(mention)
