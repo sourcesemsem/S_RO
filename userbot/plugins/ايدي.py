@@ -127,8 +127,6 @@ async def who(event):
     replied_user = await get_user(event)
     try:
         photo, caption = await fetch_info(replied_user, event)
-    if not message_id_to_reply:
-        message_id_to_reply = None
     try:
         await event.client.send_file(
             event.chat_id,
