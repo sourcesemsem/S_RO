@@ -5,17 +5,17 @@ from requests import get
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import get_input_location
-from ..sql_helper.globals import gvarstatus
+from userbot.plugins.sql_helper.globals import gvarstatus
 
-from jepthon import jepiq
-from jepthon.core.logger import logging
+from userbot import bot
+from . import *
 
 from ..Config import Config
 from ..core.managers import edit_or_reply
 from ..helpers import get_user_from_event, reply_id
 from . import spamwatch
 
-JEP_EM = Config.ID_EM or " •❃ "
+REP_EM = Config.ID_EM or " •❃ "
 ID_EDIT = gvarstatus("ID_ET") or "ايدي"
 
 plugin_category = "utils"
@@ -76,22 +76,22 @@ async def fetch_info(replied_user, event):
     full_name = full_name or first_name
     username = "@{}".format(username) if username else ("لايـوجـد معـرف")
     user_bio = "لاتـوجـد نبـذة" if not user_bio else user_bio
-    rotbat = "⌁ من مطورين السورس 𓄂𓆃 ⌁" if user_id == 705475246 else ("⌁ العضـو 𓅫 ⌁")
-    rotbat = "⌁ مـالك الحساب 𓀫 ⌁" if user_id == (await event.client.get_me()).id and user_id != 705475246  else rotbat
+    rotbat = "⌁ من مطورين السورس 𓄂𓆃 ⌁" if user_id == 5502537272 else ("⌁ العضـو 𓅫 ⌁")
+    rotbat = "⌁ مـالك الحساب 𓀫 ⌁" if user_id == (await event.client.get_me()).id and user_id != 5502537272  else rotbat
     caption = "✛━━━━━━━━━━━━━✛\n"
-    caption += f"<b> {JEP_EM}╎الاسـم    ⇠ </b> {full_name}\n"
-    caption += f"<b> {JEP_EM}╎المعـرف  ⇠ </b> {username}\n"
-    caption += f"<b> {JEP_EM}╎الايـدي   ⇠ </b> <code>{user_id}</code>\n"
-    caption += f"<b> {JEP_EM}╎الرتبـــه  ⇠ {rotbat} </b>\n"
-    caption += f"<b> {JEP_EM}╎الصـور   ⇠ </b> {replied_user_profile_photos_count}\n"
-    caption += f"<b> {JEP_EM}╎الحساب ⇠ </b> "
+    caption += f"<b> {REP_EM}╎الاسـم    ⇠ </b> {full_name}\n"
+    caption += f"<b> {REP_EM}╎المعـرف  ⇠ </b> {username}\n"
+    caption += f"<b> {REP_EM}╎الايـدي   ⇠ </b> <code>{user_id}</code>\n"
+    caption += f"<b> {REP_EM}╎الرتبـــه  ⇠ {rotbat} </b>\n"
+    caption += f"<b> {REP_EM}╎الصـور   ⇠ </b> {replied_user_profile_photos_count}\n"
+    caption += f"<b> {REP_EM}╎الحساب ⇠ </b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
-    caption += f"\n<b> {JEP_EM}╎البايـو    ⇠ </b> {user_bio} \n"
+    caption += f"\n<b> {REP_EM}╎البايـو    ⇠ </b> {user_bio} \n"
     caption += f"✛━━━━━━━━━━━━━✛"
     return photo, caption
 
-@jepiq.ar_cmd(
-    pattern="كشف(?:\s|$)([\s\S]*)",
+@bot.on(admin_cmd(pattern="كشف(?:\s|$)([\s\S]*)",))
+@bot.on(sudo_cmd(pattern="كشف(?:\s|$)([\s\S]*)", allow_sudo=True))
     command=("كشف", plugin_category),
     info={
         "header": "Gets information of an user such as restrictions ban by spamwatch or cas.",
@@ -157,7 +157,8 @@ async def _(event):
     await edit_or_reply(catevent, caption)
 
 
-@jepiq.ar_cmd(pattern="ايدي(?: |$)(.*)",
+@bot.on(admin_cmd(pattern="ايدي(?: |$)(.*)",))
+@bot.on(sudo_cmd(pattern="ايدي(?: |$)(.*)", allow_sudo=True))             
     command=("ايدي", plugin_category),
     info={
         "header": "لـ عـرض معلومـات الشخـص",
@@ -184,10 +185,10 @@ async def who(event):
         await cat.delete()
     except TypeError:
         await cat.edit(caption, parse_mode="html")
-#كـتابة  @lMl10l
-#تعديل وترتيب  @lMl10l
-@jepiq.ar_cmd(
-    pattern="رابط الحساب(?:\s|$)([\s\S]*)",
+#كـتابة  @E_7_V
+#تعديل وترتيب  @E_7_V
+@bot.on(admin_cmd(pattern="رابط الحساب(?:\s|$)([\s\S]*)",))
+@bot.on(admin_cmd(pattern="رابط الحساب(?:\s|$)([\s\S]*)", allow_sudo=True))
     command=("رابط الحساب", plugin_category),
     info={
         "header": "Generates a link to the user's PM .",
@@ -203,52 +204,3 @@ async def permalink(mention):
         return await edit_or_reply(mention, f"[{custom}](tg://user?id={user.id})")
     tag = user.first_name.replace("\u2060", "") if user.first_name else user.username
     await edit_or_reply(mention, f"⌔︙[{tag}](tg://user?id={user.id})")
-
-@jepiq.ar_cmd(
-    pattern="(الايدي|id)(?:\s|$)([\s\S]*)",
-    command=("الايدي", plugin_category),
-    info={
-        "header": "To get id of the group or user.",
-        "description": "if given input then shows id of that given chat/channel/user else if you reply to user then shows id of the replied user \
-    along with current chat id and if not replied to user or given input then just show id of the chat where you used the command",
-        "usage": "{tr}id <reply/username>",
-    },
-)
-async def _(event):
-    "To get id of the group or user."
-    input_str = event.pattern_match.group(2)
-    if input_str:
-        try:
-            p = await event.client.get_entity(input_str)
-        except Exception as e:
-            return await edit_delete(event, f"`{str(e)}`", 5)
-        try:
-            if p.first_name:
-                return await edit_or_reply(
-                    event, f"᯽︙ ايدي المستخدم : `{input_str}` هو `{p.id}`"
-                )
-        except Exception:
-            try:
-                if p.title:
-                    return await edit_or_reply(
-                        event, f"᯽︙ ايدي الدردشة/القناة `{p.title}` هو `{p.id}`"
-                    )
-            except Exception as e:
-                LOGS.info(str(e))
-        await edit_or_reply(event, "᯽︙ يـجب كـتابة مـعرف الشـخص او الـرد عـليه")
-    elif event.reply_to_msg_id:
-        await event.get_input_chat()
-        r_msg = await event.get_reply_message()
-        if r_msg.media:
-            bot_api_file_id = pack_bot_file_id(r_msg.media)
-            await edit_or_reply(
-                event,
-                f"᯽︙ ايدي الدردشه: `{str(event.chat_id)}` \n᯽︙ ايدي المستخدم: `{str(r_msg.sender_id)}` \n᯽︙ ايدي الميديا: `{bot_api_file_id}`",
-            )
-        else:
-            await edit_or_reply(
-                event,
-               f"᯽︙ ايدي الدردشه : `{str(event.chat_id)}` \n᯽︙ ايدي المستخدم: `{str(r_msg.sender_id)}` ",
-            )
-    else:
-        await edit_or_reply(event, f"᯽︙ الـدردشـة الـحالية : `{str(event.chat_id)}`")
