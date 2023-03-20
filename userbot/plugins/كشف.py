@@ -11,7 +11,6 @@ from userbot import bot
 from . import *
 
 from ..Config import Config
-from ..core.managers import edit_or_reply
 from ..helpers import get_user_from_event, reply_id
 from . import spamwatch
 
