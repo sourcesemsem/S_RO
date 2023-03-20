@@ -28,7 +28,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             buttons = [
                 (
                     custom.Button.inline("Stats", data="stats"),
-                    Button.url("Repo", "https://github.com/rogerpq/Ralls_USERBOT"),
+                    Button.url("Repo", "https://github.com/RepthonArabic/RepthonAr"),
                 )
             ]
             if TOSH and TOSH.endswith((".jpg", ".png")):
