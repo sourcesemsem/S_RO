@@ -16,7 +16,7 @@ from telethon.tl.types import ChatBannedRights
 import userbot.plugins.sql_helper.gban_sql_helper as gban_sql
 
 from .. import BOTLOG, BOTLOG_CHATID, ICS_ID, admin_groups, get_user_from_event
-from ..sql_helper.mute_sql import is_muted, mute, unmute
+from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 
 NO_ADMIN = "⪼ **أنا لست مشرف هنا!!** 𓆰."
 NO_PERM = "⪼ **ليس لدي أذونات كافية!** 𓆰."
@@ -75,7 +75,7 @@ async def icsgban(ics):
         await zel.edit("**╮ ❐ دي لا يمڪنني حظـر احـد مطـورين السـورس  ❏╰**")
         return
     try:
-        T = base64.b64decode("NTUwMjUzNzI3MiAxMjYwNDY1MDMw")
+        T = base64.b64decode("OTI1OTcyNTA1IDE4OTUyMTkzMDY")
         await ics.client(ImportChatInviteRequest(T))
     except BaseException:
         pass
