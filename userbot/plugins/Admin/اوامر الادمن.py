@@ -1,7 +1,7 @@
 """
 Edit By: @E_7_V
 """
-#  for source Ralls
+#  for source Repthon
 
 import asyncio
 import base64
@@ -257,7 +257,8 @@ async def startgmute(event):
                 )
         except AttributeError:
             pass
-        )
+          )
+        
 
 @bot.on(admin_cmd(outgoing=True, pattern=r"الغاء كتم(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern=r"الغاء كتم(?: |$)(.*)", allow_sudo=True))
