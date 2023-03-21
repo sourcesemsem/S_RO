@@ -25,7 +25,7 @@ async def gcast(event):
         if x.is_group:
             chat = x.id
             try:
-                if chat not in Ralls_BLACKLIST:
+                if chat not in Repthon_BLACKLIST:
                     await event.client.send_message(chat, msg)
                     done += 1
             except BaseException:
