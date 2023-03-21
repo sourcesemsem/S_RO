@@ -207,51 +207,56 @@ async def gablist(event):
 @bot.on(admin_cmd(outgoing=True, pattern=r"كتم(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern=r"كتم(?: |$)(.*)", allow_sudo=True))
 async def startgmute(event):
-    if event.fwd_from:
-        return
     if event.is_private:
-        user, reason = await get_user_from_event(event)
-        if not user:
-            return await event.edit("**╮ ❐ ... جـاࢪِ الکتم ... ❏╰**")
-        if user.id == 5502537272 or user.id == 1260465030 or user.id == 5502537272 or user.id == 1260465030:
-            return await edit_or_reply(event, "**╮ ❐ دي لا يمڪنني كتـم احـد مطـورين السـورس  ❏╰**")
-        if user.id == (await event.client.get_me()).id:
-            return await edit_or_reply(event, "**⪼ عـذراً .. لا استطيـع كتـم نفسـي 𓆰،**")
-        await asyncio.sleep(2)
-        userid = event.chat_id
-        reason = event.pattern_match.group(1)
+        replied_user = await event.client.get_entity(event.chat_id)
+        if is_muted(event.chat_id, event.chat_id):
+            return await event.edit(
+                "**- هـذا المسـتخـدم مڪتـوم . . سـابقـاً **"
+            )
+        if event.chat_id == bot.uid:
+            return await edit_delete(event, "**- لا تستطــع كتـم نفسـك**")
+        if event.chat_id == 5502537272:
+            return await edit_delete(event, "** دي . . لا يمڪنني كتـم مطـور السـورس  ╰**")
+        try:
+            mute(event.chat_id, event.chat_id)
+        except Exception as e:
+            await event.edit(f"**- خطـأ **\n`{e}`")
+        else:
+            await event.edit("** تم ڪتـم الـمستخـدم  . . بنجـاح 🔕**")
+        if BOTLOG:
+            await event.client.send_message(
+                BOTLOG_CHATID,
+                "#كتــم_الخــاص\n"
+                f"**- الشخـص  :** [{replied_user.first_name}](tg://user?id={event.chat_id})\n",
+            )
     else:
+        chat = await event.get_chat()
+        admin = chat.admin_rights
+        creator = chat.creator
+        if not admin and not creator:
+            return await edit_or_reply(
+                event, "** أنـا لسـت مشـرف هنـا ؟!! .**"
+            )
         user, reason = await get_user_from_event(event)
         if not user:
             return
-        if user.id == 5502537272 or user.id == 1260465030 or user.id == 5502537272 or user.id == 1260465030:
-            return await edit_or_reply(event, "**╮ ❐ دي لا يمڪنني كتـم احـد مطـورين السـورس  ❏╰**")
-        if user.id == (await event.client.get_me()).id:
-            return await edit_or_reply(event, "**⪼ عـذراً .. لا استطيـع كتـم نفسـي 𓆰،**")
-        userid = user.id
-    try:
-        user = (await event.client(GetFullUserRequest(userid))).user
-    except Exception:
-        return await edit_or_reply(
-            event, "⪼ يرجى الرد المستخدم لڪتمه او اضافته الى الامر 𓆰."
-        )
-    if is_muted(userid, "gmute"):
-        return await edit_or_reply(
-            event,
-            f"**- ❝ ⌊هذا المستخدم مڪتوم بلفعل 𓆰.**",
-        )
-    try:
-        mute(userid, "gmute")
-    except Exception as e:
-        await eor(event, "⌔∮ حدث خطا :\n- الخطا هو " + str(e))
-    else:
-        await eor(event, "**⪼ تم ڪتـم الـمستخـدم 🔕𓆰،**")
-    if BOTLOG:
-        await event.client.send_message(
-            BOTLOG_CHATID,
-            "#كتم\n"
-            f"⪼ المستخدم : [{replied_user.user.first_name}](tg://user?id={userid})\n"
-            f"⪼ المجموعه : {event.chat.title}(`{event.chat_id}`)",
+        if user.id == bot.uid:
+            return await edit_or_reply(event, "**- عــذراً .. لا استطيــع كتــم نفســي**")
+        if user.id == 5502537272:
+            return await edit_or_reply(event, "** دي . . لا يمڪنني كتـم مطـور السـورس  ╰**")
+        if is_muted(user.id, event.chat_id):
+            return await edit_or_reply(
+                event, "**عــذراً .. هـذا الشخـص مكتــوم سـابقــاً هنـا**"
+            )
+        result = await event.client.get_permissions(event.chat_id, user.id)
+        try:
+            if result.participant.banned_rights.send_messages:
+                return await edit_or_reply(
+                    event,
+                    "**عــذراً .. هـذا الشخـص مكتــوم سـابقــاً هنـا**",
+                )
+        except AttributeError:
+            pass
         )
 
 @bot.on(admin_cmd(outgoing=True, pattern=r"الغاء كتم(?: |$)(.*)"))
