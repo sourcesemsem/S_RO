@@ -1,5 +1,5 @@
-#    Ralls - Userbot
-#    Owner - @QQ070
+#    Repthon - Userbot
+#    Owner - @E_7_V
 
 from telethon import events, Button
 from ..Config import Config
@@ -9,12 +9,12 @@ from . import TOSH, K, mention
 @asst_cmd("/repo|#repo")
 async def dev(QQ070):
     await QQ070.reply(
-        "⌔∮ 𝙎𝙊𝙐𝙍𝘾𝙀 𝐑𝐀𝐈𝐈𝐒𝙏𝙃𝙊𝙉 - 𝙍𝙀𝙋𝙊 𓆪",
+        "⌔∮ 𝙎𝙊𝙐𝙍𝘾𝙀 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 - 𝙍𝙀𝙋𝙊 𓆪",
         buttons=[[Button.url("🔗 𝙍𝙀𝙋𝙊 🔗", K)]]
     )
    
 
-TOSH_PIC = Config.ALIVE_PIC if Config.ALIVE_PIC else "https://telegra.ph/file/57d51af1ca93d8cc8a958.jpg"
+TOSH_PIC = Config.ALIVE_PIC if Config.ALIVE_PIC else "https://graph.org/file/9fe877a9c16a0c3dcfcdb.jpg"
 
 if Config.BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(events.InlineQuery)
@@ -40,14 +40,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             elif TOSH_PIC:
                 result = builder.document(
                     TOSH_PIC,
-                    title="Ralls - USERBOT",
+                    title="Repthon - USERBOT",
                     text=TOSH,
                     buttons=buttons,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
-                    title="Ralls - USERBOT",
+                    title= "Repthon - USERBOT",
                     text=TOSH,
                     buttons=buttons,
                     link_preview=False,
