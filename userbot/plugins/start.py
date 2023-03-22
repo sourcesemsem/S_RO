@@ -3,7 +3,7 @@ import logging
 
 from telethon.tl import functions
 from userbot import sudo_cmd, admin_cmd
-from userbot.utils import sudo_cmd
+from userbot.utils import *
 
 
 ownerbaqir_id = 5502537272
