@@ -2,8 +2,8 @@ import random
 import logging
 
 from telethon.tl import functions
-from userbot import sudo_cmd, admin_cmd
-from userbot.utils import *
+from userbot import admin_cmd
+from userbot.utils import sudo_cmd
 
 
 ownerbaqir_id = 5502537272
