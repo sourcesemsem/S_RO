@@ -2,7 +2,7 @@ import random
 import logging
 
 from telethon.tl import functions
-from userbot import admin_cmd
+from userbot import *
 from userbot.utils import sudo_cmd
 
 
