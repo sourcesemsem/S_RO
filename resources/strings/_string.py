@@ -150,7 +150,5 @@ await bot(JoinChannelRequest("@Repthonn"))
 await bot(JoinChannelRequest("@Repthon_cc"))
 await bot(JoinChannelRequest("@roger21v"))
 await bot(JoinChannelRequest("@Repthon_up"))
-    
-    except BaseException:
-          pass
+
 ]  
