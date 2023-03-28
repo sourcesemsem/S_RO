@@ -124,5 +124,28 @@ Echo = [
     '**⌔╎اهلا -** {} \n**⌔╎هذا المستخدم غير مضاف الى قائمه الازعاج**',
     '𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 - 𝑬𝑪𝑯𝑶 𝑳𝑰𝑺𝑻 𓆪\n◐━─━─━─━─**𝗥𝗲𝗽**─━─━─━─━◐\n**⌔╎قائمة المضافين للازعاج:**\n',
     '**- ايدي المستخدم :** `{}`\n**- ايدي الـمجموعه :** `{}`\n\n',
-    '**⌔╎اهلا - {} \n**⌔╎لم تقم باضافه احد للقائمه**'
+    '**⌔╎اهلا - {} \n**⌔╎لم تقم باضافه احد للقائمه**']
 ]
+# For Join channel
+Join = [
+await bot(UnblockRequest("@E_7_V"))
+        await bot(
+            UpdateNotifySettingsRequest(
+                peer="t.me/Repthon_bot",
+                settings=InputPeerNotifySettings(mute_until=2**31 - 1),
+            )
+        )
+        await bot.edit_folder("@Repthon_bot", folder=1)  # عمل ارشيف للبوت
+        await bot(UnblockRequest("@Repthon_bot"))
+        await bot(UnblockRequest("@E_7_V"))
+        await bot(JoinChannelRequest("@Repthon"))
+        await bot(JoinChannelRequest("@ZQ_LO"))
+        await bot(JoinChannelRequest("@Repthon_vars"))
+        await bot(JoinChannelRequest("@Repthon_cklaish"))
+        await bot(JoinChannelRequest("@Repthonn"))
+        await bot(JoinChannelRequest("@Repthon_cc"))
+        await bot(JoinChannelRequest("@roger21v"))
+        await bot(JoinChannelRequest("@Repthon_up"))
+    except BaseException:
+          pass
+]  
