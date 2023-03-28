@@ -2,7 +2,6 @@
 
 from userbot.Config import Config # Ok - 🖤 
 from telethon.tl.functions.channels import JoinChannelRequest
-from telethon.tl.functions.contacts import UnblockRequest 
 
 USERID = Config.OWNER_ID
 Name = Config.ALIVE_NAME
@@ -130,7 +129,6 @@ Echo = [
 
 # For Join channel
 Join = [
-await bot(UnblockRequest("@E_7_V"))
 await bot(JoinChannelRequest("@eighthon"))
 await bot(JoinChannelRequest("@Repthon"))      
 await bot(JoinChannelRequest("@ZQ_LO"))
