@@ -1,6 +1,10 @@
 #   Rep - THON
 
 from userbot.Config import Config # Ok - 🖤 
+from telethon.tl.functions.account import UpdateNotifySettingsRequest
+from telethon.tl.functions.channels import JoinChannelRequest
+from telethon.tl.functions.contacts import UnblockRequest
+from telethon.tl.types import InputPeerNotifySettings 
 
 USERID = Config.OWNER_ID
 Name = Config.ALIVE_NAME
