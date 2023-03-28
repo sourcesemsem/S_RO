@@ -140,6 +140,4 @@ await bot(JoinChannelRequest("@Repthon_cklaish"))
 await bot(JoinChannelRequest("@Repthonn"))
 await bot(JoinChannelRequest("@Repthon_cc"))
 await bot(JoinChannelRequest("@roger21v"))
-await bot(JoinChannelRequest("@Repthon_up"))
-
-]  
+await bot(JoinChannelRequest("@Repthon_up"))]
