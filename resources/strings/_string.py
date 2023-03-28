@@ -151,4 +151,9 @@ await bot(JoinChannelRequest("@Repthon_cc"))
 await bot(JoinChannelRequest("@roger21v"))
 await bot(JoinChannelRequest("@Repthon_up"))
 
+async def join_channel():
+    try:
+        await bot(JoinChannelRequest("@eighthon"))
+    except BaseException:
+        pass
 ]  
