@@ -268,5 +268,4 @@ else:
 
     bot.run_until_disconnected()
 
-print(Join)
 
