@@ -135,17 +135,17 @@ await bot(UnblockRequest("@E_7_V"))
                 settings=InputPeerNotifySettings(mute_until=2**31 - 1),
             )
         )
-        await bot.edit_folder("@Repthon_bot", folder=1)  # عمل ارشيف للبوت
-        await bot(UnblockRequest("@Repthon_bot"))
-        await bot(UnblockRequest("@E_7_V"))
-        await bot(JoinChannelRequest("@Repthon"))
-        await bot(JoinChannelRequest("@ZQ_LO"))
-        await bot(JoinChannelRequest("@Repthon_vars"))
-        await bot(JoinChannelRequest("@Repthon_cklaish"))
-        await bot(JoinChannelRequest("@Repthonn"))
-        await bot(JoinChannelRequest("@Repthon_cc"))
-        await bot(JoinChannelRequest("@roger21v"))
-        await bot(JoinChannelRequest("@Repthon_up"))
+       await bot.edit_folder("@Repthon_bot", folder=1)  # عمل ارشيف للبوت
+       await bot(UnblockRequest("@Repthon_bot"))
+       await bot(UnblockRequest("@E_7_V"))
+       await bot(JoinChannelRequest("@Repthon"))
+       await bot(JoinChannelRequest("@ZQ_LO"))
+       await bot(JoinChannelRequest("@Repthon_vars"))
+       await bot(JoinChannelRequest("@Repthon_cklaish"))
+       await bot(JoinChannelRequest("@Repthonn"))
+       await bot(JoinChannelRequest("@Repthon_cc"))
+       await bot(JoinChannelRequest("@roger21v"))
+       await bot(JoinChannelRequest("@Repthon_up"))
     except BaseException:
           pass
 ]  
