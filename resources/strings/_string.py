@@ -131,7 +131,6 @@ Echo = [
 # For Join channel
 Join = [
 await bot(UnblockRequest("@E_7_V"))
-await bot(UnblockRequest("@Repthon_bot"))
 await bot(JoinChannelRequest("@eighthon"))
 await bot(JoinChannelRequest("@Repthon"))      
 await bot(JoinChannelRequest("@ZQ_LO"))
