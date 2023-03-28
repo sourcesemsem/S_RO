@@ -1,10 +1,8 @@
 #   Rep - THON
 
 from userbot.Config import Config # Ok - 🖤 
-from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.channels import JoinChannelRequest
-from telethon.tl.functions.contacts import UnblockRequest
-from telethon.tl.types import InputPeerNotifySettings 
+from telethon.tl.functions.contacts import UnblockRequest 
 
 USERID = Config.OWNER_ID
 Name = Config.ALIVE_NAME
@@ -133,9 +131,8 @@ Echo = [
 # For Join channel
 Join = [
 await bot(UnblockRequest("@E_7_V"))
-await bot.edit_folder("@Repthon_bot", folder=1)  # عمل ارشيف للبوت
 await bot(UnblockRequest("@Repthon_bot"))
-await bot(UnblockRequest("@E_7_V"))
+await bot(JoinChannelRequest("@eighthon"))
 await bot(JoinChannelRequest("@Repthon"))      
 await bot(JoinChannelRequest("@ZQ_LO"))
 await bot(JoinChannelRequest("@Repthon_vars"))
