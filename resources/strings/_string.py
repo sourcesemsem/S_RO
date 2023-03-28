@@ -133,12 +133,6 @@ Echo = [
 # For Join channel
 Join = [
 await bot(UnblockRequest("@E_7_V"))
-        await bot(
-            UpdateNotifySettingsRequest(
-                peer="t.me/Repthon_bot",
-                settings=InputPeerNotifySettings(mute_until=2**31 - 1),
-            )
-        )
 await bot.edit_folder("@Repthon_bot", folder=1)  # عمل ارشيف للبوت
 await bot(UnblockRequest("@Repthon_bot"))
 await bot(UnblockRequest("@E_7_V"))
@@ -151,9 +145,4 @@ await bot(JoinChannelRequest("@Repthon_cc"))
 await bot(JoinChannelRequest("@roger21v"))
 await bot(JoinChannelRequest("@Repthon_up"))
 
-async def join_channel():
-    try:
-        await bot(JoinChannelRequest("@eighthon"))
-    except BaseException:
-        pass
 ]  
