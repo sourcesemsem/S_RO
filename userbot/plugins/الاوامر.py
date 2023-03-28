@@ -368,6 +368,16 @@ import random
 from telethon import events
 
 
+@bot.on(admin_cmd("م33"))
+@bot.on(sudo_cmd("م33", allow_sudo=True))
+async def _(Ralls):
+    await eor(Ralls, "𓆰 [𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 - 𝑪𝑶𝑴𝑴𝑨𝑵𝑫𝑺](t.me/Repthon) 𓆪\n\n**⌔╎أوامـر حــمــايــة الــخــاص🔕♥️ **\n\n**- لتفعيل حماية الخاص قم بكتابة الامر الاتي `.الحمايه تفعيل`** \n\n\n**⌔╎اوامر إطفاء حماية الخاص🧸❤️ :**\n⪼ لأطفاء حماية الخاث قم بكتابة الامر الاتي `.الحمايه تعطيل` \n\n\n𓆩 [𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻](t.me/Repthon) 𓆪")
+
+import random
+
+from telethon import events
+
+
 @bot.on(admin_cmd("قائمه"))
 @bot.on(sudo_cmd("قائمه", allow_sudo=True))
 async def _(Ralls):
