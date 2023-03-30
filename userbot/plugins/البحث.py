@@ -64,7 +64,10 @@ async def (baqir):
                 "**❈╎تحـقق من انـك لم تقـم بحظـر البوت @FindMusicPleaseBot .. ثم اعـد استخدام الامـر ...🤖♥️**"
             )
             return
-        await Ralls.edit("**╮ ❐ جـارِ ارسـال الاغنيـٓه انتظـر قليلاً  ▬▭... 𓅫╰**")
-        await bot.send_file(baqir.chat_id, lavde)
-        await bot.send_read_acknowledge(conv.chat_id)
-    await baqir.delete()
+        await baqir.edit("**╮ ❐ جـارِ ارسـال الاغنيـٓه انتظـر قليلاً  ▬▭... 𓅫╰**")
+       
+    await bot.send_file(baqir.chat_id, lavde)
+       
+    await bot.send_read_acknowledge(conv.chat_id)
+   
+await baqir.delete()
