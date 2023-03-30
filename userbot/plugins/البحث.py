@@ -31,7 +31,6 @@ from youtube_dl.utils import (
 try:
 
     from youtubesearchpython import *
-
 except:
     os.system("pip install pip install youtube-search-python")
     from youtubesearchpython import SearchVideos
@@ -41,55 +40,31 @@ from ..helpers.utils import reply_id
 from userbot.helpers.functions import deEmojify
 
 
-
 @bot.on(admin_cmd(pattern="بحث ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="بحث ?(.*)", allow_sudo=True))
-async def FindMusicPleaseBot(Ralls):
-
-    song = Ralls.pattern_match.group(1)
-
+async def (baqir):
+    song = baiqr.pattern_match.group(1)
     chat = "@FindMusicPleaseBot"
-
     if not song:
-
-        return await Ralls.edit("**❈╎قم باضافـة الاغنيـه للامـر .. بحث + اسـم الاغنيـه**")
-
-    await Ralls.edit("**╮ جـارِ البحث ؏ـن الاغنيـٓه... 🎧♥️╰**")
-
+        return await baqir.edit("**❈╎قم باضافـة الاغنيـه للامـر .. بحث + اسـم الاغنيـه**")
+    await baqir.edit("**╮ جـارِ البحث ؏ـن الاغنيـٓه... 🎧♥️╰**")
     await asyncio.sleep(2)
-
     async with bot.conversation(chat) as conv:
-
-        await Ralls.edit("**╮ ❐ جـارِ تحميـل الاغنيـٓه انتظـر قليلاً  ▬▭... 𓅫╰**")
-
+        await baqir.edit("**╮ ❐ جـارِ تحميـل الاغنيـٓه انتظـر قليلاً  ▬▭... 𓅫╰**")
         try:
-
             await conv.send_message(song)
-
             response = await conv.get_response()
-
             if response.text.startswith("عـذراً"):
-
                 await bot.send_read_acknowledge(conv.chat_id)
-
-                return await Ralls.edit(f"**❈╎عـذراً .. لـم استطـع ايجـاد** {song}")
-
+                return await baqir.edit(f"**❈╎عـذراً .. لـم استطـع ايجـاد** {song}")
             await conv.get_response()
-
             lavde = await conv.get_response()
-
         except YouBlockedUserError:
-
-            await Ralls.edit(
+            await baqir.edit(
                 "**❈╎تحـقق من انـك لم تقـم بحظـر البوت @FindMusicPleaseBot .. ثم اعـد استخدام الامـر ...🤖♥️**"
             )
-
             return
-
         await Ralls.edit("**╮ ❐ جـارِ ارسـال الاغنيـٓه انتظـر قليلاً  ▬▭... 𓅫╰**")
-
-        await bot.send_file(Ralls.chat_id, lavde)
-
+        await bot.send_file(baqir.chat_id, lavde)
         await bot.send_read_acknowledge(conv.chat_id)
-
-    await Ralls.delete()
+    await baqir.delete()
