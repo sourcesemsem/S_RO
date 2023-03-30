@@ -31,7 +31,8 @@ from youtube_dl.utils import (
 try:
 
     from youtubesearchpython import *
-except:
+
+    except:
     os.system("pip install pip install youtube-search-python")
     from youtubesearchpython import SearchVideos
 
