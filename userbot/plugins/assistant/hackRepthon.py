@@ -318,7 +318,7 @@ async def users(event):
       else:
         return await event.respond("لقد تم انهاء جلسة هذا الكود من قبل الضحيه.", buttons=keyboard)
       i = await usermsgs(strses.text)
-      await event.reply(i + "\n\nشكرا لأستخدامك سورس الجوكر", buttons=keyboard)
+      await event.reply(i + "\n\nشكرا لأستخدامك سورس ريبـــثون", buttons=keyboard)
     
       
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"E")))
@@ -364,7 +364,7 @@ async def users(event):
       await x.send_message("اعطيني معرف/ايدي القناة او الكروب")
       grpid = await x.get_response()
       await delgroup(strses.text, grpid.text)
-      await event.reply("لقد تم حذف القناة/الكروب شكرا لأستخدامك الجوكر.", buttons=keyboard)
+      await event.reply("لقد تم حذف القناة/الكروب شكرا لأستخدامك ريبـــثون.", buttons=keyboard)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"H")))
 async def users(event):
