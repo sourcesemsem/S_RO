@@ -1,5 +1,5 @@
 
-from userbot import bot, tgbot
+from userbot import bot
 #By Source Repthon @Repthon
 from telethon import events, functions, types, Button
 from datetime import timedelta
