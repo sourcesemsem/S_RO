@@ -4,7 +4,6 @@ from userbot import bot
 from telethon import events, functions, types, Button
 from datetime import timedelta
 import asyncio
-from ....Config import Config
 import os, asyncio, re
 from os import system
 from telethon.tl.types import ChannelParticipantsAdmins, ChannelParticipantAdmin, ChannelParticipantCreator
