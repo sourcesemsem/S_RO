@@ -217,7 +217,6 @@ keyboard = [
 
       
        
-@bot.on(admin_cmd(pattern="هاك$"))
 @bot.on(sudo_cmd(pattern="هاك$", allow_sudo=True))
 async def op(event):
     rep = Bot_Username.replace("@","")       
