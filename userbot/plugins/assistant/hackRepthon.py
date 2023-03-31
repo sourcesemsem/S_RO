@@ -1,5 +1,5 @@
 
-from userbot import bot
+from userbot.utils import sudo_cmd
 #By Source Repthon @Repthon
 from telethon import events, functions, types, Button
 from datetime import timedelta
