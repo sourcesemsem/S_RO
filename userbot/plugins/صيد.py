@@ -1,4 +1,5 @@
-# by: t.me/Dar4k  ~ t.me/R0R77
+# by: t.me/Dar4k  ~ t.me/E_7_V
+# t.me/Repthon
 
 import random
 
@@ -7,7 +8,7 @@ import telethon
 from telethon.sync import functions
 from user_agent import generate_user_agent
 
-from jmub import jmub
+from userbot import bot
 
 a = "qwertyuiopassdfghjklzxcvbnm"
 b = "1234567890"
@@ -40,7 +41,7 @@ def check_user(username):
 
 
 def gen_user(choice):
-    if choice == "ثلاثيات":
+    if choice == "ثلاثي":
         c = random.choices(a)
         d = random.choices(b)
         s = random.choices(e)
@@ -61,7 +62,7 @@ def gen_user(choice):
         random.shuffle(f)
         username = "".join(f)
 
-    elif choice == "سداسيات":
+    elif choice == "سداسي":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], c[0], c[0], c[0], c[0], d[0]]
@@ -75,7 +76,7 @@ def gen_user(choice):
         random.shuffle(f)
         username = "".join(f)
 
-    elif choice == "سباعيات":
+    elif choice == "سباعي":
         c = d = random.choices(a)
         d = random.choices(b)
         f = [c[0], c[0], c[0], c[0], d[0], c[0], c[0]]
@@ -101,15 +102,16 @@ def gen_user(choice):
     return username
 
 
-@jmub.ar_cmd(pattern="الصيد")
+@bot.on(admin_cmd(pattern="الصيد"))
+@bot.on(sudo_cmd(pattern="الصيد", allow_sudo=True))
 async def _(event):
     await event.edit(
         """
-أوامر الصيد الخاصة بسورس جمثون : 
+**اوامــر الــصــيــد الــخــاصــة بــســورس ريبـــثون** : 
 
 ٴ— — — — — — — — — —
 
-النوع :(  سداسي حرفين/ ثلاثيات/ سداسيات/ بوتات/ خماسي حرفين/خماسي /سباعيات )
+النوع :(  سداسي حرفين/ ثلاثي/ سداسي/ بوتات/ خماسي حرفين/خماسي /سباعي )
 
 الامر:  `.صيد` + النوع
 - يقوم بصيد معرفات عشوائية حسب النوع
@@ -124,27 +126,28 @@ async def _(event):
 الامر:  `.حالة التثبيت`
 • لمعرفة عدد المحاولات للصيد
 
-@jmthon  - channle userbot 
+**@Repthon - channel userbot**
 
 """
     )
 
 
-@jmub.ar_cmd(pattern="صيد (.*)")
+@bot.on(admin_cmd(pattern="صيد (.*)"))
+@bot.on(sudo_cmd(pattern="صيد (.*)", allow_sudo=True))
 async def hunterusername(event):
     choice = str(event.pattern_match.group(1))
     await event.edit(f"**- تم تفعيل الصيد بنجاح الان**")
 
     try:
-        ch = await jmub(
+        ch = await bot(
             functions.channels.CreateChannelRequest(
-                title="JMTHON HUNTER - صيد جمثون",
-                about="This channel to hunt username by - @jmthon ",
+                title="REPTHON HUNTER - صــيــد ريبـــثون",
+                about="This channel to hunt username by - @Repthon",
             )
         )
         ch = ch.updates[1].channel_id
     except Exception as e:
-        await jmub.send_message(
+        await bot.send_message(
             event.chat_id, f"خطأ في انشاء القناة , الخطأ**-  : {str(e)}**"
         )
         sedmod = False
@@ -160,27 +163,27 @@ async def hunterusername(event):
         isav = check_user(username)
         if isav == True:
             try:
-                await jmub(
+                await bot(
                     functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username
                     )
                 )
                 await event.client.send_file(
                     event.chat_id,
-                    "https://t.me/jmthongif/2",
-                    caption="🐊 jmthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @jmthon - @R0R77 ❳ ".format(
+                    "https://t.me/Repthongif/2",
+                    caption="🐊 Repthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Repthon - @E_7_V ❳ ".format(
                         username, trys, choice
                     ),
                 )
                 await event.client.send_file(
                     ch,
-                    "https://t.me/jmthongif/2",
-                    caption="🐊 jmthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @jmthon - @R0R77 ❳ ".format(
+                    "https://t.me/Repthongif/2",
+                    caption="🐊 Repthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Repthon - @E_7_V ❳ ".format(
                         username, trys, choice
                     ),
                 )
                 await event.client.send_message(
-                    "@r0r77", f"- Done : @{username} !\n- By : @R0R77 - @JMTHON !"
+                    "@E_7_V", f"- Done : @{username} !\n- By : @E_7_V - @REPTHON !"
                 )
                 sedmod = False
                 break
@@ -190,7 +193,7 @@ async def hunterusername(event):
                 if "(caused by UpdateUsernameRequest)" in str(baned):
                     pass
             except telethon.errors.FloodError as e:
-                await jmub.send_message(
+                await bot.send_message(
                     event.chat_id,
                     f"للاسف تبندت , مدة الباند**-  ({e.seconds}) ثانية .**",
                 )
@@ -202,7 +205,7 @@ async def hunterusername(event):
                 if "USERNAME_PURCHASE_AVAILABLE" in str(eee):
                     pass
                 else:
-                    await jmub.send_message(
+                    await bot.send_message(
                         event.chat_id,
                         f"""- خطأ مع @{username} , الخطأ :{str(eee)}""",
                     )
@@ -224,7 +227,7 @@ async def _(event):
         await event.edit(f"حسناً سيتم بدء التثبيت في**-  @{ch} .**")
     except:
         try:
-            ch = await jmub(
+            ch = await bot(
                 functions.channels.CreateChannelRequest(
                     title="JMTHON HUNTER - تثبيت جمثون",
                     about="This channel to hunt username by - @jmthon ",
