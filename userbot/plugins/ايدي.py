@@ -21,7 +21,7 @@ async def who(event):
     try:
         photo, caption = await fetch_info(replied_user, event)
     except AttributeError:
-        await eor(ics, "لايمكنني العثور ع المستخدم")
+        await eor(ics, event)
         return
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
