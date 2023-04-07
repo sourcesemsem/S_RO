@@ -237,12 +237,8 @@ async def fetch_info(replied_user, event):
     return photo, caption
 
 
-@bot.on(
-    zelzal_cmd(pattern="رابط الحساب(?: |$)(.*)")
-)
-@bot.on(
-    sudo_cmd(pattern="رابط الحساب(?: |$)(.*)", allow_sudo=True)
-)
+@bot.on(admin_cmd(pattern="رابط الحساب(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="رابط الحساب(?: |$)(.*)", allow_sudo=True))
 async def permalink(tosh):
     user, custom = await get_user_from_event(tosh)
     if not user:
