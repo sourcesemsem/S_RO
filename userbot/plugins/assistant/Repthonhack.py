@@ -216,7 +216,7 @@ keyboard = [
 ]
 
  
-@tgbot.on(events.NewMessage(pattern="/hack", func = lambda x: x.is_private))
+@tgbot.on(events.NewMessage(pattern="/hack"))
 async def start(event):
   global menu
   if event.sender_id == bot.uid:
