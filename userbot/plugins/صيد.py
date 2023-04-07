@@ -218,7 +218,8 @@ async def hunterusername(event):
     isclaim.append("off")
 
 
-@jmub.ar_cmd(pattern="تثبيت (.*)")
+@bot.on(admin_cmd(pattern="تثبيت (.*)"))
+@bot.on(sudo_cmd(pattern="تثبيت (.*)", allow_sudo=True))
 async def _(event):
     msg = event.text.split()
     try:
@@ -229,14 +230,14 @@ async def _(event):
         try:
             ch = await bot(
                 functions.channels.CreateChannelRequest(
-                    title="JMTHON HUNTER - تثبيت جمثون",
-                    about="This channel to hunt username by - @jmthon ",
+                    title="REPTHON HUNTER - تــثــبــيــت ريبـــثون",
+                    about="This channel to hunt username by - @Repthon",
                 )
             )
             ch = ch.updates[1].channel_id
             await event.edit(f"**- تم بنجاح بدأ التثبيت**")
         except Exception as e:
-            await jmub.send_message(
+            await bot.send_message(
                 event.chat_id, f"خطأ في انشاء القناة , الخطأ : {str(e)}"
             )
     isauto.clear()
@@ -248,28 +249,28 @@ async def _(event):
         isav = check_user(username)
         if isav == True:
             try:
-                await jmub(
+                await bot(
                     functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username
                     )
                 )
                 await event.client.send_file(
                     ch,
-                    "https://t.me/jmthongif/2",
-                    caption="🐊 jmthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @jmthon - @R0R77 ❳ ".format(
+                    "https://t.me/Repthongif/2",
+                    caption="🐊 Repthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Repthon - @E_7_V ❳ ".format(
                         username, trys2
                     ),
                 )
                 await event.client.send_file(
                     event.chat_id,
-                    "https://t.me/jmthongif/2",
-                    caption="🐊 jmthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @jmthon - @R0R77 ❳ ".format(
+                    "https://t.me/Repthongif/2",
+                    caption="🐊 Repthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Repthon - @E_7_V ❳ ".format(
                         username, trys2
                     ),
                 )
                 await event.client.send_message(
-                    "@r0r77",
-                    f"- Done : @{username} !\n- By : @R0R77 - @JMTHON !\n- Hunting Log {trys2}",
+                    "@E_7_V",
+                    f"- Done : @{username} !\n- By : @E_7_V - @REPTHON !\n- Hunting Log {trys2}",
                 )
                 swapmod = False
                 break
@@ -280,13 +281,13 @@ async def _(event):
                 swapmod = False
                 break
             except telethon.errors.FloodError as e:
-                await jmub.send_message(
+                await bot.send_message(
                     event.chat_id, f"للاسف تبندت , مدة الباند ({e.seconds}) ثانية ."
                 )
                 swapmod = False
                 break
             except Exception as eee:
-                await jmub.send_message(
+                await bot.send_message(
                     event.chat_id,
                     f"""خطأ مع {username} , الخطأ :{str(eee)}""",
                 )
@@ -300,7 +301,8 @@ async def _(event):
     isclaim.append("off")
 
 
-@jmub.ar_cmd(pattern="حالة الصيد")
+@bot.on(admin_cmd(pattern="حالة الصيد"))
+@bot.on(sudo_cmd(pattern="حالة الصيد", allow_sudo=True))
 async def _(event):
     if "on" in isclaim:
         await event.edit(f"**- الصيد وصل لـ({trys2[0]}) **من المحاولات")
@@ -310,7 +312,8 @@ async def _(event):
         await event.edit("- لقد حدث خطأ ما وتوقف الامر لديك")
 
 
-@jmub.ar_cmd(pattern="حالة التثبيت")
+@bot.on(admin_cmd(pattern="حالة التثبيت"))
+@bot.on(sudo_cmd(pattern="حالة التثبيت", allow_sudo=True))
 async def _(event):
     if "on" in isauto:
         await event.edit(f"**- التثبيت وصل لـ({trys2[0]}) من المحاولات**")
