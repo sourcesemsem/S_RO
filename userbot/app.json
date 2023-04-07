@@ -1,5 +1,5 @@
 {
-    "name": "Tepthon",
+    "name": "derthon - دير ثون",
     "description": " اهلا بكم في تنصيب سورس صيد اليوزرات !",
     "logo" : "https://telegra.ph/file/09a6b0d947cfb8423a2d1.jpg",
     "stack": "container",
@@ -9,9 +9,9 @@
         "chatbot",
         "telegrambot"
     ],
-    "website": "https://github.com/SS7SS/Tepthon",
+    "website": "https://github.com/perdark/per-dark",
     "env": {
-        "APP_ID": {
+        "API_ID": {
             "description": "ايبي ايدي",
             "value": "",
             "required": true
