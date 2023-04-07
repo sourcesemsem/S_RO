@@ -16,7 +16,7 @@ from telethon.tl.functions.channels import CreateChannelRequest as ccr
 
 from userbot import bot
 
-from Config import Config
+from resources.Config import Config
 
 bot = borg = tgbot
 
