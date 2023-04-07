@@ -16,7 +16,7 @@ from .. import mention
 from telegraph import Telegraph, upload_file
 
 # =================== OWNER - E_7_V =================== #
-ALIVE_NAME = Config.ALIVE_NAME if Config.ALIVE_NAME else "@RallsThon"
+ALIVE_NAME = Config.ALIVE_NAME if Config.ALIVE_NAME else "@Repthon"
 CUSTOM_PMPERMIT_TEXT = Config.CUSTOM_PMPERMIT_TEXT
 LOAD_MYBOT = Config.LOAD_MYBOT
 Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
@@ -173,7 +173,7 @@ async def settings(event):
         await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @Repthon", alert=True)
 
 
-# Ralls zag - زغرفه ريسثون
+# Repthon zag - زغرفه ريبـــثون 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"icszag"))
           )  # Ralls - Userbot
 async def settings(event):
