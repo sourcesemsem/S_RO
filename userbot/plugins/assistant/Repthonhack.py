@@ -215,21 +215,6 @@ keyboard = [
     ]
 ]
 
-
-
-@bot.on(admin_cmd(pattern="هاك$"))
-@bot.on(sudo_cmd(pattern="هاك$", allow_sudo=True))
-async def op(event):
-    baqir = Bot_Username.replace("@","")       
-    await event.edit(f"**- مرحبـا عـزيـزي\n\n- قم بالدخـول للبـوت المسـاعـد @{baqir} \n- وارسـال الامر /hack**")
-
-
-@bot.on(admin_cmd(pattern="اختراق$"))
-@bot.on(sudo_cmd(pattern="اختراق$", allow_sudo=True))  
-async def op(event):
-    baqir = Bot_Username.replace("@","")       
-    await event.edit(f"**- مرحبـا عـزيـزي\n\n- قم بالدخـول للبـوت المسـاعـد @{baqir} \n- وارسـال الأمر /hack**")
-
  
 @tgbot.on(events.NewMessage(pattern="/hack", func = lambda x: x.is_private))
 async def start(event):
