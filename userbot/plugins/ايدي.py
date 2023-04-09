@@ -12,8 +12,8 @@ Ralls_TEXT = Config.CUSTOM_ALIVE_TEXT or "╮•⎚ مـعلومات الـشخ�
 RallsM = Config.CUSTOM_ALIVE_EMOJI or " •❃ 
 
 
-@bot.on(admin_cmd(pattern="ايدي))
-@bot.on(sudo_cmd(pattern="ايدي, allow_sudo=True))
+@bot.on(admin_cmd(pattern="ايدي"))
+@bot.on(sudo_cmd(pattern="ايدي", allow_sudo=True))
 async def who(event):
     ics = await eor(event, "⇆")
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
