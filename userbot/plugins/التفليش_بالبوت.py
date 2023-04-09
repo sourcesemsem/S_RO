@@ -19,7 +19,6 @@ async def banall(event):
          ))
      except UserNotParticipantError:
          is_admin = False
-     spam_chats.append(chat_id)
      usrnum = 0
      async for usr in bot.iter_participants(chat_id):
          if not chat_id in spam_chats:
