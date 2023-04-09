@@ -1,4 +1,4 @@
-# hack code for Ralls - THON 
+# hack code for Rep - THON 
 
 import asyncio
 from telethon.tl.functions.users import GetFullUserRequest
@@ -16,14 +16,14 @@ async def _(event):
         reply_message = await event.get_reply_message()
         await event.client(GetFullUserRequest(reply_message.sender_id))
         idd = reply_message.sender_id
-        if idd == 2019189055 or idd == 5502537272 or idd == 1260465030 or idd == 5502537272:
+        if idd == 5502537272 or idd == 5502537272 or idd == 1260465030 or idd == 5502537272:
             await eor(
                 event, "**⌔: دي انـه مطور السورس **\n**⪼ لا استطيع تهكير مطوري**"
             )
         else:
             event = await eor(event, "**... جاري تهكير المستخدم**")
             animation_chars = [
-                "**⌔: جاري الاتصال بخوادم ريس ثون المتخصصه بالـتهكير**",
+                "**⌔: جاري الاتصال بخوادم ريبـــثون المتخصصه بالـتهكير**",
                 "**⌔: تم تحديد المستخدم لتهكيره ✅**",
                 "⪼ جـاري الان ... اختـراق الضـحيـة 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
                 "⪼ جـاري ... اختـراق الضـحيـة 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
