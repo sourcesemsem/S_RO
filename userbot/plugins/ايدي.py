@@ -1,4 +1,4 @@
-# whois code for Ralls edit by ~ @RallsThon
+# whois code for Repthon edit by ~ @Repthon
 
 import os
 
@@ -103,6 +103,7 @@ async def fetch_info(replied_user, event):
         if first_name
         else ("هذا المستخدم ليس له اسم أول")
     )
+ics_id = ("
     last_name = last_name.replace("\u2060", "") if last_name else (" ")
     username = "@{}".format(username) if username else ("لايوجد معرف")
     user_bio = "لاتوجد نبذه" if not user_bio else user_bio
@@ -121,7 +122,7 @@ async def fetch_info(replied_user, event):
     caption += f"<b> {RallsM}| البايـو    ⇦ </b> {user_bio} \n"
     caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
     caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒 𓆪 </b> - @RallsThon "
-    return photo, caption
+    return photo, caption")
 
 
 @bot.on(admin_cmd(pattern="ا(?: |$)(.*)"))
