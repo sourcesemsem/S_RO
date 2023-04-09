@@ -1,4 +1,4 @@
-from resources.formation.Config import Config
+from resources.Config import Config
 from userbot import bot
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.errors import UserNotParticipantError
