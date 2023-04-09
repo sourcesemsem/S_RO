@@ -9,7 +9,7 @@ from telethon.utils import get_input_location
 
 TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 Ralls_TEXT = Config.CUSTOM_ALIVE_TEXT or "╮•⎚ مـعلومات الـشخص مـن بـوت ريسثـون"
-RallsM = Config.CUSTOM_ALIVE_EMOJI or " •❃ 
+RallsM = Config.CUSTOM_ALIVE_EMOJI or " •❃ "
 
 @bot.on(admin_cmd(pattern="ايدي(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="ايدي", allow_sudo=True))
