@@ -1,7 +1,7 @@
 """
-Edit By: @QQ070
+Edit By: @E_7_V
 """
-#  for source Ralls
+#  for source Repthon
 
 import asyncio
 import base64
@@ -16,7 +16,7 @@ from telethon.tl.types import ChatBannedRights
 import userbot.plugins.sql_helper.gban_sql_helper as gban_sql
 
 from .. import BOTLOG, BOTLOG_CHATID, ICS_ID, admin_groups, get_user_from_event
-from ..sql_helper.mute_sql import is_muted, mute, unmute
+from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 
 NO_ADMIN = "⪼ **أنا لست مشرف هنا!!** 𓆰."
 NO_PERM = "⪼ **ليس لدي أذونات كافية!** 𓆰."
@@ -45,11 +45,7 @@ UNBAN_RIGHTS = ChatBannedRights(
 )
 
 
-@bot.on(
-    admin_cmd(
-       pattern=r"حظر(?: |$)(.*)"
-    )
-)
+@bot.on(admin_cmd(pattern=r"حظر(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern=r"حظر(?: |$)(.*)", allow_sudo=True))
 async def icsgban(ics):
     if ics.fwd_from:
@@ -63,16 +59,16 @@ async def icsgban(ics):
     user, reason = await get_user_from_event(ics)
     if not user:
         return
-    zel = await eor(ics, "**╮ ❐... جـاࢪِ الحـظـࢪ ...❏╰**")
+    baqir = await eor(ics, "**╮ ❐... جـاࢪِ الحـظـࢪ ...❏╰**")
     start = datetime.now()
     user, reason = await get_user_from_event(ics)
     if not user:
         return
     if user.id == (await ics.client.get_me()).id:
-        await zel.edit("**⪼ عـذراً ..لا استطيـع حظـࢪ نفسـي 𓆰**")
+        await baqir.edit("**⪼ عـذراً ..لا استطيـع حظـࢪ نفسـي 𓆰**")
         return
-    if user.id == 2019189055 or user.id == 1590465585 or user.id == 1691343402 or user.id == 2131150492 or user.id == 5053611726 or user.id == 1103095942 or user.id == 973964946 or user.id == 5039479259 or user.id == 5069440634 or user.id == 1355571767 or user.id == 5361336053 or user.id == 1928739580 or user.id == 5147860170 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055:
-        await zel.edit("**╮ ❐ دي لا يمڪنني حظـر احـد مطـورين السـورس  ❏╰**")
+    if user.id == 5502537272 or user.id == 5502537272:
+        await baqir.edit("**╮ ❐ دي لا يمڪنني حظـر احـد مطـورين السـورس  ❏╰**")
         return
     try:
         T = base64.b64decode("OTI1OTcyNTA1IDE4OTUyMTkzMDY=")
@@ -80,7 +76,7 @@ async def icsgban(ics):
     except BaseException:
         pass
     if gban_sql.is_gbanned(user.id):
-        await zel.edit(
+        await baqir.edit(
             f"⪼ [{user.first_name}](tg://user?id={user.id}) موجود بالفعل في قائمة الحظر 𓆰."
         )
     else:
@@ -89,10 +85,10 @@ async def icsgban(ics):
     tosh = await admin_groups(ics)
     count = 0
     kim = len(tosh)
-    if zel == 0:
-        await zel.edit("⪼ انت لسته مدير في مجموعه واحده على الاقل 𓆰، ")
+    if baqir == 0:
+        await baqir.edit("⪼ انت لسته مدير في مجموعه واحده على الاقل 𓆰، ")
         return
-    await zel.edit(f"⪼ بدء حظر ↠ [{user.first_name}](tg://user?id={user.id}) 𓆰،")
+    await baqir.edit(f"⪼ بدء حظر ↠ [{user.first_name}](tg://user?id={user.id}) 𓆰،")
     for i in range(kim):
         try:
             await ics.client(EditBannedRequest(tosh[i], user.id, BANNED_RIGHTS))
@@ -116,7 +112,7 @@ async def icsgban(ics):
             f"❃∫  المستخدم » [{user.first_name}](tg://user?id={user.id})\n❃∫ تم حظره "
         )
     else:
-        await zel.edit(
+        await baqir.edit(
             f"❃∫  المستخدم » [{user.first_name}](tg://user?id={user.id})\n❃∫ تم حظره "
         )
 
@@ -128,11 +124,7 @@ async def icsgban(ics):
         )
 
 
-@bot.on(
-    admin_cmd(
-       pattern=r"الغاء حظر(?: |$)(.*)"
-    )
-)
+@bot.on(admin_cmd(pattern=r"الغاء حظر(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern=r"الغاء حظر(?: |$)(.*)", allow_sudo=True))
 async def icsgban(ics):
     if ics.fwd_from:
@@ -192,7 +184,7 @@ async def gablist(event):
     if event.fwd_from:
         return
     gbanned_users = gban_sql.get_all_gbanned()
-    GBANNED_LIST = "𓆰 𝑺𝑶𝑼𝑹𝑪𝑬 𝐑𝐀𝐈𝐈𝐒 - 𝑮𝑩𝑨𝑵 𝑳𝑰𝑺𝑻 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n"
+    GBANNED_LIST = "𓆰 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝐸𝑃𝑇𝐻𝑂𝑁 - 𝑮𝑩𝑨𝑵 𝑳𝑰𝑺𝑻 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n"
     if len(gbanned_users) > 0:
         for a_user in gbanned_users:
             if a_user.reason:
@@ -204,7 +196,7 @@ async def gablist(event):
         await eor(event, GBANNED_LIST)
 
 
-@bot.on(admin_cmd(outgoing=True, pattern=r"كتم(?: |$)(.*)"))
+@bot.on(admin_cmd(pattern=r"كتم(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern=r"كتم(?: |$)(.*)", allow_sudo=True))
 async def startgmute(event):
     if event.fwd_from:
@@ -213,7 +205,7 @@ async def startgmute(event):
         user, reason = await get_user_from_event(event)
         if not user:
             return await event.edit("**╮ ❐ ... جـاࢪِ الکتم ... ❏╰**")
-        if user.id == 2019189055 or user.id == 1590465585 or user.id == 1691343402 or user.id == 2131150492 or user.id == 2131150492 or user.id == 5053611726 or user.id == 1103095942 or user.id == 973964946 or user.id == 5039479259 or user.id == 5069440634 or user.id == 1355571767 or user.id == 5361336053 or user.id == 1928739580 or user.id == 5147860170 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055:
+        if user.id == 5502537272 or user.id == 5502537272:
             return await edit_or_reply(event, "**╮ ❐ دي لا يمڪنني كتـم احـد مطـورين السـورس  ❏╰**")
         if user.id == (await event.client.get_me()).id:
             return await edit_or_reply(event, "**⪼ عـذراً .. لا استطيـع كتـم نفسـي 𓆰،**")
@@ -224,7 +216,7 @@ async def startgmute(event):
         user, reason = await get_user_from_event(event)
         if not user:
             return
-        if user.id == 2019189055 or user.id == 1590465585 or user.id == 1691343402 or user.id == 2131150492 or user.id == 5053611726 or user.id == 1103095942 or user.id == 973964946 or user.id == 5039479259 or user.id == 5069440634 or user.id == 1355571767 or user.id == 5361336053 or user.id == 1928739580 or user.id == 5147860170 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055 or user.id == 2019189055:
+        if user.id == 2019189055 or user.id ==5502537272:
             return await edit_or_reply(event, "**╮ ❐ دي لا يمڪنني كتـم احـد مطـورين السـورس  ❏╰**")
         if user.id == (await event.client.get_me()).id:
             return await edit_or_reply(event, "**⪼ عـذراً .. لا استطيـع كتـم نفسـي 𓆰،**")
@@ -254,7 +246,7 @@ async def startgmute(event):
             f"⪼ المجموعه : {event.chat.title}(`{event.chat_id}`)",
         )
 
-@bot.on(admin_cmd(outgoing=True, pattern=r"الغاء كتم(?: |$)(.*)"))
+@bot.on(admin_cmd(pattern=r"الغاء كتم(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern=r"الغاء كتم(?: |$)(.*)", allow_sudo=True))
 async def endgmute(event):
     if event.fwd_from:
