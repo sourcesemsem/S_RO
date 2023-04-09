@@ -104,25 +104,25 @@ async def fetch_info(replied_user, event):
         else ("هذا المستخدم ليس له اسم أول")
     )
 ics_id = ("
-    last_name = last_name.replace("\u2060", "") if last_name else (" ")
-    username = "@{}".format(username) if username else ("لايوجد معرف")
-    user_bio = "لاتوجد نبذه" if not user_bio else user_bio
-    rotbat = "「من مطـورين السورس 𓄂𓆃」" if user_id == 2019189055 or user_id == 1590465585 or user_id == 1691343402 or user_id == 2131150492 or user_id == 5053611726 or user_id == 1103095942 or user_id == 973964946 or user_id == 5039479259 or user_id == 5069440634 or user_id == 1355571767 or user_id == 5361336053 or user_id == 1928739580 or user_id == 5147860170 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 else (".「  العضـو 𓅫  」.") 
-    rotbat = ".「 مـالك الحساب 𓀫 」." if user_id == (await event.client.get_me()).id and user_id != 2019189055 and user_id != 1590465585 and user_id != 1691343402 and user_id != 2131150492 and user_id != 5053611726 and user_id != 1103095942 and user_id != 973964946 and user_id != 5039479259 and user_id != 5069440634 and user_id != 1355571767 and user_id != 5361336053 and user_id != 1928739580 and user_id != 5147860170 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 else rotbat
-    caption = f"<b> {Ralls_TEXT} </b>\n"
-    caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
-    caption += f"<b> {RallsM}| الاسـم    ⇦ </b> {first_name} {last_name}\n"
-    caption += f"<b> {RallsM}| المعـرف  ⇦ </b> {username}\n"
-    caption += f"<b> {RallsM}| الايـدي   ⇦ </b> <code>{user_id}</code>\n"
-    caption += f"<b> {RallsM}| الرتبـــه  ⇦ {rotbat} </b>\n"
-    caption += f"<b> {RallsM}| الصـور   ⇦ </b> {replied_user_profile_photos_count}\n"
-    caption += f"<b> {RallsM}|الحسـاب ⇦ </b> "
-    caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
-    caption += f"\n<b> {RallsM}| الـمجموعات المشتـركة ⇦ </b> {common_chat} \n"
-    caption += f"<b> {RallsM}| البايـو    ⇦ </b> {user_bio} \n"
-    caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
-    caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝐑𝐀𝐈𝐈𝐒 𓆪 </b> - @RallsThon "
-    return photo, caption")
+last_name = last_name.replace("\u2060", "") if last_name else (" ")
+username = "@{}".format(username) if username else ("لايوجد معرف")
+user_bio = "لاتوجد نبذه" if not user_bio else user_bio
+rotbat = "「من مطـورين السورس 𓄂𓆃」" if user_id == 2019189055 or user_id == 1590465585 or user_id == 1691343402 or user_id == 2131150492 or user_id == 5053611726 or user_id == 1103095942 or user_id == 973964946 or user_id == 5039479259 or user_id == 5069440634 or user_id == 1355571767 or user_id == 5361336053 or user_id == 1928739580 or user_id == 5147860170 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 or user_id == 2019189055 else (".「  العضـو 𓅫  」.") 
+rotbat = ".「 مـالك الحساب 𓀫 」." if user_id == (await event.client.get_me()).id and user_id != 2019189055 and user_id != 1590465585 and user_id != 1691343402 and user_id != 2131150492 and user_id != 5053611726 and user_id != 1103095942 and user_id != 973964946 and user_id != 5039479259 and user_id != 5069440634 and user_id != 1355571767 and user_id != 5361336053 and user_id != 1928739580 and user_id != 5147860170 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 and user_id != 2019189055 else rotbat
+caption = f"<b> {Ralls_TEXT} </b>\n"
+caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
+caption += f"<b> {RallsM}| الاسـم    ⇦ </b> {first_name} {last_name}\n"
+caption += f"<b> {RallsM}| المعـرف  ⇦ </b> {username}\n"
+caption += f"<b> {RallsM}| الايـدي   ⇦ </b> <code>{user_id}</code>\n"
+caption += f"<b> {RallsM}| الرتبـــه  ⇦ {rotbat} </b>\n"
+caption += f"<b> {RallsM}| الصـور   ⇦ </b> {replied_user_profile_photos_count}\n"
+caption += f"<b> {RallsM}|الحسـاب ⇦ </b> "
+caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
+caption += f"\n<b> {RallsM}| الـمجموعات المشتـركة ⇦ </b> {common_chat} \n"
+caption += f"<b> {RallsM}| البايـو    ⇦ </b> {user_bio} \n"
+caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
+caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 𓆪 </b> - @Repthon"
+return photo, caption ")
 
 
 @bot.on(admin_cmd(pattern="ا(?: |$)(.*)"))
