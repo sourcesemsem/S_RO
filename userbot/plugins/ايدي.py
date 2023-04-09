@@ -103,7 +103,7 @@ async def fetch_info(replied_user, event):
         if first_name
         else ("هذا المستخدم ليس له اسم أول")
     )
-ics_id = (
+ics_id == ("""
 last_name = last_name.replace("\u2060", "") if last_name else (" ")
 username = "@{}".format(username) if username else ("لايوجد معرف")
 user_bio = "لاتوجد نبذه" if not user_bio else user_bio
@@ -122,7 +122,7 @@ caption += f"\n<b> {RallsM}| الـمجموعات المشتـركة ⇦ </b> {c
 caption += f"<b> {RallsM}| البايـو    ⇦ </b> {user_bio} \n"
 caption += f"<b> ٴ•━─━─━─━─━─━─━─━─━• </b>\n"
 caption += f"<b> 𓆩 𝙎𝙊𝙐𝙍𝘾𝞝 𝗥𝗲𝗽𝘁𝗵𝗼𝗻 𓆪 </b> - @Repthon"
-return photo, caption )
+return photo, caption """)
 
 
 @bot.on(admin_cmd(pattern="ا(?: |$)(.*)"))
